@@ -1,0 +1,588 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Modem</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="Datorkommunikation"
+HREF="book1.html"><LINK
+REL="PREVIOUS"
+TITLE="Trådlösa nätverk, WLAN"
+HREF="chap_wlan.html"><LINK
+REL="NEXT"
+TITLE="Publika telenätet"
+HREF="chap_publtele.html"><LINK
+REL="stylesheet"
+HREF="./fritis.css"
+TYPE="text/css"></HEAD
+><BODY
+CLASS="chapter"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Datorkommunikation</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="chap_wlan.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="chap_publtele.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="chapter"
+><H1
+><A
+NAME="chap_modem"
+></A
+>Kapitel 8. Modem</H1
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Innehållsförteckning</B
+></DT
+><DT
+><A
+HREF="chap_modem.html#AEN588"
+>Introduktion</A
+></DT
+><DT
+><A
+HREF="chap_modem.html#AEN595"
+>Olika sätt att modulera</A
+></DT
+><DT
+><A
+HREF="chap_modem.html#AEN640"
+>Handskakning</A
+></DT
+><DT
+><A
+HREF="chap_modem.html#AEN645"
+>Hayes-kommandon, (AT-kommandon)</A
+></DT
+><DT
+><A
+HREF="chap_modem.html#AEN678"
+>Sammanfattning</A
+></DT
+></DL
+></DIV
+><BLOCKQUOTE
+CLASS="ABSTRACT"
+><DIV
+CLASS="abstract"
+><P
+></P
+><A
+NAME="AEN585"
+></A
+><P
+>&#13;			För bara några år sedan kom internet-boomen till Sverige. Alla
+			skulle koppla upp sig. I början fanns det bara ett sätt att
+			skapa en förbindelse mellan kunderna och deras
+			internetleverantör (ISP, Internet Service Provider). Det var
+			genom att skicka digital datatrafik som analoga signaler över
+			telefonnätet. Till detta används en uppfining som är mycket
+			äldre än så och som använts i datorkommunikationssammanhang
+			sedan 1960-talet, nämligen modemet.
+		</P
+><P
+>&#13;			I detta kapitel tittar vi närmare på modem. Vad ett modem är
+			och hur det fungerar.
+		</P
+><P
+></P
+></DIV
+></BLOCKQUOTE
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN588"
+>Introduktion</A
+></H1
+><P
+>&#13;			Som vi sagt tidigare så är vissa medier, till exempel
+			telefonnätet, gjorda för att transportera analoga signaler.
+			Ofta vill man transportera digital data över en analog
+			förbindelse.  Till detta används en utrustning som kallas för
+			<SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>modem</I
+></SPAN
+>. Modem är en förkortning för
+			<SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Modulator/Demodulator</I
+></SPAN
+> och kommer från
+			modemets huvudsakliga funktion. Att modulera innebär att man
+			översätter digitala signaler till analoga och att demodulera
+			innebär att man reverserar processen genom att omvandla de
+			analoga signalerna tillbaka till digitala.
+		</P
+><P
+>&#13;			Modem har traditionellt varit det vanligaste sättet för
+			privatpersoner att ansluta sig till Internet. Alla
+			Internetleverantören (Internet Service Provider, ISP) erbjuder
+			tjänsten uppringt Internet, det vill säga Internet via ett
+			modem anslutet till telenätet. I dag blir detta dock allt
+			mindre vanligt då nya snabbare tjänster erbjuds. Mer som dessa
+			kommer i kapitlet om Internet (<A
+HREF="chap_internet.html"
+>kapitel 11</A
+>).
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN595"
+>Olika sätt att modulera</A
+></H1
+><P
+>&#13;			När ett modem modulerar en digital signal finns det flera olika
+			sätt att göra det på. I slutändan blir det någon typ av ljud
+			med olika egenskaper. Man kan välja att ändra den analoga
+			signalen på flera olika sätt för att kunna koda in digitala
+			signaler i den.
+		</P
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN598"
+>Amplitudmodulering</A
+></H2
+><P
+>&#13;				Amplitudmodulering innebär att man genom att ändra
+				amplituden i signalen kan man baka in data i signalen. Det
+				vill säga 1:or ges en amplitud och 0:or en annan.  Denna
+				metod är inte så effektiv, eftersom den till exempel är
+				väldigt beroende av att signalen inte dämpas på vägen, och
+				användes i de första modemen. 
+			</P
+><P
+>&#13;				I <A
+HREF="chap_modem.html#fig_amplitudmodulering"
+>figur 8-1</A
+> visas
+				amplitudmodulering.  I figuren innebär till exempel en högre
+				amplitud en 1:a och en lägre en 0:a. Denna metod är dock
+				väldigt känslig för till exempel att signalen blir dämpad
+				och användes bara i de första modemen.
+				
+
+				<DIV
+CLASS="figure"
+><A
+NAME="fig_amplitudmodulering"
+></A
+><P
+><B
+>Figur 8-1. Amplitudmodulering</B
+></P
+><DIV
+CLASS="mediaobject"
+><P
+><IMG
+SRC="bilder/amplitudmodulering.jpeg"></P
+></DIV
+></DIV
+>
+			</P
+></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN612"
+>Frekvensmodulering</A
+></H2
+><P
+>&#13;				Frekvensmudulering innebär att man skickar en signal med
+				konstant amplitud men att frekvensen ändras. Denna metod är
+				bättre än amplitudmodulering.
+			</P
+><P
+>&#13;				I <A
+HREF="chap_modem.html#fig_frekvensmodulering"
+>figur 8-2</A
+> visas
+				frekvensmodulering. Vid frekvensmodulering används olika
+				frekvenser för att bära antingen 1:or eller 0:or. I figuren
+				innebär till exempel en högre frekvens en 1:a och en lägre
+				en 0:a.
+
+			
+				<DIV
+CLASS="figure"
+><A
+NAME="fig_frekvensmodulering"
+></A
+><P
+><B
+>Figur 8-2. Frekvensmodulering</B
+></P
+><DIV
+CLASS="mediaobject"
+><P
+><IMG
+SRC="bilder/frekvensmodulering.jpeg"></P
+></DIV
+></DIV
+>
+			</P
+></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN626"
+>Fasskiftesmodulering</A
+></H2
+><P
+>&#13;				Ett tredje sätt att bädda in digitala signaler i en analog
+				är att använda sig av fasskiftesmodulering. Det innebär att
+				man utgår från en sinusformad signal och bestämmer att ett
+				fasskifte har en viss innebörd. Eftersom man kan välja att
+				byta fas vid olika ställen (vinklar) så kan man skicka mer
+				information än 1:or och 0:or. Till exempel kan man bestämma
+				att vissa lägen betyder 00, 01, 10 och 11.
+			</P
+><P
+>&#13;				I <A
+HREF="chap_modem.html#fig_fasskiftesmodulering"
+>figur 8-3</A
+> visas
+				fasskiftesmodulering. Vid fasskiftesmodulering utgår man
+				från en sinusformad kurva och låter den byta fas vid
+				bestämda lägen. Ett fasskifte på ett visst ställe i cykeln
+				betyder en viss sak, till exempel en 1:a eller 0:a.  Det
+				finns också utrymme för att specificera följder av tecken,
+				till exempel 00, 01, 10 eller 11.
+
+				<DIV
+CLASS="figure"
+><A
+NAME="fig_fasskiftesmodulering"
+></A
+><P
+><B
+>Figur 8-3. Fasskiftesmodulering</B
+></P
+><DIV
+CLASS="mediaobject"
+><P
+><IMG
+SRC="bilder/fasskiftesmodulering.jpeg"></P
+></DIV
+></DIV
+>
+			</P
+></DIV
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN640"
+>Handskakning</A
+></H1
+><P
+>&#13;			Innan två modem kan börja tala med varandra (det är alltid två
+			modem) så måste modem komma överens om hur de skall skicka
+			information. Det gör de i en procedur som kallas
+			<SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>handskakning</I
+></SPAN
+> (eng. Handshake). I
+			handskakningen, som föregår det egentliga datautbytet, kommer
+			modemen överens om exempelvis överföringshastigheten.
+		</P
+><P
+>&#13;			För att ett modem skall kunna kommunicera med så många olika
+			modem som möjligt så kan de flesta modemen skicka och ta emot
+			data i en mängd olika hastigheter. När två modem kommer överens
+			om överföringshastigheten så är det alltid det långsammaste
+			modemet som bestämmer i vilken hastighet de skall utbyta data.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN645"
+>Hayes-kommandon, (AT-kommandon)</A
+></H1
+><P
+>&#13;			Modem avsedda för telenätet var oftast så kallade akustiska
+			modem.  De bestod av en liten låda med en sladd och en
+			telefonlursliknande sak med gummimuffar som passade på en
+			vanlig telefonlur. Modemet innehöll alltså ingen telefon utan
+			man ringde manuellt upp det nummer man skulle ringa och sedan
+			kopplade man på modemen på varje sida genom att montera
+			modemets mikrofon och högtalare på telefonluren. Detta var
+			naturligtvis inte speciellt praktiskt. Man ville ju kunna
+			programmera modemet från datorn så att datorn själv kunde till
+			exempel ringa upp ett annat modem. Modemet borde ju dessutom
+			kunna svara själv.
+		</P
+><P
+>&#13;			Det första modemet som kunde detta var ett modem från ett
+			företag som heter <SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Hayes Communications</I
+></SPAN
+>.
+			Modemet hette <SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Hayes Smartmodem</I
+></SPAN
+> och
+			lanserades 1981. Detta modem kunde man kontrollera helt från
+			datorn. Man kunde alltså ringa ett nummer, ändra inställningar,
+			lägga på luren med mera från datorn utan att röra modemet. I
+			övrigt var Smartmodem inget fartunder utan det skickade data i
+			blygsamma 300 bit/s vilket var ganska vanligt på den tiden.
+		</P
+><P
+>&#13;			För att styra modemet så införde företaget ett system med olika
+			kommandon som man använder för att säga åt modemet att göra
+			olika saker. Dessa kommandon började alla med
+			<SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>AT</I
+></SPAN
+> som är en förkortning för engelskans
+			"attention". På grund av detta kallas dessa kommandon för
+			AT-kommandon eller Hayes-kommandon. Det är ingen formell
+			standard men de flesta modem som finns idag är
+			<SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Hayes-kompatibla</I
+></SPAN
+>. det vill säga de stöder
+			hela eller delar av Hayes uppsättning AT-kommandon.  Flera
+			modemtillverkare lägger till egna kommandon utöver de vanliga.
+			I <A
+HREF="chap_modem.html#tab_hayes"
+>tabell 8-1</A
+> listas några vanliga
+			AT-kommandon. Är du intresserad så finns det en mer komplett
+			lista på http://en.wikipedia.org/wiki/Hayes_command_set.
+
+			<DIV
+CLASS="table"
+><A
+NAME="tab_hayes"
+></A
+><P
+><B
+>Tabell 8-1. Vanliga Hayes-kommandon (AT-kommandon)</B
+></P
+><TABLE
+BORDER="1"
+FRAME="border"
+RULES="all"
+CLASS="CALSTABLE"
+><COL><COL><THEAD
+><TR
+><TH
+>Kommando: (AT+)</TH
+><TH
+>Gör</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+>DT1111111</TD
+><TD
+>Ringer upp 1111111 med tonval</TD
+></TR
+><TR
+><TD
+>DP1111111</TD
+><TD
+>Ringer upp 1111111 med pulsval</TD
+></TR
+><TR
+><TD
+>M0</TD
+><TD
+>Stänger av modemets högtalare</TD
+></TR
+><TR
+><TD
+>H0</TD
+><TD
+>Lägger på luren</TD
+></TR
+><TR
+><TD
+>Z0</TD
+><TD
+>Återställer modemets sparade
+						konfiguration</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN678"
+>Sammanfattning</A
+></H1
+><P
+>&#13;			Modem är en gammal uppfinning. Modem är en förkortning för
+			<SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Modulator/Demodulator</I
+></SPAN
+>. Sändande modem
+			modulerar och mottagande demodulerar. Man kan modulera på flera
+			sätt och det vanligaste idag är fasskiftesmodulering.
+		</P
+><P
+>&#13;			Innan två modem kan börja utbyta data kommer de överens
+			om i vilken hastighet detta skall ske. Denna procedur kallas
+			handskakning och det är alltid det långsammaste modemet som
+			bestämmer.
+		</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="chap_wlan.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Hem</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="chap_publtele.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Trådlösa nätverk, WLAN</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Publika telenätet</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

@@ -1,0 +1,487 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Kommentering</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="Programmering i PHP"
+HREF="book1.html"><LINK
+REL="PREVIOUS"
+TITLE="Indentering"
+HREF="chap_indentering.html"><LINK
+REL="NEXT"
+TITLE="Mer om str�ngar"
+HREF="chap_strings.html"><LINK
+REL="stylesheet"
+HREF="./book.css"
+TYPE="text/css"></HEAD
+><BODY
+CLASS="chapter"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Programmering i PHP</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="chap_indentering.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="chap_strings.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="chapter"
+><H1
+><A
+NAME="chap_kommentering"
+></A
+>Kapitel 12. Kommentering</H1
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Innehållsförteckning</B
+></DT
+><DT
+><A
+HREF="chap_kommentering.html#AEN530"
+>Hur ser en kommentar ut</A
+></DT
+><DT
+><A
+HREF="chap_kommentering.html#AEN541"
+>Att kommentera sin kod</A
+></DT
+><DT
+><A
+HREF="chap_kommentering.html#AEN552"
+>Liten sammanfattning</A
+></DT
+><DT
+><A
+HREF="chap_kommentering.html#AEN568"
+>Mer l�sning</A
+></DT
+></DL
+></DIV
+><BLOCKQUOTE
+CLASS="ABSTRACT"
+><DIV
+CLASS="abstract"
+><P
+></P
+><A
+NAME="AEN528"
+></A
+><P
+>&#13;				Alla som n�gon g�ng jobbat i ett programmeringsprojekt vet att det
+				�r av yttersta vikt att man kommenterar sin kod. Detta avsnitt
+				beskriver hur man kommenterar och vad man skall t�nka p� n�r man
+				kommenterar sin kod.
+			</P
+><P
+></P
+></DIV
+></BLOCKQUOTE
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN530"
+>Hur ser en kommentar ut</A
+></H1
+><P
+>&#13;				I PHP finns det tv� typer av kommentarer. De �r <SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>//
+				Kommentar</I
+></SPAN
+> och <SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>/* Kommentar */</I
+></SPAN
+>.
+				Den f�rsta fungerar s� att allt som kommer efter <SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>//
+				</I
+></SPAN
+> och fram till radens slut �r en kommentar och kommer
+				att ignoreras av PHP-tolkaren. Den andra typen av kommentar
+				fungerar s� att det som st�r mellan <SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>/*</I
+></SPAN
+> och
+				<SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>*/ </I
+></SPAN
+> �r kommentarer. Den andra varianten kan
+				str�cka sig �ver flera rader.
+
+				<DIV
+CLASS="example"
+><A
+NAME="AEN538"
+></A
+><P
+><B
+>Exempel 12-1. Exempel med kommentering</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+/* Detta �r en kommentar */
+// Detta �r en kommentar
+$i = 1000; // Detta �r ocks� en kommetar
+?&#62;
+
+				</PRE
+></DIV
+>
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN541"
+>Att kommentera sin kod</A
+></H1
+><P
+>&#13;			Att kommentera i sin kod �r en konst. Det �r mycket att t�nka p�. Det
+			som �r sv�rast �r att veta hur mycket man skall kommentera. Det �r
+			lika illa att kommentera f�r mycket som f�r lite. H�r kommer n�gra
+			riktlinjer.
+		</P
+><P
+>&#13;			Skriv i kommentaren VAD som g�rs och inte HUR det g�rs. Hur det g�rs
+			skall koden i sig sj�lv f�rklara.
+		</P
+><P
+>&#13;			Kommentera i en sammanh�ngande l�ngre kommentar f�re ett avancerat
+			block vad som g�rs. Ett litet exempel:
+
+			<DIV
+CLASS="example"
+><A
+NAME="AEN546"
+></A
+><P
+><B
+>Exempel 12-2. L�ngre kommentar f�re block</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+//
+// Nedanst�ende r�knar ut summan av alla tal mellan tal1 och
+// tal2.
+//
+// Summan skrivs ut och tal2 m�ste vara st�rre �n tal1
+//
+
+$summa = 0;
+for ($i = $tal1; $i &#60;= $tal2; $i++) {
+   $summa = summa + $i;
+}
+echo $summa;
+?&#62;
+
+				</PRE
+></DIV
+>
+
+			J�mf�r detta med nedanst�ende kod som �r full av "Papegojkommentarer"
+			(En papegoja brukar bara l�ra sig att upprepa det den h�r).
+
+			<DIV
+CLASS="example"
+><A
+NAME="AEN549"
+></A
+><P
+><B
+>Exempel 12-3. Papegojkommentarer</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+$summa = 0; // Summan s�tts till 0
+
+for ($i = $tal1; $i &#60;= $tal2; $i++) { // R�kna upp i fr�n $tal1 till $tal2
+   $summa = summa + $i; // Aktuellt tal l�ggs till summan
+}
+echo $summa; // Skriv ut summan
+?&#62;
+
+				</PRE
+></DIV
+>
+
+			Observera att det �r sv�rare att f�rst� vad den h�r koden g�r �n den
+			ovanf�r. Trots att den �r full av kommantarer. Den nedre har bara
+			kommentarer som beskriver vad koden i sig beskriver och tillf�r
+			inget. Radkommentarer �r till�tet om de g�r n�gon nytta. Till exempel
+			d� variabler deklareras �r det bra att ha radkommentarer efter varje
+			variabel d�r man beskriver vad man t�nkt att variabeln skall g�ra.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN552"
+>Liten sammanfattning</A
+></H1
+><P
+>&#13;			<P
+></P
+><UL
+><LI
+><P
+>Kommentera inte f�r mycket och inte f�r litet.</P
+></LI
+><LI
+><P
+>Koden i sig skall visa vad programmet g�r.</P
+></LI
+><LI
+><P
+>&#13;						Beskriv g�rna i en (l�ngre) kommantar f�re en funktion eller
+						avancerat block i en funktion vad det g�r ist�llet f�r att
+						kommantera p� varje rad.
+					</P
+></LI
+><LI
+><P
+>&#13;						Kommentarer p� samma rad som koden blir l�tt
+						"Papegojkommentarer" s�dana �r fula och skall inte
+						g�ras.
+					</P
+></LI
+></UL
+>
+		</P
+><P
+>&#13;			Ett mer sammanh�ngande exempel finns nedan:
+
+			<DIV
+CLASS="example"
+><A
+NAME="AEN565"
+></A
+><P
+><B
+>Exempel 12-4. Kommentering sammanh�ngade exempel</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+//
+// kommentering.php
+//
+// Detta �r ett litet skript som bara demonstrerar kommentering.
+// I b�rjan av varje fil �r det v�ldigt bra om man har ett block
+// som detta d�r det st�r vad som finns i filen. Och hur man f�r
+// tag i programmeraren.
+//
+// Av: Marcus Rej�s &#60;marcus@rejas.se&#62;
+// Ver: 1.002
+//
+
+//
+// F�ljande visar hur anv�ndarens browser presenterar sig. Det
+// �r bra att f�re avancerade block eller funktioner i koden
+// beskriva vad koden g�r.
+//
+
+echo "Din browser presenterar sig som:&#60;br&#62;";
+echo $HTTP_USER_AGENT;
+
+
+//
+// Man kan �ven visa vilket IP de kommer fr�n
+//
+echo "&#60;p&#62;Du har IP-nummer:&#60;br&#62;";
+echo $REMOTE_ADDR;
+
+//
+// Skriver ut alla tal mellan 1 och 10
+//
+echo "&#60;p&#62;Alla tal mellan 1 och 10 ";
+$tal = 1;
+while ($tal &#60;= 10) {
+   echo "$tal ";
+   $tal++;
+}
+
+// Nedan visas samma kod med "Papegojkommentarer"
+echo "&#60;p&#62;Alla tal mellan 1 och 10 ";
+$tal = 1;               // Tal tilldelas 1
+while ($tal &#60;= 10) {    // S� l�nge som tal &#60;= 10
+   echo "$tal ";       // Skriv ut tal
+   $tal++;             // �ka tal med ett
+}
+
+// Vilket g�r l�ttast att f�rst�?
+
+// Exempel p� en block-kommentar. Nedanst�ende �r helt
+// bortkommenterat
+
+/*
+  Nedan visas samma kod med "Papegojkommentarer"
+$tal = 1;               // Tal tilldelas 1
+while ($tal &#60;= 10) {    // S� l�nge som tal &#60;= 10
+   echo "$tal ";       // Skriv ut tal
+   $tal++;             // �ka tal med ett
+}
+*/
+
+echo "&#60;hr&#62;Detta �r bara ett skript som demonstrerar kommentering.
+Titta p� k�llkoden ist�llet.";
+
+?&#62;
+
+				</PRE
+></DIV
+>
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN568"
+>Mer l�sning</A
+></H1
+><P
+>&#13;			L�nkar till mera l�sning f�r den intresserade
+		</P
+><P
+>&#13;			Svensk text med massor av exempel p� indentering och
+			kommentering, samt l�nkar till mer info p� engelska:
+			http://www.phpsidan.nu/res_articles.php?view=art&#38;id=48
+		</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="chap_indentering.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Hem</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="chap_strings.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Indentering</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Mer om str�ngar</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

@@ -1,0 +1,299 @@
+<chapter id="chap_datornatverk"><title>Datornätverk</title>
+	<abstract>
+		<para>
+			Att ansluta datorer till nätverk är idag regel snarare än
+			undantag. Alla nya datorer som säljs kan kompletteras med
+			nätverkskort och de flesta har det som standard redan från
+			början.
+		</para>
+		<para>
+			I detta kapitel tittar vi närmare på hur ett datornätverk byggs
+			upp, vad topologier är och hur de ser ut och hur man kan
+			sammanbygga flera mindre nät till ett stort.
+		</para>
+	</abstract>
+
+	<sect1><title>Inledning</title>
+		<para>
+			I det förra kapitlet tittade vi på seriell och parallell
+			överföring. Vid sådan kommunikation är det alltid två parter
+			som talar med varandra. I detta kapitel tittar vi lite längre
+			upp ser hur man bygger mer avancerade kommunikationsnät med en
+			mer avancerad struktur där datorer efter givna regler kan
+			kommunicera med varandra. Dessa nät kallar vi kort och gott för
+			datornät.
+		</para>
+		<para>
+			Ett datornätverk är ett system som består av två eller flera
+			datorer som kopplats ihop så att det kan utbyta data med
+			varandra. Ett litet nätverk kan kopplas ihop med ett annat för
+			att bilda ett större nätverk. Det största nätverket som finns
+			är Internet som består av extremt många nätverk, både stora och
+			små.
+		</para>
+
+	</sect1>
+
+	<sect1><title>LAN, WAN, MAN</title>
+		<para>
+			Man kallar nätverken för olika saker beroende på hur stort
+			område de sträcker sig över. Det vanligaste är det som kallas
+			för <emphasis>LAN, Local Area Network</emphasis> som är ett
+			nätverk som oftast håller sig inom samma byggnad. Det finns
+			dock inget som hindrar att även ett LAN utbreder sig mellan
+			flera byggnader eller ett campus. På svenska säger vi lokalt
+			nätverk eller just LAN som är den engelska förkortningen. Allt
+			från små hemmanätverk till ganska stora företagsnätverk hör
+			till denna grupp.  
+		</para>
+
+		<para>
+			Ett nätverk som sträcker sig mellan flera byggnader, inte
+			sällan långt från varandra, eller mellan olika städer kallas
+			för ett <emphasis>WAN, Wide Area Network</emphasis>. Ett WAN
+			består oftast av två eller flera LAN som kopplats ihop till ett
+			större WAN. Ett exempel på ett WAN är Internet.
+		</para>
+
+		<para>
+			Storleksmässigt mellan LAN och WAN finns något som kallas för
+			<emphasis>MAN, Metropolitan Area Networks</emphasis>. Ett MAN
+			är större än ett LAN och kopplar ihop LAN inom ett begränsat
+			område, till exempel en stad, med hög kapacitet. I Sverige är
+			stadsnäten exempel på olika MAN. MAN är ett nyare begrepp än de
+			andra två och används inte så ofta. Det är inte fel att säga
+			WAN om ett MAN eftersom ett MAN också består av flera LAN. 
+		</para>
+	</sect1>
+
+	<sect1><title>Topologier</title>
+		<para>
+			Ett lokalt datornätverk  (LAN) kan byggas på en mängd olika
+			sätt. Både logiskt och fysiskt kan man välja olika lösningar.
+			Hur ett nätverk strukturellt är uppbyggt kallar vi för
+			<emphasis>topologi</emphasis>. En topologi kan beskriva både
+			hur nätet ser ut fysiskt (hur kablar är dragna) och hur det ser
+			ut logiskt. De topologierna som används är:
+			<emphasis>bussnät</emphasis>, <emphasis>stjärnnät</emphasis>
+			och <emphasis>ringnät</emphasis>.
+		</para>
+
+		<sect2><title>Bussnät</title>
+			<para>
+				I ett bussnät finns det en kabel till vilken alla datorer är
+				kopplade. Till den gemensamma kabeln (kallas för backbone) 
+				kopplas datorerna med så kallade drop-cables. I <xref
+				linkend="fig_bussnat"/> visas en schematisk bild av ett
+				bussnät. Överst i bilden är backbone-kabeln med terminatorer
+				i ändarna.  Från den går så kallade drop-cables till de
+				olika datorerna på nätverket. 
+																												
+
+				<figure id="fig_bussnat"><title>Bussnät</title>
+					<mediaobject>
+  						<imageobject>
+      					<imagedata scalefit="1" fileref="bilder/bussnat.jpeg" format="JPEG" />
+        				</imageobject>
+  						<imageobject>
+      					<imagedata scalefit="1" fileref="bilder/bussnat.eps" format="EPS" />
+        				</imageobject>
+						<textobject>
+							<phrase>
+								Schematisk bild av ett bussnät med en
+								backbone-kabel och drop-cables till datorerna.
+							</phrase>
+						</textobject>
+					</mediaobject>
+				</figure>	
+			</para>
+			<para>
+				Bussnätverk är relativt billiga att installera. Ett problem
+				med dem är att alla delar av nätet är beroende av
+				backbone-kabeln.  Bara en dator i taget kan sända ut data på
+				nätet. Detta leder till att nätverket blir långsammare ju
+				fler datorer som ansluts.  För att signaler på
+				backbone-kabeln inte skall kunna studsa fram och tillbaka
+				(och så på sätt ockupera nätet längre än nödvändigt) så
+				måste backbone-kabeln ha <emphasis>terminatorer</emphasis> i
+				båda ändarna. Terminatorn är egentligen ett motstånd som
+				dämpar signalen.
+			</para>
+		</sect2>
+		
+		<sect2><title>Stjärnnät</title>
+			<para>
+				I ett stjärnnät kopplas alla datorer till en central punkt
+				som kallas för <emphasis>hub</emphasis>. Hub, som brukar
+				försvenskas till hubb, är engelska och betyder nav. I <xref
+				linkend="fig_stjarnnat"/> visas ett stjärnnät. Om man tittar
+				på bilden och jämför hubben med navet på ett hjul så förstår
+				man varför den kallas hubb och varför topologin kallas
+				stjärnnät.
+	
+				<figure id="fig_stjarnnat"><title>Stjärnnät</title>
+					<mediaobject>
+  						<imageobject>
+      					<imagedata scalefit="1" fileref="bilder/stjarnnat.jpeg" format="JPEG" />
+        				</imageobject>
+  						<imageobject>
+      					<imagedata scalefit="1" fileref="bilder/stjarnnat.eps" format="EPS" />
+        				</imageobject>
+						<textobject>
+							<phrase>
+								Schematisk bild av ett stjärnnät. I mitten syns
+								hubben och maskinerna sitter på kablar som
+								strålar ut från den som en stjärna.
+							</phrase>
+						</textobject>
+					</mediaobject>
+				</figure>	
+			</para>
+			<para>
+				Stjärnnät är den vanligaste topologin i nyinstallerade
+				nätverk idag. Den är billig att installera och om någon del
+				av nätverket fallerar behöver inte nödvändigtvis hela nätet
+				påverkas. Hubben i mitten fungerar så att en dator sänder
+				och alla andra lyssnar, bara den datorn som meddelandet är
+				avsett för sparar och behandlar meddelandet. Om någon dator
+				faller ur nätverket så spelar det ingen roll för de övriga.
+				Hubbar ersätts idag ofta med switchar. En switch fungerar
+				som en hubb men håller reda på till vilken dator som ett
+				meddelande skall. På så sätt kan flera maskiner utbyta data
+				samtidigt oberoende av varandra. Det gör att nätverkets
+				kapacitet ökar markant. 
+			</para>
+		</sect2>
+		
+		<sect2><title>Ringnät</title>
+			<para>
+				I både bussnät och stjärnnät så finns det en central del som
+				alltid måste fungera (backbone respektive hubben). I ett
+				ringnät behövs inte detta utan noderna (datorerna) är
+				kopplade till varandra utan någon central enhet. Detta är
+				möjligt eftersom alla datorer har två anslutningar, en från
+				föregående dator och en till nästa dator. När cirkeln av
+				datorer är sluten har man fått en ring, därav namnet
+				ringnät. I <xref linkend="fig_ringnat"/> ser vi ett exempel
+				på ett ringnät. Observera att ringen ofta består av en så
+				kallad MAU, <emphasis>Media Access Unit</emphasis>. Denna
+				MAU innehåller en logisk ring och påminner till utseendet om
+				en hubb eller switch. Med en MAU får en ringnät samma
+				fysiska topologi om ett stjärnnät.
+
+				<figure id="fig_ringnat"><title>Ringnät</title>
+					<mediaobject>
+  						<imageobject>
+      					<imagedata scalefit="1" fileref="bilder/ringnat.jpeg" format="JPEG" />
+        				</imageobject>
+  						<imageobject>
+      					<imagedata scalefit="1" fileref="bilder/ringnat.eps" format="EPS" />
+        				</imageobject>
+						<textobject>
+							<phrase>
+								Schematisk bild av ett ringnät. Datorena bildar
+								en ring. Varje dator har två anslutningar, en
+								till varje granne i ringen.
+							</phrase>
+						</textobject>
+					</mediaobject>
+				</figure>
+			</para>
+			<para>
+				En nackdel med ringnät är att de är relativt känsliga för
+				störningar. Om cirkeln bryts kommer kommunikationen inte att
+				fungera. Detta försöker man undvika genom att skydda
+				kablarna så mycket som möjligt och ibland drar man även
+				dubbla cirklar.  Ringnät är inte speciellt vanliga idag utan
+				idag byggs i huvudsak stjärnnät när man bygger ett nytt
+				nätverk.
+			</para>
+		</sect2>
+	</sect1>
+
+	<sect1 id="sect_accessmetoder"><title>Accessmetoder</title>
+		<para>
+			I alla tre topologier som vi gått igenom måste det finnas
+			regler för vilken dator som får sända när. I inget av näten kan
+			alla datorer prata i munnen på varandra på samma kabel. Det går
+			inte eftersom det inte fysiskt fungerar. För att detta inte
+			skall ske och för att det inte skall bli katastrof om det sker
+			så finns det vissa regler för hur datorerna får tala. Dessa
+			regler kallas för accessmetoder och är i själva verket
+			protokoll som säger vilken dator som för tillfället har rätt
+			att använda det gemensamma mediet (kabeln). Om du skall ringa
+			till din kompis så får du en upptaget-ton om han eller hon
+			talar i telefonen, du får försöka igen lite senare. Det är ett
+			exempel på en relativt enkel accessmetod.
+		</para>
+		<para>
+			Den vanligaste accessmetoden är en med det krångliga namnet
+			<emphasis>CSMA/CD</emphasis> som betyder: <emphasis>Carrier
+			Sense Multiple Access / Collision
+			Detection</emphasis><footnote><para>Datorkommunikation är ett
+			underbart ämne med underbara förkortningar!</para></footnote>.
+			Vi tar det steg för steg. Carrier Sense innebär att en dator
+			innan den sänder måste känna efter om det är någon som använder
+			nätet. Är det det så måste datorerna vänta tills det blir
+			ledigt.  Multiple Access betyder att alla får använda nätet men
+			inte samtidigt. Collision Detection innebär att om två stycken
+			eller flera börjar sända samtidigt så skall detta detekteras
+			och de får sända en i taget. I praktiken så fungerar det så att
+			om en kollision upptäcks så slutar alla inblandade att sända
+			och väntar en slumpvis tidsperiod. På så sätt minimeras risken
+			att de börjar sända samtidigt igen. Naturligtvis gör
+			kollisioner att trafiken i systemet går långsammare. På hubbar
+			brukar det ofta finnas lampor som indikerar att en kollision
+			har inträffat. CSMA/CD används i nätverksprotokollet Ethernet.
+		</para>
+		<para>
+			En variant på CSMA/CD är <emphasis>CSMA/CA</emphasis>.
+			Alla bokstäver står för samma sak (och samma innebörd)
+			utom då CA som står för <emphasis>Collision
+				Avoidance</emphasis>. Det fungerar så att en
+			dator innan den börjar sända skickar ut ett litet
+			meddelande för att kontrollera att nätverket är ledigt
+			och om det är det skickar ut riktiga data. Det gör att
+			kollisioner inte behöver ske med riktiga data utan bara
+			med de små "provskotten".  CSMA/CA används i LocalTalk
+			som är ett nätverksprotokoll från Apple och i de flesta
+			av våra trådlösa nätverk.
+		</para>
+		<para>
+			CSMA/CD och CSMA/CA passar när nätverket består av ett
+			gemensamt media, till exempel en kabel eller en hubb. I fallet
+			med ringnät passar inte detta eftersom det är olika kablar i de
+			olika delarna av nätverket (studera <xref
+			linkend="fig_ringnat"/>).  I ett ringnät kan man istället
+			använda en accessmetod som heter <emphasis>token
+			passing</emphasis>. Token passing går ut på att en token
+			cirkulerar runt i nätverket ungefär som en stafettpinne. Varje
+			dator får stafettpinnen och skickar den vidare. Det finns bara
+			en stafettpinne och bara den dator som har stafettpinnen får
+			sända data. Dessa data och stafettpinen skickas vidare. Alla
+			datorer skickar vidare och den som aktuella data är avsedd för
+			kopierar dessa  data och skickar vidare. När dessa data kommer
+			tillbaka (med stafettpinnen) till avsändaren tar den bort dessa
+			data från nätet och skickar stafettpinnen vidare. Detta gör att
+			kollisioner helt kan undvikas. Token Passing används i
+			nätverksteknologin Token Ring från IBM.
+		</para>
+	</sect1>
+
+	<sect1><title>Sammanfattning</title>
+		<para>
+			I detta kapitel har du lärt dig vad ett datornätverk är. Du har
+			lärt dig de olika topologierna och hur de ser ut och fungerar.
+			Du skall även veta vad accessmetoder är, vad de vanligaste
+			heter och hur de fungerar.
+		</para>	
+	</sect1>
+</chapter>	
+
+
+<!-- Keep this comment at the end of the file
+tab-width: 3
+vim600: fdm=syntax sw=3 ts=3
+vim: sw=3 ts=3
+vi: sw=3 ts=3
+-->
+

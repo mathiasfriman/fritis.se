@@ -1,0 +1,727 @@
+2004-05-31 08:35  rejas
+
+	Changed:
+		chap_epost.xml (1.3), "Exp", lines: +4 -4
+
+	Fler typos som Pär Lindskog rapporterat.
+
+2004-05-31 00:10  rejas
+
+	Changed:
+		brev.xml (1.2), "Exp", lines: +45 -1
+		chap_epost.xml (1.2), "Exp", lines: +17 -16
+
+	Lade till ett brev med kommentarer från Pär Lindskog <lindskog
+	(snabel-a) imapcenter.net> angående IMAP. Jag kommer att föra in det
+	i texten sedan.
+
+2004-05-30 23:47  rejas
+
+	Changed:
+		datorkommunikation.xml (1.48), "Exp", lines: +5 -4
+
+	Lade till Pär Lindskog i credit som informerat om IMAP
+
+2004-04-24 23:43  rejas
+
+	Changed:
+		Makefile (1.9), "Exp", lines: +0 -1
+		chap_sakerhet.xml (1.4), "Exp", lines: +185 -137
+
+	Skrev lite  ... :)
+
+2004-04-24 22:44  rejas
+
+	Changed:
+		datorkommunikation.xml (1.47), "Exp", lines: +22 -3820
+
+	Flyttat kapitel till egna filer
+
+2004-04-24 22:44  rejas
+
+	Added:
+		chap_dataoverforing.xml (1.1)
+		chap_datornatverk.xml (1.1)
+		chap_internet.xml (1.1)
+		chap_internetteknik.xml (1.1)
+		chap_kablar.xml (1.1)
+		chap_modem.xml (1.1)
+		chap_natverkskomponenter.xml (1.1)
+		chap_protokoll.xml (1.1)
+		chap_publtele.xml (1.1)
+		chap_serpar.xml (1.1)
+
+	Lade till filer. Delar upp boken i flera filer med ett kapitel på
+	varje.
+
+2004-04-22 07:39  rejas
+
+	Changed:
+		chap_sakerhet.xml (1.3), "Exp", lines: +91 -38
+
+	Stavkoll och lite tillägg om de tre punkterna sekretess, integritet
+	och tillgänglighet
+
+2004-04-21 22:56  rejas
+
+	Changed:
+		chap_sakerhet.xml (1.2), "Exp", lines: +18 -1
+
+	Skapade rubriker för basic-saker under säkerhet. Skall sova nu :)
+
+2004-04-21 22:51  rejas
+
+	Added:
+		chap_sakerhet.xml (1.1)
+	Changed:
+		Makefile (1.8), "Exp", lines: +1 -1
+		datorkommunikation.xml (1.46), "Exp", lines: +4 -262
+
+	Flyttade säkerhet till en ny fil
+
+2004-04-21 22:33  rejas
+
+	Changed:
+		datorkommunikation.xml (1.45), "Exp", lines: +126 -10
+
+	Skrev om säkehet
+
+2004-04-20 07:41  rejas
+
+	Changed:
+		datorkommunikation.xml (1.44), "Exp", lines: +9 -3
+
+	Lade till länk till Säkerhetspresentationen
+
+2004-04-19 22:59  rejas
+
+	Changed:
+		Makefile (1.7), "Exp", lines: +1 -1
+		datorkommunikation.xml (1.43), "Exp", lines: +87 -6
+		rfcer.xml (1.7), "Exp", lines: +5 -2
+		laborationer/lab3_tcpip1.sxw (1.2), "Exp", lines: +34 -28
+
+	Skrev lite om säkerhet
+
+2004-03-29 19:53  rejas
+
+	Added:
+		chap_epost.xml (1.1)
+		chap_inledning.xml (1.1)
+	Changed:
+		datorkommunikation.xml (1.42), "Exp", lines: +6 -272
+
+	Skrivit lite på e-postkapitlet. Har även flyttat ut det och
+	inledningen till separata filer. Kommer att flytta ut flera filer
+	längre fram.
+
+2004-03-28 13:42  rejas
+
+	Changed:
+		datorkommunikation.xml (1.41), "Exp", lines: +164 -137
+		rfcer.xml (1.6), "Exp", lines: +3 -3
+
+	iSkrev lite på E-post, gjorde det till ett eget kapitel (näst sist)
+
+2004-03-25 08:44  rejas
+
+	Changed:
+		netmask.xml (1.5), "Exp", lines: +1 -1
+
+	Typo :-(
+
+2004-03-22 20:50  rejas
+
+	Changed:
+		datorkommunikation.xml (1.40), "Exp", lines: +12 -8
+
+	Lagt till kommentarer om Bengt Gördéns brev
+
+2004-03-22 20:45  rejas
+
+	Changed:
+		fdl-sv.xml (1.7), "Exp", lines: +1 -31
+
+	Slutgiltiga versionen
+
+2004-03-22 20:43  rejas
+
+	Added:
+		brev.xml (1.1)
+
+	Lade till en fil med kommentarer från läsare
+
+2004-02-05 09:31  rejas
+
+	Changed:
+		datorkommunikation.xml (1.39), "Exp", lines: +14 -2
+
+	Lade till ett litet avsnitt om NicSE. Kanske man skulle göra ett
+	helt nytt avsnitt om toppdomäner?
+
+2004-02-04 20:57  rejas
+
+	Changed:
+		liskola.dsl (1.3), "Exp", lines: +28 -27
+
+	Flyttade delen med radnummer till "common"
+
+2004-02-02 11:07  rejas
+
+	Changed:
+		datorkommunikation.xml (1.38), "Exp", lines: +15 -3
+
+	Lade till ett litet stycke om DNS Round Robin
+
+2004-01-27 22:35  rejas
+
+	Changed:
+		datorkommunikation.xml (1.37), "Exp", lines: +61 -21
+
+	Skrivit lite om standarder.
+
+2004-01-27 21:54  rejas
+
+	Changed:
+		liskola.dsl (1.2), "Exp", lines: +202 -26
+
+	Kommenterade den i överflöd så att andra skall kunna se vad jag har
+	gjort och kanske uppmuntras till att ändra den själv.
+
+	Den består nu av tre delar, en för "print", en för "html", och sedan
+	en med gemesamma deklarationer. I den gemensamma har jag ändrat
+	några av de svenska översättningarna som följer med eftersom jag
+	tycker de var lite knasiga, "Avsnitt som kallas hej in Kapitel 10"
+	till exempel.
+
+	Jonas, Jag kommer att fixa till det så att othercredit renderas
+	bättre senare. Förhoppningsvis innan "release".
+
+2004-01-27 20:21  rejas
+
+	Changed:
+		datorkommunikation.xml (1.36), "Exp", lines: +140 -4
+
+	Skrivit en del om Modem plus lite småfix.
+
+2004-01-26 15:41  rejas
+
+	Changed:
+		datorkommunikation.xml (1.35), "Exp", lines: +105 -3
+
+	Skrev mer om routing. Pedagogiken tangerar ett nytt lågvattenmärke
+	idag.  Routingen är utspridd på flera ställen i boken och det känns
+	som att dessa kapitel är mycket röriga. Skall läsa igenom dem och
+	se om jag kan få ordning på dem.
+
+2004-01-26 11:09  rejas
+
+	Changed:
+		dectobintabell.xml (1.3), "Exp", lines: +42 -63
+		netmask.xml (1.4), "Exp", lines: +8 -8
+
+	Typos
+
+2004-01-26 11:04  rejas
+
+	Changed:
+		datorkommunikation.xml (1.34), "Exp", lines: +20 -7
+		netmask.xml (1.3), "Exp", lines: +49 -0
+
+	Mer om CIDR
+
+2004-01-26 10:16  rejas
+
+	Changed:
+		datorkommunikation.xml (1.33), "Exp", lines: +77 -16
+		rfcer.xml (1.5), "Exp", lines: +6 -6
+
+	Lade till ett avsnitt om NAT
+
+2004-01-26 08:51  rejas
+
+	Deleted:
+		book.css (1.2)
+		docbook.dsl (1.3)
+	Added:
+		liskola.css (1.1)
+		liskola.dsl (1.1)
+	Changed:
+		Makefile (1.6), "Exp", lines: +3 -3
+
+	Skrivit om stylesheets.
+
+	I framtiden kanske bygg-systemet och stylesheetsen skall vara i en
+	egen modul så att dessa kan utvecklas för sig av de som kan.
+
+2004-01-25 18:19  rejas
+
+	Added:
+		fdl.xml (1.1)
+	Changed:
+		datorkommunikation.xml (1.32), "Exp", lines: +23 -10
+
+	Följer FDL och inkluderar både den engelska och svenska texten
+
+2004-01-25 16:53  rejas
+
+	Changed:
+		datorkommunikation.xml (1.31), "Exp", lines: +36 -4
+
+	Lade till nya bilder och började skriva om routing, men saknar
+	totalt inspiration just nu.
+
+2004-01-25 16:48  rejas
+
+	Added:
+		bilder/ositcpip.eps (1.1)
+		bilder/ositcpip.jpeg (1.1)
+		bilder/tcpip.eps (1.1)
+		bilder/tcpip.jpeg (1.1)
+	Changed:
+		bilder/ifconfig.eps (1.4), "Exp", lines: +15983 -3478
+		bilder/ifconfig.jpeg (1.2), "Exp", lines: +644 -450
+
+	Lade till en bild på TCP/IP vs OSI och en på TCP/IP-modellen.
+	Uppdaterade ifconfig så att den visar utdata från samma system som
+	de övriga.
+
+2004-01-25 09:25  rejas
+
+	Changed:
+		datorkommunikation.xml (1.30), "Exp", lines: +13 -13
+		ovningsuppgifter.xml (1.2), "Exp", lines: +1 -1
+		rfcer.xml (1.4), "Exp", lines: +1 -1
+
+	Lade till id= på alla kapitel eftersom dess nu blir filnamn när
+	html-output skapas.
+
+2004-01-25 09:24  rejas
+
+	Changed:
+		docbook.dsl (1.2), "Exp", lines: +4 -0
+
+	Lade till så att filnamnen i HTML-output blir samma som id. Det är
+	bra om någon utifrån vill länka till sidorna så att man vet att de
+	inte byter namn hur som helst.
+
+	Ni som eventuellt använder denna fil bör checka ut den igen eller be
+	mig att få en ny.
+
+2004-01-22 17:15  rejas
+
+	Added:
+		ovningsuppgifter.xml (1.1)
+		services.xml (1.1)
+		topdomains.xml (1.1)
+	Changed:
+		datorkommunikation.xml (1.29), "Exp", lines: +43 -439
+
+	Ersatte alla avsnitt "Övningsuppgifter" med "Sammanfattning". Alla
+	har inte innehåll ännu. Flyttade övningsuppgifterna till ett
+	Appendix.  Flyttade alla Appenxix till separata filer, dels för att
+	göra dokumentet mindre, men även för att de skall gå att använda i
+	andra dokument.
+
+2004-01-22 15:51  rejas
+
+	Changed:
+		datorkommunikation.xml (1.28), "Exp", lines: +32 -15
+
+	Skrev på kapitlet om Internet, får vara så länge.
+
+2004-01-22 14:48  rejas
+
+	Changed:
+		datorkommunikation.xml (1.27), "Exp", lines: +14 -17
+
+	Protokollkapitlet
+
+2004-01-22 14:45  rejas
+
+	Changed:
+		datorkommunikation.xml (1.26), "Exp", lines: +12 -6
+
+	Modemkapitlet
+
+2004-01-22 14:35  rejas
+
+	Changed:
+		datorkommunikation.xml (1.25), "Exp", lines: +21 -15
+
+	Pillat lite med kapitlet om kablar.
+
+2004-01-22 14:17  rejas
+
+	Changed:
+		datorkommunikation.xml (1.24), "Exp", lines: +19 -8
+		fdl-sv.xml (1.6), "Exp", lines: +185 -139
+
+	Finputsat på kapitlet om datornätverk.
+
+	(Ny version av GNU FDL, ännu inte den slutgitliga)
+
+2004-01-22 13:56  rejas
+
+	Changed:
+		datorkommunikation.xml (1.23), "Exp", lines: +32 -7
+
+	Lade till stubbar för vad som skall bli avsnittet om säkerhet
+
+2004-01-22 12:31  rejas
+
+	Changed:
+		datorkommunikation.xml (1.22), "Exp", lines: +108 -11
+		rfcer.xml (1.3), "Exp", lines: +6 -6
+
+	Skrivit på kapitlet om Internet. Tror det börjar bli klart nu. Lade
+	till några RFC:er med.
+
+2004-01-21 16:07  rejas
+
+	Changed:
+		datorkommunikation.xml (1.21), "Exp", lines: +34 -28
+
+	Ändrade så att vi nu använder de nya bilderna.
+
+2004-01-21 15:57  rejas
+
+	Added:
+		bilder/arp.jpeg (1.1)
+		bilder/host.jpeg (1.1)
+		bilder/ifconfig.jpeg (1.1)
+		bilder/netstat.jpeg (1.1)
+		bilder/ping.jpeg (1.1)
+		bilder/route.jpeg (1.1)
+		bilder/traceroute.jpeg (1.1)
+
+	Fler bilder.
+
+2004-01-21 15:55  rejas
+
+	Added:
+		bilder/amplitudmodulering.eps (1.1)
+		bilder/amplitudmodulering.jpeg (1.1)
+		bilder/analog-digital.eps (1.1)
+		bilder/analog-digital.jpeg (1.1)
+		bilder/asynkron.eps (1.1)
+		bilder/asynkron.jpeg (1.1)
+		bilder/bussnat.eps (1.1)
+		bilder/bussnat.jpeg (1.1)
+		bilder/fasskiftesmodulering.eps (1.1)
+		bilder/fasskiftesmodulering.jpeg (1.1)
+		bilder/frekvensmodulering.eps (1.1)
+		bilder/frekvensmodulering.jpeg (1.1)
+		bilder/hubb.eps (1.1)
+		bilder/hubb.jpeg (1.1)
+		bilder/natvarksexempel.eps (1.1)
+		bilder/natvarksexempel.jpeg (1.1)
+		bilder/osi.eps (1.1)
+		bilder/osi.jpeg (1.1)
+		bilder/parallell.eps (1.1)
+		bilder/parallell.jpeg (1.1)
+		bilder/ringnat.eps (1.1)
+		bilder/ringnat.jpeg (1.1)
+		bilder/seriell.eps (1.1)
+		bilder/seriell.jpeg (1.1)
+		bilder/stjarnnat.eps (1.1)
+		bilder/stjarnnat.jpeg (1.1)
+		bilder/switch.eps (1.1)
+		bilder/switch.jpeg (1.1)
+		bilder/telefonsamtal.eps (1.1)
+		bilder/telefonsamtal.jpeg (1.1)
+
+	Lade till nya bilder.
+
+	Dessa bilder är ritade på papper och sedan skannade. De skall
+	ersättas av andra sedan när någon Illustratör har klivit fram.
+
+2004-01-20 18:24  rejas
+
+	Changed:
+		fdl-sv.xml (1.5), "Exp", lines: +20 -19
+		bilder/arp.eps (1.3), "Exp", lines: +2199 -1059
+		bilder/host.eps (1.3), "Exp", lines: +2096 -987
+		bilder/ifconfig.eps (1.3), "Exp", lines: +3482 -1714
+		bilder/netstat.eps (1.3), "Exp", lines: +3126 -1535
+		bilder/ping.eps (1.3), "Exp", lines: +4088 -2171
+		bilder/route.eps (1.3), "Exp", lines: +2088 -1012
+		bilder/traceroute.eps (1.3), "Exp", lines: +4141 -1984
+
+	Fixade bilderna
+
+	Ny version av FDL
+
+2004-01-20 13:45  rejas
+
+	Changed:
+		Makefile (1.5), "Exp", lines: +4 -2
+		datorkommunikation.xml (1.20), "Exp", lines: +122 -37
+		index.in (1.2), "Exp", lines: +1 -1
+		bilder/arp.eps (1.2), "Exp", lines: +1081 -38288
+		bilder/host.eps (1.2), "Exp", lines: +1006 -38288
+		bilder/ifconfig.eps (1.2), "Exp", lines: +1733 -35111
+		bilder/netstat.eps (1.2), "Exp", lines: +1557 -38288
+		bilder/ping.eps (1.2), "Exp", lines: +2193 -35111
+		bilder/route.eps (1.2), "Exp", lines: +1031 -35111
+		bilder/traceroute.eps (1.2), "Exp", lines: +2003 -40132
+
+	Minskade bilderna en del ...
+
+2004-01-20 11:18  rejas
+
+	Added:
+		bilder/arp.eps (1.1)
+		bilder/arp.png (1.1)
+		bilder/host.eps (1.1)
+		bilder/host.png (1.1)
+		bilder/ifconfig.eps (1.1)
+		bilder/ifconfig.png (1.1)
+		bilder/netstat.eps (1.1)
+		bilder/netstat.png (1.1)
+		bilder/ping.eps (1.1)
+		bilder/ping.png (1.1)
+		bilder/route.eps (1.1)
+		bilder/route.png (1.1)
+		bilder/traceroute.eps (1.1)
+		bilder/traceroute.png (1.1)
+
+	Lade till lite bilder (Sorry Tim, det här logmailet kommer att
+	studsa)
+
+	Bilderna är skärmdumpar av program. Kanske får göra om dem med vit
+	bakgrund senare.
+
+2004-01-20 09:35  rejas
+
+	Changed:
+		datorkommunikation.xml (1.19), "Exp", lines: +393 -396
+
+	Snyggade till koden lite här och var. INGEN FÖRÄNDRING AV
+	INNEHÅLLET.
+
+2004-01-20 07:43  rejas
+
+	Changed:
+		datorkommunikation.xml (1.18), "Exp", lines: +331 -327
+
+	Jobbade med kapitlet om kablar. Det är inte klart ännu men det står
+	lite under varje rubrik så att det skall vara läsbart.
+
+	Mer om kablarna kommer
+
+2004-01-20 01:21  rejas
+
+	Changed:
+		datorkommunikation.xml (1.17), "Exp", lines: +379 -373
+
+	Skrev lite om telenätet.
+
+	Inte helt 100 på att allt är riktigt just nu. Telias sida säger inte
+	så mycket men jag skall kolla upp det sen ... lägga i todo ...
+
+2004-01-19 21:26  rejas
+
+	Changed:
+		rfcer.xml (1.2), "Exp", lines: +3 -3
+
+	Mindre typo :-(
+
+2004-01-19 20:57  rejas
+
+	Added:
+		rfcer.xml (1.1)
+	Changed:
+		Makefile (1.4), "Exp", lines: +1 -1
+		datorkommunikation.xml (1.16), "Exp", lines: +431 -463
+
+	Lagt till ett appendix med de RFC:er (eller några av dem) som har
+	med boken att göra. Kan vara roligt att slå i eller visa som
+	exempel.
+
+	Har även uppdaterat stycket om Internet, mer kommer.
+
+2004-01-19 20:09  rejas
+
+	Changed:
+		datorkommunikation.xml (1.15), "Exp", lines: +21 -5
+
+	Skrev ett kort stycke om IMAP
+
+2004-01-19 18:52  rejas
+
+	Changed:
+		datorkommunikation.xml (1.14), "Exp", lines: +58 -15
+
+	Skrivit lite på kapitlet om TCP/IP
+
+	Skrivit om:
+
+	IP TCP UDP ARP ICMP
+
+2004-01-19 09:50  rejas
+
+	Changed:
+		datorkommunikation.xml (1.13), "Exp", lines: +99 -14
+
+	Ändrade / Lade till lite i TCP/IP-avsnittet
+
+2004-01-19 07:58  rejas
+
+	Changed:
+		datorkommunikation.xml (1.12), "Exp", lines: +8 -9
+
+	Mindre fel som bara syns i pdf- eller ps-versionen.
+
+2004-01-18 23:16  rejas
+
+	Changed:
+		datorkommunikation.xml (1.11), "Exp", lines: +5 -2
+		dectobintabell.xml (1.2), "Exp", lines: +12 -3
+		hextodectabell.xml (1.2), "Exp", lines: +2 -2
+		kommandotabell.xml (1.2), "Exp", lines: +23 -9
+		netmask.xml (1.2), "Exp", lines: +247 -51
+
+	Lite småpill, inget Major. Tyvärr ...
+
+2004-01-18 23:16  rejas
+
+	Added:
+		laborationer/lab3_tcpip1.sxw (1.1)
+
+	Lade till en ny laboration
+
+2004-01-18 14:18  rejas
+
+	Added:
+		dectobintabell.xml (1.1)
+	Changed:
+		datorkommunikation.xml (1.10), "Exp", lines: +5 -2
+
+	Lade, på begäran, in en tabell för att översätta från basen 10 till
+	bacen 2. Det kommer att uppmuntras i boken att man lär sig hur man
+	räknar istället eftersom det är bättre i längden. Dock ingår det
+	inte i kursen så det är inte fel att lägga in tabellen så att de
+	som vill kan använda den.
+
+2004-01-18 13:07  rejas
+
+	Changed:
+		datorkommunikation.xml (1.9), "Exp", lines: +8 -10
+		fdl-sv.xml (1.4), "Exp", lines: +199 -184
+
+	Ny version av licensen. Den slutgiltiga versionen av licensen
+	beräknas vara klar om en vecka.
+
+2004-01-17 23:02  rejas
+
+	Added:
+		netmask.xml (1.1)
+
+	Lade till netmask.xml. Den skall bli ett appendix där CIDR
+	förklaras.  Den är ännu inte inkluderad i dokumentet, i morgon
+	kanske...
+
+2004-01-17 19:45  rejas
+
+	Changed:
+		datorkommunikation.xml (1.8), "Exp", lines: +9 -11
+
+	Lite knas efter ispell ... sorry
+
+2004-01-17 19:42  rejas
+
+	Changed:
+		fdl-sv.xml (1.3), "Exp", lines: +510 -593
+
+	Uppgraderade till senaste versionen
+
+2004-01-17 19:31  rejas
+
+	Changed:
+		Makefile (1.3), "Exp", lines: +5 -9
+
+	Städade lite. Behöver snyggas till.
+
+2004-01-17 19:30  rejas
+
+	Changed:
+		datorkommunikation.xml (1.7), "Exp", lines: +155 -155
+
+	Tog en tur med ispell :)
+
+2004-01-16 20:35  rejas
+
+	Added:
+		kommandotabell.xml (1.1)
+	Changed:
+		datorkommunikation.xml (1.6), "Exp", lines: +583 -713
+
+	Flyttade tabellen med kommandon till en egen fil. Gör så med alla
+	appendix.
+
+2004-01-16 16:21  rejas
+
+	Added:
+		.cvsignore (1.1)
+	Changed:
+		Makefile (1.2), "Exp", lines: +1 -0
+
+	Lade till .cvsignore
+
+	Lade till en rad i Makefile som postar ett litet brev till listan
+	när make pub (det vill säga en ny version publiceras). Makefilen är
+	överlag stökig och bör ses över. Något att göra efter 1.0 ... :)
+
+2004-01-15 20:52  rejas
+
+	Changed:
+		datorkommunikation.xml (1.5), "Exp", lines: +25 -25
+		fdl-sv.xml (1.2), "Exp", lines: +108 -110
+
+	Datan och datat -> data enligt erkänd expertis :-)
+
+2004-01-14 23:36  rejas
+
+	Changed:
+		datorkommunikation.xml (1.4), "Exp", lines: +328 -5
+
+	Jobbat med kapitlet om nätverkskomponenter
+
+2004-01-14 18:35  rejas
+
+	Changed:
+		datorkommunikation.xml (1.3), "Exp", lines: +295 -289
+
+	Jobbat med kapitel 4, datornätverk
+
+2004-01-14 15:26  rejas
+
+	Changed:
+		datorkommunikation.xml (1.2), "Exp", lines: +162 -187
+
+	Kapitel 1 och 2 korrläst av Johan Hammar
+
+2004-01-14 13:38  rejas
+
+	Added:
+		Makefile (1.1)
+		asciitabell.xml (1.1)
+		book.css (1.1)
+		datorkommunikation.xml (1.1)
+		docbook.dsl (1.1)
+		dtr1201.xml (1.1)
+		fdl-sv.xml (1.1)
+		hextodectabell.xml (1.1)
+		index.in (1.1)
+		outline.txt (1.1)
+		laborationer/lab1_hub_vs_switch.sxw (1.1)
+		laborationer/lab2_OSI.sxw (1.1)
+		bilder/ingen-bild.eps (1.1)
+		bilder/ingen-bild.jpeg (1.1)
+		bilder/ingen-bild.xcf (1.1)
+		bilder/konqueror.eps (1.1)
+		bilder/konqueror.jpeg (1.1)
+
+	Flyttade till nytt repository
+

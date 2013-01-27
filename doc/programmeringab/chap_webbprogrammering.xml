@@ -1,0 +1,73 @@
+<chapter id="chap_webbprogrammering">
+	<title>Webbrowser, webbserver och program</title>
+
+	<abstract>
+		<para>
+			När man skriver och kör ett PHP-program är det många delar som
+			skall samverka. Man skriver ett program som skall tolkas av en
+			PHP-tolk. Sedan skall utdata av detta program hanteras av en
+			webbläsare. Hur detta hänger ihop förklaras i detta kapitel.
+		</para>
+	</abstract>
+
+
+	<sect1>
+		<title>Webbläsaren</title>
+
+		<para>
+			Webbläsaren är den del av kedjan som är närmast användaren.
+			Webbläsaren är det som du eller dina användare kommer i kontakt
+			med. För att webbläsaren skall visa vettiga saker för användaren
+			gäller att den matas med vettiga saker från ditt program.
+		</para>
+
+		<para>
+			Webbläsaren förstår HTML
+			<footnote>
+				<para>
+					Moderna webbläsare förstår en massa annat också, men det
+					som är relevant i denna kurs är HTML
+				</para>
+			</footnote>
+			så det som skall komma till webbläsaren är HTML. Webbläsaren förstår
+			inte PHP-kod så PHP-koden måste tolkas av en PHP-tolk på webbservern.
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>Webbservern</title>
+
+		<para>
+			Webbservern har till uppgift att serva webbläsaren med webbsidor.
+			Kör man PHP så är det även på webbservern som PHP-koden tolkas.
+			PHP-tolken gör inget för att det som kommer ut ur PHP-koden skall
+			bli giltig HTML utan det är upp till dig som programmerare att se
+			till att den är det.
+		</para>
+
+		<para>
+			Webbservern har ofta en mängd olika funktioner beroende på vad den
+			för tillfället skall göra. Du kan till exempel ha rena HTML-sidor
+			parallellt med din PHP-filer. Webbservern vet vilka sidor som är
+			PHP och vilka som är HTML och hanterar dem därefter.
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>Program</title>
+		<para>
+			Programmet, eller skriptet, skall fungera så att det skriver ut
+			HTML-kod som webbservern kan skicka till användarens webbläsare.
+		</para>
+	</sect1>
+</chapter>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+tab-width: 3
+End:
+vim600: syn=xml fen fdm=syntax si
+vim: noet sw=3 ts=3 syn=sgml
+vi: ts=3 sw=3
+-->

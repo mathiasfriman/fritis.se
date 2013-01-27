@@ -1,0 +1,392 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Iterationer (Upprepningar, loopar)</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="Programmering i PHP"
+HREF="book1.html"><LINK
+REL="PREVIOUS"
+TITLE="Selektioner (Villkorssatser)"
+HREF="chap_selektioner.html"><LINK
+REL="NEXT"
+TITLE="Pseudokod"
+HREF="chap_pseudokod.html"><LINK
+REL="stylesheet"
+HREF="./book.css"
+TYPE="text/css"></HEAD
+><BODY
+CLASS="chapter"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Programmering i PHP</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="chap_selektioner.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="chap_pseudokod.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="chapter"
+><H1
+><A
+NAME="chap_iterationer"
+></A
+>Kapitel 9. Iterationer (Upprepningar, loopar)</H1
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Innehållsförteckning</B
+></DT
+><DT
+><A
+HREF="chap_iterationer.html#AEN464"
+>While-satsen</A
+></DT
+><DT
+><A
+HREF="chap_iterationer.html#AEN472"
+>do-while-satsen</A
+></DT
+><DT
+><A
+HREF="chap_iterationer.html#AEN478"
+>for-loopen</A
+></DT
+><DT
+><A
+HREF="chap_iterationer.html#AEN493"
+>Mer l�sning</A
+></DT
+></DL
+></DIV
+><BLOCKQUOTE
+CLASS="ABSTRACT"
+><DIV
+CLASS="abstract"
+><P
+></P
+><A
+NAME="AEN462"
+></A
+><P
+>&#13;			Datorprogram �r extremt bra p� att g�ra saker om och om igen, utan
+			att ledsna eller g�ra fel. Till detta anv�nder man n�gon typ av
+			iterationssats (iteration = upprepning).
+		</P
+><P
+></P
+></DIV
+></BLOCKQUOTE
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN464"
+>While-satsen</A
+></H1
+><P
+>&#13;			While-satsen �r en vanlig iterationssats. Den fungerar s� att en
+			sats (som kan vara ett block) k�rs om och om igen s� l�nge som ett
+			test �r sant. Studera f�ljande exempel som skriver ut tiotusen
+			ettor.
+
+			<DIV
+CLASS="example"
+><A
+NAME="AEN467"
+></A
+><P
+><B
+>Exempel 9-1. Exempel med while</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+// Exempel p� while-loop
+
+echo "&#60;h1&#62;Tiotusen ettor&#60;/h1&#62;";
+
+$a = 0;
+while ($a &#60; 10000) {
+   echo "1 ";
+   $a = $a + 1;
+}
+?&#62;
+
+
+				</PRE
+></DIV
+>
+
+			Vi tittar p� exemplet rad f�r rad. Raden som b�rjar med "//" �r en
+			kommentar, den kan ni ignorera, kommentarer �r viktiga men vi kommer
+			att g� igenom dem lite senare.
+		</P
+><P
+>&#13;			Den andra raden �r starten p� while-loopen (kallas �ven loop eftersom
+			den loopar om och om igen). S� l�nge som testet ($a &#60; 10000) �r
+			sant so kommer satsen efter att repeteras. N�r $a �r st�rre �n eller
+			lika med 10000 kommer loopen att avbryts. Om man i loopen gl�mmer att
+			�ka $a kommer testet alltid att vara sant och man kommer aldrig ur
+			loopen.  Detta kallas f�r en o�ndlig loop och �r ett vanligt
+			programmeringsfel som g�r att programmet h�nger sig eller kraschar.
+		</P
+><P
+>&#13;			Om testet inte �r sant fr�n b�rjan s� kommer aldrig det st�r i satsen
+			att k�ras. Se d�rf�r till att testet �r sant fr�n b�rjan.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN472"
+>do-while-satsen</A
+></H1
+><P
+>&#13;			Do-while liknar p� m�nga s�tt den vanliga while-satsen. Den enda
+			skillnaden �r att det som st�r i satsen alltid kommer att utf�ras
+			�tminstone en g�ng. Se f�ljande exempel:
+
+			<DIV
+CLASS="example"
+><A
+NAME="AEN475"
+></A
+><P
+><B
+>Exempel 9-2. Exempel med do-while</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+// Ett exempel p� hur man anv�nder do-while
+
+$i = 0;
+
+do {
+   echo "$i ";
+   $i = $i + 1;
+} while ($i &#60; 100);
+
+?&#62;
+
+
+				</PRE
+></DIV
+>
+
+			Tilldelningen till $i �r viktig eftersom den s�tter v�rdet d�r
+			loopen skall b�rja. I loopen 	skrivs f�rst $i ut och sedan �kas
+			variabeln $i med ett. Detta sker s� l�nge som $i �r mindre �n 100.
+			Allts� fr�n 0 till 99.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN478"
+>for-loopen</A
+></H1
+><P
+>&#13;			For �r den vanligaste iterationen. Den �r dock vid en f�rsta anblick
+			lite kr�ngligare �n de andra. Man kan om man vill anv�nda while
+			ist�llet f�r for om man vill, men n�r man kan for �r den mycket
+			smidigare.
+		</P
+><P
+>&#13;			for-loopen skriver man med det reserverade ordet for f�ljt av en
+			parentes. Inom parentesen skall det st� tre stycken uttryck. Dessa
+			tre skall se ut enligt f�ljande.
+
+			<P
+></P
+><UL
+><LI
+><P
+>&#13;						Det f�rsta kommer att exekveras en g�ng inan loopen b�rjar.
+					</P
+></LI
+><LI
+><P
+>&#13;						Det andra skall vara ett boolskt uttryck. Loopen kommer att
+						g� s� l�nge detta �r sant.
+					</P
+></LI
+><LI
+><P
+>&#13;						Det tredje k�rs efter varje g�ng som loopen har g�tt.
+					</P
+></LI
+></UL
+>
+		</P
+><P
+>&#13;			Nu k�nner jag att exempel �r p� sin plats igen:
+
+			<DIV
+CLASS="example"
+><A
+NAME="AEN490"
+></A
+><P
+><B
+>Exempel 9-3. Exempel med for-loop</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+//Exempel p� for-loop
+
+for ($i = 0; $i &#60;= 10; $i++) {
+   echo "$i&#60;br&#62;\n";
+}
+?&#62;
+
+
+				</PRE
+></DIV
+>
+
+			Oftast anv�nds de tre olika satserna p� precis det s�tt som visas
+			ovan. N�mligen att initiera en r�knare, kolla ett gr�nsv�rde och
+			r�kna upp r�knaren, men inget hindrar att man anv�nder dem p� andra
+			s�tt.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN493"
+>Mer l�sning</A
+></H1
+><P
+>&#13;			Aktuellt avsnitt i PHP-manualen:
+			<A
+HREF="http://www.php.net/manual/en/control-structures.php"
+TARGET="_top"
+>&#13;				<I
+CLASS="citetitle"
+>&#13;					http://www.php.net/manual/en/control-structures.php
+				</I
+>
+			</A
+>
+		</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="chap_selektioner.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Hem</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="chap_pseudokod.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Selektioner (Villkorssatser)</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Pseudokod</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

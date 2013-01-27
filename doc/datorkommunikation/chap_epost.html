@@ -1,0 +1,530 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>E-post</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="Datorkommunikation"
+HREF="book1.html"><LINK
+REL="PREVIOUS"
+TITLE="Mer om Internets teknik"
+HREF="chap_internetteknik.html"><LINK
+REL="NEXT"
+TITLE="Datasäkerhet och lagstiftning"
+HREF="chap_sakerhet.html"><LINK
+REL="stylesheet"
+HREF="./fritis.css"
+TYPE="text/css"></HEAD
+><BODY
+CLASS="chapter"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Datorkommunikation</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="chap_internetteknik.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="chap_sakerhet.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="chapter"
+><H1
+><A
+NAME="chap_epost"
+></A
+>Kapitel 13. E-post</H1
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Innehållsförteckning</B
+></DT
+><DT
+><A
+HREF="chap_epost.html#AEN1193"
+>E-post</A
+></DT
+><DT
+><A
+HREF="chap_epost.html#AEN1205"
+>Flera protokoll</A
+></DT
+><DT
+><A
+HREF="chap_epost.html#AEN1208"
+>Simple Mail Transport Protocol, SMTP</A
+></DT
+><DT
+><A
+HREF="chap_epost.html#AEN1215"
+>Post Office Protocol, POP</A
+></DT
+><DT
+><A
+HREF="chap_epost.html#AEN1219"
+>IMAP</A
+></DT
+><DT
+><A
+HREF="chap_epost.html#AEN1225"
+>Webmail</A
+></DT
+><DT
+><A
+HREF="chap_epost.html#AEN1231"
+>E-post och säkerhet</A
+></DT
+></DL
+></DIV
+><BLOCKQUOTE
+CLASS="ABSTRACT"
+><DIV
+CLASS="abstract"
+><P
+></P
+><A
+NAME="AEN1190"
+></A
+><P
+>&#13;			Från Wikipedia, den fria encyklopedin.
+		</P
+><P
+>&#13;			E-post, förkortning för "elektronisk post". En av de
+			ursprungliga typerna av meddelanden som vidarebefodras över
+			Internet och som kännetecknas av högre tillförlitlighet än
+			andra typer av elektroniska meddelanden. Tillkomsten av
+			fenomen som spam (oönskad skräppost) och datavirus har gjort
+			e-post mindre användbar på senare år, men den är fortfarande
+			den dominerande standarden för att skicka meddelanden över
+			Internet. 
+		</P
+><P
+></P
+></DIV
+></BLOCKQUOTE
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN1193"
+>E-post</A
+></H1
+><P
+>&#13;			E-post är den tjänst som av många räknas som den viktigaste på
+			Internet. Utan e-post står många företag stilla. I detta avsnitt
+			skall vi behandla e-post och hur det fungerar lite närmare.
+		</P
+><P
+>&#13;			I svenskt tal och skrift bör man använda ordet e-post före till
+			exempel e-mail eller bara mail. Framför allt bara mail eller
+			försvenskat till mejl är olyckligt eftersom det redan har en
+			annan betydelse på engelska, nämligen papperspost. Ytterligare
+			information om detta finns hos Svenska
+			Datatermgruppen<A
+NAME="AEN1197"
+HREF="#FTN.AEN1197"
+><SPAN
+CLASS="footnote"
+>[1]</SPAN
+></A
+>.
+		</P
+><P
+>&#13;			E-post var den tjänst som många såg som den mest användbara när
+			Internetliknande teknik presenterades i slutet på 60-talet. De
+			första e-postsystemen fungerade så att man hade en fil som
+			flera datorer kunde komma åt. I denna fil kunde man skriva
+			meddelanden som andra kunde läsa. Detta system var dock inte så
+			bra när man ville ha ett system där alla datorer skulle kunna
+			skicka meddelanden till varandra oavsett var de fanns och
+			oavsett vilket system de körde. Man utvecklade det vi i idag
+			kallar e-post.
+		</P
+><P
+>&#13;			Från början när det inte fanns så många datorer skickade man
+			breven till en viss användare på en viss dator. Efter ett tag, när
+			e-posten utvecklades kom man på den notation som vi fortfarande
+			använder i e-post adresser. Den med ett @ mellan användarnamnet
+			och datornamnet. Från början så var det just ett användarnamn och
+			ett datornamn som avsågs. Då hittade man som regel den man sökte
+			på en viss dator i systemet. I dag är det oftast så att det som
+			står före @ mostvarar ett namn och det som står efter @ är i regel
+			ett domännamn som mostvarar ett företag eller en ISP.
+		</P
+><P
+>&#13;			E-postadresserna så som vi är vana att se dem idag kom till
+			1971. Den som hittade på det var Raymond Tomlinson (1941-). Han
+			kom på det när han jobbade med att anpassa dåtidens e-post till
+			Arpanet.
+		</P
+><P
+>&#13;			Vad är då @? Detta tecken kallas för "at" på engelska. Det
+			betyder ungefär "på" eller "vid". Adressen rejas@se.linux.org
+			skulle då utläsas "rejas på se.linux.org" vilket stämmer bra.
+			På svenska kallas @ för snabel-a men den har också en mängd
+			olika smeknamn<A
+NAME="AEN1203"
+HREF="#FTN.AEN1203"
+><SPAN
+CLASS="footnote"
+>[2]</SPAN
+></A
+>.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN1205"
+>Flera protokoll</A
+></H1
+><P
+>&#13;			När du skickar ett e-brev till någon så kommer flera protokoll
+			att ha används innan mottagaren har läst brevet. Förutom TCP/IP,
+			DNS med mera används även minst ett par olika protokoll för
+			själva brevskickandet.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN1208"
+>Simple Mail Transport Protocol, SMTP</A
+></H1
+><P
+>&#13;			Det viktigaste protokollet som används är <SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Simple Mail
+			Transport Protocol, SMTP</I
+></SPAN
+>. Det är med SMTP som brevet
+			transporteras över Internet från dig till mottagaren. Man kan
+			säga att det är med SMTP som man skickar e-post.
+		</P
+><P
+>&#13;			Du startar ditt e-postprogram på din dator. Normalt så har du
+			ingen SMTP-server på din dator utan när du skickar brevet så
+			pratar ditt e-postprogram med en SMTP-server på ditt nät som
+			antingen tillhandahålls av din ISP eller av IT-avdelningen på
+			det företag du jobbar. Det protokoll som används mellan
+			e-postprogram och servern är SMTP.
+		</P
+><P
+>&#13;			När brevet nått din SMTP-server måste det skickas vidare.
+			Mottagaren har ju inte tillgång till din SMTP-server, och även
+			om mottagaren hade det så kan han eller hon inte veta att post
+			väntar på just din server. Istället så skickar din SMTP-server
+			brevet vidare till den SMTP-server som hanterar posten för det
+			domännamn som du angav i mottagarens e-postadress (det som står
+			till höger om "@" i e-postadressen). Information om vilken
+			server som ansvarar för e-posten för just den aktuella domänen
+			får din server från DNS-systemet. När brevet kommit dit så finns
+			det förhoppningvis på en server som mottagaren har tillgång
+			till. I vissa fall så hoppar brevet flera steg till innan det
+			nått den servern som just din mottagare kommer åt.
+		</P
+><P
+>&#13;			Nu återstår det bara för din mottagare att hämta och läsa brevet
+			från dig. Det finns flera olika sätt att göra det. De vanligaste
+			sätten är via protokoll som POP eller IMAP, men det blir
+			vanligare och vanligare att man använder något som kalls för
+			webbmail som är ett system för att, med hjälp av en webbläsare
+			läsa sin post direkt från SMTP-servern.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN1215"
+>Post Office Protocol, POP</A
+></H1
+><P
+>&#13;			Ett ganska gammalt, men fortfarande väldigt vanligt, sätt att
+			hämta sin e-post är att använda ett protokoll som heter
+			<SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Post Office Protocol, POP</I
+></SPAN
+>. Med hjälp av POP
+			hämtar du posten från din POP-server till lokala dator. De
+			flesta e-postprogram klarar att hämta post med POP. Märk att
+			SMTP har används hela tiden för att transportera brevet men
+			sista biten används andra protokoll. I det här fallet POP.  När
+			brevet flyttats (kallas ibland för poppats) till din dator tas
+			det oftast bort från POP-servern och lagras nu lokalt på din
+			hårddisk.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN1219"
+>IMAP</A
+></H1
+><P
+>Se även brevet från Pär Lindskog i i <A
+HREF="brev.html"
+>appendix K</A
+>
+		angående IMAP.</P
+><P
+>&#13;			IMAP är en forkortning för <SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Internet Message Access
+			Protocol</I
+></SPAN
+> är ett protokoll för att läsa e-posten med
+			ett e-postprogram. Till skillnad från POP så är IMAP avsett för
+			att läsa, sortera och söka bland breven på servern. (POP var ju
+			avsett för att hämta breven från servern till den lokala
+			datorn.) Fördelarna med IMAP är uppenbara, all e-post lagras
+			centralt på en server. Användarna kan komma åt från vilken
+			plats som helst. Till skillnad från POP så kan man med IMAP
+			också skapa mappar på servern och sortera breven i dem.
+			Nackdelen är kanske också uppenbar, att man läser breven från
+			servern gör att man är beroende av denna och måste ha en
+			fungerande anslutning till det nät där servern finns. Det finns
+			program som löser detta genom att spara en synkroniserad kopia
+			på den lokala datorn och synkronisera denna med servern när
+			programmet har kontakt med den.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN1225"
+>Webmail</A
+></H1
+><P
+>&#13;			En nackdel med POP och IMAP är att det krävs inställningar på
+			den dator man skall läsa sin post ifrån. Många vill idag kunna
+			läsa sin post på vilken dator som helst eftersom de ofta reser
+			eller använder flera olika datorer.
+		</P
+><P
+>&#13;			Det enklaste sättet att göra detta på är att använda sig av en
+			webbmail. Det är ett system då man istället för att hämta sin
+			post från leverantörens eller företagets SMTP-server med POP
+			eller IMAP, läser den direkt från servern med hjälp av en
+			webbmailprogramvara. Vad denna programvara gör är att möjliggöra
+			att man läser sin post via HTTP och ett vanlig webbläsare.
+			Eftersom nästan alla datorer idag har en webbläsare och är
+			anslutna till Internet kan man läsa sin post nästan varifrån som
+			helst.
+		</P
+><P
+>&#13;			Att kunna läsa sin post varifrån som helst och att slippa spara
+			sina brev på den egna datorn är stora fördelar som gör att många
+			använder webbmail. Det finns flera företag som använder gratis
+			webbmailtjänster som gör att du kan skaffa dig en e-postadress
+			alldeles gratis utan att ens ha en internetansluten dator. Men
+			det finns också nackdelar med webbmail.
+		</P
+><P
+>&#13;			Webbmail har flera nackdelar. Att hantera sin post med en
+			webbläsare är oftast krångligare och långsammare än att göra
+			det med ett vanligt e-postprogram. En annan nackdel är att du
+			måste vara uppkopplad hela tiden du skall läsa din post. Om du
+			hämtar posten med POP eller IMAP behöver du ju bara vara
+			ansluten till Internet just när du hämtar posten, sedan kan du
+			ju läsa den i lugn och ro även om du inte är uppkopplad. En
+			annan nackdel är att de flesta företag som erbjuder webbmail
+			har en gräns för hur mycket post du får spara på deras server.
+			Det gör att du men jämna mellanrum måste slänga dina brev för
+			att få plats med nya. Detta gäller i första han gratistjänster
+			men det är inte ovanligt att även sådana man betalar för eller
+			de inom företag har liknande gränser (om än oftast lite högre).
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN1231"
+>E-post och säkerhet</A
+></H1
+><P
+>&#13;			I nästa kapitel kommer vi att tala om säkerhet men det är ändå
+			på sin plats att tala lite om det redan nu när vi hanterar
+			e-post. E-post är nämligen en tjänst på Internet som skall
+			betraktas som osäker. En tumregel som är bra är att man inte
+			skall skriva någonting i ett e-brev som man inte skulle skriva
+			på ett vykort. Vill man skicka någonting som är lite hemligt
+			skall man använda sig av något verktyg för att kryptera sitt
+			brev så att obehöriga inte kan läsa det.
+		</P
+></DIV
+></DIV
+><H3
+CLASS="FOOTNOTES"
+>Noter</H3
+><TABLE
+BORDER="0"
+CLASS="FOOTNOTES"
+WIDTH="100%"
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="5%"
+><A
+NAME="FTN.AEN1197"
+HREF="chap_epost.html#AEN1197"
+><SPAN
+CLASS="footnote"
+>[1]</SPAN
+></A
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="95%"
+><P
+>http://www.nada.kth.se/dataterm/</P
+></TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="5%"
+><A
+NAME="FTN.AEN1203"
+HREF="chap_epost.html#AEN1203"
+><SPAN
+CLASS="footnote"
+>[2]</SPAN
+></A
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="95%"
+><P
+>Se svenska datatermgruppen på
+			http://www.nada.kth.se/dataterm/rek.html#a17</P
+></TD
+></TR
+></TABLE
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="chap_internetteknik.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Hem</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="chap_sakerhet.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Mer om Internets teknik</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Datasäkerhet och lagstiftning</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<chapter>
+<title id="diverse">Diverse begrepp</title>
+
+<para>Det finns några begrepp som är viktiga för <quote>finliret</quote> i
+C++. </para>
+
+<section>
+<title>Sekvenspunkt</title>
+
+<para>I vissa sammanhang skapar C++ temporära variabler som inte syns i koden.
+I vissa fall kan man se felmeddelanden som refererar till
+<quote>temporary</quote>. I de första versionerna av C++ var det oklart hur
+länge de leverl. För att reglera detta införde man begrepp som sekvenspunkt
+(eng: <quote>sequence point</quote>) och komplett sats (eng <quote>full
+statement</quote>). Det senare kan man säga är ett semikolon. Det förra
+inbegriper också det komplette vilkoret i t.ex. en if-sats.På dessa ställen i
+koden förstörs alla <emphasis>av kompilatorn genererade</emphasis> temporära
+objekt. </para>
+
+<para><remark>Lägg in exempel här....</remark></para>
+
+<para><remark></remark> </para>
+</section>
+
+<section>
+<title>inline</title>
+
+<para>Normal producerar kompilatorn kod så att varje funktion ligger för sig
+och anropas från annan kod. Om en funktion är inline:ad kopieras istället hela
+funktionen in på det ställe där den anropats. inline-deklarationer är ett tips
+till kompilatorn och har ingen betydelse för resultatet, men kan påverka
+prestanda, förhoppningsvis åt det bättre hållet, men inte nödvändigtvis.
+Dessutom är det inline bara ett tips som kompilatorn kan ignorera. Moderna
+kompilatorer kan dessutom själv gör kod inline fast den inte är deklarerad som
+sådan. </para>
+</section>
+
+<section>
+<title>Ovanliga operatorer</title>
+
+<para>Vissa operatorer i C++ används inte regelbundet, men det kan vara bra
+att veta att de finns även om man inte behöver komma ihåg dem i vardagligt
+bruk.</para>
+
+<section>
+<title>operator,</title>
+
+<para>Komma-operatorn</para>
+</section>
+
+<section>
+<title>operator -&gt;*</title>
+
+<para>pekare-till-medlem-dereferens.. Det</para>
+</section>
+
+<section>
+<title>kombinationer operator *= etc</title>
+
+<para>Många operatorer kan kombineras med = (tilldelning) för att gör kod
+kortare. +=-operatorn är välkänd men det finns även *=, /=, &amp;=, |=, %=,
+^=.</para>
+</section>
+</section>
+</chapter>

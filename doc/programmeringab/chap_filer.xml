@@ -1,0 +1,282 @@
+<chapter id="chap_filer">
+	<title>Filer och filhantering</title>
+
+	<abstract>
+		<para>
+			När man skriver datorprogram vill man ofta spara information mellan
+			olika körningar program. Ett sätt att göra detta är att lagra
+			informationen i en eller flera filer. I detta kapitel behandlas hur
+			man gör.
+		</para>
+	</abstract>
+
+	<sect1>
+		<title>Filer</title>
+
+		<para>
+			Innan vi börjar använda oss av filer i programmeringen skall vi
+			titta lite kort på vad en fil är. En fil är en samling
+			sammanhängande information på ett medium, oftast en hårddisk,
+			som man namngett.
+		</para>
+
+		<para>
+			För att läsa eller skriva i filen använder man ett filhandtag
+			(eng.  file handle). När man programmerar kan man inte hoppa runt
+			i filen hur som helst lika enkelt som man gör i till exempel ett
+			ordbehandlingsprogram.
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>Arbetsmetod vid arbete med filer</title>
+
+		<para>
+			När man jobbar med filer i PHP använder man följande metodik.
+		</para>
+
+		<para>
+			Man öppnar en fil med ett anrop till funktionen <emphasis>fopen
+			</emphasis>. Den funktionen returnerar ett filhandtag. Detta
+			filhandtag kan man sedan använda för att skriva till eller läsa
+			från filen. Slutligen skall man stänga sin fil med funktionen
+			<emphasis>fclose</emphasis>. När man har en fil öppen finns det
+			också, även om man inte märker det så ofta, en så kallad filpekare
+			som håller reda på var i filen man är.
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>Funktionen fopen</title>
+
+		<para>
+			Funktionen fopen tar två argument och returnerar ett
+			filhandtag.  Så här kan ett anrop till fopen se ut:
+
+			<example>
+				<title>Funktionen fopen</title>
+				<programlisting>
+<![CDATA[
+<?php
+$filhandtag = fopen("/home/rejas/data/testfil", "a");
+?>
+]]>
+				</programlisting>
+			</example>
+
+			Vad som sker är att $filhandtag tilldelas ett handtag till filen
+			testfil i katalogen /home/rejas/data/. Observera att detta är
+			sökvägen till filen på servern och att den användare som kör
+			webservern måsta ha rätt att läsa och eventuellt skriva till filen.
+			Det första argumentet är således filnamnet, men vad är det andra?
+			Jo det andra talar om på vilket sätt filen skall öppnas. Följande
+			är de vanligaste värdena på det andra argumentet och deras
+			innebörder:
+
+
+			<table frame='all'>
+				<title>Andra argumentet till fopen</title>
+				<tgroup cols='2' align='left' colsep='1' rowsep='1'>
+					<colspec colname='c1'/>
+					<colspec colname='c2'/>
+
+					<thead>
+						<row>
+							<entry>Värde</entry>
+							<entry>Innebörd</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row>
+							<entry>r</entry>
+							<entry>
+								Öppnar en fil endast för läsning, filpekaren
+								placeras först i filen.
+							</entry>
+						</row>
+						<row>
+							<entry>r+</entry>
+							<entry>
+								Öppnar en fil för läsning och skrivning, filpekaren
+								placeras i början av filen.
+							</entry>
+						</row>
+						<row>
+							<entry>w</entry>
+							<entry>
+								Öppnar en fil endast för skrivning, filpekaren ställs
+								ställs först i filen. Om filen inte finns skapas den
+								och om den finns så blir den överskriven.
+							</entry>
+						</row>
+						<row>
+							<entry>w+</entry>
+							<entry>Samma som w men öppnar även för läsning</entry>
+						</row>
+						<row>
+							<entry>a</entry>
+							<entry>
+								Öppnar endast för skrivning. Skapar filen om den inte
+								finns. Ställer filpekaren i slutet av filen.
+							</entry>
+						</row>
+						<row>
+							<entry>a+</entry>
+							<entry>Samma som a men även för läsning.</entry>
+						</row>
+						<row>
+							<entry>x</entry>
+							<entry>
+								Öppnar en fil för skrivning och placerar filpekaren i
+								början av filen. Om filen redan existerar returnerar
+								funktionen FALSE och ett varnings meddelande kan komma
+								att skrivas ut. Annars skapas filen.
+							</entry>
+						</row>
+						<row>
+							<entry>x+</entry>
+							<entry>
+								Samma som x men tillåter även läsning av filen.
+							</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+
+			Argumenten med + till fopen verkar bra att använda men används
+			faktiskt inte så ofta som man kan tro.
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>Funktionen fwrite</title>
+
+		<para>
+			Funktionen fwrite använda för att skriva till en fil. Den tar
+			två argument, ett filhandtag och så det som skall skrivas till
+			filen.
+		</para>
+
+		<para>
+			Ett exmpel:
+
+			<example>
+				<title>Funktionen fwrite</title>
+				<programlisting>
+<![CDATA[
+<?php
+$fh = fopen("/home/rejas/data/testfil", "a");
+fwrite($fh, "Hej på dig\n");
+fclose($fh);
+?>
+]]>
+				</programlisting>
+			</example>
+
+			Funktionen fwrite returnerar false om det skulle vara så att den
+			inte kan skriva till filen så det kan vara bra att kolla att det
+			går bra.
+
+			<example>
+				<title>Funktionen fwrite med felkontrol</title>
+				<programlisting>
+<![CDATA[
+<?php
+$fh = fopen("/home/rejas/data/testfil", "a");
+if (! fwrite($fh, "Hej på dig\n")) {
+   echo "Ooops, fel vid skrivning till fil";
+   exit; // Avbryter körningen
+}
+
+fclose($fh);
+?>
+]]>
+				</programlisting>
+			</example>
+
+			Även fopen returnerar false om den inte kan öppna filen, att kolla
+			detta lämnas som övning till läsaren :).
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>Readfile</title>
+
+		<para>
+			Readfile är en av många funktioner som kan användas för att läsa
+			från en fil. Den läser en hel fil och skriver ut den på
+			utskiftsbufferten.
+		</para>
+
+		<para>
+			Se följande exempel:
+
+			<example>
+				<title>Exempel med readfile</title>
+				<programlisting>
+<![CDATA[
+<?php
+readfile("/home/rejas/data/testfil");
+?>
+]]>
+				</programlisting>
+			</example>
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>Sammanhängande exempel</title>
+
+		<para>
+			Nu kan vi skriva ett litet program som varje gång det körs lägger
+			till en rad i en fil och skriver ut filen.
+
+			<example>
+				<title>Sammanhängande exempel på filanvändning</title>
+				<programlisting>
+<![CDATA[
+<?php
+$filename = "/home/rejas/data/testfil";
+
+$fh = fopen($filename, "a");
+
+if (! fwrite($fh, "Hej på dig\n")) {
+   echo "Ooops, fel vid skrivning till fil";
+   exit; // Avbryter körningen
+}
+
+fclose($fh);
+
+readfile($filename);
+?>
+]]>
+				</programlisting>
+			</example>
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>Mer läsning</title>
+
+		<para>
+			Mer information om funktioner för att hantera filer och filsystem
+			finns här:
+			<ulink url="http://se.php.net/manual/en/ref.filesystem.php">
+				<citetitle>
+					http://www.php.net/manual/en/ref.filesystem.php
+				</citetitle>
+			</ulink>
+		</para>
+	</sect1>
+</chapter>
+
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+tab-width: 3
+End:
+vim600: syn=xml fen fdm=syntax si
+vim: noet sw=3 ts=3 syn=sgml
+vi: ts=3 sw=3
+-->

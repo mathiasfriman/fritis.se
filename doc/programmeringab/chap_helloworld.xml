@@ -1,0 +1,132 @@
+<chapter id="chap_helloworld">
+	<title>Hallå Världen!</title>
+
+	<abstract>
+		<para>
+			Detta avsnitt beskriver hur ett enkelt PHP-script är uppbyggt.
+		</para>
+	</abstract>
+
+
+	<sect1>
+		<title>Programmeringsmiljön</title>
+		<para>
+			Som vi har sagt tidigare så skapar man ett program på följande
+			sätt (något förenklat):
+
+			<itemizedlist>
+				<listitem><para>Skapa PHP-fil</para></listitem>
+				<listitem><para>Kopiera till servern</para></listitem>
+				<listitem><para>Provkör</para></listitem>
+			</itemizedlist>
+		</para>
+
+		<para>
+			Du kan använda vilken editor du vill för att skapa php-filer.
+			Notepad fungerar alldeles utmärkt men det finns de med fler
+			finesser. Vim är en av dem. Den har stöd bland annat för
+			färgläggning av kod och finns för både Linux&reg; och Windows att
+			hämta från deras hemsida:
+			<ulink url="http://vim.sf.net">
+				<citetitle>
+					http://vim.sf.net
+				</citetitle>
+			</ulink>
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>Hallå världen!</title>
+
+		<para>
+			Nästan alla programmeringskurser börjar med att man skapar ett
+			program som heter Hello World. Hello World är ett program som
+			inte gör något annat än att skriva ut "Hello World" på skärmen.
+		</para>
+
+		<para>
+			Vi börjar med att titta på hur det ser ut i PHP.
+			<example>
+				<title>Hello World i PHP</title>
+				<programlisting>
+<![CDATA[
+<html>
+<head>
+   <title>Hallå Världen!</title>
+</head>
+<body>
+   <p>
+      <?php
+         echo "Hallå Världen!";
+      ?>
+   </p>
+</body>
+</html>
+]]>
+				</programlisting>
+			</example>
+		</para>
+
+		<para>
+			Så, vad gör nu detta program? Som ni säkert kan se så är det HTML
+			i början och slutet av filen. Det enda av filen som är PHP är
+			mellan tecknen &lt;?php och ?&gt;. Det är för att tolkaren skall
+			veta när den skall exekvera raderna istället för att skriva ut dem.
+		</para>
+
+		<para>
+			Den enda PHP-koden i detta lilla program är
+			<type>echo "Hallå Världen!";</type>. Echo talar om att något skall
+			skrivas ut (Hallå Världen!) och semikolonet talar om att en sats i
+			programmet slutar. En sats kan omfatta flera rader men avslutas
+			alltid av ett semikolon.
+		</para>
+
+		<para>
+			Man kan självklart skriva ett "Hello World!" program som enbart
+			använder sig av PHP och ingen HTML (dock utan den formatering som
+			kommer med HTML).
+			<example>
+				<title>Hello World i PHP utan HTML</title>
+				<programlisting>
+<![CDATA[
+<?php
+echo "Hallå Världen!";
+?>
+]]>
+				</programlisting>
+			</example>
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>Övningsuppgifter</title>
+		<para>
+			<itemizedlist>
+				<listitem>
+					<para>
+						Ändra programmet så att det skriver ut något annat än
+						"Hallå Världen!". Testa att det fungerar som du vill.
+					</para>
+				</listitem>
+
+				<listitem>
+					<para>
+						Gör så att två rader skrivs ut. (Använd HTML-koder).
+					</para>
+				</listitem>
+			</itemizedlist>
+		</para>
+	</sect1>
+</chapter>
+
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+tab-width: 3
+End:
+vim600: syn=xml fen fdm=syntax si
+vim: noet sw=3 ts=3 syn=sgml
+vi: ts=3 sw=3
+-->

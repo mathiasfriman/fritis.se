@@ -1,0 +1,112 @@
+<chapter id="chap_inledning"><title>Inledning</title>
+
+	<abstract>
+		<para>
+			I detta kapitel ges en liten introduktion till vad
+			datorkommunikation är och går igenom några grundläggande
+			begrepp.
+		</para>
+	</abstract>
+
+	<sect1><title>Vad är data och vad är dator?</title>
+		<para>
+			Det här är inte så lätt som man kan tro. Data är någon typ av
+			fakta eller värden som kan bearbetas av människor eller
+			maskiner men som ännu inte har tolkats. Till exempel så är en
+			ström av bokstäver data. Man kan titta på bokstäverna utan att
+			läsa ut vad de innebär, man kan flytta dem, skriva ut den,
+			kopiera dem och så vidare. Bokstäverna kan bilda en mening men
+			behöver inte nödvändigtvis göra detta för att vara data. På
+			samma sätt kan en tabell med siffror utgöra data. Rätt tolkade
+			kanske de utgör en viktig kalkyl för ett stort företag men utan
+			att tolka dem så är det data.
+		</para>
+		<para>
+			En dator är en maskin som vi använder för att behandla data,
+			till exempel en persondator eller en server i ett nätverk. Man
+			hör ofta att någon säger "Jag slog på datan." när de egentligen
+			menar, "Jag slog på datorn.", såvida de inte faktiskt stod och
+			slog på cd-skivan eller vad det nu kan vara för något som
+			innehåller data.
+		</para>
+	</sect1>
+
+	<sect1><title>Vad är information?</title>
+		<para>
+			Data som tolkats och förståtts av en människa kallas för
+			information. Till exempel så är en bild som sparats på en disk
+			data ända tills den presenterats av ett bildvisningsprogram för
+			en människa som förstår bilden, då först är det information. På
+			samma sätt så är strängen med bokstäver i exemplet ovan data
+			tills dess att de läses av en människa som kan tolka dem. Då
+			blir det information.
+		</para>
+		<para>
+			Några exempel kan vara på sin plats. 10 är data. Men om 10
+			sätts i ett sammanhang som man kan tolka, till exempel "lådan
+			väger 10 kilo", så blir 10 information. På samma sätt är 23
+			data medan det blir information om man vet att det handlar om
+			temperaturen i Pajala i Celsiusgrader.
+		</para>
+		<para>
+			Alltså data som presenteras (tolkats och givits en innebörd) på
+			ett sätt som direkt kan förstås av en människa är information.
+			Information kan inte flyttas mellan två datorer men data kan.
+			Information kan inte sparas ned på en disk men data kan. Data
+			kan, om den är rätt utformad, tolkas till information.
+		</para>
+	</sect1>
+
+	<sect1><title>Vad är kommunikation?</title>
+		<para>
+			Kommunikation är ett vitt begrepp. Vi använder det för att
+			benämna till exempel ett samtal eller att vi själv förflyttar
+			oss med till exempel tåg eller buss. Kommunikation kommer från
+			det latinska ordet communicatio som betyder ungefär "att
+			utbyta" eller "att delge". Ordet kommunikation kan, som du vet,
+			användas på flera olika sätt och alla är riktiga. Men i denna
+			bok och i ämnesområdet datorkommunikation betyder kommunikation
+			att man utbyter information. Som vi konstaterat tidigare så
+			kan inte information skickas mellan två datorer men data kan.
+			Data plus regler för hur dessa data skall tolkas kan ju göras om
+			till information.
+		</para>
+	</sect1>
+
+	<sect1><title>Vad är datorkommunikation?</title>
+		<para>
+			Datorkommunikation är ju vad denna bok skall behandla, så vad
+			är det för något? Datorkommunikation är när människor utbyter
+			information med varandra med hjälp av datorer. Som vi sett så
+			kan bara datorerna utbyta data så det måste även finnas regler
+			för hur denna data skall kunna tolkas till information i
+			slutändan för att det skall vara någon mening med
+			kommunikationen. Under kommunikationens gång kan data behandlas
+			av system eller datorer som inte har vetskap om vad dessa data
+			betyder. Dessa är en del av kommunikationsprocessen. Till
+			exempel så är telefonen en del av ett telefonsamtal men det är
+			inte telefonen som kommunicerar utan det är du och den som
+			håller i luren på andra sidan som kommunicerar. Trots detta är
+			telefonen, ledningar och telefonväxlar ett led i
+			kommunikationen.
+		</para>	
+	</sect1>
+
+	<sect1><title>Sammanfattning</title>
+		<para>
+			I detta kapitel har vi lärt oss vad några grundläggande begrepp
+			inom datorkommunikationsämnet står för. Detta kapitel avslutas,
+			liksom de resterande kapitlen i boken, med några kontrollfrågor
+			eller övningsuppgifter som du kan använda för att kontrollera
+			att du lärt dig det som kapitlet handlade om.
+		</para>
+	</sect1>
+</chapter>
+
+<!-- Keep this comment at the end of the file
+tab-width: 3
+vim600: fdm=syntax sw=3 ts=3
+vim: sw=3 ts=3
+vi: sw=3 ts=3
+-->
+

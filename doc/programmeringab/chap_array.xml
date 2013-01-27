@@ -1,0 +1,158 @@
+<chapter id="chap_array">
+	<title>Arrayer (vektorer)</title>
+
+	<abstract>
+		<para>
+			Vi har tidigare tittat på variabler. Nu skall vi titta på en speciell
+			typ av variabler nämligen arrayer. En array är en variabel som kan
+			innehålla flera olika värden. En array kallas iband även för en
+			vektor.
+		</para>
+	</abstract>
+
+	<sect1>
+		<title>Arrayer</title>
+
+		<para>
+			Ibland vill man spara flera värden i en variabel. Till exempel om
+			de måste höra ihop och inte får komma isär eller om man vill
+			returnera flera världen från en funktion. Det är precis var arrayer
+			är, en typ av variabel som kan hålla flera värden.
+		</para>
+
+		<para>
+			Vi kastar oss direkt in på ett exempel:
+
+			<example>
+				<title>Arrayer</title>
+				<programlisting>
+<![CDATA[
+<?php
+// Vi skapar en array som heter arr och innehåller tre värden.
+$arr[0] = 10;
+$arr[1] = 20;
+$arr[2] = 30;
+
+echo $arr[2]; // Skriver ut 30
+?>
+]]>
+				</programlisting>
+			</example>
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>Array-funktioner</title>
+
+		<para>
+			En annan fördel med arrayer är att det finns massor av funktioner
+			som verkar på arrayer. Till exempel så finns det funktioner för att
+			sortera, reversera eller blanda arrayer.
+		</para>
+
+		<para>
+			Vi skall titta på ett par användbara funktioner:
+		</para>
+
+			<sect2>
+				<title>Funktionen array_reverse</title>
+
+				<para>
+					Den här funktionen tar en array som argument och returnerar
+					samma array fast i omvänd ordning. Det vill säga det som var
+					sist i arrayen tidigare liger först i den array som
+					array_reverse returnerar. Ett litet exempel:
+
+					<example>
+						<title>Exempel med array_reverse()</title>
+						<programlisting>
+<![CDATA[
+<?php
+$arr[0] = 1;
+$arr[1] = 2;
+$arr[2] = 3;
+
+$arr2 = array_reverse($arr);
+
+echo $arr2[0] ."\n"; // Skriver ut 3
+echo $arr2[1] ."\n"; // Skriver ut 2
+echo $arr2[2] ."\n"; // Skriver ut 1
+?>
+]]>
+						</programlisting>
+					</example>
+				</para>
+			</sect2>
+
+			<sect2>
+				<title>Funktionen sort</title>
+
+				<para>
+					Funktionen sort tar en array som argument och sorterar den.
+					Observera att denna funktion inte returnerar något utan
+					sorterar den array den får som argument.
+
+					<example>
+						<title>Exempel med sort()</title>
+						<programlisting>
+<![CDATA[
+$arr2[0] = "Kalle";
+$arr2[1] = "Fnatte";
+$arr2[2] = "Knatte";
+$arr2[3] = "Kajsa";
+$arr2[4] = "Joakim";
+$arr2[5] = "Alexander";
+$arr2[6] = "Tjatte";
+
+
+sort($arr2); // Observera att inget returneras, utan att arrayen blir sorterad.
+
+for ($i = 0; $i <= 6; $i++) {
+        echo "$arr2[$i]<br>";
+}
+]]>
+					</programlisting>
+					</example>
+				</para>
+			</sect2>
+
+			<sect2>
+				<title>Funktionen file</title>
+
+				<para>
+					File är en funktion som kanske bättre pasar bland
+					filfunktionerna (där finns den till exempel i PHP-manualen)
+					men jag har valt att lägga den här eftersom den inbjuder till
+					att använda andra array-funktioner.
+					<!--
+					XXX: Den bör nog flyttas iaf till rätt sektion vars den *ska*
+					     vara ;)
+					-->
+				</para>
+
+				<para>
+					File tar ett argument som skall vara ett filnamn, den
+					returnerar en array med varje rad i filen i ett element.
+				</para>
+			</sect2>
+	</sect1>
+
+	<sect1>
+		<title>Mer läsning</title>
+
+		<para>
+			http://www.php.net/manual/en/language.types.array.php
+			http://www.php.net/manual/en/ref.array.php
+		</para>
+	</sect1>
+</chapter>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+tab-width: 3
+End:
+vim600: syn=xml fen fdm=syntax si
+vim: noet sw=3 ts=3 syn=sgml
+vi: ts=3 sw=3
+-->

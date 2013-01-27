@@ -1,0 +1,134 @@
+<appendix id="rfc">
+	<title>Tabell över några av de RFC:er som berör boken</title>
+	<table frame="all" id="tab_rfc">
+		<title>Exmpel på RFC:er som är relaterade till boken</title>
+		<tgroup cols='3' align='center' colsep='1' rowsep='1'>
+		<colspec colname='c1'/>
+		<colspec colname='c2'colwidth="4*"/>
+		<colspec colname='c3'colwidth="4*"/>
+			<thead>
+				<row>
+					<entry>RFC</entry>
+					<entry>Titel</entry>
+					<entry>URL</entry>
+				</row>
+			</thead>
+			<tbody>
+				<row>
+					<entry>RFC 768</entry>
+					<entry>User Datagram Protocol
+					(UDP)</entry>
+					<entry>http://www.faqs.org/rfcs/rfc768.html</entry>
+				</row>
+				<row>
+					<entry>RFC 2060</entry>
+					<entry>Internet Message Access
+					Protocol (IMAP)</entry>
+					<entry>http://www.faqs.org/rfcs/rfc2060.html</entry>
+				</row>
+				<row>
+					<entry>RFC 792</entry>
+					<entry>Internet Control Message
+					Protocol (ICMP)</entry>
+					<entry>http://www.faqs.org/rfcs/rfc792.html</entry>
+				</row>
+				<row>
+					<entry>RFC 977</entry>
+					<entry>Network News Transfer Protocol</entry>
+					<entry>http://www.faqs.org/rfcs/rfc977.html</entry>
+				</row>
+				<row>
+					<entry>RFC 854</entry>
+					<entry>Telnet Protocol Specification</entry>
+					<entry>http://www.faqs.org/rfcs/rfc854.html</entry>
+				</row>
+				<row>
+					<entry>RFC 1631</entry>
+					<entry>The IP Network Address Translator (NAT)</entry>
+					<entry>http://www.faqs.org/rfcs/rfc1631.html</entry>
+				</row>
+				<row>
+					<entry>RFC 1918</entry>
+					<entry>Address Allocation for Private Internets</entry>
+					<entry>http://www.faqs.org/rfcs/rfc1918.html</entry>
+				</row>
+				<row>
+					<entry>RFC 2822</entry>
+					<entry>Internet Message Format</entry>
+					<entry>http://www.faqs.org/rfcs/rfc2822.html</entry>
+				</row>
+				<row>
+					<entry></entry>
+					<entry></entry>
+					<entry></entry>
+				</row>
+				<row>
+					<entry></entry>
+					<entry></entry>
+					<entry></entry>
+				</row>
+				<row>
+					<entry></entry>
+					<entry></entry>
+					<entry></entry>
+				</row>
+				<row>
+					<entry></entry>
+					<entry></entry>
+					<entry></entry>
+				</row>
+				<row>
+					<entry></entry>
+					<entry></entry>
+					<entry></entry>
+				</row>
+				<row>
+					<entry></entry>
+					<entry></entry>
+					<entry></entry>
+				</row>
+				<row>
+					<entry></entry>
+					<entry></entry>
+					<entry></entry>
+				</row>
+				<row>
+					<entry></entry>
+					<entry></entry>
+					<entry></entry>
+				</row>
+				<row>
+					<entry></entry>
+					<entry></entry>
+					<entry></entry>
+				</row>
+				<row>
+					<entry></entry>
+					<entry></entry>
+					<entry></entry>
+				</row>
+				<row>
+					<entry></entry>
+					<entry></entry>
+					<entry></entry>
+				</row>
+				<row>
+					<entry></entry>
+					<entry></entry>
+					<entry></entry>
+				</row>
+				<row>
+					<entry></entry>
+					<entry></entry>
+					<entry></entry>
+				</row>
+				<row>
+					<entry></entry>
+					<entry></entry>
+					<entry></entry>
+				</row>
+			</tbody>
+		</tgroup>
+	</table>
+
+</appendix>

@@ -1,0 +1,887 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Mer om str�ngar</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="Programmering i PHP"
+HREF="book1.html"><LINK
+REL="PREVIOUS"
+TITLE="Kommentering"
+HREF="chap_kommentering.html"><LINK
+REL="NEXT"
+TITLE="Funktioner"
+HREF="chap_funktioner.html"><LINK
+REL="stylesheet"
+HREF="./book.css"
+TYPE="text/css"></HEAD
+><BODY
+CLASS="chapter"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Programmering i PHP</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="chap_kommentering.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="chap_funktioner.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="chapter"
+><H1
+><A
+NAME="chap_strings"
+></A
+>Kapitel 13. Mer om str�ngar</H1
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Innehållsförteckning</B
+></DT
+><DT
+><A
+HREF="chap_strings.html#AEN576"
+>Vad �r en str�ng</A
+></DT
+><DT
+><A
+HREF="chap_strings.html#AEN583"
+>Escape-tecken</A
+></DT
+><DT
+><A
+HREF="chap_strings.html#AEN620"
+>L�gga ihop str�ngar</A
+></DT
+><DT
+><A
+HREF="chap_strings.html#AEN626"
+>J�mf�ra str�ngar</A
+></DT
+><DT
+><A
+HREF="chap_strings.html#AEN635"
+>�ndra str�ngar</A
+></DT
+><DT
+><A
+HREF="chap_strings.html#AEN672"
+>Hantera o�nskad HTML i str�ngar</A
+></DT
+><DT
+><A
+HREF="chap_strings.html#AEN681"
+>S�ka i str�ngar</A
+></DT
+><DT
+><A
+HREF="chap_strings.html#AEN690"
+>Mer l�sning</A
+></DT
+></DL
+></DIV
+><BLOCKQUOTE
+CLASS="ABSTRACT"
+><DIV
+CLASS="abstract"
+><P
+></P
+><A
+NAME="AEN574"
+></A
+><P
+>&#13;			Str�ngar �r en typ som best�r av f�ljder av tecken. Till exempel s�
+			�r "Jag heter Marcus" en str�ng. I detta avsnitt tittar vi lite mer
+			p� vad man kan g�ra med str�ngar.
+		</P
+><P
+></P
+></DIV
+></BLOCKQUOTE
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN576"
+>Vad �r en str�ng</A
+></H1
+><P
+>&#13;			En str�ng �r en grupp av tecken. Str�ngar f�rekommer, i stort sett,
+			i alla program. PHP �r ett spr�k som �r v�ldigt rikt p� funktioner
+			f�r att hantera str�ngar. Mycket beroende p� att det �r ett spr�k
+			f�r web-programmering d�r i princip allt som kommer fr�n programmet
+			�r str�ngar. Det uppmuntrar �ven till att man l�ter ok�nda anv�ndare
+			mata in str�ngar till programmen vilket g�r att man av s�kerhetssk�l
+			m�ste vara f�rsiktig med str�ngarna.
+		</P
+><P
+>&#13;			I PHP markeras en str�ng av att den innesluts av enkla eller dubbla
+			citationstecken. Skillnaden �r den att inom dubbla citationstecken
+			kommer alla variabler i str�ngen att bytas ut mot sitt v�rde. Se
+			f�ljande exempel:
+
+			<DIV
+CLASS="example"
+><A
+NAME="AEN580"
+></A
+><P
+><B
+>Exempel 13-1. Exempel med str�ngar</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+$summa = 1 + 6;
+echo "Summan �r $summa"; // Skriver ut: Summan �r 7
+echo 'Summan �r $summa'; // Skriver ut: Summan �r $summa
+?&#62;
+
+				</PRE
+></DIV
+>
+
+			Som du ser s� sker ingen variabelsubstitution i den andra raden
+			eftersom den omges av enkla citationstecken.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN583"
+>Escape-tecken</A
+></H1
+><P
+>&#13;			Som vi s�g i f�rra stycket s� omges en str�ng av citationstecken.
+			En naturlig fr�ga man d� st�ller sig �r vad som h�nder om jag vill
+			ha citationstecken i en str�ng. Se f�ljande exempel:
+
+			<DIV
+CLASS="example"
+><A
+NAME="AEN586"
+></A
+><P
+><B
+>Exempel 13-2. Citationstecken i str�ngar</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+echo "Tjenare din gamle "hacker"";
+?&#62;
+
+				</PRE
+></DIV
+>
+
+			Man ser direkt att det inte kommer att bli bra. Hur skall tolkaren
+			kunna veta var str�ngen slutar? Det som kommer att ske �r att
+			str�ngen b�rjar vid det f�rsta citationstecknet och slutar vid den
+			andra. Den bosktav (h) som kommer efter kommer att orsaka ett
+			"parse error". Hur g�r man d�?
+			Jo om man vill infoga specialtecken i en str�ng m�ste dessa f�reg�s
+			av specialtecknet \ (bakv�nt snedstreck eller backslash). Str�ngen
+			ovan blir d�:
+
+			<DIV
+CLASS="example"
+><A
+NAME="AEN589"
+></A
+><P
+><B
+>Exempel 13-3. Exempel p� escape-tecken</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+echo "Tjenare din gamle \"hacker\"";
+?&#62;
+
+				</PRE
+></DIV
+>
+
+			Nu blir utskrifter som vi t�nkt oss. Det finns �ven andra
+			specialtecken:
+
+			<DIV
+CLASS="table"
+><A
+NAME="AEN592"
+></A
+><P
+><B
+>Tabell 13-1. Specialtecken i str�ngar</B
+></P
+><TABLE
+BORDER="1"
+FRAME="border"
+RULES="all"
+CLASS="CALSTABLE"
+><COL
+WIDTH="1*"
+TITLE="c1"><COL
+WIDTH="1*"
+TITLE="c2"><THEAD
+><TR
+><TH
+>Teckenkombination</TH
+><TH
+>Skrivs ut som</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+>\"</TD
+><TD
+>"</TD
+></TR
+><TR
+><TD
+>\'</TD
+><TD
+>'</TD
+></TR
+><TR
+><TD
+>\\</TD
+><TD
+>\</TD
+></TR
+><TR
+><TD
+>\$</TD
+><TD
+>$</TD
+></TR
+><TR
+><TD
+>\n</TD
+><TD
+>Ny rad</TD
+></TR
+><TR
+><TD
+>\t</TD
+><TD
+>Tab</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+
+			I str�ngar inom enkla citationstecken (') s� substitueras bara
+			"\'". Alla andra representerar sig sj�lva.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN620"
+>L�gga ihop str�ngar</A
+></H1
+><P
+>&#13;			Man kan inte l�gga ihop str�ngar med hj�lp av additionsoperatorn
+			(+).  Den �r ju till f�r aritmetiska termer. Som tur �r s� finns
+			det speciella opteratorer f�r just str�ngar. Den som l�gger ihop
+			tv� str�ngar kallas f�r concatenationsoperatorn. Den representeras
+			av tecknet "." (punkt).  Se nedanst�ende exempel.
+
+			<DIV
+CLASS="example"
+><A
+NAME="AEN623"
+></A
+><P
+><B
+>Exempel 13-4. Exempel med str�ngar</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+$a = "Hello ";
+$b = $a . "World!"; // Vi l�gger till str�ngen "World!" efter $a
+echo $b; // Skriver ut "Hello World!"
+?&#62;
+
+				</PRE
+></DIV
+>
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN626"
+>J�mf�ra str�ngar</A
+></H1
+><P
+>&#13;			I PHP kan man j�mf�ra str�ngar med de operaorer som vi l�rt oss f�r
+			numeriska v�rden. Det �r ganska specifikt f�r PHP. R�kna inte med
+			att du kan g�ra s� i andra spr�k du kommer i kontakt med. �ven i PHP
+			finns det funktioner f�r att j�mf�ra str�ngar.
+		</P
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN629"
+>Strcmp och strcasecmp</A
+></H2
+><P
+>&#13;				Strcmp (STRing CoMPare) �r en funktion som j�mf�r tv� str�ngar
+				med varandra. Om de �r exakt likadana returneras v�rdet 0. Om
+				den f�rsta �r st�rre returneras 1 och om den andra �r st�rre
+				returneras -1. Syntaxen och ett exempel p� hur den kan anv�ndas
+				visas i nedanst�ende exempel.
+
+				<DIV
+CLASS="example"
+><A
+NAME="AEN632"
+></A
+><P
+><B
+>Exempel 13-5. Exempel med strcmp</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+if (strcmp($password, "Hemligt") == 0) {
+   echo "R�tt l�senord";
+} else {
+   echo "Fel l�senord!";
+}
+?&#62;
+
+					</PRE
+></DIV
+>
+
+				T�nk p� att strcmp g�r skillnad p� stora och sm� bokst�var.
+				Texten "R�tt l�senord" ovan kommer bara att skrivas ut om
+				$password inneh�ller exakt "Hemligt". Vill du j�mf�ra
+				str�ngen utan att versaler/gemener skall ha n�gon betydelse
+				kan du prova strcasecmp som fungerar p� samma s�tt fast
+				"case insensitive".
+			</P
+></DIV
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN635"
+>�ndra str�ngar</A
+></H1
+><P
+>&#13;			Ofta vill man �ndra p� str�ngar s� att de ser lite annorlunda ut.
+			Det kan vara att man vill g�ra om alla bokst�ver till versaler
+			eller gemener. Eller att man vill byta n�got ord mot ett annat.
+			PHP har massor av funktioner f�r detta. Vanliga saker man vill
+			g�ra med str�ngar �r att byta ut en f�rekomst av ett ord mot ett
+			annat eller att g�ra alla tecken till sm� eller stora bokst�ver
+			eller ta bort tomma tecken.
+		</P
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN638"
+>strtoupper och strtolower</A
+></H2
+><P
+>&#13;				Dessa tv� funktioner (STRing TO UPPERcase och LOWERcase) tar
+				en str�ng som argument och returnerar samma str�ng med alla
+				bokst�ver konverterade till antingen stora bokst�ver (versaler)
+				eller sm� bokst�ver (gemener).
+			</P
+><P
+>&#13;				Se f�ljande lilla exempel:
+
+				<DIV
+CLASS="example"
+><A
+NAME="AEN642"
+></A
+><P
+><B
+>Exempel 13-6. Exempel med strtoupper och strtolower</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+$str1 = "Kalle Anka";
+$str2 = strtolower($str1);  // str2 blir "kalle anka"
+$str3 = strtoupper($str1);  // str3 blir "KALLE ANKA"
+echo "\$str1: ". $str1;
+echo "\n\$str2: ". $str2;
+echo "\n\$str3: ". $str3 ."\n";
+?&#62;
+
+					</PRE
+></DIV
+>
+			</P
+></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN645"
+>Ucfirst och ucwords</A
+></H2
+><P
+>&#13;				Dessa tv� funtioner (UpperCase FIRST och WORDS) �r kanske inte
+				lika anv�ndbara som strtoupper och strtolower men kan vara bra
+				att k�nna till. De kan anv�ndas till exempel om man vill snygga
+				till anv�ndarinmatad data. Vad de g�r �r att g�ra den f�rsta
+				bokstaven i en str�ng (ucfirst) eller f�rsta bokstaven i varje
+				ord i str�ngen (ucwords) till versal. Observera att dessa
+				funktioner bara verkar p� de tecken det g�ller och inte de
+				�vriga. Se f�ljande exempel:
+
+				<DIV
+CLASS="example"
+><A
+NAME="AEN648"
+></A
+><P
+><B
+>Exempel 13-7. Exempel med ucfirst och  ucword</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+$str1 = "kalle anka";
+$str2 = ucwords($str1); // str2 blir "Kalle Anka"
+
+$str1 = 'KALLE ANKA';
+$str2 = ucwords($str1); // str2 blir KALLE ANKA (inga tecken blir gemener)
+
+$str3 = ucwords(strtolower($str1)); // str3 blir Kalle Anka
+?&#62;
+
+					</PRE
+></DIV
+>
+
+				I exemplet ser vi att "KALLE ANKA" blir samma sak efter ucwords.
+				Det beror p� att denna funktion bara verkar p� det f�rsta
+				tecknet i varje ord. Detta g�rs versalt. Inget annat g�rs. �r
+				alla tecken versaler s� kommer inget att ske. I den sista satsen
+				l�gger vi in ett anrop till strtolower vilket g�r att ucwords
+				matas med str�ngen "kalle anka" ist�llet.
+			</P
+><P
+>&#13;				Ucfirst fungerar p� exakt samma s�tt fast bara p� det allra
+				f�rsta tecknet i str�ngen.
+			</P
+></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN652"
+>strrev</A
+></H2
+><P
+>&#13;				Detta �r en v�ldigt trevlig lite funktion (STRing REVerse). Det
+				enda den g�r �r att den tar en str�ng som argument och returnerar
+				samma str�ng fast reverserad.
+
+				<DIV
+CLASS="example"
+><A
+NAME="AEN655"
+></A
+><P
+><B
+>Exempel 13-8. Exempel med strrev</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+$str1 = "Kalle Anka";
+$str2 = strrev($str1); // str2 blir "aknA ellaK"
+?&#62;
+
+					</PRE
+></DIV
+>
+			</P
+></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN658"
+>strlen</A
+></H2
+><P
+>&#13;				En betydligt mer anv�ndbar funktion �n strrev �r strlen (STRing
+				LENgth). Denna returnerar antalet tecken i en str�ng.
+			</P
+><P
+>&#13;				Som vanligt tar vi ett litet exempel:
+
+				<DIV
+CLASS="example"
+><A
+NAME="AEN662"
+></A
+><P
+><B
+>Exempel 13-9. Exemepel med strrev</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+$str1 = "Kalle Anka";
+echo strlen($str1);          // skriver ut 10
+echo strlen(" Kalle Anka "); // skriver ut 12
+?&#62;
+
+					</PRE
+></DIV
+>
+			</P
+></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN665"
+>str_replace</A
+></H2
+><P
+>&#13;				Detta �r en mycket anv�ndbar funktion. Den byter ut en teckenf�ljd
+				i en mening mot en annan. Funktionen tar tre argument och
+				returnerar en str�ng. Det f�rsta argumentet �r den teckenf�ljd som
+				skall ers�ttas, det andra �r det som det skall ers�ttas med och
+				det tredje argumentet �r den str�ng som det hela ber�r. Det som
+				returneras �r str�ngen i det tredje argumentet d�r alla
+				f�rekomster av teckenf�ljden i det f�rsta argumentet ersatts med
+				tecknen i det andra argumentet.
+			</P
+><P
+>&#13;				F�rvirrad? Se nedanst�ende exempel:
+
+				<DIV
+CLASS="example"
+><A
+NAME="AEN669"
+></A
+><P
+><B
+>Exempel 13-10. Exempel med str_replace</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+$str1 = "Kalle Anka �r b�st";
+$str2 = str_replace("Kalle", "Kajsa", $str1);
+
+echo $str2;  // str2 �r "Kajsa Anka �r b�st"
+?&#62;
+
+					</PRE
+></DIV
+>
+
+				Detta �r anv�ndbart till v�ldigt mycket. Bara fantasin s�tter
+				gr�nserna.
+			</P
+></DIV
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN672"
+>Hantera o�nskad HTML i str�ngar</A
+></H1
+><P
+>&#13;			I PHP hanterar man av naturliga sk�l ofta str�ngar som skall
+			presenteras i en webl�sare. Flera av dessa str�ngar kommer vanligtvis
+			fr�n anv�ndare eller andra os�kra k�llor. D� vill man g�rna
+			kontrollera s� att inte anv�ndaren kan mata in data som f�rst�r
+			resten av sidan. Till exempel s� skall man inte i ett web-forum kunna
+			skriva in HTML-kod hur som helst.  Man skulle d� kunna l�nka in fula
+			bilder eller andra typsnittet p� hela sidan. Man kan �stadkomma detta
+			genom att anv�nda massor av anrop p� str_replace. Till exempel:
+
+			<DIV
+CLASS="example"
+><A
+NAME="AEN675"
+></A
+><P
+><B
+>Exempel 13-11. Med str_replace</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+//
+// F�ljande tv� rader tar bort alla f�rekomster av st�rre �n och
+// mindre �n och ers�tter dem med deras HTML-motsvarighet. Detta
+// eliminerar alla HTML-taggar.
+//
+$html_string = str_replace("&#38;lt;", "&#38;amp;lt;", $html_string);
+$html_string = str_replace("&#38;gt;", "&#38;amp;gt;", $html_string);
+?&#62;
+
+				</PRE
+></DIV
+>
+
+			Men det finns b�ttre s�tt att g�ra det p�. Det finns (naturligtvis)
+			f�rdiga funktioner som g�r HTML av str�ngar, till exempel
+			htmlentities. htmlentities g�r om en str�ng s� att alla tecken som har
+			en motsvarighet i HTML kod blir just, HTML kod.
+			Funktionen tar ett argument och har tv� stycken valfria argument som
+			du inte beh�ver ange, mer �n om du t.ex. beh�ver anv�nda en annan
+			teckenupps�ttning. Se f�ljande exempel:
+
+			<DIV
+CLASS="example"
+><A
+NAME="AEN678"
+></A
+><P
+><B
+>Exempel 13-12. Exempel med htmlentities</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+$str1 = "&#60;h1&#62;Kalle Anka&#60;/h1&#62;"; // Blir "Kalle Anka" (Rubrik 1) i browsern
+$str2 = htmlentities($str1);   // Blir &#60;h1&#62;Kalle Anka&#60;/h1&#62;; i browsern
+?&#62;
+
+				</PRE
+></DIV
+>
+
+			Detta g�r att allt man skickar till htmlentities kommer att synas i
+			browsern precis som det ser ut i klartext.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN681"
+>S�ka i str�ngar</A
+></H1
+><P
+>&#13;			Ofta vill man hitta eller anv�nda bara vissa delar av en str�ng. Det
+			finns flera funktioner f�r detta. Vi skall titta p� tv� av dem.
+		</P
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN684"
+>strstr och stristr</A
+></H2
+><P
+>&#13;				Dessa tv� funktioner fungerar s� att de tar tv� argument, b�da �r
+				str�ngar (STRing in STRing och STRing case-Insensitive in STRing).
+				Den f�rsta �r den str�ng som det skall s�kas i och det andra �r
+				det s�kta.  Det som returneras �r det som �r kvar av det f�rsta
+				argumentet efter den funna str�ngen. F�rvirrad?
+
+				<DIV
+CLASS="example"
+><A
+NAME="AEN687"
+></A
+><P
+><B
+>Exempel 13-13. Exemempel med strstr()</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+$namn = "Kalle Anka";
+$enamn = strstr($namn, " ");    // enamn blir " Anka"
+
+$adress = "kalle@ankeborg.net";
+$domain = strstr($adress, "@"); // domain blir "@ankeborg.net"
+?&#62;
+
+					</PRE
+></DIV
+>
+
+				Funktionen stristr fungerar p� samma s�tt men den bryr sig inte
+				om om den efters�kta str�ngen har stora eller sm� bokst�ver
+				(Case-Insensitive).
+
+			</P
+></DIV
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN690"
+>Mer l�sning</A
+></H1
+><P
+>&#13;			Aktuellt avsnitt i Manualen.
+			<A
+HREF="http://www.php.net/manual/en/ref.strings.php"
+TARGET="_top"
+>&#13;				<I
+CLASS="citetitle"
+>&#13;					http://www.php.net/manual/en/ref.strings.php
+				</I
+>
+			</A
+>
+		</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="chap_kommentering.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Hem</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="chap_funktioner.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Kommentering</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Funktioner</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

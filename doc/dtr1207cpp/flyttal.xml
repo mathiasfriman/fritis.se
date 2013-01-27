@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<chapter>
+  <title>Flyttal</title>
+
+  <abstract>
+    <para>Vi har hittils enbart jobbat med heltal ( int ) och det är dags för
+    att börja titta på flyttal. </para>
+  </abstract>
+
+  <section>
+    <title>Flyttalsvariabler</title>
+
+    <para>Flyttal använder vi för att kunna jobba med tal i decimalform, till
+    exempel <literal>37.287239</literal> och
+    <literal>-237.32</literal>.</para>
+
+    <para>Det finns två datatyper för flyttal: <type>float</type> och
+    <type>double</type> . Skillnaden mellan dem är att vi kan få större
+    nogrannhet ( <emphasis>decimaler</emphasis> ) med datatypen
+    <type>double</type> än med <type>float</type>. I detta kapitel kommer vi
+    enbart jobba med datatypen <type>float</type>, eftersom vi inte behöver så
+    hög nogrannhet som datatypen <type>double</type> erbjuder. Alla decimaler
+    skall anges med punkttecken ( <keycap>.</keycap> ) och inte med
+    kommatecken ( <keycap>,</keycap> ).</para>
+
+    <para>Vi har tidigare deklarat våra heltalsvariabler med <type>int</type>
+    . Nu skall vi använda <type>float</type>. Se <xref linkend="flyttal1" />
+    .</para>
+
+    <example id="flyttal1">
+      <title>En flyttalsdeklaration</title>
+
+      <programlisting>float ftal1;</programlisting>
+    </example>
+
+    <para>Vi ger oss på ett exempel direkt. Se <xref linkend="flyttal2" />
+    .</para>
+
+    <example id="flyttal2">
+      <title>Addera två flyttal</title>
+
+      <programlisting>#include &lt;iostream&gt;
+
+int main()
+{
+    float ftal1, ftal2;
+
+    std::cout &lt;&lt; "Mata in två flyttal: ";
+    std::cin &gt;&gt; ftal1 &gt;&gt; ftal2;
+
+    std::cout &lt;&lt; "Summan av " &lt;&lt; ftal1 &lt;&lt; " och " &lt;&lt; ftal2;
+    std::cout &lt;&lt; " är " &lt;&lt; ftal1 + ftal2 &lt;&lt; std::endl;
+
+    return 0;
+}
+</programlisting>
+    </example>
+
+    <para>I <xref linkend="flyttal2" /> deklararar vi två flyttalsvariabler,
+    <varname>ftal1</varname> och <varname>ftal2</varname> .Vi skriver ut en
+    uppmaning till användaren att skriva in två flyttal. Användaren skriver
+    båda flyttalen på samma rad, åtskiljda av blanksteg och trycker på
+    <keycap>RETUR</keycap>. Programmet skriver ut beräkningen på skärmen och
+    avslutas.</para>
+
+    <para>Matar du till exempel in <literal>98.2</literal> och
+    <literal>0.3</literal> så får du svaret <literal>98.5</literal> .</para>
+
+    <tip>
+      <para>Om du skriver 98 utan decimaler kommer talet ändå att lagras som
+      98.0 i minnet. Talet är ett flyttal och alla flyttal lagras med
+      decimaler.</para>
+    </tip>
+  </section>
+
+  <section>
+    <title>Formattera flyttal</title>
+
+    <para>Du kommer märka att dina flyttal kommer skrivas ut med många
+    decimaler. Det finns sätt att begränsa antalet decimaler i utskrifterna.
+    Vi kan använda <function>std::cout.setf( std::ios::fixed )</function> och
+    <function>std::cout.precision()</function> för detta. Titta på <xref
+    linkend="flyttal3" /> . </para>
+
+    <example id="flyttal3">
+      <title>Formatterade flyttal</title>
+
+      <programlisting>#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+
+int main()
+{
+    float f1, f2;
+
+    std::cout.setf( std::ios::fixed );
+    std::cout.precision(2);
+
+    std::cout &lt;&lt; "Mata in två tal: ";
+    std::cin &gt;&gt; f1 &gt;&gt; f2;
+    std::cout &lt;&lt; "Summan av talen " &lt;&lt; f1 &lt;&lt; " och " &lt;&lt; f2 ;
+    std::cout &lt;&lt; " är " &lt;&lt; f1 + f2 &lt;&lt; std::endl;
+
+    return 0;
+}</programlisting>
+    </example>
+
+    <para>Även i detta exempel adderar vi två tal och skriver ut summan av
+    dem. Det nya i det här exemplet är de två raderna under
+    flyttalsdeklarationerna. Den första anger vilket format vi skall använda
+    för <function>std::cout</function> och den andra (
+    <function>std::cout.precision(2)</function> ) hur hög nogrannhet vi skall
+    ha på flyttalet ( <emphasis>decimalerna</emphasis> ). När du ställer in
+    detta kommer det att gälla för alla utskrifter som kommer efter om du inte
+    stänger av fixed med <function>std::cout.unsetf( std::ios::fixed
+    )</function> .</para>
+
+    <para></para>
+
+    <para></para>
+  </section>
+</chapter>

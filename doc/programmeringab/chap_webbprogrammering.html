@@ -1,0 +1,276 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Webbrowser, webbserver och program</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="Programmering i PHP"
+HREF="book1.html"><LINK
+REL="PREVIOUS"
+TITLE="Hall� V�rlden!"
+HREF="chap_helloworld.html"><LINK
+REL="NEXT"
+TITLE="Variabler"
+HREF="chap_variabler.html"><LINK
+REL="stylesheet"
+HREF="./book.css"
+TYPE="text/css"></HEAD
+><BODY
+CLASS="chapter"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Programmering i PHP</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="chap_helloworld.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="chap_variabler.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="chapter"
+><H1
+><A
+NAME="chap_webbprogrammering"
+></A
+>Kapitel 5. Webbrowser, webbserver och program</H1
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Innehållsförteckning</B
+></DT
+><DT
+><A
+HREF="chap_webbprogrammering.html#AEN215"
+>Webbl�saren</A
+></DT
+><DT
+><A
+HREF="chap_webbprogrammering.html#AEN221"
+>Webbservern</A
+></DT
+><DT
+><A
+HREF="chap_webbprogrammering.html#AEN225"
+>Program</A
+></DT
+></DL
+></DIV
+><BLOCKQUOTE
+CLASS="ABSTRACT"
+><DIV
+CLASS="abstract"
+><P
+></P
+><A
+NAME="AEN213"
+></A
+><P
+>&#13;			N�r man skriver och k�r ett PHP-program �r det m�nga delar som
+			skall samverka. Man skriver ett program som skall tolkas av en
+			PHP-tolk. Sedan skall utdata av detta program hanteras av en
+			webbl�sare. Hur detta h�nger ihop f�rklaras i detta kapitel.
+		</P
+><P
+></P
+></DIV
+></BLOCKQUOTE
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN215"
+>Webbl�saren</A
+></H1
+><P
+>&#13;			Webbl�saren �r den del av kedjan som �r n�rmast anv�ndaren.
+			Webbl�saren �r det som du eller dina anv�ndare kommer i kontakt
+			med. F�r att webbl�saren skall visa vettiga saker f�r anv�ndaren
+			g�ller att den matas med vettiga saker fr�n ditt program.
+		</P
+><P
+>&#13;			Webbl�saren f�rst�r HTML
+			<A
+NAME="AEN219"
+HREF="#FTN.AEN219"
+><SPAN
+CLASS="footnote"
+>[1]</SPAN
+></A
+>
+			s� det som skall komma till webbl�saren �r HTML. Webbl�saren f�rst�r
+			inte PHP-kod s� PHP-koden m�ste tolkas av en PHP-tolk p� webbservern.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN221"
+>Webbservern</A
+></H1
+><P
+>&#13;			Webbservern har till uppgift att serva webbl�saren med webbsidor.
+			K�r man PHP s� �r det �ven p� webbservern som PHP-koden tolkas.
+			PHP-tolken g�r inget f�r att det som kommer ut ur PHP-koden skall
+			bli giltig HTML utan det �r upp till dig som programmerare att se
+			till att den �r det.
+		</P
+><P
+>&#13;			Webbservern har ofta en m�ngd olika funktioner beroende p� vad den
+			f�r tillf�llet skall g�ra. Du kan till exempel ha rena HTML-sidor
+			parallellt med din PHP-filer. Webbservern vet vilka sidor som �r
+			PHP och vilka som �r HTML och hanterar dem d�refter.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN225"
+>Program</A
+></H1
+><P
+>&#13;			Programmet, eller skriptet, skall fungera s� att det skriver ut
+			HTML-kod som webbservern kan skicka till anv�ndarens webbl�sare.
+		</P
+></DIV
+></DIV
+><H3
+CLASS="FOOTNOTES"
+>Noter</H3
+><TABLE
+BORDER="0"
+CLASS="FOOTNOTES"
+WIDTH="100%"
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="5%"
+><A
+NAME="FTN.AEN219"
+HREF="chap_webbprogrammering.html#AEN219"
+><SPAN
+CLASS="footnote"
+>[1]</SPAN
+></A
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="95%"
+><P
+>&#13;					Moderna webbl�sare f�rst�r en massa annat ocks�, men det
+					som �r relevant i denna kurs �r HTML
+				</P
+></TD
+></TR
+></TABLE
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="chap_helloworld.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Hem</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="chap_variabler.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Hall� V�rlden!</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Variabler</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

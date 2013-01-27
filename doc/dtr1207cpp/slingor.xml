@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<chapter>
+<title>Slingor</title>
+<section>
+<title>Uppbyggnaden</title>
+<para>Det finns flera sätt att åstadkomma upprepning i C++.
+<command>for</command>, <command>while</command>, <command>do-while</command>,
+<command>goto</command> och rekursion. Vi hoppar över goto och rekursion
+tillsvidare.</para>
+<section>
+<title><command>for</command></title>
+<para>En <command>for</command>-slinga (for-loop) är den vanligaste formen av
+slinga i C++. Formen är for (tilldelning av startvärde; test; stegning) {
+kodblock }. Efter <command>for</command>-satsen skriven man ett block (precis
+som i <command>i</command>f-satsen) där man lägger koden som skall exekveras
+för varje varv.</para>
+<example>
+<title>exempel på <command>for</command>-sats</title>
+<programlisting>for (int i=0; i&lt;2; ++i) { cout &lt;&lt; i &lt;&lt; endl; }</programlisting>
+<para>Denna kod skriver ut heltalen 0 t.om. 2.</para>
+</example>
+<note>
+<para>Testen i villkorssatsen görs <emphasis>innan</emphasis> varje varv
+påbörjas så en for-slinga kan upprepas 0 gånger. Villkoret kan vara vilket
+C++-uttryck som helst som kan tolkas som ett sanningsvärde, dvs sant eller
+falskt. Stegningen utförs sist i varje varv, dvs efter (och om) kodblocket
+exekverats.</para>
+</note>
+<para>En steg-för-steg-genomgång.</para>
+<orderedlist>
+<listitem>
+<programlisting>int i=0;</programlisting>
+<para>En variabel i deklareras och ges ett värde.</para>
+</listitem>
+<listitem>
+<programlisting>i&lt;2</programlisting>
+<para>Nu testas om i är mindre än fem, vilket det är. Alltså skall slingan
+köras</para>
+</listitem>
+<listitem>
+<programlisting>cout &lt;&lt; i &lt;&lt; endl;</programlisting>
+<para>Skriver ut värdet av i, dvs 0</para>
+</listitem>
+<listitem>
+<programlisting>++i</programlisting>
+<para>öka i (med ett), dvs nu är i==1</para>
+</listitem>
+<listitem>
+<programlisting>i&lt;2</programlisting>
+<para>i har värdet 1, så i&lt;2 är sant</para>
+</listitem>
+<listitem>
+<programlisting>cout &lt;&lt; i &lt;&lt; endl;</programlisting>
+<para>Skriver ut värdet av i, dvs 1</para>
+</listitem>
+<listitem>
+<programlisting>++i</programlisting>
+<para>öka i (med ett), dvs nu är i==2</para>
+</listitem>
+<listitem>
+<programlisting>i&lt;2</programlisting>
+<para>i har värdet 2, så i&lt;2 är falskt.</para>
+<para>Slingan avslutas.</para>
+</listitem>
+</orderedlist>
+<para>Eftersom variabeln i deklarerades i själva for-satsen upphör den att
+existera efter kodblocket i for-satsen.<footnote>
+<para>I gamla kompilatorer fortsätter i att vara definierade efter for-satsen
+och har då sitt sista värde innan slingan avslutades. För att vara kompatibel
+med både gamla och nya kompilatorer kan man deklarera sling-variabeln separat,
+men det anses vara god stil att initialisera variabler direkt i
+deklarationen.</para>
+</footnote></para>
+</section>
+<section>
+<title><command>while</command></title>
+<para><command>while</command> är en enklare typ av slinga än for. Formen för
+. Till skillnad från <command>for</command>-satsen finns ingen initialisering
+inbyggd utan det får man sköta separat.</para>
+<example>
+<title>exempel på while-sats</title>
+<programlisting>int i=0;
+while (i&lt;2) {
+    cout &lt;&lt; i &lt;&lt; endl;
+    ++i;
+}</programlisting>
+<para>Den här koden gör exakt samma sak som for-satsen tidigare.</para>
+</example>
+</section>
+<section>
+<title>do-while</title>
+<para><command>do-while</command> är en slinga som genomlöps minst en gång.
+Vilkoret för att upprepa slingan testas först efter första varvet.</para>
+<example>
+<title>exempel på do-while</title>
+<programlisting>int n[4];
+int i=0;
+do {
+   cin &gt;&gt; n[i++];
+} while (i&lt;4);</programlisting>
+</example>
+</section>
+<section>
+<title>break, continue och goto</title>
+<para>Goto är inte en konstruktion som skall användas för att konstruerar
+slingor men den kan användas för att ta sig ur en slinga. Break och continue
+kan vara bra sätt att terminera/fortsätta slingor om vilkoret för att göra
+detta är komplicerat eller skulle resultera i näslatde ifsatser inuti slingan
+för att undvika dessa. Välj den metod som ger den mest lättlästa koden.</para>
+<example>
+<title>exempel på break</title>
+<programlisting>for (int i=0; i&lt;10000; ++i) {
+
+   // do some work
+
+   if (a_global_break_was_set)
+       break; // end loop
+
+   // do more work
+}</programlisting>
+</example>
+<example>
+<title>exempel på continue</title>
+<programlisting>for (int i=0; i&lt;10000; ++i) {
+
+   // do some work
+
+   if (already_done_this_turn)
+       continue; // end loop
+
+   // do more work
+}</programlisting>
+</example>
+<example>
+<title>exempel på goto</title>
+<programlisting>for (int i=0; i&lt;10000; ++i) {
+
+   for (int j=0; i&lt;100; ++j) {
+
+       // do some work
+
+       if (aglobalbreakwasset)
+          goto L1; // cannot "break" out of nested loops
+
+       // do more work
+   }
+}
+
+L1:
+
+   // goto comes here</programlisting>
+</example>
+</section>
+</section>
+</chapter>

@@ -1,0 +1,75 @@
+<appendix id="commands"><title>Tabell över kommandon i olika operativsystem</title>
+<para>
+	I denna bok utgår vi från att du har tillgång till ett Linux
+	eller Unixsystem. Har du inte det så finns det i detta kapitel
+	en tabell över alla kommandon som nämnts i boken och deras
+	motsvarighet i olika operativsystem.
+</para>
+<para>
+	För att få reda på exakt hur de fungerar så rekommenderas att du
+	läser manualen till just ditt operativsystem.
+</para>
+
+<table frame="all"><title>Kommandotabell</title>
+<tgroup cols='5' align='left' colsep='3' rowsep='3'>
+	<thead><row>
+		<entry>Kommando</entry>	
+		<entry>Linux/Unix</entry>
+		<entry>Windows 9x</entry>
+		<entry>Windows 2000/XP</entry>
+		<entry>MacOS</entry>
+	</row></thead>
+	<tbody>
+	<row>
+		<entry>"Pinga" en adress</entry>
+		<entry>ping</entry>
+		<entry>ping</entry>
+		<entry>ping</entry>
+		<entry></entry>
+	</row>
+	<row>
+		<entry>Lista nätverksgränssnitt</entry>
+		<entry>ifconfig</entry>
+		<entry>ipconfig</entry>
+		<entry>ipconfig</entry>
+		<entry></entry>
+	</row>
+	<row>
+		<entry>Skriva ut routingtabellen</entry>
+		<entry>route</entry>
+		<entry>route /print</entry>
+		<entry>route /print</entry>
+		<entry></entry>
+	</row>
+	<row>
+		<entry>Spåra en rutt (route)</entry>
+		<entry>traceroute</entry>
+		<entry>tracert</entry>
+		<entry>tracert</entry>
+		<entry></entry>
+	</row>
+	<row>
+		<entry>DNS-uppslag</entry>
+		<entry>host eller nslookup</entry>
+		<entry>nslookup</entry>
+		<entry>nslookup</entry>
+		<entry></entry>
+	</row>
+	<row>
+		<entry>Lista arp-tabell</entry>
+		<entry>arp -a</entry>
+		<entry>arp -a</entry>
+		<entry>arp -a</entry>
+		<entry></entry>
+	</row>
+	<row>
+		<entry>Lista aktiva nätverksanslutningar</entry>
+		<entry>netstat</entry>
+		<entry>netstat</entry>
+		<entry>netstat</entry>
+		<entry></entry>
+	</row>
+	</tbody>
+</tgroup></table>
+</appendix>
+

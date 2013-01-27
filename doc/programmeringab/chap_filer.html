@@ -1,0 +1,572 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Filer och filhantering</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="Programmering i PHP"
+HREF="book1.html"><LINK
+REL="PREVIOUS"
+TITLE="Funktioner"
+HREF="chap_funktioner.html"><LINK
+REL="NEXT"
+TITLE="Arrayer (vektorer)"
+HREF="chap_array.html"><LINK
+REL="stylesheet"
+HREF="./book.css"
+TYPE="text/css"></HEAD
+><BODY
+CLASS="chapter"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Programmering i PHP</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="chap_funktioner.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="chap_array.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="chapter"
+><H1
+><A
+NAME="chap_filer"
+></A
+>Kapitel 15. Filer och filhantering</H1
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Innehållsförteckning</B
+></DT
+><DT
+><A
+HREF="chap_filer.html#AEN739"
+>Filer</A
+></DT
+><DT
+><A
+HREF="chap_filer.html#AEN743"
+>Arbetsmetod vid arbete med filer</A
+></DT
+><DT
+><A
+HREF="chap_filer.html#AEN749"
+>Funktionen fopen</A
+></DT
+><DT
+><A
+HREF="chap_filer.html#AEN789"
+>Funktionen fwrite</A
+></DT
+><DT
+><A
+HREF="chap_filer.html#AEN799"
+>Readfile</A
+></DT
+><DT
+><A
+HREF="chap_filer.html#AEN806"
+>Sammanh�ngande exempel</A
+></DT
+><DT
+><A
+HREF="chap_filer.html#AEN812"
+>Mer l�sning</A
+></DT
+></DL
+></DIV
+><BLOCKQUOTE
+CLASS="ABSTRACT"
+><DIV
+CLASS="abstract"
+><P
+></P
+><A
+NAME="AEN737"
+></A
+><P
+>&#13;			N�r man skriver datorprogram vill man ofta spara information mellan
+			olika k�rningar program. Ett s�tt att g�ra detta �r att lagra
+			informationen i en eller flera filer. I detta kapitel behandlas hur
+			man g�r.
+		</P
+><P
+></P
+></DIV
+></BLOCKQUOTE
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN739"
+>Filer</A
+></H1
+><P
+>&#13;			Innan vi b�rjar anv�nda oss av filer i programmeringen skall vi
+			titta lite kort p� vad en fil �r. En fil �r en samling
+			sammanh�ngande information p� ett medium, oftast en h�rddisk,
+			som man namngett.
+		</P
+><P
+>&#13;			F�r att l�sa eller skriva i filen anv�nder man ett filhandtag
+			(eng.  file handle). N�r man programmerar kan man inte hoppa runt
+			i filen hur som helst lika enkelt som man g�r i till exempel ett
+			ordbehandlingsprogram.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN743"
+>Arbetsmetod vid arbete med filer</A
+></H1
+><P
+>&#13;			N�r man jobbar med filer i PHP anv�nder man f�ljande metodik.
+		</P
+><P
+>&#13;			Man �ppnar en fil med ett anrop till funktionen <SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>fopen
+			</I
+></SPAN
+>. Den funktionen returnerar ett filhandtag. Detta
+			filhandtag kan man sedan anv�nda f�r att skriva till eller l�sa
+			fr�n filen. Slutligen skall man st�nga sin fil med funktionen
+			<SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>fclose</I
+></SPAN
+>. N�r man har en fil �ppen finns det
+			ocks�, �ven om man inte m�rker det s� ofta, en s� kallad filpekare
+			som h�ller reda p� var i filen man �r.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN749"
+>Funktionen fopen</A
+></H1
+><P
+>&#13;			Funktionen fopen tar tv� argument och returnerar ett
+			filhandtag.  S� h�r kan ett anrop till fopen se ut:
+
+			<DIV
+CLASS="example"
+><A
+NAME="AEN752"
+></A
+><P
+><B
+>Exempel 15-1. Funktionen fopen</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+$filhandtag = fopen("/home/rejas/data/testfil", "a");
+?&#62;
+
+				</PRE
+></DIV
+>
+
+			Vad som sker �r att $filhandtag tilldelas ett handtag till filen
+			testfil i katalogen /home/rejas/data/. Observera att detta �r
+			s�kv�gen till filen p� servern och att den anv�ndare som k�r
+			webservern m�sta ha r�tt att l�sa och eventuellt skriva till filen.
+			Det f�rsta argumentet �r s�ledes filnamnet, men vad �r det andra?
+			Jo det andra talar om p� vilket s�tt filen skall �ppnas. F�ljande
+			�r de vanligaste v�rdena p� det andra argumentet och deras
+			inneb�rder:
+
+
+			<DIV
+CLASS="table"
+><A
+NAME="AEN755"
+></A
+><P
+><B
+>Tabell 15-1. Andra argumentet till fopen</B
+></P
+><TABLE
+BORDER="1"
+FRAME="border"
+RULES="all"
+CLASS="CALSTABLE"
+><COL
+WIDTH="1*"
+TITLE="c1"><COL
+WIDTH="1*"
+TITLE="c2"><THEAD
+><TR
+><TH
+>V�rde</TH
+><TH
+>Inneb�rd</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+>r</TD
+><TD
+>&#13;								�ppnar en fil endast f�r l�sning, filpekaren
+								placeras f�rst i filen.
+							</TD
+></TR
+><TR
+><TD
+>r+</TD
+><TD
+>&#13;								�ppnar en fil f�r l�sning och skrivning, filpekaren
+								placeras i b�rjan av filen.
+							</TD
+></TR
+><TR
+><TD
+>w</TD
+><TD
+>&#13;								�ppnar en fil endast f�r skrivning, filpekaren st�lls
+								st�lls f�rst i filen. Om filen inte finns skapas den
+								och om den finns s� blir den �verskriven.
+							</TD
+></TR
+><TR
+><TD
+>w+</TD
+><TD
+>Samma som w men �ppnar �ven f�r l�sning</TD
+></TR
+><TR
+><TD
+>a</TD
+><TD
+>&#13;								�ppnar endast f�r skrivning. Skapar filen om den inte
+								finns. St�ller filpekaren i slutet av filen.
+							</TD
+></TR
+><TR
+><TD
+>a+</TD
+><TD
+>Samma som a men �ven f�r l�sning.</TD
+></TR
+><TR
+><TD
+>x</TD
+><TD
+>&#13;								�ppnar en fil f�r skrivning och placerar filpekaren i
+								b�rjan av filen. Om filen redan existerar returnerar
+								funktionen FALSE och ett varnings meddelande kan komma
+								att skrivas ut. Annars skapas filen.
+							</TD
+></TR
+><TR
+><TD
+>x+</TD
+><TD
+>&#13;								Samma som x men till�ter �ven l�sning av filen.
+							</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+
+			Argumenten med + till fopen verkar bra att anv�nda men anv�nds
+			faktiskt inte s� ofta som man kan tro.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN789"
+>Funktionen fwrite</A
+></H1
+><P
+>&#13;			Funktionen fwrite anv�nda f�r att skriva till en fil. Den tar
+			tv� argument, ett filhandtag och s� det som skall skrivas till
+			filen.
+		</P
+><P
+>&#13;			Ett exmpel:
+
+			<DIV
+CLASS="example"
+><A
+NAME="AEN793"
+></A
+><P
+><B
+>Exempel 15-2. Funktionen fwrite</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+$fh = fopen("/home/rejas/data/testfil", "a");
+fwrite($fh, "Hej p� dig\n");
+fclose($fh);
+?&#62;
+
+				</PRE
+></DIV
+>
+
+			Funktionen fwrite returnerar false om det skulle vara s� att den
+			inte kan skriva till filen s� det kan vara bra att kolla att det
+			g�r bra.
+
+			<DIV
+CLASS="example"
+><A
+NAME="AEN796"
+></A
+><P
+><B
+>Exempel 15-3. Funktionen fwrite med felkontrol</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+$fh = fopen("/home/rejas/data/testfil", "a");
+if (! fwrite($fh, "Hej p� dig\n")) {
+   echo "Ooops, fel vid skrivning till fil";
+   exit; // Avbryter k�rningen
+}
+
+fclose($fh);
+?&#62;
+
+				</PRE
+></DIV
+>
+
+			�ven fopen returnerar false om den inte kan �ppna filen, att kolla
+			detta l�mnas som �vning till l�saren :).
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN799"
+>Readfile</A
+></H1
+><P
+>&#13;			Readfile �r en av m�nga funktioner som kan anv�ndas f�r att l�sa
+			fr�n en fil. Den l�ser en hel fil och skriver ut den p�
+			utskiftsbufferten.
+		</P
+><P
+>&#13;			Se f�ljande exempel:
+
+			<DIV
+CLASS="example"
+><A
+NAME="AEN803"
+></A
+><P
+><B
+>Exempel 15-4. Exempel med readfile</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+readfile("/home/rejas/data/testfil");
+?&#62;
+
+				</PRE
+></DIV
+>
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN806"
+>Sammanh�ngande exempel</A
+></H1
+><P
+>&#13;			Nu kan vi skriva ett litet program som varje g�ng det k�rs l�gger
+			till en rad i en fil och skriver ut filen.
+
+			<DIV
+CLASS="example"
+><A
+NAME="AEN809"
+></A
+><P
+><B
+>Exempel 15-5. Sammanh�ngande exempel p� filanv�ndning</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+$filename = "/home/rejas/data/testfil";
+
+$fh = fopen($filename, "a");
+
+if (! fwrite($fh, "Hej p� dig\n")) {
+   echo "Ooops, fel vid skrivning till fil";
+   exit; // Avbryter k�rningen
+}
+
+fclose($fh);
+
+readfile($filename);
+?&#62;
+
+				</PRE
+></DIV
+>
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN812"
+>Mer l�sning</A
+></H1
+><P
+>&#13;			Mer information om funktioner f�r att hantera filer och filsystem
+			finns h�r:
+			<A
+HREF="http://se.php.net/manual/en/ref.filesystem.php"
+TARGET="_top"
+>&#13;				<I
+CLASS="citetitle"
+>&#13;					http://www.php.net/manual/en/ref.filesystem.php
+				</I
+>
+			</A
+>
+		</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="chap_funktioner.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Hem</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="chap_array.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Funktioner</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Arrayer (vektorer)</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

@@ -1,0 +1,284 @@
+<appendix id="topdomains"><title>Topdomäner</title>
+<para>
+	Toppdomänerna är den översta nivån i DNS-hierarkin. I detta
+	appendix listas de generiska och de nationella toppdomänerna.
+	Dessa uppgifter kommer från Internet Assigned Numbers Authority
+	(IANA, http://www.iana.org).
+</para>
+
+<sect1><title>Generiska (gtld)</title>
+<para>
+<literallayout>
+<emphasis>aero</emphasis>, Reserverad för medlemmar av flygtransportindustrin, sponsrad av Société Internationale de Télécommunications Aéronautiques (SITA).
+<emphasis>biz</emphasis>, Begränsad till företag, drivs av NeuLevel, Inc.
+<emphasis>com</emphasis>, Drivs av VeriSign Global Registry Services.
+<emphasis>coop</emphasis>, Reserverad för kooperativa föreningar, sponsrad av Dot Cooperation LLC.
+<emphasis>info</emphasis>, Drivs av Afilias Limited.
+<emphasis>museum</emphasis>, Reserverad för museum, sponsrad av Museum Domain Management Association.
+<emphasis>name</emphasis>, Reserved för privatpersoner, drivs av Global Name Registry.
+<emphasis>net</emphasis>, Drivs av VeriSign Global Registry Services.
+<emphasis>org</emphasis>, Drivs av Public Interest Registry. Avsedd för icke-kommersiella verksamheter men finns tillgänglig för alla.
+<emphasis>pro</emphasis>, Under uppbyggnad, drivs av RegistryPro. 
+<emphasis>gov</emphasis>, Reserverad enbart för den amerikanska regeringen. Drivs av US General Services Administration.
+<emphasis>edu</emphasis>, Reserverad för amerikanska skolväsendet
+<emphasis>mil</emphasis>, Reserverad för det amerikanska försvaret.Drivs av US DoD Network Information Center.
+<emphasis>int</emphasis>, Används bara av oraganisationer som etablerats av olika regeringar. Drivs av IANA .int Domain Registry. 
+</literallayout>
+</para>
+</sect1>
+
+<sect1><title>Nationella (cctld)</title>
+<para>
+
+<emphasis>ac</emphasis>, Ascension Island.
+<emphasis>ad</emphasis>, Andorra.
+<emphasis>ae</emphasis>, United Arab Emirates.
+<emphasis>af</emphasis>, Afghanistan.
+<emphasis>ag</emphasis>, Antigua and Barbuda.
+<emphasis>ai</emphasis>, Anguilla.
+<emphasis>al</emphasis>, Albania.
+<emphasis>am</emphasis>, Armenia.
+<emphasis>an</emphasis>, Netherlands Antilles.
+<emphasis>ao</emphasis>, Angola.
+<emphasis>aq</emphasis>, Antarctica.
+<emphasis>ar</emphasis>, Argentina.
+<emphasis>as</emphasis>, American Samoa.
+<emphasis>at</emphasis>, Austria.
+<emphasis>au</emphasis>, Australia.
+<emphasis>aw</emphasis>, Aruba.
+<emphasis>az</emphasis>, Azerbaijan.
+<emphasis>ba</emphasis>, Bosnia and Herzegovina.
+<emphasis>bb</emphasis>, Barbados.
+<emphasis>bd</emphasis>, Bangladesh.
+<emphasis>be</emphasis>, Belgium.
+<emphasis>bf</emphasis>, Burkina Faso.
+<emphasis>bg</emphasis>, Bulgaria.
+<emphasis>bh</emphasis>, Bahrain.
+<emphasis>bi</emphasis>, Burundi.
+<emphasis>bj</emphasis>, Benin.
+<emphasis>bm</emphasis>, Bermuda.
+<emphasis>bn</emphasis>, Brunei Darussalam.
+<emphasis>bo</emphasis>, Bolivia.
+<emphasis>br</emphasis>, Brazil.
+<emphasis>bs</emphasis>, Bahamas.
+<emphasis>bt</emphasis>, Bhutan.
+<emphasis>bv</emphasis>, Bouvet Island.
+<emphasis>bw</emphasis>, Botswana.
+<emphasis>by</emphasis>, Belarus.
+<emphasis>bz</emphasis>, Belize.
+<emphasis>ca</emphasis>, Canada.
+<emphasis>cc</emphasis>, Cocos (Keeling) Islands.
+<emphasis>cd</emphasis>, Congo, Democratic Republic of the.
+<emphasis>cf</emphasis>, Central African Republic.
+<emphasis>cg</emphasis>, Congo, Republic of.
+<emphasis>ch</emphasis>, Switzerland.
+<emphasis>ci</emphasis>, Cote d'Ivoire.
+<emphasis>ck</emphasis>, Cook Islands.
+<emphasis>cl</emphasis>, Chile.
+<emphasis>cm</emphasis>, Cameroon.
+<emphasis>cn</emphasis>, China.
+<emphasis>co</emphasis>, Colombia.
+<emphasis>cr</emphasis>, Costa Rica.
+<emphasis>cu</emphasis>, Cuba.
+<emphasis>cv</emphasis>, Cap Verde.
+<emphasis>cx</emphasis>, Christmas Island.
+<emphasis>cy</emphasis>, Cyprus.
+<emphasis>cz</emphasis>, Czech Republic.
+<emphasis>de</emphasis>, Germany.
+<emphasis>dj</emphasis>, Djibouti.
+<emphasis>dk</emphasis>, Denmark.
+<emphasis>dm</emphasis>, Dominica.
+<emphasis>do</emphasis>, Dominican Republic.
+<emphasis>dz</emphasis>, Algeria.
+<emphasis>ec</emphasis>, Ecuador.
+<emphasis>ee</emphasis>, Estonia.
+<emphasis>eg</emphasis>, Egypt.
+<emphasis>eh</emphasis>, Western Sahara.
+<emphasis>er</emphasis>, Eritrea.
+<emphasis>es</emphasis>, Spain.
+<emphasis>et</emphasis>, Ethiopia.
+<emphasis>fi</emphasis>, Finland.
+<emphasis>fj</emphasis>, Fiji.
+<emphasis>fk</emphasis>, Falkland Islands (Malvina).
+<emphasis>fm</emphasis>, Micronesia, Federal State of.
+<emphasis>fo</emphasis>, Faroe Islands.
+<emphasis>fr</emphasis>, France.
+<emphasis>ga</emphasis>, Gabon.
+<emphasis>gd</emphasis>, Grenada.
+<emphasis>ge</emphasis>, Georgia.
+<emphasis>gf</emphasis>, French Guiana.
+<emphasis>gg</emphasis>, Guernsey.
+<emphasis>gh</emphasis>, Ghana.
+<emphasis>gi</emphasis>, Gibraltar.
+<emphasis>gl</emphasis>, Greenland.
+<emphasis>gm</emphasis>, Gambia.
+<emphasis>gn</emphasis>, Guinea.
+<emphasis>gp</emphasis>, Guadeloupe.
+<emphasis>gq</emphasis>, Equatorial Guinea.
+<emphasis>gr</emphasis>, Greece.
+<emphasis>gs</emphasis>, South Georgia and the South Sandwich Islands.
+<emphasis>gt</emphasis>, Guatemala.
+<emphasis>gu</emphasis>, Guam.
+<emphasis>gw</emphasis>, Guinea-Bissau.
+<emphasis>gy</emphasis>, Guyana.
+<emphasis>hk</emphasis>, Hong Kong.
+<emphasis>hm</emphasis>, Heard and McDonald Islands.
+<emphasis>hn</emphasis>, Honduras.
+<emphasis>hr</emphasis>, Croatia/Hrvatska.
+<emphasis>ht</emphasis>, Haiti.
+<emphasis>hu</emphasis>, Hungary.
+<emphasis>id</emphasis>, Indonesia.
+<emphasis>ie</emphasis>, Ireland.
+<emphasis>il</emphasis>, Israel.
+<emphasis>im</emphasis>, Isle of Man.
+<emphasis>in</emphasis>, India.
+<emphasis>io</emphasis>, British Indian Ocean Territory.
+<emphasis>iq</emphasis>, Iraq.
+<emphasis>ir</emphasis>, Iran (Islamic Republic of).
+<emphasis>is</emphasis>, Iceland.
+<emphasis>it</emphasis>, Italy.
+<emphasis>je</emphasis>, Jersey.
+<emphasis>jm</emphasis>, Jamaica.
+<emphasis>jo</emphasis>, Jordan.
+<emphasis>jp</emphasis>, Japan.
+<emphasis>ke</emphasis>, Kenya.
+<emphasis>kg</emphasis>, Kyrgyzstan.
+<emphasis>kh</emphasis>, Cambodia.
+<emphasis>ki</emphasis>, Kiribati.
+<emphasis>km</emphasis>, Comoros.
+<emphasis>kn</emphasis>, Saint Kitts and Nevis.
+<emphasis>kp</emphasis>, Korea, Democratic People's Republic.
+<emphasis>kr</emphasis>, Korea, Republic of.
+<emphasis>kw</emphasis>, Kuwait.
+<emphasis>ky</emphasis>, Cayman Islands.
+<emphasis>kz</emphasis>, Kazakhstan.
+<emphasis>la</emphasis>, Lao People's Democratic Republic.
+<emphasis>lb</emphasis>, Lebanon.
+<emphasis>lc</emphasis>, Saint Lucia.
+<emphasis>li</emphasis>, Liechtenstein.
+<emphasis>lk</emphasis>, Sri Lanka.
+<emphasis>lr</emphasis>, Liberia.
+<emphasis>ls</emphasis>, Lesotho.
+<emphasis>lt</emphasis>, Lithuania.
+<emphasis>lu</emphasis>, Luxembourg.
+<emphasis>lv</emphasis>, Latvia.
+<emphasis>ly</emphasis>, Libyan Arab Jamahiriya.
+<emphasis>ma</emphasis>, Morocco.
+<emphasis>mc</emphasis>, Monaco.
+<emphasis>md</emphasis>, Moldova, Republic of.
+<emphasis>mg</emphasis>, Madagascar.
+<emphasis>mh</emphasis>, Marshall Islands.
+<emphasis>mk</emphasis>, Macedonia, Former Yugoslav Republic.
+<emphasis>ml</emphasis>, Mali.
+<emphasis>mm</emphasis>, Myanmar.
+<emphasis>mn</emphasis>, Mongolia.
+<emphasis>mo</emphasis>, Macau.
+<emphasis>mp</emphasis>, Northern Mariana Islands.
+<emphasis>mq</emphasis>, Martinique.
+<emphasis>mr</emphasis>, Mauritania.
+<emphasis>ms</emphasis>, Montserrat.
+<emphasis>mt</emphasis>, Malta.
+<emphasis>mu</emphasis>, Mauritius.
+<emphasis>mv</emphasis>, Maldives.
+<emphasis>mw</emphasis>, Malawi.
+<emphasis>mx</emphasis>, Mexico.
+<emphasis>my</emphasis>, Malaysia.
+<emphasis>mz</emphasis>, Mozambique.
+<emphasis>na</emphasis>, Namibia.
+<emphasis>nc</emphasis>, New Caledonia.
+<emphasis>ne</emphasis>, Niger.
+<emphasis>nf</emphasis>, Norfolk Island.
+<emphasis>ng</emphasis>, Nigeria.
+<emphasis>ni</emphasis>, Nicaragua.
+<emphasis>nl</emphasis>, Netherlands.
+<emphasis>no</emphasis>, Norway.
+<emphasis>np</emphasis>, Nepal.
+<emphasis>nr</emphasis>, Nauru.
+<emphasis>nu</emphasis>, Niue.
+<emphasis>nz</emphasis>, New Zealand.
+<emphasis>om</emphasis>, Oman.
+<emphasis>pa</emphasis>, Panama.
+<emphasis>pe</emphasis>, Peru.
+<emphasis>pf</emphasis>, French Polynesia.
+<emphasis>pg</emphasis>, Papua New Guinea.
+<emphasis>ph</emphasis>, Philippines.
+<emphasis>pk</emphasis>, Pakistan.
+<emphasis>pl</emphasis>, Poland.
+<emphasis>pm</emphasis>, St. Pierre and Miquelon.
+<emphasis>pn</emphasis>, Pitcairn Island.
+<emphasis>pr</emphasis>, Puerto Rico.
+<emphasis>ps</emphasis>, Palestinian Territories.
+<emphasis>pt</emphasis>, Portugal.
+<emphasis>pw</emphasis>, Palau.
+<emphasis>py</emphasis>, Paraguay.
+<emphasis>qa</emphasis>, Qatar.
+<emphasis>re</emphasis>, Reunion Island.
+<emphasis>ro</emphasis>, Romania.
+<emphasis>ru</emphasis>, Russian Federation.
+<emphasis>rw</emphasis>, Rwanda.
+<emphasis>sa</emphasis>, Saudi Arabia.
+<emphasis>sb</emphasis>, Solomon Islands.
+<emphasis>sc</emphasis>, Seychelles.
+<emphasis>sd</emphasis>, Sudan.
+<emphasis>se</emphasis>, Sweden.
+<emphasis>sg</emphasis>, Singapore.
+<emphasis>sh</emphasis>, St. Helena.
+<emphasis>si</emphasis>, Slovenia.
+<emphasis>sj</emphasis>, Svalbard and Jan Mayen Islands.
+<emphasis>sk</emphasis>, Slovak Republic.
+<emphasis>sl</emphasis>, Sierra Leone.
+<emphasis>sm</emphasis>, San Marino.
+<emphasis>sn</emphasis>, Senegal.
+<emphasis>so</emphasis>, Somalia.
+<emphasis>sr</emphasis>, Suriname.
+<emphasis>st</emphasis>, Sao Tome and Principe.
+<emphasis>sv</emphasis>, El Salvador.
+<emphasis>sy</emphasis>, Syrian Arab Republic.
+<emphasis>sz</emphasis>, Swaziland.
+<emphasis>tc</emphasis>, Turks and Caicos Islands.
+<emphasis>td</emphasis>, Chad.
+<emphasis>tf</emphasis>, French Southern Territories.
+<emphasis>tg</emphasis>, Togo.
+<emphasis>th</emphasis>, Thailand.
+<emphasis>tj</emphasis>, Tajikistan.
+<emphasis>tk</emphasis>, Tokelau.
+<emphasis>tm</emphasis>, Turkmenistan.
+<emphasis>tn</emphasis>, Tunisia.
+<emphasis>to</emphasis>, Tonga.
+<emphasis>tp</emphasis>, East Timor.
+<emphasis>tr</emphasis>, Turkey.
+<emphasis>tt</emphasis>, Trinidad and Tobago.
+<emphasis>tv</emphasis>, Tuvalu.
+<emphasis>tw</emphasis>, Taiwan.
+<emphasis>tz</emphasis>, Tanzania.
+<emphasis>ua</emphasis>, Ukraine.
+<emphasis>ug</emphasis>, Uganda.
+<emphasis>uk</emphasis>, United Kingdom.
+<emphasis>um</emphasis>, US Minor Outlying Islands.
+<emphasis>us</emphasis>, United States.
+<emphasis>uy</emphasis>, Uruguay.
+<emphasis>uz</emphasis>, Uzbekistan.
+<emphasis>va</emphasis>, Holy See (City Vatican State).
+<emphasis>vc</emphasis>, Saint Vincent and the Grenadines.
+<emphasis>ve</emphasis>, Venezuela.
+<emphasis>vg</emphasis>, Virgin Islands (British).
+<emphasis>vi</emphasis>, Virgin Islands (USA).
+<emphasis>vn</emphasis>, Vietnam.
+<emphasis>vu</emphasis>, Vanuatu.
+<emphasis>wf</emphasis>, Wallis and Futuna Islands.
+<emphasis>ws</emphasis>, Western Samoa.
+<emphasis>ye</emphasis>, Yemen.
+<emphasis>yt</emphasis>, Mayotte.
+<emphasis>yu</emphasis>, Yugoslavia.
+<emphasis>za</emphasis>, South Africa.
+<emphasis>zm</emphasis>, Zambia.
+<emphasis>zw</emphasis>, Zimbabwe.
+
+
+</para>
+</sect1>
+
+
+</appendix>
+
+

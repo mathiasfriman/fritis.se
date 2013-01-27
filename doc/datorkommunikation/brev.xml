@@ -1,0 +1,151 @@
+<appendix id="brev">
+	<title>Kommentarer från läsare och experter</title>
+
+	<sect1><title>Brev från Bengt Gördén</title>
+		<screen>
+Date: Thu, 11 Mar 2004 23:42:25 +0100
+From: Bengt Gördén &lt;bengan (snabel-a) sunet.se&gt;
+To: marcus@rejas.se
+Subject: ang. NAT
+
+Hej!
+
+Ang. Datorkommunikation och kurs DTR1201.
+
+Trevlig läsning (även om jag inte lyckats ta mig genom allt :-).
+
+Nu till lite spörsmål ang. NAT.
+
+Ditt avsnitt om NAT är inte riktigt rättvisande, om man utgår från att
+kapittlet egentligen handlar om IP-routing. IETF har under flera år
+varit rejält bekymrade ang. NAT. Anledningen är helt enkelt att NAT slår
+sönder det fundament varpå IP bygger. Det finns några få kriterier som
+måste uppfyllas för att Internet skall fungera. Ett av dem är "unik
+adresserbarhet".  Genom att NAT (främst den varianten där man i hög grad
+bygger adresseringen på transportnivå) förhindrar detta så är det
+förkastligt att använda det.
+
+Det är för övrigt ingen fördel att spara adresser då man konserverar en
+modell och bygger dåliga lösningar runt den. Speciellt i USA och Europa
+har vi inget adressproblem. Det finns så mycket adresser att vi kan
+gödsla med dem. Att få ut nya adresser är heller inte svårt. Det är bara
+de stora ISP:erna som anför annledningen att det är dåligt med adresser
+så att de bara kan dela ut 1 till varje hushåll. Den egentliga
+annledningen är att de inte vill att du har mycket burkar på ditt hemnät
+som aggerar servrar. Och kanske framför allt inte att du ska köra
+IP-telefoni (de stora ISP:erna är ju egentligen telekombolag).
+
+Jag vet inte om du har tänkt skriva något om detta i din kurs men som
+"Old Internet Fart" (tm) så skulle jag råda dig till att skriva in ett
+stycke där man förklarar just grunden för IP och varför det är dumt att
+slå sönder den.
+		</screen>
+	</sect1>
+	<sect1><title>Brev från Pär Lindskog </title>
+		<screen>
+Date: Sun, 30 May 2004 23:33:55 +0200
+From: Pär Lindskog &lt;lindskog (snabel-a) imapcenter.net&gt;
+To: marcus@rejas.se
+Subject: Rättelse/tillägg Datorkommunikation
+
+Hej
+
+Surfade runt lite på se.linux.org och fastnade en stund på din bok om
+datorkommunikation. Mycket bra skrivet, verkligen välgjord.
+Nu har jag inte läst hela boken (hoppas jag hinner till sommaren) men
+jag upptäckte en sak på kapitlet om E-post. Det står att med protokollet
+IMAP lagras all e-post lokalt... CENTRALT borde det vara? Sen har jag
+ett tillägg på IMAP-protokollet som kan vara värt att nämna, nämligen
+risken med backuper då mailen lagras centralt, man måste vara medveten
+om att man är helt och hållet i händerna på leverantören (motsv.) då det
+gäller backup av sina mail. Många av de leverantörer som specialicerat
+sig på IMAP har möjligheten att ladda ner allt innehåll i en mapp som
+tex. en zip-fil.
+
+En stor fördel med IMAP är möjligheten till ett kommando som heter IDLE,
+vilken ser till att "pusha" ut mailen istället för att ställa in
+mailprogrammet att aktivt "gå" och hämta nya mail med visst intervall
+(som POP-mail). Om IDLE supportas av servern och klienten har jag mailet
+i min mailklient samtidigt som det kommer till servern. Man kan
+visserligen ställa tiden för hämtning av POP-mail lågt men det tar
+ganska stora resurser i anspråk (logga in, kolla, logga ut) så det kan
+lätt bli överbelastning på servern om många gör det...
+
+Vidare under webmail står det att webmail ofta har begränsat utrymme på
+servern, som det står skrivet kan man tolka det som att utrymmet är
+obegränsat då man använder sig av någon mailklient (POP/IMAP), borde nog
+förtydligas lite, speciellt om man använder sig av IMAP då man måste
+rensa själv på servern.
+
+Ändra/lägg till det du önskar eller tycker är relevant i sammanhanget,
+jag återkommer säkert med fler synpunkter i framtiden.
+
+--
+Mvh
+/Pär Lindskog
+		</screen>
+	</sect1>
+
+        <sect1><title>Brev fån Jan Johansson</title>
+		<screen>
+
+Date: Tue, 30 Nov 2004 16:27:10 +0100
+From: "Jan Johansson" &lt;jan.johansson (snabel-a) ragunda.se&gt;
+To: marcus@rejas.se
+Subject: datorkommunikation
+
+Hej Marcus
+Jag har jobbat flera år som lärare och håller fullständigt med när det
+gäller svårigheten att hitta lämpliga böcker för kursen
+datorkommunikation. Kul att du har tagit detta initiativ! Boken är
+skriven på ett lättfattligt och lättläst sätt, men tenderar kanske att
+bli ytlig i en del avsnitt.                         
+
+Jag brukar ta upp lite mer när det gäller repeatrar och bryggor. Bryggan
+är viktig att förstå eftersom den är grunden till hur switchen fungerar.
+Fortsätter sedan med att ta upp layer 2 funktionen, broadcast, switchar
+finns i olika utföranden mm. Begreppen simplex, halv- och full-duplex
+måste också förklaras.      
+
+Repeatrar
+Är en kvarleva från bussnätens tid. Trots att koaxialkabeln i 10base2
+(thinnet) kunde sträckas ut nästan 200meter och 10base5 (thicknet) ca
+500 meter behövdes  signalerna i koaxialkablarna förstärkas med hjälp av
+repeatrar så att man kunde forsätta ännu längre sträckor. Eftersom det
+var glest mellan datorerna på den  tiden och de skulle dessutom
+sammanbindas med samma kabel blev det snabbt långa krokiga snirklingar
+med kablarna.
+
+Med stjärnnäten blev repetrarna var mans egendom eftersom det sitter en
+förstärkare (repeater) på varje port i en hubb. Vi skulle kunna säga att
+hubben är en "multirepeater" som isolerar varje kabelsegment så att ett
+kabelfel (kortslutning, avbrott eller missanpassning) på ett ställe inte
+slår ut de andra anslutningarna (portarna) i hubben.
+
+Bryggor
+Har haft en lika tynande tillvaro som repeatrar men har nu börjat göra
+comeback i trådlösa nät. Bryggan används ofta för att minska onyttig
+trafik i nät där trafiken ökat för mycket. Egentligen så minskar man
+ej trafiken utan ser med bryggan till att hålla "onödig trafik" sk
+broadcast lokalt inom mindre områden. Genom att lagra nätverkskortens
+hårdvaruadresser "MAC-adresser" i ett litet minne, lär sig bryggan på
+vilken sida av bryggan som olika datorer finns. Bara den trafik som
+behöver komma till andra sidan av bryggan släpps sedan igenom. I nät med
+hubbar och Windows datorer kan broadcast och elections ta upp en stor
+del  av bandbredden. För att lätta upp situationen är en brygga lättare
+att sätta in än att dela nätet med en router.
+
+I nät med switchar uppstår inte behovet av att sätta in bryggor eftersom
+switchar har en bryggfunktion i varje port. Därför kan vi likna switchen
+vid en "multibrygga". I dagens trådlösa nät har vi oftast en
+bryggfunktion inbygd i den trådlösa accesspunkten. Bryggan har i det
+fallet i uppgift att brygga samman  det trådade nätet med det trådlösa.
+
+Skall försöka återkomma med mera när jag får tid över. Du får
+använda/förändra som du vill.
+
+Mvh
+Jan Johansson
+		</screen>
+	</sect1>
+</appendix>

@@ -1,0 +1,593 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Tabell över CIDR-nät</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="Datorkommunikation"
+HREF="book1.html"><LINK
+REL="PREVIOUS"
+TITLE="Topdomäner"
+HREF="topdomains.html"><LINK
+REL="NEXT"
+TITLE="Tabell över några av de RFC:er som berör boken"
+HREF="rfc.html"><LINK
+REL="stylesheet"
+HREF="./fritis.css"
+TYPE="text/css"></HEAD
+><BODY
+CLASS="appendix"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Datorkommunikation</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="topdomains.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="rfc.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="appendix"
+><H1
+><A
+NAME="natmask"
+></A
+>Appendix I. Tabell över CIDR-nät</H1
+><P
+>&#13;		Som vi sett i boken så delar man upp nätverksklasser i
+		A-, B- och C-nät.  Så var det från början på Internet.
+		Skulle du ansluta ditt företag fick du välja om de
+		behövde ett A-, B- och C-nät. Eftersom det är ganska
+		stora steg mellan dem så blev det ett väldigt slöseri
+		med IP-adresser.  Varje företag måste ju skaffa ett nät
+		som var större än det antal datorer de ville ansluta
+		till Internet för att det skulle räcka. Man insåg snabbt
+		att antalet adresser på Internet skulle ta slut om man
+		inte kom på ett effektivare sätt att fördela dem på.
+	</P
+><P
+>&#13;		Teknikst så fungerar nätmasken så här. Både nätmasken
+		och IP-adressen representeras (som allt annat) i binär
+		form. Till exempel så blir nätmasken 255.255.255.0
+
+		<P
+CLASS="literallayout"
+>11111111.11111111.11111111.00000000<br>
+		</P
+>
+
+		naturligtvis är inte punkterna med men jag tar med dem
+		ändå i exemplen för att det skall bli lättare att se.
+	</P
+><P
+>&#13;		En IP-adress, till exempel 192.168.0.1 ser ut så här i
+		binär form
+	
+		<P
+CLASS="literallayout"
+>11000000.10101000.00000000.00000001<br>
+		</P
+>
+	</P
+><P
+>&#13;		För att få fram nätverksadressen använder man den
+		logiska (Booleska) operanden AND på varje bit i
+		nätmasken med varje bit i IP-adressen. Detta kallas
+		bitvis AND. AND fungerar enligt följande:
+
+		<P
+CLASS="literallayout"
+>1&nbsp;AND&nbsp;1&nbsp;=&nbsp;1<br>
+1&nbsp;AND&nbsp;0&nbsp;=&nbsp;0<br>
+0&nbsp;AND&nbsp;1&nbsp;=&nbsp;0<br>
+0&nbsp;AND&nbsp;0&nbsp;=&nbsp;0<br>
+		</P
+>
+
+		Det vill säga AND är bara 1 om båda termerna är 1.
+	</P
+><P
+>&#13;		Om man AND-ar nätmasken med IP-adressen får man fram
+		nätadressen. Se nedan:
+	
+		<P
+CLASS="literallayout"
+>11111111.11111111.11111111.00000000<br>
+11000000.10101000.00000000.00000001&nbsp;AND<br>
+11000000.10101000.00000000.00000000<br>
+		</P
+>
+		
+		Alltså är 11000000.10101000.00000000.00000000 =
+		192.168.0.0 nätverksadressen.
+	</P
+><P
+>&#13;		I exempler ät nätmasken 24 bitar stor (24 ettor). Man
+		säger att det är ett /24-nät. Vilket är samma sak som
+		ett C-nät eller ett nät med nätmasken 255.255.255.0.
+	</P
+><P
+>&#13;		Tekniskt så finns det inget som hindrar att man gör nät
+		med andra nätmasker än de som hör till A-, B- och
+		C-näten. Man införde ett koncept som kallas för CIDR
+		(Classless Inter-Domain Routing) som är en metod för mer
+		finmaskig uppdelning av ett IP-nät. Istället för att
+		ange nätadressen som 192.168.0.0/255.255.255.0 så anger
+		man den som nätadress/1-24 där 1-24 kallas IP-prefix
+		eller nät-prefix och motsvarar nätmaskens storlek i
+		bitar. Nät-prefixen 8, 16 och 24 motsvarar A-, B- och
+		C-nät. Prefixet 32 motsvarar en nodadress (host).
+	</P
+><P
+>&#13;		Tabellen <A
+HREF="natmask.html#tab_netmask"
+>tabell I-1</A
+> visar alla CIDR nät. I
+		kolumnen med anatelt adresser bör man beakta att det som
+		regel "går bort" två adresser. Det är för att man
+		behöver en broadcastadress och en nätverksadress.
+	</P
+><DIV
+CLASS="table"
+><A
+NAME="tab_netmask"
+></A
+><P
+><B
+>Tabell I-1. CIDR nätadresser</B
+></P
+><TABLE
+BORDER="1"
+FRAME="border"
+RULES="all"
+CLASS="CALSTABLE"
+><COL><COL><COL><COL><THEAD
+><TR
+><TH
+>Nätmask</TH
+><TH
+>CIDR-notation</TH
+><TH
+>Antal adresser</TH
+><TH
+>Kommentar</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+>0.0.0.0</TD
+><TD
+>n.n.n.n/0</TD
+><TD
+>4 294 967 296</TD
+><TD
+>Hela Internet</TD
+></TR
+><TR
+><TD
+>128.0.0.0</TD
+><TD
+>n.n.n.n/1</TD
+><TD
+>2 147 483 648</TD
+><TD
+>128 A-nät</TD
+></TR
+><TR
+><TD
+>192.0.0.0</TD
+><TD
+>n.n.n.n/2</TD
+><TD
+>1 073 741 824</TD
+><TD
+>64 A-nät</TD
+></TR
+><TR
+><TD
+>224.0.0.0</TD
+><TD
+>n.n.n.n/3</TD
+><TD
+>536 870 912</TD
+><TD
+>32 A-nät</TD
+></TR
+><TR
+><TD
+>240.0.0.0</TD
+><TD
+>n.n.n.n/4</TD
+><TD
+>268 435 456</TD
+><TD
+>16 A-nät</TD
+></TR
+><TR
+><TD
+>248.0.0.0</TD
+><TD
+>n.n.n.n/5</TD
+><TD
+>134 217 728</TD
+><TD
+>8 A-nät</TD
+></TR
+><TR
+><TD
+>252.0.0.0</TD
+><TD
+>n.n.n.n/6</TD
+><TD
+>67 108 864</TD
+><TD
+>4 A-nät</TD
+></TR
+><TR
+><TD
+>254.0.0.0</TD
+><TD
+>n.n.n.n/7</TD
+><TD
+>33 554 432</TD
+><TD
+>2 A-nät</TD
+></TR
+><TR
+><TD
+>255.0.0.0</TD
+><TD
+>n.n.n.n/8</TD
+><TD
+>16 777 216</TD
+><TD
+>A-nät</TD
+></TR
+><TR
+><TD
+>255.128.0.0</TD
+><TD
+>n.n.n.n/9</TD
+><TD
+>8 388 608</TD
+><TD
+>128 B-nät</TD
+></TR
+><TR
+><TD
+>255.192.0.0</TD
+><TD
+>n.n.n.n/10</TD
+><TD
+>4 194 304</TD
+><TD
+>64 B-nät</TD
+></TR
+><TR
+><TD
+>255.224.0.0</TD
+><TD
+>n.n.n.n/11</TD
+><TD
+>2 097 152</TD
+><TD
+>32 B-nät</TD
+></TR
+><TR
+><TD
+>255.240.0.0</TD
+><TD
+>n.n.n.n/12</TD
+><TD
+>1 048 576</TD
+><TD
+>16 B-nät</TD
+></TR
+><TR
+><TD
+>255.248.0.0</TD
+><TD
+>n.n.n.n/13</TD
+><TD
+>524 288</TD
+><TD
+>8 B-nät</TD
+></TR
+><TR
+><TD
+>255.252.0.0</TD
+><TD
+>n.n.n.n/14</TD
+><TD
+>262 144</TD
+><TD
+>4 B-nät</TD
+></TR
+><TR
+><TD
+>255.254.0.0</TD
+><TD
+>n.n.n.n/15</TD
+><TD
+>131 072</TD
+><TD
+>2 B-nät</TD
+></TR
+><TR
+><TD
+>255.255.0.0</TD
+><TD
+>n.n.n.n/16</TD
+><TD
+>65 536</TD
+><TD
+>B-nät</TD
+></TR
+><TR
+><TD
+>255.255.128.0</TD
+><TD
+>n.n.n.n/17</TD
+><TD
+>32 768</TD
+><TD
+>128 C-nät</TD
+></TR
+><TR
+><TD
+>255.255.192.0</TD
+><TD
+>n.n.n.n/18</TD
+><TD
+>16 384</TD
+><TD
+>64 C-nät</TD
+></TR
+><TR
+><TD
+>255.255.224.0</TD
+><TD
+>n.n.n.n/19</TD
+><TD
+>8 192</TD
+><TD
+>32 C-nät</TD
+></TR
+><TR
+><TD
+>255.255.240.0</TD
+><TD
+>n.n.n.n/20</TD
+><TD
+>4 096</TD
+><TD
+>16 C-nät</TD
+></TR
+><TR
+><TD
+>255.255.248.0</TD
+><TD
+>n.n.n.n/21</TD
+><TD
+>2 048</TD
+><TD
+>8 C-nät</TD
+></TR
+><TR
+><TD
+>255.255.252.0</TD
+><TD
+>n.n.n.n/22</TD
+><TD
+>1 024</TD
+><TD
+>4 C-nät</TD
+></TR
+><TR
+><TD
+>255.255.254.0</TD
+><TD
+>n.n.n.n/23</TD
+><TD
+>512</TD
+><TD
+>2 C-nät</TD
+></TR
+><TR
+><TD
+>255.255.255.0</TD
+><TD
+>n.n.n.n/24</TD
+><TD
+>256</TD
+><TD
+>C-nät</TD
+></TR
+><TR
+><TD
+>255.255.255.128</TD
+><TD
+>n.n.n.n/25</TD
+><TD
+>128</TD
+><TD
+>128 Noder (1/2 C-nät)</TD
+></TR
+><TR
+><TD
+>255.255.255.192</TD
+><TD
+>n.n.n.n/26</TD
+><TD
+>64</TD
+><TD
+>64 Noder (1/4 C-nät)</TD
+></TR
+><TR
+><TD
+>255.255.255.224</TD
+><TD
+>n.n.n.n/27</TD
+><TD
+>32</TD
+><TD
+>32 Noder (1/8 C-nät)</TD
+></TR
+><TR
+><TD
+>255.255.255.240</TD
+><TD
+>n.n.n.n/28</TD
+><TD
+>16</TD
+><TD
+>16 Noder (1/16 C-nät</TD
+></TR
+><TR
+><TD
+>255.255.255.248</TD
+><TD
+>n.n.n.n/29</TD
+><TD
+>8</TD
+><TD
+>8 Noder (1/32 C-nät)</TD
+></TR
+><TR
+><TD
+>255.255.255.252</TD
+><TD
+>n.n.n.n/30</TD
+><TD
+>4</TD
+><TD
+>4 Noder (1/64 C-nät)</TD
+></TR
+><TR
+><TD
+>255.255.255.254</TD
+><TD
+>n.n.n.n/31</TD
+><TD
+>2</TD
+><TD
+>2 Noder (1/128 C-nät)</TD
+></TR
+><TR
+><TD
+>255.255.255.255</TD
+><TD
+>n.n.n.n/32</TD
+><TD
+>1</TD
+><TD
+>1 Nod (hostadress)</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="topdomains.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Hem</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="rfc.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Topdomäner</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Tabell över några av de RFC:er som berör boken</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

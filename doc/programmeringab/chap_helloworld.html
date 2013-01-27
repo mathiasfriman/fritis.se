@@ -1,0 +1,339 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Hall� V�rlden!</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="Programmering i PHP"
+HREF="book1.html"><LINK
+REL="PREVIOUS"
+TITLE="Fr�n k�llkod till program"
+HREF="chap_building.html"><LINK
+REL="NEXT"
+TITLE="Webbrowser, webbserver och program"
+HREF="chap_webbprogrammering.html"><LINK
+REL="stylesheet"
+HREF="./book.css"
+TYPE="text/css"></HEAD
+><BODY
+CLASS="chapter"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Programmering i PHP</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="chap_building.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="chap_webbprogrammering.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="chapter"
+><H1
+><A
+NAME="chap_helloworld"
+></A
+>Kapitel 4. Hall� V�rlden!</H1
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Innehållsförteckning</B
+></DT
+><DT
+><A
+HREF="chap_helloworld.html#AEN176"
+>Programmeringsmilj�n</A
+></DT
+><DT
+><A
+HREF="chap_helloworld.html#AEN189"
+>Hall� v�rlden!</A
+></DT
+><DT
+><A
+HREF="chap_helloworld.html#AEN203"
+>�vningsuppgifter</A
+></DT
+></DL
+></DIV
+><BLOCKQUOTE
+CLASS="ABSTRACT"
+><DIV
+CLASS="abstract"
+><P
+></P
+><A
+NAME="AEN174"
+></A
+><P
+>&#13;			Detta avsnitt beskriver hur ett enkelt PHP-script �r uppbyggt.
+		</P
+><P
+></P
+></DIV
+></BLOCKQUOTE
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN176"
+>Programmeringsmilj�n</A
+></H1
+><P
+>&#13;			Som vi har sagt tidigare s� skapar man ett program p� f�ljande
+			s�tt (n�got f�renklat):
+
+			<P
+></P
+><UL
+><LI
+><P
+>Skapa PHP-fil</P
+></LI
+><LI
+><P
+>Kopiera till servern</P
+></LI
+><LI
+><P
+>Provk�r</P
+></LI
+></UL
+>
+		</P
+><P
+>&#13;			Du kan anv�nda vilken editor du vill f�r att skapa php-filer.
+			Notepad fungerar alldeles utm�rkt men det finns de med fler
+			finesser. Vim �r en av dem. Den har st�d bland annat f�r
+			f�rgl�ggning av kod och finns f�r b�de Linux® och Windows att
+			h�mta fr�n deras hemsida:
+			<A
+HREF="http://vim.sf.net"
+TARGET="_top"
+>&#13;				<I
+CLASS="citetitle"
+>&#13;					http://vim.sf.net
+				</I
+>
+			</A
+>
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN189"
+>Hall� v�rlden!</A
+></H1
+><P
+>&#13;			N�stan alla programmeringskurser b�rjar med att man skapar ett
+			program som heter Hello World. Hello World �r ett program som
+			inte g�r n�got annat �n att skriva ut "Hello World" p� sk�rmen.
+		</P
+><P
+>&#13;			Vi b�rjar med att titta p� hur det ser ut i PHP.
+			<DIV
+CLASS="example"
+><A
+NAME="AEN193"
+></A
+><P
+><B
+>Exempel 4-1. Hello World i PHP</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;html&#62;
+&#60;head&#62;
+   &#60;title&#62;Hall� V�rlden!&#60;/title&#62;
+&#60;/head&#62;
+&#60;body&#62;
+   &#60;p&#62;
+      &#60;?php
+         echo "Hall� V�rlden!";
+      ?&#62;
+   &#60;/p&#62;
+&#60;/body&#62;
+&#60;/html&#62;
+
+				</PRE
+></DIV
+>
+		</P
+><P
+>&#13;			S�, vad g�r nu detta program? Som ni s�kert kan se s� �r det HTML
+			i b�rjan och slutet av filen. Det enda av filen som �r PHP �r
+			mellan tecknen &#60;?php och ?&#62;. Det �r f�r att tolkaren skall
+			veta n�r den skall exekvera raderna ist�llet f�r att skriva ut dem.
+		</P
+><P
+>&#13;			Den enda PHP-koden i detta lilla program �r
+			<SPAN
+CLASS="type"
+>echo "Hall� V�rlden!";</SPAN
+>. Echo talar om att n�got skall
+			skrivas ut (Hall� V�rlden!) och semikolonet talar om att en sats i
+			programmet slutar. En sats kan omfatta flera rader men avslutas
+			alltid av ett semikolon.
+		</P
+><P
+>&#13;			Man kan sj�lvklart skriva ett "Hello World!" program som enbart
+			anv�nder sig av PHP och ingen HTML (dock utan den formatering som
+			kommer med HTML).
+			<DIV
+CLASS="example"
+><A
+NAME="AEN200"
+></A
+><P
+><B
+>Exempel 4-2. Hello World i PHP utan HTML</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+echo "Hall� V�rlden!";
+?&#62;
+
+				</PRE
+></DIV
+>
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN203"
+>�vningsuppgifter</A
+></H1
+><P
+>&#13;			<P
+></P
+><UL
+><LI
+><P
+>&#13;						�ndra programmet s� att det skriver ut n�got annat �n
+						"Hall� V�rlden!". Testa att det fungerar som du vill.
+					</P
+></LI
+><LI
+><P
+>&#13;						G�r s� att tv� rader skrivs ut. (Anv�nd HTML-koder).
+					</P
+></LI
+></UL
+>
+		</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="chap_building.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Hem</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="chap_webbprogrammering.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Fr�n k�llkod till program</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Webbrowser, webbserver och program</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

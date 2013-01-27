@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<chapter id="varochkontanter">
+<title>Variabler och konstanter</title>
+<sect1 id="variabler">
+<title>Variabler</title>
+<para>För att kunna ändra värden i programmet behöver vi använda variabler. En variabel är en plats i minnet som vi tilldelat en specifik datatyp. Värdet som lagras i en variabel kan ändras under tiden vi kör programmet. Säg till exempel att vi vill kunna lagra ett heltal i vårt program och under tiden programmet körs skall detta heltal kunna förändras. Vår kod skriver vi som i <xref linkend="var_heltal" />.</para>
+<example id="var_heltal">
+<title>Skapa en heltalsvariabel</title>
+<programlisting>int tal;
+
+</programlisting>
+</example>
+<para>Först skriver vi vilken datatyp vi vill använda, i <xref linkend="var_heltal" /> använder vi datatypen <type>int</type> eftersom vi vill lagra heltal. Därefter sätter vi ett variabelnamn, i vårt exempel är variabelnamnet <varname>tal</varname>. Raden avslutas med ett semikolon, <keycap>;</keycap>, vilket alla rader i C++ skall göra (med få undantag).</para>
+<para>Nu kan vi lagra ett heltal i vårt program under tiden det körs. Låt oss lagra talet 20 i vår variabel <varname>tal</varname>. Vi skriver som i <xref linkend="var_heltal2" />.</para>
+<example id="var_heltal2">
+<title>Skapa en heltalsvariabel och tilldela ett värde</title>
+<programlisting>int tal;
+tal = 20;
+
+</programlisting>
+</example>
+<para>Det som är nytt i <xref linkend="var_heltal2" /> är att vi tilldelar tal värdet 20 i programkoden.</para>
+<para>Hur skulle vi göra om vi vill använda flyttal istället för heltal? Just det, vi skapar en flyttalsvariabel med <type>float</type> som i <xref linkend="var_float" />.</para>
+<example id="var_float">
+<title>Skapa en flyttalsvariabel</title>
+<programlisting>float tal;
+tal = 20.78;
+
+</programlisting>
+</example>
+<para>Lägg märke till hur vi använder <type>float</type> istället för <type>int</type> i programkoden. Vi tilldelar <varname>tal</varname> värdet <literal>20.78</literal>. Alla decimala tal i C++ anges med punkt ( <keycap>.</keycap> ) och inte med kommatecken ( <keycap>,</keycap> ) som vi ibland använder.</para>
+<para>Om vi då vill ha både heltal och flyttal i vårt program? Vi deklarerar båda datatyperna i programmet, som i <xref linkend="var_intfloat" />.</para>
+<example id="var_intfloat">
+<title>Deklarera två datatyper</title>
+<programlisting>int tal;
+float tal2;
+tal = 20;
+tal2 = 20.78;
+
+</programlisting>
+</example>
+<para>I <xref linkend="var_intfloat" /> deklareras ett heltal och ett flyttal. Båda tilldelas värden. Lägg märke till hur vi måste använda olika namn på variablerna. Vi kan inte ha ett heltal som heter <varname>tal</varname> och samtidigt ha ett flyttal som heter <varname>tal</varname>. Variabelnamnet måste således vara <emphasis>unikt</emphasis> i programmet, klassen eller funktionen där den deklareras.</para>
+<para>Variabelnamn får enbart bestå av bokstäver, siffor och understreck ( <keycap>_</keycap> ). Variabelnamnet får inte börja med en siffra. Variabelnamn bör dessutom enbart skrivas med små bokstäver, eftersom vi använder stora bokstäver för konstanter.</para>
+</sect1>
+<sect1 id="konstanter">
+<title>Konstanter</title>
+<abstract>
+<para>För att förstå denna del bör du läsa igenom <xref linkend="variabler" /> först.</para>
+</abstract>
+<para>En konstant är en variabel som inte kan förändras under tiden programmet körs. Vi skulle kunna säga att det är en <emphasis>låst variabel</emphasis>. Detta gör att du kan använda konstanten var som helst i din programkod och vara säker på att den verkligen kommer ha det tilldelade värdet som du gett den. I <xref linkend="const_pi" /> skapar vi en flyttalskonstant för pi.</para>
+<example id="const_pi">
+<title>Deklarera en konstant med värdet av pi</title>
+<programlisting>const float PI = 3.14159;
+
+</programlisting>
+</example>
+<para>Kontantnamnet får enbart innehålla bokstäver, siffor och understreck ( <keycap>_</keycap> ). Konstantnamnet får inte börja med en siffra.</para>
+</sect1>
+<sect1 id="var_sammanfattning">
+<title>Sammanfattning</title>
+<para>Variabler använder vi när vi vill kunna förändra värdet under tiden programmet körs, till exempel att användaren matar in värden. Konstanter är låsta till ett värde och vi använder dem för att ange kända värden som till exempel pi.</para>
+<para>Variabelnamn och konstantnamn får enbart bestå av bokstäver, siffor och understreck ( <keycap>_</keycap> ). Varken variabelnamn eller konstantnamn får börja med en siffra. Variabler skriver vi med små bokstäver och konstanter med stora bokstäver.</para>
+</sect1>
+</chapter>

@@ -1,0 +1,233 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Mer om funktioner</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="Programmering i PHP"
+HREF="book1.html"><LINK
+REL="PREVIOUS"
+TITLE="Arrayer (vektorer)"
+HREF="chap_array.html"><LINK
+REL="NEXT"
+TITLE="Inmatning"
+HREF="chap_inmatning.html"><LINK
+REL="stylesheet"
+HREF="./book.css"
+TYPE="text/css"></HEAD
+><BODY
+CLASS="chapter"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Programmering i PHP</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="chap_array.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="chap_inmatning.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="chapter"
+><H1
+><A
+NAME="chap_funktioner2"
+></A
+>Kapitel 17. Mer om funktioner</H1
+><BLOCKQUOTE
+CLASS="ABSTRACT"
+><DIV
+CLASS="abstract"
+><P
+></P
+><A
+NAME="AEN853"
+></A
+><P
+>&#13;			Tidigare har vi l�rt oss hur funktioner fungerar. I detta kapitel
+			l�r vi oss lite mer om dem.
+		</P
+><P
+></P
+></DIV
+></BLOCKQUOTE
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN855"
+>Call by reference, call by value</A
+></H1
+><P
+>&#13;			N�r man anropar en funktion skickar man vanligtvis med ett eller
+			flera argument. Vi har tidigare sett att om man �ndrar dessa argument
+			i funktionen s� �ndras de inte utanf�r funktionen. Det �r f�r att man
+			l�ttare skall kunna flytta funktionen mellan olika program utan att
+			beh�va vara r�dd f�r att den skall �ndra n�got utanf�r sj�lva
+			funktionen. Detta kallas f�r <SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>call by value</I
+></SPAN
+>. Det
+			vill s�ga att v�rdet i variabeln skickas till funktionen, inte sj�lva
+			variabeln.
+		</P
+><P
+>&#13;			Ibland kan man vilja l�ta funktionen �ndra variabler �ven i v�rlden
+			utanf�r. Allts� om jag skickar en variabel till en funktion och den
+			�ndras i funktionen s� skall den �ndras �ven utanf�r funktionen.
+			Detta f�rfarande kallas f�r <SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>call by reference</I
+></SPAN
+>.
+			Det vill s�ga att man ist�llet f�r att skicka en kopia p� v�rdet i en
+			variabel s� skickar man en pekare till variablen s� att det man g�r
+			men variabeln i funktionen �ven h�nder utanf�r funktionen.
+		</P
+><P
+>&#13;			Detta kan i flera fall vara v�ldigt smidigt men skall normalt
+			undvikas. Ett litet exempel.
+
+			<DIV
+CLASS="example"
+><A
+NAME="AEN862"
+></A
+><P
+><B
+>Exempel 17-1. Call by reference</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+function swap (&#38;$var1, &#38;$var2) {
+   $tmp = $var2;
+   $var2 = $var1;
+   $var1 = $tmp;
+}
+
+$text1 = "Text1";
+$text2 = "Text2";
+
+echo "F�re swap: text1: $text1, text2: $text2 &#60;br&#62;\n";
+
+swap($text1, $text2);
+
+echo "Efter swap: text1: $text1, text2: $text2 &#60;br&#62;\n";
+?&#62;
+
+				</PRE
+></DIV
+>
+		</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="chap_array.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Hem</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="chap_inmatning.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Arrayer (vektorer)</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Inmatning</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

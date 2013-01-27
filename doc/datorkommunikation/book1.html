@@ -1,0 +1,1743 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Datorkommunikation</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="NEXT"
+TITLE="Förord"
+HREF="forord.html"><LINK
+REL="stylesheet"
+HREF="./fritis.css"
+TYPE="text/css"></HEAD
+><BODY
+CLASS="book"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="BOOK"
+><A
+NAME="AEN1"
+></A
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="title"
+><A
+NAME="AEN2"
+>Datorkommunikation</A
+></H1
+><H3
+CLASS="author"
+><A
+NAME="AEN4"
+></A
+>Marcus Rejås</H3
+><DIV
+CLASS="affiliation"
+><SPAN
+CLASS="orgname"
+>Rejås Datakonsult AB<BR></SPAN
+><DIV
+CLASS="address"
+><P
+CLASS="address"
+><CODE
+CLASS="email"
+>&#60;<A
+HREF="mailto:marcus@rejas.se"
+>marcus@rejas.se</A
+>&#62;</CODE
+></P
+></DIV
+></DIV
+><P
+CLASS="copyright"
+>Copyright &copy; 2003,2004,2005,2007,2008,2009,2010 Marcus Rejås</P
+><DIV
+><DIV
+CLASS="abstract"
+><P
+></P
+><A
+NAME="AEN29"
+></A
+><P
+>&#13;			Denna bok är anpassad för gymnasieskolans kurs
+			datorkommunikation med kurskoden DTR1201 (<A
+HREF="dtr1201.html"
+>appendix B</A
+>). Den kan naturligtvis användas även i
+			andra sammanhang.
+		</P
+><P
+>&#13;			Du kan köpa tryckta böcker från Rejås Datakonsult AB, se
+			http://www.rejas.se.
+		</P
+><P
+></P
+></DIV
+></DIV
+><DIV
+CLASS="legalnotice"
+><P
+></P
+><A
+NAME="AEN20"
+></A
+><P
+>&#13;			Permission is granted to copy, distribute and/or modify this
+			document under the terms of the GNU Free Documentation License,
+			Version 1.2 or any later version published by the Free Software
+			Foundation; with the Invariant Sections being <A
+HREF="dtr1201.html"
+>appendix B</A
+> and <A
+HREF="forord.html"
+><I
+>Förord</I
+></A
+>, no
+			Front-Cover Texts, and no Back-Cover Texts. A copy of the
+			license is included in the section entitled "GNU Free
+			Documentation License".
+		</P
+><P
+>&#13;			[Översättning:] Var och en äger rätt att kopiera, sprida
+			och/eller förändra detta dokument under villkoren i licensen
+			"GNU Free Documentation License", version 1.2 eller senare
+			publicerad av Free Software Foundation, med de oföränderliga
+			avsnitten <A
+HREF="dtr1201.html"
+>appendix B</A
+> och <A
+HREF="forord.html"
+><I
+>Förord</I
+></A
+>, utan framsidestexter och utan
+			baksidestexter.  En kopia av denna licens finns med i avsnittet
+			med titeln "GNU Free Documentation License".
+		</P
+><P
+>&#13;			Denna bok använder visst material från Wikipedia
+			(http://sv.wikipedia.org).
+		</P
+><P
+>&#13;			Det vill säga, du kan fritt ladda ner, vidaredistribuera och
+			kopiera denna bok. Du får ändra den om du vill (se
+			licenstexten).
+		</P
+><P
+></P
+></DIV
+><HR></DIV
+><H1
+><A
+NAME="AEN33"
+></A
+>Dedikation</H1
+><P
+>Denna bok vill jag tillägna mina barn.</P
+><P
+>In Memorian Daniel Lundblad 1995--2008.</P
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Innehållsförteckning</B
+></DT
+><DT
+><A
+HREF="forord.html"
+>Förord</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="forord.html#AEN38"
+>Tack till</A
+></DT
+><DT
+><A
+HREF="forord.html#AEN55"
+>Några ord om denna bok</A
+></DT
+></DL
+></DD
+><DT
+>1. <A
+HREF="chap_inledning.html"
+>Inledning</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_inledning.html#AEN69"
+>Vad är data och vad är dator?</A
+></DT
+><DT
+><A
+HREF="chap_inledning.html#AEN73"
+>Vad är information?</A
+></DT
+><DT
+><A
+HREF="chap_inledning.html#AEN78"
+>Vad är kommunikation?</A
+></DT
+><DT
+><A
+HREF="chap_inledning.html#AEN81"
+>Vad är datorkommunikation?</A
+></DT
+><DT
+><A
+HREF="chap_inledning.html#AEN84"
+>Sammanfattning</A
+></DT
+></DL
+></DD
+><DT
+>2. <A
+HREF="chap_dataoverforing.html"
+>Dataöverföring</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_dataoverforing.html#AEN91"
+>Inledning</A
+></DT
+><DT
+><A
+HREF="chap_dataoverforing.html#AEN109"
+>Duplex, Simplex och Halv-duplex</A
+></DT
+><DT
+><A
+HREF="chap_dataoverforing.html#AEN112"
+>Analog och digital överföring</A
+></DT
+><DT
+><A
+HREF="chap_dataoverforing.html#AEN127"
+>Amplitud och frekvens</A
+></DT
+><DT
+><A
+HREF="chap_dataoverforing.html#AEN132"
+>Mer om digital dataöverföring</A
+></DT
+><DT
+><A
+HREF="chap_dataoverforing.html#AEN141"
+>Något om talbaser</A
+></DT
+><DT
+><A
+HREF="chap_dataoverforing.html#AEN165"
+>Bit, Byte kByte, ...</A
+></DT
+><DT
+><A
+HREF="chap_dataoverforing.html#AEN177"
+>ASCII-tabell</A
+></DT
+><DT
+><A
+HREF="chap_dataoverforing.html#AEN182"
+>Sammanfattning</A
+></DT
+></DL
+></DD
+><DT
+>3. <A
+HREF="chap_serpar.html"
+>Seriell och parallell kommunikation</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_serpar.html#AEN189"
+>Seriell och parallell kommunikation</A
+></DT
+><DT
+><A
+HREF="chap_serpar.html#sect_parallell_kommunikation"
+>Parallell kommunikation</A
+></DT
+><DT
+><A
+HREF="chap_serpar.html#AEN220"
+>Seriell kommunikation</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_serpar.html#AEN248"
+>Synkron överföring</A
+></DT
+><DT
+><A
+HREF="chap_serpar.html#AEN251"
+>Asynkron överföring</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="chap_serpar.html#AEN275"
+>Sammanfattning</A
+></DT
+></DL
+></DD
+><DT
+>4. <A
+HREF="chap_datornatverk.html"
+>Datornätverk</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_datornatverk.html#AEN283"
+>Inledning</A
+></DT
+><DT
+><A
+HREF="chap_datornatverk.html#AEN287"
+>LAN, WAN, MAN</A
+></DT
+><DT
+><A
+HREF="chap_datornatverk.html#AEN295"
+>Topologier</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_datornatverk.html#AEN302"
+>Bussnät</A
+></DT
+><DT
+><A
+HREF="chap_datornatverk.html#AEN317"
+>Stjärnnät</A
+></DT
+><DT
+><A
+HREF="chap_datornatverk.html#AEN332"
+>Ringnät</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="chap_datornatverk.html#sect_accessmetoder"
+>Accessmetoder</A
+></DT
+><DT
+><A
+HREF="chap_datornatverk.html#AEN361"
+>Sammanfattning</A
+></DT
+></DL
+></DD
+><DT
+>5. <A
+HREF="chap_natverkskomponenter.html"
+>Nätverkskomponenter</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_natverkskomponenter.html#AEN368"
+>Noder</A
+></DT
+><DT
+><A
+HREF="chap_natverkskomponenter.html#AEN373"
+>Datorer/Servrar</A
+></DT
+><DT
+><A
+HREF="chap_natverkskomponenter.html#AEN388"
+>Hubb<A
+NAME="AEN390"
+HREF="#FTN.AEN390"
+><SPAN
+CLASS="footnote"
+>[1]</SPAN
+></A
+></A
+></DT
+><DT
+><A
+HREF="chap_natverkskomponenter.html#AEN405"
+>Switch<A
+NAME="AEN407"
+HREF="#FTN.AEN407"
+><SPAN
+CLASS="footnote"
+>[2]</SPAN
+></A
+></A
+></DT
+><DT
+><A
+HREF="chap_natverkskomponenter.html#AEN426"
+>Repeater<A
+NAME="AEN428"
+HREF="#FTN.AEN428"
+><SPAN
+CLASS="footnote"
+>[3]</SPAN
+></A
+></A
+></DT
+><DT
+><A
+HREF="chap_natverkskomponenter.html#AEN432"
+>Brygga<A
+NAME="AEN434"
+HREF="#FTN.AEN434"
+><SPAN
+CLASS="footnote"
+>[4]</SPAN
+></A
+></A
+></DT
+><DT
+><A
+HREF="chap_natverkskomponenter.html#AEN438"
+>Brouter</A
+></DT
+><DT
+><A
+HREF="chap_natverkskomponenter.html#AEN441"
+>Router</A
+></DT
+><DT
+><A
+HREF="chap_natverkskomponenter.html#AEN446"
+>Gateway</A
+></DT
+><DT
+><A
+HREF="chap_natverkskomponenter.html#AEN449"
+>Brandvägg</A
+></DT
+><DT
+><A
+HREF="chap_natverkskomponenter.html#AEN457"
+>Sammanhängande exempel</A
+></DT
+><DT
+><A
+HREF="chap_natverkskomponenter.html#AEN470"
+>Sammanfattning</A
+></DT
+></DL
+></DD
+><DT
+>6. <A
+HREF="chap_kablar.html"
+>Kablar och icke-kablar</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_kablar.html#AEN477"
+>Inledning</A
+></DT
+><DT
+><A
+HREF="chap_kablar.html#AEN481"
+>Kabelegenskaper</A
+></DT
+><DT
+><A
+HREF="chap_kablar.html#AEN488"
+>Kablar till periferiutrustning</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_kablar.html#AEN491"
+>Parallellkabel</A
+></DT
+><DT
+><A
+HREF="chap_kablar.html#AEN495"
+>Seriekabel</A
+></DT
+><DT
+><A
+HREF="chap_kablar.html#AEN498"
+>USB-kabel</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="chap_kablar.html#AEN502"
+>Kablar till datornätverk</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_kablar.html#AEN506"
+>Twisted-pair (TP)</A
+></DT
+><DT
+><A
+HREF="chap_kablar.html#AEN517"
+>Koaxialkabel (Koax)</A
+></DT
+><DT
+><A
+HREF="chap_kablar.html#AEN521"
+>Fiberoptisk kabel (Fiber)</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="chap_kablar.html#AEN526"
+>Trådlösa alternativ</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_kablar.html#AEN531"
+>Infrarött ljus (IR)</A
+></DT
+><DT
+><A
+HREF="chap_kablar.html#AEN534"
+>Radio</A
+></DT
+><DT
+><A
+HREF="chap_kablar.html#AEN543"
+>Bluetooth (Blåtand)</A
+></DT
+><DT
+><A
+HREF="chap_kablar.html#AEN548"
+>Mobiltelefon</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="chap_kablar.html#AEN555"
+>Sammanfattning</A
+></DT
+></DL
+></DD
+><DT
+>7. <A
+HREF="chap_wlan.html"
+>Trådlösa nätverk, WLAN</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_wlan.html#AEN563"
+>Trådlös frihet</A
+></DT
+><DT
+><A
+HREF="chap_wlan.html#AEN567"
+>Trådlöst LAN</A
+></DT
+><DT
+><A
+HREF="chap_wlan.html#AEN573"
+>Teknik</A
+></DT
+><DT
+><A
+HREF="chap_wlan.html#AEN577"
+>Säkerhet</A
+></DT
+></DL
+></DD
+><DT
+>8. <A
+HREF="chap_modem.html"
+>Modem</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_modem.html#AEN588"
+>Introduktion</A
+></DT
+><DT
+><A
+HREF="chap_modem.html#AEN595"
+>Olika sätt att modulera</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_modem.html#AEN598"
+>Amplitudmodulering</A
+></DT
+><DT
+><A
+HREF="chap_modem.html#AEN612"
+>Frekvensmodulering</A
+></DT
+><DT
+><A
+HREF="chap_modem.html#AEN626"
+>Fasskiftesmodulering</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="chap_modem.html#AEN640"
+>Handskakning</A
+></DT
+><DT
+><A
+HREF="chap_modem.html#AEN645"
+>Hayes-kommandon, (AT-kommandon)</A
+></DT
+><DT
+><A
+HREF="chap_modem.html#AEN678"
+>Sammanfattning</A
+></DT
+></DL
+></DD
+><DT
+>9. <A
+HREF="chap_publtele.html"
+>Publika telenätet</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_publtele.html#AEN688"
+>Telenätets uppbyggnad</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_publtele.html#AEN691"
+>Stamnät och accessnät</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="chap_publtele.html#AEN696"
+>Kretskopplade nät</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_publtele.html#AEN700"
+>Datex</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="chap_publtele.html#AEN703"
+>Paketförmedlande nät</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_publtele.html#AEN708"
+>Datapak</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="chap_publtele.html#AEN711"
+>Uppringt Internet</A
+></DT
+><DT
+><A
+HREF="chap_publtele.html#AEN715"
+>Sammanfattning</A
+></DT
+></DL
+></DD
+><DT
+>10. <A
+HREF="chap_protokoll.html"
+>Protokoll</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_protokoll.html#AEN722"
+>Inledning</A
+></DT
+><DT
+><A
+HREF="chap_protokoll.html#AEN729"
+>Olika protokoll till olika saker</A
+></DT
+><DT
+><A
+HREF="chap_protokoll.html#AEN735"
+>Vem styr över protokollen och hur tillkommer nya?</A
+></DT
+><DT
+><A
+HREF="chap_protokoll.html#sect_osimodellen"
+>OSI-modellen</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_protokoll.html#AEN772"
+>Applikationslagret</A
+></DT
+><DT
+><A
+HREF="chap_protokoll.html#AEN775"
+>Presentationslagret</A
+></DT
+><DT
+><A
+HREF="chap_protokoll.html#AEN778"
+>Sessionslagret</A
+></DT
+><DT
+><A
+HREF="chap_protokoll.html#AEN781"
+>Transportlagret</A
+></DT
+><DT
+><A
+HREF="chap_protokoll.html#AEN784"
+>Nätverkslagret</A
+></DT
+><DT
+><A
+HREF="chap_protokoll.html#AEN787"
+>Datalänklagret</A
+></DT
+><DT
+><A
+HREF="chap_protokoll.html#AEN790"
+>Fysiska lagret</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="chap_protokoll.html#AEN793"
+>Sammanfattning</A
+></DT
+></DL
+></DD
+><DT
+>11. <A
+HREF="chap_internet.html"
+>Internet</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_internet.html#AEN801"
+>Internets historia och utveckling</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_internet.html#AEN804"
+>Internets historia</A
+></DT
+><DT
+><A
+HREF="chap_internet.html#AEN812"
+>Word wide web, WWW</A
+></DT
+><DT
+><A
+HREF="chap_internet.html#AEN825"
+>Svensk Internethistoria</A
+></DT
+><DT
+><A
+HREF="chap_internet.html#AEN831"
+>RFC-Dokument</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="chap_internet.html#AEN838"
+>Att ansluta till Internet</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_internet.html#AEN841"
+>Privatpersoner och mindre företag</A
+></DT
+><DT
+><A
+HREF="chap_internet.html#AEN848"
+>Företag</A
+></DT
+><DT
+><A
+HREF="chap_internet.html#AEN853"
+>Ytterligare metoder att ansluta till Internet</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="chap_internet.html#AEN858"
+>Vanliga tjänster, program och protokoll på Internet</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_internet.html#AEN862"
+>TCP/IP</A
+></DT
+><DT
+><A
+HREF="chap_internet.html#AEN867"
+>WWW (HTTP)</A
+></DT
+><DT
+><A
+HREF="chap_internet.html#AEN883"
+>Filöverföring (FTP)</A
+></DT
+><DT
+><A
+HREF="chap_internet.html#AEN887"
+>Nyhetsgrupper, Usenet News (NNTP)</A
+></DT
+><DT
+><A
+HREF="chap_internet.html#AEN892"
+>Fjärrinloggning (TELNET/SSH)</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="chap_internet.html#AEN899"
+>Internets framtid</A
+></DT
+><DT
+><A
+HREF="chap_internet.html#AEN906"
+>Sammanfattning</A
+></DT
+></DL
+></DD
+><DT
+>12. <A
+HREF="chap_internetteknik.html"
+>Mer om Internets teknik</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_internetteknik.html#AEN913"
+>TCP/IP</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_internetteknik.html#AEN929"
+>Några av protokollen i TCP/IP</A
+></DT
+><DT
+><A
+HREF="chap_internetteknik.html#AEN966"
+>IP-adresser</A
+></DT
+><DT
+><A
+HREF="chap_internetteknik.html#AEN1016"
+>Portnummer och tjänster</A
+></DT
+><DT
+><A
+HREF="chap_internetteknik.html#AEN1021"
+>URL Uniform Resource Locator</A
+></DT
+><DT
+><A
+HREF="chap_internetteknik.html#sec_routing"
+>Routing</A
+></DT
+><DT
+><A
+HREF="chap_internetteknik.html#AEN1078"
+>Felsökning i TCP/IP-nätverk</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="chap_internetteknik.html#AEN1154"
+>Domännamnssystemet (DNS)</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_internetteknik.html#AEN1160"
+>Hierarkiskt system</A
+></DT
+><DT
+><A
+HREF="chap_internetteknik.html#AEN1172"
+>Domännamnsförfrågan</A
+></DT
+><DT
+><A
+HREF="chap_internetteknik.html#AEN1178"
+>DNS-servrar</A
+></DT
+><DT
+><A
+HREF="chap_internetteknik.html#AEN1182"
+>Round Robin DNS</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="chap_internetteknik.html#AEN1185"
+>Sammanfattning</A
+></DT
+></DL
+></DD
+><DT
+>13. <A
+HREF="chap_epost.html"
+>E-post</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_epost.html#AEN1193"
+>E-post</A
+></DT
+><DT
+><A
+HREF="chap_epost.html#AEN1205"
+>Flera protokoll</A
+></DT
+><DT
+><A
+HREF="chap_epost.html#AEN1208"
+>Simple Mail Transport Protocol, SMTP</A
+></DT
+><DT
+><A
+HREF="chap_epost.html#AEN1215"
+>Post Office Protocol, POP</A
+></DT
+><DT
+><A
+HREF="chap_epost.html#AEN1219"
+>IMAP</A
+></DT
+><DT
+><A
+HREF="chap_epost.html#AEN1225"
+>Webmail</A
+></DT
+><DT
+><A
+HREF="chap_epost.html#AEN1231"
+>E-post och säkerhet</A
+></DT
+></DL
+></DD
+><DT
+>14. <A
+HREF="chap_sakerhet.html"
+>Datasäkerhet och lagstiftning</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_sakerhet.html#AEN1239"
+>Syftet med datasäkerhet</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_sakerhet.html#AEN1252"
+>Sekretess</A
+></DT
+><DT
+><A
+HREF="chap_sakerhet.html#AEN1255"
+>Integritet</A
+></DT
+><DT
+><A
+HREF="chap_sakerhet.html#AEN1258"
+>Tillgänglighet</A
+></DT
+><DT
+><A
+HREF="chap_sakerhet.html#AEN1261"
+>Spårbarhet</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="chap_sakerhet.html#AEN1264"
+>Hur farligt är Internet?</A
+></DT
+><DT
+><A
+HREF="chap_sakerhet.html#AEN1268"
+>Hur kan jag skydda mig?</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_sakerhet.html#AEN1271"
+>Var försiktig med e-post och bilagor</A
+></DT
+><DT
+><A
+HREF="chap_sakerhet.html#AEN1274"
+>Ladda hem saker från Internet med försiktighet</A
+></DT
+><DT
+><A
+HREF="chap_sakerhet.html#AEN1277"
+>Använd bra lösenord</A
+></DT
+><DT
+><A
+HREF="chap_sakerhet.html#AEN1290"
+>Uppdatera ditt system</A
+></DT
+><DT
+><A
+HREF="chap_sakerhet.html#AEN1293"
+>Välj inte de "dansande grisarna"</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="chap_sakerhet.html#AEN1296"
+>Brandväggar</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_sakerhet.html#AEN1298"
+>Allmänt</A
+></DT
+><DT
+><A
+HREF="chap_sakerhet.html#AEN1303"
+>Paketfiltrerande</A
+></DT
+><DT
+><A
+HREF="chap_sakerhet.html#AEN1310"
+>Proxies</A
+></DT
+><DT
+><A
+HREF="chap_sakerhet.html#AEN1315"
+>Personlig brandvägg</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="chap_sakerhet.html#AEN1319"
+>Kryptering</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_sakerhet.html#AEN1328"
+>Symmetrisk och asymmetrisk kryptering</A
+></DT
+><DT
+><A
+HREF="chap_sakerhet.html#AEN1337"
+>Signering</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="chap_sakerhet.html#AEN1343"
+>Relevanta lagar</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_sakerhet.html#AEN1346"
+>Personuppgiftslagen (PUL)</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="chap_sakerhet.html#AEN1351"
+>Sammanfattning</A
+></DT
+></DL
+></DD
+><DT
+>A. <A
+HREF="ovningsuppgifter.html"
+>Övningsuppgifter</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="ovningsuppgifter.html#AEN1359"
+>Datorkommunikation: Inledning</A
+></DT
+><DT
+><A
+HREF="ovningsuppgifter.html#AEN1368"
+>Datorkommunikation: Dataöverföring</A
+></DT
+><DT
+><A
+HREF="ovningsuppgifter.html#AEN1384"
+>Datorkommunikation: Seriell och parallell kommunikation</A
+></DT
+><DT
+><A
+HREF="ovningsuppgifter.html#AEN1393"
+>Datorkommunikation: Datornätverk</A
+></DT
+><DT
+><A
+HREF="ovningsuppgifter.html#AEN1406"
+>Datorkommunikation: Nätverkskomponenter</A
+></DT
+><DT
+><A
+HREF="ovningsuppgifter.html#AEN1417"
+>Datorkommunikation: kablar och icke-kablar</A
+></DT
+><DT
+><A
+HREF="ovningsuppgifter.html#AEN1428"
+>Datorkommunikation: Modem</A
+></DT
+><DT
+><A
+HREF="ovningsuppgifter.html#AEN1435"
+>Datorkommunikation: Publika telenätet</A
+></DT
+><DT
+><A
+HREF="ovningsuppgifter.html#AEN1440"
+>Datorkommunikation: Protokoll</A
+></DT
+><DT
+><A
+HREF="ovningsuppgifter.html#AEN1443"
+>Datorkommunikation: Internet</A
+></DT
+><DT
+><A
+HREF="ovningsuppgifter.html#AEN1446"
+>Datorkommunikation: Mer om Internets teknik</A
+></DT
+><DT
+><A
+HREF="ovningsuppgifter.html#AEN1449"
+>Datorkommunikation: Datasäkerhet</A
+></DT
+></DL
+></DD
+><DT
+>B. <A
+HREF="dtr1201.html"
+>DTR1201 - Datorkommunikation</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="dtr1201.html#AEN1455"
+>Mål</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="dtr1201.html#AEN1457"
+>Mål för kursen</A
+></DT
+><DT
+><A
+HREF="dtr1201.html#AEN1460"
+>Mål som eleverna skall ha uppnått efter avslutad
+kurs</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="dtr1201.html#AEN1478"
+>Betygskriterier</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="dtr1201.html#AEN1480"
+>Kriterier för betyget Godkänd</A
+></DT
+><DT
+><A
+HREF="dtr1201.html#AEN1488"
+>Kriterier för betyget Väl godkänd</A
+></DT
+><DT
+><A
+HREF="dtr1201.html#AEN1493"
+>Kriterier för betyget Mycket väl godkänd</A
+></DT
+></DL
+></DD
+></DL
+></DD
+><DT
+>C. <A
+HREF="asciitabell.html"
+>Exempel på ASCII-tabell</A
+></DT
+><DT
+>D. <A
+HREF="hextodectabell.html"
+>Tabell för att översätta mellan Hexadecimala och Decimala tal</A
+></DT
+><DT
+>E. <A
+HREF="dectobintabell.html"
+>Tabell för att översätta mellan Decimala och binära tal</A
+></DT
+><DT
+>F. <A
+HREF="commands.html"
+>Tabell över kommandon i olika operativsystem</A
+></DT
+><DT
+>G. <A
+HREF="services.html"
+>Portnummer och tjänster</A
+></DT
+><DT
+>H. <A
+HREF="topdomains.html"
+>Topdomäner</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="topdomains.html#AEN3091"
+>Generiska (gtld)</A
+></DT
+><DT
+><A
+HREF="topdomains.html#AEN3109"
+>Nationella (cctld)</A
+></DT
+></DL
+></DD
+><DT
+>I. <A
+HREF="natmask.html"
+>Tabell över CIDR-nät</A
+></DT
+><DT
+>J. <A
+HREF="rfc.html"
+>Tabell över några av de RFC:er som berör boken</A
+></DT
+><DT
+>K. <A
+HREF="brev.html"
+>Kommentarer från läsare och experter</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="brev.html#AEN3649"
+>Brev från Bengt Gördén</A
+></DT
+><DT
+><A
+HREF="brev.html#AEN3652"
+>Brev från Pär Lindskog</A
+></DT
+><DT
+><A
+HREF="brev.html#AEN3655"
+>Brev fån Jan Johansson</A
+></DT
+></DL
+></DD
+><DT
+>L. <A
+HREF="gfdl-sv.html"
+>GNU Free Documentation License</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="gfdl-sv.html#gfdl-sv-0"
+>0. BAKGRUND</A
+></DT
+><DT
+><A
+HREF="gfdl-sv.html#gfdl-sv-1"
+>1. TILLÄMPNINGSOMRÅDE OCH DEFINITIONER</A
+></DT
+><DT
+><A
+HREF="gfdl-sv.html#gfdl-sv-2"
+>2. ORDAGRANN KOPIERING</A
+></DT
+><DT
+><A
+HREF="gfdl-sv.html#gfdl-sv-3"
+>3. OMFATTANDE KOPIERING</A
+></DT
+><DT
+><A
+HREF="gfdl-sv.html#gfdl-sv-4"
+>4. FÖRÄNDRINGAR</A
+></DT
+><DT
+><A
+HREF="gfdl-sv.html#gfdl-sv-5"
+>5. KOMBINERA DOKUMENT</A
+></DT
+><DT
+><A
+HREF="gfdl-sv.html#gfdl-sv-6"
+>6. SAMLINGAR AV DOKUMENT</A
+></DT
+><DT
+><A
+HREF="gfdl-sv.html#gfdl-sv-7"
+>7. SAMMANSLAGNING MED OBEROENDE VERK</A
+></DT
+><DT
+><A
+HREF="gfdl-sv.html#gfdl-sv-8"
+>8. ÖVERSÄTTNING</A
+></DT
+><DT
+><A
+HREF="gfdl-sv.html#gfdl-sv-9"
+>9. UPPHÖRANDE</A
+></DT
+><DT
+><A
+HREF="gfdl-sv.html#gfdl-sv-10"
+>10. FRAMTIDA VERSIONER AV DENNA LICENS</A
+></DT
+><DT
+><A
+HREF="gfdl-sv.html#gfdl-sv-addendum"
+>TILLÄGG: Hur du använder denna licens för dina dokument</A
+></DT
+></DL
+></DD
+><DT
+>M. <A
+HREF="gfdl.html"
+>GNU Free Documentation License (Originaltext)</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="gfdl.html#gfdl-0"
+>0. PREAMBLE</A
+></DT
+><DT
+><A
+HREF="gfdl.html#gfdl-1"
+>1. APPLICABILITY AND DEFINITIONS</A
+></DT
+><DT
+><A
+HREF="gfdl.html#gfdl-2"
+>2. VERBATIM COPYING</A
+></DT
+><DT
+><A
+HREF="gfdl.html#gfdl-3"
+>3. COPYING IN QUANTITY</A
+></DT
+><DT
+><A
+HREF="gfdl.html#gfdl-4"
+>4. MODIFICATIONS</A
+></DT
+><DT
+><A
+HREF="gfdl.html#gfdl-5"
+>5. COMBINING DOCUMENTS</A
+></DT
+><DT
+><A
+HREF="gfdl.html#gfdl-6"
+>6. COLLECTIONS OF DOCUMENTS</A
+></DT
+><DT
+><A
+HREF="gfdl.html#gfdl-7"
+>7. AGGREGATION WITH INDEPENDENT WORKS</A
+></DT
+><DT
+><A
+HREF="gfdl.html#gfdl-8"
+>8. TRANSLATION</A
+></DT
+><DT
+><A
+HREF="gfdl.html#gfdl-9"
+>9. TERMINATION</A
+></DT
+><DT
+><A
+HREF="gfdl.html#gfdl-10"
+>10. FUTURE REVISIONS OF THIS LICENSE</A
+></DT
+><DT
+><A
+HREF="gfdl.html#gfdl-addendum"
+>ADDENDUM: How to use this License for
+  your documents</A
+></DT
+></DL
+></DD
+></DL
+></DIV
+><DIV
+CLASS="LOT"
+><DL
+CLASS="LOT"
+><DT
+><B
+>Tabellförteckning</B
+></DT
+><DT
+>8-1. <A
+HREF="chap_modem.html#tab_hayes"
+>Vanliga Hayes-kommandon (AT-kommandon)</A
+></DT
+><DT
+>12-1. <A
+HREF="chap_internetteknik.html#table_natverksklasser"
+>Nätverksklasser</A
+></DT
+><DT
+>C-1. <A
+HREF="asciitabell.html#tab_ascii"
+>ASCII-tabell</A
+></DT
+><DT
+>D-1. <A
+HREF="hextodectabell.html#tab_hextodec"
+>Hexadecimal -&#62; Decimal</A
+></DT
+><DT
+>E-1. <A
+HREF="dectobintabell.html#tab_dectobin"
+>Decimal -&#62; Binära</A
+></DT
+><DT
+>F-1. <A
+HREF="commands.html#AEN3031"
+>Kommandotabell</A
+></DT
+><DT
+>I-1. <A
+HREF="natmask.html#tab_netmask"
+>CIDR nätadresser</A
+></DT
+><DT
+>J-1. <A
+HREF="rfc.html#tab_rfc"
+>Exmpel på RFC:er som är relaterade till boken</A
+></DT
+></DL
+></DIV
+><DIV
+CLASS="LOT"
+><DL
+CLASS="LOT"
+><DT
+><B
+>Figurförteckning</B
+></DT
+><DT
+>2-1. <A
+HREF="chap_dataoverforing.html#fig_telefonsamtal"
+>Ett telefonsamtal</A
+></DT
+><DT
+>2-2. <A
+HREF="chap_dataoverforing.html#fig_analogadigitalasignaler"
+>Analoga och digitala signaler</A
+></DT
+><DT
+>3-1. <A
+HREF="chap_serpar.html#fig_parallell"
+>Parallell överföring</A
+></DT
+><DT
+>3-2. <A
+HREF="chap_serpar.html#fig_parallellport"
+>Parallellport eller skrivarport</A
+></DT
+><DT
+>3-3. <A
+HREF="chap_serpar.html#fig_seriell"
+>Seriell överföring</A
+></DT
+><DT
+>3-4. <A
+HREF="chap_serpar.html#fig_serieportar"
+>Olika seriella portar och motsvarande kablar</A
+></DT
+><DT
+>3-5. <A
+HREF="chap_serpar.html#fig_startostoppbit"
+>Start- och stoppbit</A
+></DT
+><DT
+>4-1. <A
+HREF="chap_datornatverk.html#fig_bussnat"
+>Bussnät</A
+></DT
+><DT
+>4-2. <A
+HREF="chap_datornatverk.html#fig_stjarnnat"
+>Stjärnnät</A
+></DT
+><DT
+>4-3. <A
+HREF="chap_datornatverk.html#fig_ringnat"
+>Ringnät</A
+></DT
+><DT
+>5-1. <A
+HREF="chap_natverkskomponenter.html#fig_hubb"
+>Kommunikation över en hubb</A
+></DT
+><DT
+>5-2. <A
+HREF="chap_natverkskomponenter.html#fig_switch"
+>Kommunikation över en switch</A
+></DT
+><DT
+>5-3. <A
+HREF="chap_natverkskomponenter.html#fig_natverk"
+>Exempel på nätverk</A
+></DT
+><DT
+>8-1. <A
+HREF="chap_modem.html#fig_amplitudmodulering"
+>Amplitudmodulering</A
+></DT
+><DT
+>8-2. <A
+HREF="chap_modem.html#fig_frekvensmodulering"
+>Frekvensmodulering</A
+></DT
+><DT
+>8-3. <A
+HREF="chap_modem.html#fig_fasskiftesmodulering"
+>Fasskiftesmodulering</A
+></DT
+><DT
+>10-1. <A
+HREF="chap_protokoll.html#fig_osi-modell"
+>OSI-modellen</A
+></DT
+><DT
+>11-1. <A
+HREF="chap_internet.html#fig_konqueror"
+>Den grafiska webbläsaren Konqueror</A
+></DT
+><DT
+>12-1. <A
+HREF="chap_internetteknik.html#fig_osi-vs-tcpip"
+>OSI modellen kontra TCP/IP</A
+></DT
+><DT
+>12-2. <A
+HREF="chap_internetteknik.html#fig_tcpip"
+>Några av protokollen i TCP/IP</A
+></DT
+><DT
+>12-3. <A
+HREF="chap_internetteknik.html#fig_netroute"
+>Nätverksexempel</A
+></DT
+><DT
+>12-4. <A
+HREF="chap_internetteknik.html#fig_ifconfig"
+>Skärmdump: ifconfig på Linux</A
+></DT
+><DT
+>12-5. <A
+HREF="chap_internetteknik.html#fig_ping"
+>Skärmdump: ping på Linux</A
+></DT
+><DT
+>12-6. <A
+HREF="chap_internetteknik.html#fig_route"
+>Skärmdump: route på Linux</A
+></DT
+><DT
+>12-7. <A
+HREF="chap_internetteknik.html#fig_traceroute"
+>Skärmdump: traceroute på Linux</A
+></DT
+><DT
+>12-8. <A
+HREF="chap_internetteknik.html#fig_host"
+>Skärmdump: host på Linux</A
+></DT
+><DT
+>12-9. <A
+HREF="chap_internetteknik.html#fig_apr"
+>Skärmdump: arp på Linux</A
+></DT
+><DT
+>12-10. <A
+HREF="chap_internetteknik.html#fig_netstat"
+>Skärmdump: netstat på Linux</A
+></DT
+></DL
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="forord.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Förord</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

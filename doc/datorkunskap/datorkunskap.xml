@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="latin1" ?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
+"http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd" [
+<!ENTITY fdl-sv SYSTEM "fdl-sv.xml">
+<!ENTITY fdl SYSTEM "fdl.xml">
+<!ENTITY kapitel1 SYSTEM "kapitel1.xml">
+]>
+
+<book lang="sv" status="draft">
+<bookinfo>
+
+	<title>Datorkunskap</title>
+
+	<author>
+		<firstname>Marcus</firstname> 
+		<surname>Rejås</surname>
+		<affiliation>
+			<orgname>Rejås Datakonsult</orgname>
+			<address><email>marcus@rejas.se</email></address>
+		</affiliation>
+	</author>
+
+	<pubdate>$Date: 2006/01/10 09:30:56 $</pubdate>
+
+	<copyright>
+		<year>2006</year>
+		<holder>Marcus Rejås / Rejås Datakonsult</holder>
+	</copyright>
+
+	<revhistory>
+		<revision>
+			<revnumber>$Revision: 1.1 $</revnumber>
+			<date></date>
+			<revremark>Utvecklingsversion</revremark>
+		</revision>
+	</revhistory>
+
+
+	<legalnotice>
+		<para>
+			Permission is granted to copy, distribute and/or modify this
+			document under the terms of the GNU Free Documentation License,
+			Version 1.2 or any later version published by the Free Software
+			Foundation; with no Invariant Sections, no Front-Cover Texts,
+			and no Back-Cover Texts. A copy of the license is included in
+			the section entitled "GNU Free Documentation License".
+		</para>
+		<para>
+			[Översättning:] Var och en äger rätt att kopiera, sprida
+			och/eller förändra detta dokument under villkoren i licensen
+			"GNU Free Documentation License", version 1.2 eller senare
+			publicerad av Free Software Foundation, utan oföränderliga
+			avsnitt, utan framsidestexter och utan baksidestexter.  En
+			kopia av denna licens finns med i avsnittet med titeln "GNU
+			Free Documentation License".
+		</para>
+		<para>
+			Det vill säga, du kan fritt ladda ner, vidaredistribuera och
+			kopiera denna bok. Du får ändra den om du vill (se
+			licenstexten).
+		</para>
+	</legalnotice>
+
+	<abstract>
+		<para>
+			En liten sammanfattning av hela boken här.
+		</para>
+	</abstract>
+
+</bookinfo>
+
+<preface id="forord"><title>Förord</title>
+	<sect1><title>Tack till</title>
+		<para>
+			Se till att tacka alla som hjälpt dig med korrektuläsning och
+			annat.
+		</para>
+		<para>
+			Man kan ha flera stycken om man vill så klart.
+		</para>
+		<para>
+			Sist vill jag tacka min <emphasis>Kajsa</emphasis> för att hon
+			visat mig hur man betonar ord (se hennes namn).
+		</para>
+	</sect1>
+</preface>
+
+<toc/>
+
+&kapitel1;
+
+<!--&kapitel2;-->
+
+&fdl-sv;
+
+&fdl;
+
+</book>
+
+
+<!-- Keep this comment at the end of the file
+tab-width: 3
+vim600: fdm=syntax sw=3 ts=3
+vim: sw=3 ts=3
+vi: sw=3 ts=3
+-->
+

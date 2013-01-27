@@ -1,0 +1,578 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Programmeringsspr�k</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="Programmering i PHP"
+HREF="book1.html"><LINK
+REL="PREVIOUS"
+TITLE="Kort historik"
+HREF="chap_historik.html"><LINK
+REL="NEXT"
+TITLE="Fr�n k�llkod till program"
+HREF="chap_building.html"><LINK
+REL="stylesheet"
+HREF="./book.css"
+TYPE="text/css"></HEAD
+><BODY
+CLASS="chapter"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Programmering i PHP</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="chap_historik.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="chap_building.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="chapter"
+><H1
+><A
+NAME="chap_programmeringssprak"
+></A
+>Kapitel 2. Programmeringsspr�k</H1
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Innehållsförteckning</B
+></DT
+><DT
+><A
+HREF="chap_programmeringssprak.html#AEN64"
+>Olika spr�k till olika saker</A
+></DT
+><DT
+><A
+HREF="chap_programmeringssprak.html#AEN69"
+>Kompilerande spr�k</A
+></DT
+><DT
+><A
+HREF="chap_programmeringssprak.html#AEN74"
+>Interpreterande spr�k</A
+></DT
+><DT
+><A
+HREF="chap_programmeringssprak.html#AEN79"
+>Andra typer av spr�k</A
+></DT
+><DT
+><A
+HREF="chap_programmeringssprak.html#AEN82"
+>F�r- och nackdelar</A
+></DT
+><DT
+><A
+HREF="chap_programmeringssprak.html#AEN110"
+>Exempel p� olika spr�k som ni b�r k�nna till</A
+></DT
+></DL
+></DIV
+><BLOCKQUOTE
+CLASS="ABSTRACT"
+><DIV
+CLASS="abstract"
+><P
+></P
+><A
+NAME="AEN62"
+></A
+><P
+>&#13;			Detta avsnitt ger en orientering om olika
+			programmeringsspr�k och varf�r det finns s� m�nga och
+			n�gra grundl�ggande egenskaper hos olika spr�k och olika
+			familjer av spr�k.
+		</P
+><P
+></P
+></DIV
+></BLOCKQUOTE
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN64"
+>Olika spr�k till olika saker</A
+></H1
+><P
+>&#13;			Det finns idag hundratals olika programmeringsspr�k. De har kommit
+			till av olika anledningar och har olika syften. Vissa �r besl�ktade
+			och har arv fr�n varandra och andra har utvecklats f�r att fylla ett
+			speciellt �ndam�l.
+		</P
+><P
+>&#13;			Anledningen till att det finns s� m�nga spr�k och alltid kommer nya
+			�r naturligtvis att de �r bra p� olika saker och att olika personer
+			uppskattar spr�ken olika mycket.
+		</P
+><P
+>&#13;			Vi kan b�rja med att dela upp spr�ken i tv� grupper efter hur
+			programmen kompileras och k�rs. Alla program skrivs i n�gon form av
+			k�llkod. Denna k�llkod m�ste sedan �vers�ttas till n�got som en dator
+			kan f�rst�. Datorn f�rst�r bara 1 och 0, p� eller av. Detta kallas
+			kompilering och kan g�ras vid olika tillf�llen.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN69"
+>Kompilerande spr�k</A
+></H1
+><P
+>&#13;			Datorn kan ju inte l�sa utan det som man skriver i sina program m�ste
+			�vers�ttas till n�got som datorn f�rst�r. Det datorn f�rst�r kallas
+			f�r maskinkod eller bin�rkod. Denna kod best�r av maskininstruktioner
+			som �r, n�st intill, om�jliga f�r en m�nniska att f�rst�.
+		</P
+><P
+>&#13;			Ett kompilerande spr�k �r ett programmeringsspr�k d�r k�llkoden med
+			hj�lp av olika verktyg �vers�tts till maskinkod. Maskinkoden blir d�
+			ett frist�ende program som kan k�ras direkt av datorn. Man s�ger att
+			man kompilerar koden. Koden kopileras allts� i samband med
+			utvecklingen och inte i samband med exekveringen av programmet. Mer
+			om det i ett annat avsnitt.
+		</P
+><P
+>&#13;			Exempel p� kompilerande spr�k �r: C, C++, Pascal och m�nga fler.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN74"
+>Interpreterande spr�k</A
+></H1
+><P
+>&#13;			Ett interpreterande programspr�k, som ocks� kallas skriptspr�k, �r
+			ett programspr�k som inte kompilerar det program som programmeraren
+			har skrivit f�rr�n det k�rs, och som g�r det varje g�ng det k�rs.
+			Ibland kompileras hela programmet innan det k�rs och ibland
+			kompileras det rad f�r rad. Detta g�r att utvecklingen g�r snabbare
+			eftersom programmet inte beh�ver kompileras vid testk�rning men det
+			inneb�r ocks� att det f�rdiga programmet blir l�ngsammare eftersom
+			det m�ste kompileras varje g�ng det k�rs.
+		</P
+><P
+>&#13;			Motorn som k�r ett interpreterande spr�k kallas interpretator,
+			programtolk eller tolkare.
+		</P
+><P
+>&#13;			Exempel p� interpreterande spr�k �r: Perl, PHP, Python, TCL, Bash.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN79"
+>Andra typer av spr�k</A
+></H1
+><P
+>&#13;			Det finns andra s�tt att l�sa uppgiften p�. Till exempel att man
+			kompilerar koden till en mellankod som sedan en interpreterare
+			tolkar. S� fungerar till exempel Java.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN82"
+>F�r- och nackdelar</A
+></H1
+><DIV
+CLASS="table"
+><A
+NAME="AEN84"
+></A
+><P
+><B
+>Tabell 2-1. 
+				F�rdeler och nackdelar med kompilerande och interpreterande spr�k.
+			</B
+></P
+><TABLE
+BORDER="1"
+FRAME="border"
+CLASS="CALSTABLE"
+><COL
+WIDTH="1*"
+TITLE="c1"><COL
+WIDTH="1*"
+TITLE="c2"><THEAD
+><TR
+><TH
+>F�rdelar</TH
+><TH
+>Nackdelar</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+COLSPAN="2"
+ALIGN="center"
+>&#13;						Kompilerande
+					</TD
+></TR
+><TR
+><TD
+>Snabbt att k�ra</TD
+><TD
+>L�ngsam programmering</TD
+></TR
+><TR
+><TD
+>L�tt att distribuera</TD
+><TD
+>Sv�rt att portera</TD
+></TR
+><TR
+><TD
+COLSPAN="2"
+ALIGN="center"
+>&#13;							Interpreterande
+						</TD
+></TR
+><TR
+><TD
+>Snabb programmering</TD
+><TD
+>L�ngsamt att k�ra</TD
+></TR
+><TR
+><TD
+>&#13;							Mycket l�tt att portera (om tolkare finns)
+						</TD
+><TD
+>&#13;							Sv�rare att distribuera (tolkare m�ste finnas)
+						</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN110"
+>Exempel p� olika spr�k som ni b�r k�nna till</A
+></H1
+><P
+>&#13;			Det finns tusentals, jo s�kert, olika programmeringsspr�k. H�r
+			listas de jag tycker ni b�r k�nna till och hur programmet
+			"Hello World!" ser ut i dem.
+		</P
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN113"
+>C</A
+></H2
+><P
+>&#13;				C �r ett av de mest utbredda spr�ken. Det �r en vidareutveckling
+				av spr�ket B. Utvecklades vid AT&#38;T Bell Labs samtidigt med
+				operativsystemet UNIX®. C anses som ett ganska maskinn�ra spr�k.
+				Flera operativsystem �r till stor det skrivna i C. Hello World
+				i C ser ut s� h�r:
+			</P
+><P
+>&#13;				<DIV
+CLASS="example"
+><A
+NAME="AEN117"
+></A
+><P
+><B
+>Exempel 2-1. Hello World i C</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+/*
+ * Hello World i C
+ */
+#include &#60;stdio.h&#62;
+
+int main() {
+        printf("Hello, world!\n");
+        return 0;
+}
+
+					</PRE
+></DIV
+>
+			</P
+></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN120"
+>C++</A
+></H2
+><P
+>&#13;				C++ utveckladen av Bjarne Stroustrup vid AT&#38;T Bell Labs och
+				�r en ut�kning av programspr�ket C. Till skillnad fr�n C s� �r
+				C++ objektorienterat (eller har b�ttre st�d f�r det i alla fall).
+			</P
+><P
+>&#13;				Hello World i C++ ser ut s� h�r:
+			</P
+><P
+>&#13;				<DIV
+CLASS="example"
+><A
+NAME="AEN125"
+></A
+><P
+><B
+>Exempel 2-2. Hello World i C++</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+/*
+ * Hello World i C++
+ */
+#include &#60;iostream&#62;
+
+int main () {
+        cout &#60;&#60; "Hello world" &#60;&#60; endl;
+}
+
+					</PRE
+></DIV
+>
+			</P
+></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN128"
+>C# (C-sharp eller Ciss)</A
+></H2
+><P
+>&#13;				Objektorienterat spr�k utvecklat av Microsoft f�r att m�ta Java
+				fr�n Sun. Spr�ket �r, liksom Java, halvinterpreterande och har
+				mycket influenser fr�n C och C++.
+			</P
+><P
+>&#13;				Hello World i C# ser ut s� h�r:
+				<DIV
+CLASS="example"
+><A
+NAME="AEN132"
+></A
+><P
+><B
+>Exempel 2-3. Hello World i C#</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+//
+// Hello World i C#
+//
+using System;
+class HelloWorld {
+        static void Main() {
+                Console.WriteLine("Hello, world!");
+        }
+}
+
+					</PRE
+></DIV
+>
+			</P
+></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN135"
+>Java</A
+></H2
+><P
+>&#13;				Objektorienterat spr�k utvecklat av Sun Microsystems. Spr�ket �r
+				halvinterpreterande och har mycket influenser fr�n C och C++. En
+				stor f�rdel med Java �r att program skrivna i Java �r n�stan
+				platformsoberoende. Du kan allts� k�ra dem i alla milj�er till
+				vilka det finns en javamotor.
+			</P
+><P
+>&#13;				Hello World i Java ser ut s� h�r:
+				<DIV
+CLASS="example"
+><A
+NAME="AEN139"
+></A
+><P
+><B
+>Exempel 2-4. Hello World i Java</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+//
+// Hello World i Java
+//
+class HelloWorld {
+        public static void main (String s[]) {
+                System.out.println("Hello world");
+        }
+}
+
+					</PRE
+></DIV
+>
+			</P
+></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN142"
+>Mer l�sning</A
+></H2
+><P
+>&#13;				En sida med j�ttem�nga exempel p� "Hello World!" i olika spr�k. (
+				<A
+HREF="http://www2.latech.edu/~acm/HelloWorld.shtml"
+TARGET="_top"
+>&#13;					<I
+CLASS="citetitle"
+>&#13;						http://www2.latech.edu/~acm/HelloWorld.shtml
+					</I
+>
+				</A
+>
+				)
+			</P
+></DIV
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="chap_historik.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Hem</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="chap_building.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Kort historik</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Fr�n k�llkod till program</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

@@ -1,0 +1,97 @@
+<!--
+	Ett kapitel i boken boktitiel av Kalle Anka
+
+	Detta verk är släppt undet GNU FDL
+
+-->
+
+<chapter id="kapitel1"><title>Kapitel 1</title>
+	<abstract>
+		<para>
+			Även kapitel bör ha sammanfattningar ...
+		</para>
+		<para>
+			Gärna i flera stycken.
+		</para>
+	</abstract>
+
+	<sect1><title>Rubriknivå 1</title>
+		<para>
+			Stycke
+		</para>
+		<para>
+			Exempel på fotnot<footnote><para>hej hopp, jag är en
+			fotnot</para></footnote>.
+		</para>
+	</sect1>
+
+	<sect1><title>Rubrik igen</title>
+		<para>
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+			Praesent consequat ultricies metus. Mauris sed enim. Curabitur
+			id ipsum nec mauris faucibus posuere. Fusce ante. Fusce commodo
+			dignissim nulla. Etiam adipiscing ante eget risus. Cum sociis
+			natoque penatibus et magnis dis parturient montes, nascetur
+			ridiculus mus. Phasellus pretium malesuada erat. Vivamus congue
+			arcu. Curabitur sit amet pede eget purus rutrum vulputate.
+			Morbi nonummy urna eu tellus. Proin et nulla quis nunc accumsan
+			porta. In bibendum.
+		</para>
+	</sect1>
+
+	<sect1><title>Simple Mail Transport Protocol, SMTP</title>
+		<para>
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+			Praesent consequat ultricies metus. Mauris sed enim. Curabitur
+			id ipsum nec mauris faucibus posuere. Fusce ante. Fusce commodo
+			dignissim nulla. Etiam adipiscing ante eget risus. Cum sociis
+			natoque penatibus et magnis dis parturient montes, nascetur
+			ridiculus mus. Phasellus pretium malesuada erat. Vivamus congue
+			arcu. Curabitur sit amet pede eget purus rutrum vulputate.
+			Morbi nonummy urna eu tellus. Proin et nulla quis nunc accumsan
+			porta. In bibendum.
+		</para>
+		<para>
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+			Praesent consequat ultricies metus. Mauris sed enim. Curabitur
+			id ipsum nec mauris faucibus posuere. Fusce ante. Fusce commodo
+			dignissim nulla. Etiam adipiscing ante eget risus. Cum sociis
+			natoque penatibus et magnis dis parturient montes, nascetur
+			ridiculus mus. Phasellus pretium malesuada erat. Vivamus congue
+			arcu. Curabitur sit amet pede eget purus rutrum vulputate.
+			Morbi nonummy urna eu tellus. Proin et nulla quis nunc accumsan
+			porta. In bibendum.
+		</para>
+		<para>
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+			Praesent consequat ultricies metus. Mauris sed enim. Curabitur
+			id ipsum nec mauris faucibus posuere. Fusce ante. Fusce commodo
+			dignissim nulla. Etiam adipiscing ante eget risus. Cum sociis
+			natoque penatibus et magnis dis parturient montes, nascetur
+			ridiculus mus. Phasellus pretium malesuada erat. Vivamus congue
+			arcu. Curabitur sit amet pede eget purus rutrum vulputate.
+			Morbi nonummy urna eu tellus. Proin et nulla quis nunc accumsan
+			porta. In bibendum.
+		</para>
+		<para>
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+			Praesent consequat ultricies metus. Mauris sed enim. Curabitur
+			id ipsum nec mauris faucibus posuere. Fusce ante. Fusce commodo
+			dignissim nulla. Etiam adipiscing ante eget risus. Cum sociis
+			natoque penatibus et magnis dis parturient montes, nascetur
+			ridiculus mus. Phasellus pretium malesuada erat. Vivamus congue
+			arcu. Curabitur sit amet pede eget purus rutrum vulputate.
+			Morbi nonummy urna eu tellus. Proin et nulla quis nunc accumsan
+			porta. In bibendum.
+		</para>
+	</sect1>
+</chapter>
+
+
+
+<!-- Keep this comment at the end of the file
+tab-width: 3
+vim600: fdm=syntax sw=3 ts=3
+vim: sw=3 ts=3
+vi: sw=3 ts=3
+-->

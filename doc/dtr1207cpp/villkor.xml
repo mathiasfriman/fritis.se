@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<chapter id="villkor">
+<title>Villkor</title>
+
+<abstract>
+<para>Med <command>if</command> och <command>else</command> kan du styra
+händelser i ditt program. Beroende på vad användaren gör så kan du utföra
+vissa saker.</para>
+</abstract>
+
+<sect1 id="uppbyggnaden">
+<title>Uppbyggnaden</title>
+
+<para><emphasis>if-satser</emphasis> skriver du så här <command>if( villkoret
+)</command>. Efter if-satsen kan du skriva kod i ett <xref linkend="block" />,
+se <xref linkend="ifsatsen" /> där vi har villkoret <emphasis>två är stärre än
+tre</emphasis>.</para>
+
+<example id="ifsatsen">
+<title>En enkel if-sats</title>
+
+<programlisting>if( 2 &gt; 3 ) {
+  cout &lt;&lt; "2 är stärre än 3!" &lt;&lt; endl;
+}
+</programlisting>
+</example>
+
+<para>Om villkoret i <xref linkend="ifsatsen" /> är <emphasis>SANN</emphasis>
+kommer if-satsen att gå vidare till <command>cout</command> och skriva ut
+texten, är villkoret <emphasis>FALSKT</emphasis> (vilket det är i exemplet)
+kommer if-satsen att hoppa över kodblocket och gå vidare i programmet.</para>
+
+<sect2 id="ifforenklad">
+<title>Förenkla if-satsen</title>
+
+<para>Om du bara skall använda ett kommando, som i <xref
+linkend="ifsatsen" />, efter en if-sats kan du färenkla den som i <xref
+linkend="ifsatsenenkel" />.</para>
+
+<example id="ifsatsenenkel">
+<title>En enklare if-sats</title>
+
+<programlisting>if( 2 &gt; 3 )
+  cout &lt;&lt; "Tvä är stärre än tre!" &lt;&lt; endl;
+
+</programlisting>
+</example>
+
+<para><xref linkend="ifsatsenenkel" /> gör precis samma sak som <xref
+linkend="ifsatsen" />.</para>
+
+<note>
+<title>Tänk på!</title>
+
+<para>En enkel <command>if</command>-sats kan du bara använda om du enbart
+skall köra <emphasis>ett</emphasis> kommando om villkoret är
+<emphasis>SANT</emphasis>. I alla andra fall skall du använda
+kodblocket.</para>
+</note>
+</sect2>
+</sect1>
+
+<sect1>
+<title>Villkor</title>
+
+<para>Villkor du kan använda i <command>if</command>-satser är:</para>
+
+<segmentedlist>
+<segtitle></segtitle>
+
+<seglistitem>
+<seg></seg>
+</seglistitem>
+</segmentedlist>
+
+<para>== lika med != skiljt från, inte lika med &gt; större än &lt; mindre än
+&gt;= större än eller lika med &lt;= mindre än eller lika med % modulus</para>
+</sect1>
+
+<sect1 id="ifelse">
+<title>if-else</title>
+
+<para>Ibland vill man testa flera vilkor, till exempel <emphasis>om 10 är
+mindre än 20 eller 10 är mindre än 15</emphasis>. Då använder vi
+<command>if... else...</command>.</para>
+
+<programlisting>if( tal1 &gt; 20 ) { 
+    cout "Talet är större än 20" &lt;&lt; endl;
+} else { 
+    cout "Talet är mindre än 20" &lt;&lt; endl;
+}</programlisting>
+</sect1>
+
+<sect1 id="ifeleseif">
+<title>Nästlade if-else</title>
+
+<para>Du kan använda <command>if.. else if..</command> för att testa flera
+villkor.</para>
+
+<programlisting>if( tal1 &gt; 20 ) {
+    cout &lt;&lt; "talet är större än 20" &lt;&lt; endl;
+} else if( tal1 &gt; 10 ) { 
+   cout &lt;&lt; "Talet är större än 10" &lt;&lt; endl;
+} else {
+   cout &lt;&lt; "Talet är mindre än 10" &lt;&lt; endl;
+}</programlisting>
+</sect1>
+
+<sect1 id="ifiif">
+<title>If-satser i if-satser</title>
+
+<para>Ibland vill vi kontrollera att flera villkor är uppfyllda, det kan vi
+göra genom att skriva flera if-satser i varann. Använd alltid klamar för att
+klargöra vilka satser som hör ihop med vilket villkor eftersom det lätt kan
+bli fel annars. Tänk på att kompilatorn inte se hur koden är
+indenterad.</para>
+
+<programlisting>if( tal1 &gt; 20 ) {
+    if( tal2 &gt; 30 ) {
+        cout &lt;&lt; "Tal1 är större än 20 och tal2 är större än 30." &lt;&lt; endl;
+    }
+    cout &lt;&lt; "Tal1 är större än 20 och tal2 är mindre än 30." &lt;&lt; endl;
+}</programlisting>
+</sect1>
+</chapter>

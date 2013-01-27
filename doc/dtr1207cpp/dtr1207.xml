@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<appendix id="dtr1207kursmal">
+<title>DTR1207 - Programmering A</title>
+<abstract><para>50 poäng inrättad 2000-07 SKOLFS: 2000:28</para></abstract>
+
+
+<sect1 id="dtr1207_mal"><title>Mål</title>
+    
+
+
+<sect2 id="dtr1207_kursmal"><title>Mål för kursen</title>
+
+<para>
+Kursen skall ge grundläggande teoretiska och praktiska kunskaper i programmering. Kursen skall även ge kunskaper om vanliga användningsområden för olika programmeringsspråk. Kursen skall också ge grundläggande färdigheter i systemering och struktureringsteknik.
+</para>
+
+</sect2>
+
+<sect2 id="dtr1207_avslutkurs"><title>Mål som eleverna skall ha uppnått efter avslutad kurs</title>
+
+
+<para>
+Eleven skall
+kunna något programmeringsspråks grundläggande datatyper, fördefinierade strukturer och funktioner samt deras regler och syntax
+
+
+kunna analysera programmeringsuppgifter och formulera strukturerad pseudokod samt konstruera enkla algoritmer
+
+
+kunna systemera och strukturera programmeringsarbetet samt skriva enkla program och felsöka källkod
+
+
+känna till kompilatorns/länkarens arbete från källkod till färdigt program
+
+
+känna till viktiga operativsystemstandarder för bl.a. teckenkoder och utmatningsrutiner
+
+
+känna till språkens allmänna prestanda och egenskaper samt vilka programmeringsuppgifter de är bäst lämpade för.
+
+</para>
+</sect2>
+    
+</sect1>
+
+
+<sect1 id="dtr1207_betyg"><title>Betygskriterier</title>
+
+<sect2 id="dtr1207_godkand"><title>Kriterier för betyget Godkänd</title>
+<para>
+Eleven analyserar enkla programmeringsuppgifter och skapar med viss handledning körbara väldokumenterade program.
+Eleven söker med viss handledning upp de fakta som behövs för programmeringsuppgifterna.
+Eleven beskriver det använda programspråkets uppbyggnad, viktigaste funktioner, egenskaper och prestanda.
+</para>
+</sect2>
+<sect2 id="dtr1207_vg"><title>Kriterier för betyget Väl godkänd</title>
+<para>       
+
+
+Eleven utför sina programmeringsuppgifter på egen hand och inom rimlig tid.
+Eleven hämtar på egen hand fakta från olika källor och tillämpar dessa i uppgifterna.
+
+</para>
+</sect2>
+    
+<sect2 id="dtr1207_mvg"><title>Kriterier för betyget Mycket väl godkänd</title>
+<para>
+Eleven utför självständigt sina programmeringsuppgifter med noggrannhet och når snabbt avsett resultat.
+Eleven anpassar sin arbetsinsats till situationen, analyserar resultat samt åtgärdar kvalitetsavvikelser.
+Eleven beskriver samband och ser helheter i komplicerade programmeringssituationer.
+</para>
+</sect2>
+   
+</sect1>
+</appendix>

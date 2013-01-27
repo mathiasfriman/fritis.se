@@ -1,0 +1,73 @@
+<appendix id="app_reserved-words">
+
+	<title>Reserverade ord i PHP</title>
+
+	<para>
+		Reserverade ord har en speciell innebörd i PHP. Du kan
+		inte använda dem som namn på konstanter, namn på klasser
+		eller namn på funktioner. Du kan naturligtvis använda
+		dem i strängar.
+	</para>	 
+
+	<para>
+		De reserverade orden är: 
+		<emphasis>
+			and, 
+			array() , 
+			as , 
+			break , 
+			case, 
+			cfunction , 
+			__CLASS__, 
+			class, 
+			const, 
+			continue, 
+			declare, 
+			default, 
+			die(), 
+			do, 
+			echo(), 
+			else, 
+			elseif, 
+			empty(), 
+			enddeclare, 
+			endfor, 
+			endforeach, 
+			endif, 
+			endswitch, 
+			endwhile, 
+			eval, 
+			exception, 
+			exit(), 
+			extends, 
+			__FILE__ , 
+			for, 
+			foreach, 
+			function, 
+			__FUNCTION__, 
+			global, 
+			if, 
+			include(), 
+			include_once(), 
+			isset(), 
+			__LINE__ , 
+			list(), 
+			__METHOD__, 
+			new, 
+			old_function, 
+			or , 
+			php_user_filter, 
+			print(), 
+			require(), 
+			require_once(), 
+			return(), 
+			static, 
+			switch, 
+			unset(), 
+			use, 
+			var, 
+			while, 
+			xor
+		</emphasis>
+	</para>
+</appendix>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="latin1" ?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
+ "/usr/share/sgml/docbook/dtd/4.2/docbookx.dtd" [
+<!ENTITY fdl-sv SYSTEM "fdl-sv.xml">
+<!ENTITY dtr1207 SYSTEM "dtr1207.xml">
+<!ENTITY dtr1208 SYSTEM "dtr1208.xml">
+<!ENTITY chap_historik SYSTEM "chap_historik.xml">
+<!ENTITY chap_programmeringssprak SYSTEM "chap_programmeringssprak.xml">
+<!ENTITY chap_building SYSTEM "chap_building.xml">
+<!ENTITY chap_helloworld SYSTEM "chap_helloworld.xml">
+<!ENTITY chap_webbprogrammering SYSTEM "chap_webbprogrammering.xml">
+<!ENTITY chap_variabler SYSTEM "chap_variabler.xml">
+<!ENTITY chap_operatorer SYSTEM "chap_operatorer.xml">
+<!ENTITY chap_selektioner SYSTEM "chap_selektioner.xml">
+<!ENTITY chap_iterationer SYSTEM "chap_iterationer.xml">
+<!ENTITY chap_kommentering SYSTEM "chap_kommentering.xml">
+<!ENTITY chap_strings SYSTEM "chap_strings.xml">
+<!ENTITY chap_funktioner SYSTEM "chap_funktioner.xml">
+<!ENTITY chap_filer SYSTEM "chap_filer.xml">
+<!ENTITY chap_array SYSTEM "chap_array.xml">
+<!ENTITY chap_funktioner2 SYSTEM "chap_funktioner2.xml">
+<!ENTITY chap_inmatning SYSTEM "chap_inmatning.xml">            
+
+<!ENTITY reserved_words SYSTEM "reserved_words.xml">
+]>
+
+<book lang="sv">
+<bookinfo>
+
+	<title>Programmering i PHP</title>
+	
+	<authorgroup>
+	<author>
+		<firstname>Marcus</firstname>
+		<surname>Rejås</surname>
+		<affiliation>
+			<address>
+				<email>marcus@rejas.se</email>
+			</address>
+		</affiliation>
+	</author>
+	<author>
+		<firstname>Magnus</firstname>
+		<surname>Määttä</surname>
+		<affiliation>
+			<address>
+				<email>magnus@php.net</email>
+			</address>
+		</affiliation>
+	</author>
+	</authorgroup>
+
+	<pubdate>Utkast</pubdate>
+
+	<copyright>
+		<year>2003-2005</year>
+		<holder>Marcus Rejås och Magnus Määttä</holder>
+	</copyright>
+	<copyright>
+		<year>2006,2008</year>
+		<holder>Marcus Rejås</holder>
+	</copyright>
+
+	<legalnotice>
+		<para>
+			Var och en äger rätt att kopiera, distribuera och/eller
+			modifiera detta dokument under villkoren i licensen "GNU Free
+			Documentation License", version 1.2 eller senare publicerad av
+			Free Software Foundation, med de invarianta avsnitten <xref
+			linkend="dtr1207"/> och <xref linkend="dtr1208"/>, utan
+			framsidestexter och utan baksidestexter.  En kopia av denna
+			licens finns med i avsnittet med titeln "GNU Free Documentation
+			License".
+		</para>
+
+		<para>
+			Det vill säga, du kan fritt ladda ner, vidaredistribuera
+			och kopiera denna bok. Du får ändra den om du vill (se
+			licenstexten).  Tryckta böcker kan köpas av TriNix AB i
+			Helsingborg, telefon 042-127800.
+		</para>
+	</legalnotice>
+
+	<revhistory>
+		<revision>
+			<revnumber>$Id: programmeringAB.xml,v 1.23 2006/06/11 10:27:10 rejas Exp $</revnumber>
+			<date></date>
+			<revremark>*** Utvecklingsversion ***</revremark>
+		</revision>
+	</revhistory>
+
+	<abstract>
+		<para>
+			Denna bok är anpassad för gymnasieskolans kurser Programmering
+			A och B med kurskoderna DTR1207 och DTR1208 (PPHP1408). Den kan
+			naturligtvis användas även i andra sammanhang, till exempel
+			självstudier, studiecirklar eller annan lärarledd utbildning.
+		</para>
+
+		<para>
+			Till boken kommer att finnas förslag på övningar man kan utföra
+			för att praktiskt utöva de färdigheter man skaffar sig under
+			studierna.
+		</para>
+	</abstract>
+</bookinfo>
+
+<preface id="forord"><title>Förord</title>
+	<sect1><title>Tack till</title>
+		<para>
+			Vi vill börja denna bok med att tacka alla som hjälpt oss med
+			den. Speciellt vill vi tacka Micke Karlsson som föreslagit
+			förbättringar, Jerry Segerholm som hittat stavfel och Daniel
+			Wahlgren som hittat både stavfel och sakfel. Tack!
+		</para>
+		<para>
+			Vi vill också tacka dig som läser denna bok. Hittar du något
+			som är fel eller som du tycker att vi kan göra på något bättre
+			sätt så tveka inte att höra av dig till oss. Våra adresser står
+			i början av boken. Vi har våra begränsningar som författare men
+			genom att släppa denna bok fri förväntar vi oss att du som
+			läsare skall skicka kommentarer så att vi tillsammans kan göra
+			den mycket bättre än vad vi och kanske du skulle ensamma.
+		</para>
+	</sect1>
+</preface>
+
+<toc/>
+
+<!-- Kapitel -->
+
+&chap_historik;
+
+&chap_programmeringssprak;
+
+&chap_building;
+
+&chap_helloworld;
+
+&chap_webbprogrammering;
+
+&chap_variabler;
+
+&chap_operatorer;
+
+&chap_selektioner;
+
+&chap_iterationer;
+
+&chap_kommentering;
+
+&chap_strings;
+
+&chap_funktioner;
+
+&chap_filer;
+
+&chap_array;
+
+&chap_funktioner2;
+
+&chap_inmatning;
+
+<!-- Appendix -->
+
+&dtr1207;
+
+&dtr1208;
+
+&reserved_words;
+
+&fdl-sv;
+
+
+
+</book>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+tab-width: 3
+End:
+vim600: syn=xml fen fdm=syntax si
+vim: noet sw=3 ts=3 syn=sgml
+vi: ts=3 sw=3
+-->

@@ -1,0 +1,15 @@
+introduktion.xml
+datatyper.xml
+varochkonst.xml
+operatorer.xml
+introprog.xml
+forstaprog.xml
+inutmatning.xml
+flyttal.xml
+slingor.xml
+logiskaoperatorer.xml
+enklaposter.xml
+
+<--appendix-->
+dtr1207.xml
+fdl-sv.xml

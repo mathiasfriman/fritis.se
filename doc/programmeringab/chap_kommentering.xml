@@ -1,0 +1,238 @@
+<chapter id="chap_kommentering">
+	<title>Kommentering</title>
+
+		<abstract>
+			<para>
+				Alla som någon gång jobbat i ett programmeringsprojekt vet att det
+				är av yttersta vikt att man kommenterar sin kod. Detta avsnitt
+				beskriver hur man kommenterar och vad man skall tänka på när man
+				kommenterar sin kod.
+			</para>
+		</abstract>
+
+		<sect1>
+			<title>Hur ser en kommentar ut</title>
+
+			<para>
+				I PHP finns det två typer av kommentarer. De är <emphasis>//
+				Kommentar</emphasis> och <emphasis>/* Kommentar */</emphasis>.
+				Den första fungerar så att allt som kommer efter <emphasis>//
+				</emphasis> och fram till radens slut är en kommentar och kommer
+				att ignoreras av PHP-tolkaren. Den andra typen av kommentar
+				fungerar så att det som står mellan <emphasis>/*</emphasis> och
+				<emphasis>*/ </emphasis> är kommentarer. Den andra varianten kan
+				sträcka sig över flera rader.
+
+				<example>
+					<title>Exempel med kommentering</title>
+					<programlisting>
+<![CDATA[
+<?php
+/* Detta är en kommentar */
+// Detta är en kommentar
+$i = 1000; // Detta är också en kommetar
+?>
+]]>
+				</programlisting>
+			</example>
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>Att kommentera sin kod</title>
+
+		<para>
+			Att kommentera i sin kod är en konst. Det är mycket att tänka på. Det
+			som är svårast är att veta hur mycket man skall kommentera. Det är
+			lika illa att kommentera för mycket som för lite. Här kommer några
+			riktlinjer.
+		</para>
+
+		<para>
+			Skriv i kommentaren VAD som görs och inte HUR det görs. Hur det görs
+			skall koden i sig själv förklara.
+		</para>
+
+		<para>
+			Kommentera i en sammanhängande längre kommentar före ett avancerat
+			block vad som görs. Ett litet exempel:
+
+			<example>
+				<title>Längre kommentar före block</title>
+				<programlisting>
+<![CDATA[
+<?php
+//
+// Nedanstående räknar ut summan av alla tal mellan tal1 och
+// tal2.
+//
+// Summan skrivs ut och tal2 måste vara större än tal1
+//
+
+$summa = 0;
+for ($i = $tal1; $i <= $tal2; $i++) {
+   $summa = summa + $i;
+}
+echo $summa;
+?>
+]]>
+				</programlisting>
+			</example>
+
+			Jämför detta med nedanstående kod som är full av "Papegojkommentarer"
+			(En papegoja brukar bara lära sig att upprepa det den hör).
+
+			<example>
+				<title>Papegojkommentarer</title>
+				<programlisting>
+<![CDATA[
+<?php
+$summa = 0; // Summan sätts till 0
+
+for ($i = $tal1; $i <= $tal2; $i++) { // Räkna upp i från $tal1 till $tal2
+   $summa = summa + $i; // Aktuellt tal läggs till summan
+}
+echo $summa; // Skriv ut summan
+?>
+]]>
+				</programlisting>
+			</example>
+
+			Observera att det är svårare att förstå vad den här koden gör än den
+			ovanför. Trots att den är full av kommantarer. Den nedre har bara
+			kommentarer som beskriver vad koden i sig beskriver och tillför
+			inget. Radkommentarer är tillåtet om de gör någon nytta. Till exempel
+			då variabler deklareras är det bra att ha radkommentarer efter varje
+			variabel där man beskriver vad man tänkt att variabeln skall göra.
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>Liten sammanfattning</title>
+
+		<para>
+			<itemizedlist>
+				<listitem>
+					<para>Kommentera inte för mycket och inte för litet.</para>
+				</listitem>
+				<listitem>
+					<para>Koden i sig skall visa vad programmet gör.</para>
+				</listitem>
+				<listitem>
+					<para>
+						Beskriv gärna i en (längre) kommantar före en funktion eller
+						avancerat block i en funktion vad det gör istället för att
+						kommantera på varje rad.
+					</para>
+				</listitem>
+				<listitem>
+					<para>
+						Kommentarer på samma rad som koden blir lätt
+						"Papegojkommentarer" sådana är fula och skall inte
+						göras.
+					</para>
+				</listitem>
+			</itemizedlist>
+		</para>
+
+		<para>
+			Ett mer sammanhängande exempel finns nedan:
+
+			<example>
+				<title>Kommentering sammanhängade exempel</title>
+				<programlisting>
+<![CDATA[
+<?php
+//
+// kommentering.php
+//
+// Detta är ett litet skript som bara demonstrerar kommentering.
+// I början av varje fil är det väldigt bra om man har ett block
+// som detta där det står vad som finns i filen. Och hur man får
+// tag i programmeraren.
+//
+// Av: Marcus Rejås <marcus@rejas.se>
+// Ver: 1.002
+//
+
+//
+// Följande visar hur användarens browser presenterar sig. Det
+// är bra att före avancerade block eller funktioner i koden
+// beskriva vad koden gör.
+//
+
+echo "Din browser presenterar sig som:<br>";
+echo $HTTP_USER_AGENT;
+
+
+//
+// Man kan även visa vilket IP de kommer från
+//
+echo "<p>Du har IP-nummer:<br>";
+echo $REMOTE_ADDR;
+
+//
+// Skriver ut alla tal mellan 1 och 10
+//
+echo "<p>Alla tal mellan 1 och 10 ";
+$tal = 1;
+while ($tal <= 10) {
+   echo "$tal ";
+   $tal++;
+}
+
+// Nedan visas samma kod med "Papegojkommentarer"
+echo "<p>Alla tal mellan 1 och 10 ";
+$tal = 1;               // Tal tilldelas 1
+while ($tal <= 10) {    // Så länge som tal <= 10
+   echo "$tal ";       // Skriv ut tal
+   $tal++;             // Öka tal med ett
+}
+
+// Vilket går lättast att förstå?
+
+// Exempel på en block-kommentar. Nedanstående är helt
+// bortkommenterat
+
+/*
+  Nedan visas samma kod med "Papegojkommentarer"
+$tal = 1;               // Tal tilldelas 1
+while ($tal <= 10) {    // Så länge som tal <= 10
+   echo "$tal ";       // Skriv ut tal
+   $tal++;             // Öka tal med ett
+}
+*/
+
+echo "<hr>Detta är bara ett skript som demonstrerar kommentering.
+Titta på källkoden istället.";
+
+?>
+]]>
+				</programlisting>
+			</example>
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>Mer läsning</title>
+
+		<para>
+			Länkar till mera läsning för den intresserade
+		</para>
+		<para>
+			Svensk text med massor av exempel på indentering och
+			kommentering, samt länkar till mer info på engelska:
+			http://www.phpsidan.nu/res_articles.php?view=art&amp;id=48
+		</para>
+	</sect1>
+</chapter>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+tab-width: 3
+End:
+vim600: syn=xml fen fdm=syntax si
+vim: noet sw=3 ts=3 syn=sgml
+vi: ts=3 sw=3
+-->

@@ -1,0 +1,606 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Operatorer</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="Programmering i PHP"
+HREF="book1.html"><LINK
+REL="PREVIOUS"
+TITLE="Variabler"
+HREF="chap_variabler.html"><LINK
+REL="NEXT"
+TITLE="Selektioner (Villkorssatser)"
+HREF="chap_selektioner.html"><LINK
+REL="stylesheet"
+HREF="./book.css"
+TYPE="text/css"></HEAD
+><BODY
+CLASS="chapter"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Programmering i PHP</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="chap_variabler.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="chap_selektioner.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="chapter"
+><H1
+><A
+NAME="chap_operatorer"
+></A
+>Kapitel 7. Operatorer</H1
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Innehållsförteckning</B
+></DT
+><DT
+><A
+HREF="chap_operatorer.html#AEN290"
+>Vad �r en operator?</A
+></DT
+><DT
+><A
+HREF="chap_operatorer.html#AEN423"
+>Mer l�sning</A
+></DT
+></DL
+></DIV
+><BLOCKQUOTE
+CLASS="ABSTRACT"
+><DIV
+CLASS="abstract"
+><P
+></P
+><A
+NAME="AEN288"
+></A
+><P
+>&#13;			Detta avsnitt beskriver vad operatorer �r och hur man anv�nder dem i
+			ett PHP-script.
+		</P
+><P
+></P
+></DIV
+></BLOCKQUOTE
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN290"
+>Vad �r en operator?</A
+></H1
+><P
+>&#13;			En operator �r n�got som verkar p� en eller flera termer. Exempel p�
+			operatorer �r +, -, * och / som g�r precis vad ni tror att de g�r.
+		</P
+><P
+>&#13;			Det finns olika typer av operatorer. Aritmetiska operatorer, som de
+			ovan, opererar bara p� tal. Sedan finns det tilldelningsoperatorer
+			som g�r tilldelningar och s� vidare. H�r kommer n�gra av de vi kommer
+			att jobba med:
+		</P
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN294"
+>Aritmetiska operatorer</A
+></H2
+><P
+>&#13;				<DIV
+CLASS="table"
+><A
+NAME="AEN297"
+></A
+><P
+><B
+>Tabell 7-1. Aritmetiska operatorer</B
+></P
+><TABLE
+BORDER="1"
+FRAME="border"
+RULES="all"
+CLASS="CALSTABLE"
+><COL
+WIDTH="1*"
+TITLE="c1"><COL
+WIDTH="1*"
+TITLE="c2"><COL
+WIDTH="1*"
+TITLE="c3"><THEAD
+><TR
+><TH
+>Exempel</TH
+><TH
+>Namn</TH
+><TH
+>Resultat</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+>$a + $b</TD
+><TD
+>Addition</TD
+><TD
+>Summan av $a och $b</TD
+></TR
+><TR
+><TD
+>$a - $b</TD
+><TD
+>Subtraktion</TD
+><TD
+>Differensen av $a och $b</TD
+></TR
+><TR
+><TD
+>$a * $b</TD
+><TD
+>Multiplikation</TD
+><TD
+>Produkten av $a och $b</TD
+></TR
+><TR
+><TD
+>$a / $b</TD
+><TD
+>Division</TD
+><TD
+>Kvoten av $a och $b</TD
+></TR
+><TR
+><TD
+>$a % $b</TD
+><TD
+>Modulus</TD
+><TD
+>Resten av division mellan $a och $b</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+			</P
+></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN329"
+>Tilldelningsoperatorer</A
+></H2
+><P
+>&#13;				Det finns bara en tilldelningsoperator och den heter helt enkelt
+				"tilldelas". Den representeras av ett lika-med-tecken (=). S� h�r
+				kan den anv�ndas:
+				<DIV
+CLASS="example"
+><A
+NAME="AEN332"
+></A
+><P
+><B
+>Exempel 7-1. Tilldelningsoperatorn</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+$c = $a + $b; // Utl�ses, c tilldelas v�rdet av a + b
+?&#62;
+
+					</PRE
+></DIV
+>
+			</P
+><P
+>&#13;				Det finns vissa andra tilldelningsoperatorer, men dessa beh�ver
+				ni inte kunna. Jag tar dem kort h�r.
+				<DIV
+CLASS="example"
+><A
+NAME="AEN336"
+></A
+><P
+><B
+>Exempel 7-2. Tilldelningsoperatorerna += och -=</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+$a += 5; // Samma sak som $a = $a + 5
+$a -= 5; // Samma sak som $a = $a - 5
+?&#62;
+
+					</PRE
+></DIV
+>
+			</P
+></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN339"
+>J�mf�relseoperatorer</A
+></H2
+><P
+>&#13;				J�mf�relseoperatorer arbetar p� tal och returnerar alltid ett
+				v�rde av typen boolean. Det vill s�ga true eller false.
+
+				<DIV
+CLASS="table"
+><A
+NAME="AEN342"
+></A
+><P
+><B
+>Tabell 7-2. J�mf�relseoperatorer</B
+></P
+><TABLE
+BORDER="1"
+FRAME="border"
+RULES="all"
+CLASS="CALSTABLE"
+><COL
+WIDTH="1*"
+TITLE="c1"><COL
+WIDTH="1*"
+TITLE="c2"><COL
+WIDTH="1*"
+TITLE="c3"><THEAD
+><TR
+><TH
+>Exempel</TH
+><TH
+>Namn</TH
+><TH
+>Resultat</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+>$a == $b</TD
+><TD
+>Lika med</TD
+><TD
+>&#13;									Sant om $a �r lika med $b.
+								</TD
+></TR
+><TR
+><TD
+>$a != $b</TD
+><TD
+>Inte lika med</TD
+><TD
+>&#13;									Sant om $a inte �r lika med $b.
+								</TD
+></TR
+><TR
+><TD
+>$a &#60; $b</TD
+><TD
+>Mindre �n</TD
+><TD
+>&#13;									Sant om $a �r mindre �n $b.
+								</TD
+></TR
+><TR
+><TD
+>$a &#62; $b</TD
+><TD
+>St�rre �n</TD
+><TD
+>&#13;									Sant om $a �r st�rre �n $b.
+								</TD
+></TR
+><TR
+><TD
+>$a &#60;= $b</TD
+><TD
+>Mindre �n eller lika med</TD
+><TD
+>&#13;									Sant om $a �r mindre �n eller lika med $b.
+								</TD
+></TR
+><TR
+><TD
+>$a &#62;= $b</TD
+><TD
+>St�rre �n eller lika med</TD
+><TD
+>&#13;									Sant om $a �r st�rre �n eller lika med $b.
+								</TD
+></TR
+><TR
+><TD
+>$a === $b</TD
+><TD
+>Identiska</TD
+><TD
+>&#13;									Sant om $a �r lika med $b och b�da �r av samma typ.
+								</TD
+></TR
+><TR
+><TD
+>$a !== $b</TD
+><TD
+>Inte identiska</TD
+><TD
+>&#13;									Sant om $a inte �r lika med $b eller om de inte
+									�r av samma typ.
+								</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+			</P
+></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN386"
+>Logiska operatorer</A
+></H2
+><P
+>&#13;				Som jag sade ovan s� returnerar alltid de j�mf�rande operatorerna
+				av typen boolean och opererar p� tal. Logiska operatorer
+				returnerar alltid boolean, men opererar ocks� bara p� logiska
+				termer.
+
+				<DIV
+CLASS="table"
+><A
+NAME="AEN389"
+></A
+><P
+><B
+>Tabell 7-3. Logiska operatorer</B
+></P
+><TABLE
+BORDER="1"
+FRAME="border"
+RULES="all"
+CLASS="CALSTABLE"
+><COL
+WIDTH="1*"
+TITLE="c1"><COL
+WIDTH="1*"
+TITLE="c2"><COL
+WIDTH="1*"
+TITLE="c3"><THEAD
+><TR
+><TH
+>Exempel</TH
+><TH
+>Namn</TH
+><TH
+>Resultat</TH
+></TR
+></THEAD
+><TBODY
+><TR
+><TD
+>$a and $b</TD
+><TD
+>Och</TD
+><TD
+>&#13;									Sant om $a och $b �r sanna.
+								</TD
+></TR
+><TR
+><TD
+>$a or $b</TD
+><TD
+>Eller</TD
+><TD
+>&#13;									Sant om $a eller $b �r sanna.
+								</TD
+></TR
+><TR
+><TD
+>$a xor $b</TD
+><TD
+>Exklusivt eller</TD
+><TD
+>&#13;									Sant om $a eller $b �r sanna men inte b�da tv�.
+								</TD
+></TR
+><TR
+><TD
+>!$a</TD
+><TD
+>Inte/Icke</TD
+><TD
+>&#13;									Sant om $a inte �r sant.
+								</TD
+></TR
+></TBODY
+></TABLE
+></DIV
+>
+			</P
+></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN417"
+>Str�ngoperatorer</A
+></H2
+><P
+>&#13;				Det finns tre operatorer som opererar p� str�ngar, den f�rsta
+				k�nner ni till sedan f�rut och det �r tilldelningsoperatorn
+				"tilldelas". Den fungerar lika p� str�ngar som p� tal. Sedan
+				finns det tv� till. Dessa beskrivs l�ttast med ett exempel:
+
+				<DIV
+CLASS="example"
+><A
+NAME="AEN420"
+></A
+><P
+><B
+>Exempel 7-3. Str�ngoperatorer</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+$s = "Kalle ";    //$a tilldelas "Kalle "
+$t = $a . "Anka"; //$t inneh�ller nu "Kalle Anka"
+$s = "Kalle ";
+$s .= "Anka";     //Samma sak som $s = $s . "Anka"
+?&#62;
+
+					</PRE
+></DIV
+>
+			</P
+></DIV
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN423"
+>Mer l�sning</A
+></H1
+><P
+>&#13;			Det st�r mycket om operatorer i PHP-Manualen (
+			<A
+HREF="http://www.php.net/manual/en/language.operators.php"
+TARGET="_top"
+>&#13;				<I
+CLASS="citetitle"
+>&#13;					http://www.php.net/manual/en/language.operators.php
+				</I
+>
+			</A
+>).
+		</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="chap_variabler.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Hem</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="chap_selektioner.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Variabler</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Selektioner (Villkorssatser)</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

@@ -1,0 +1,297 @@
+<chapter id="chap_operatorer">
+	<title>Operatorer</title>
+
+	<abstract>
+		<para>
+			Detta avsnitt beskriver vad operatorer är och hur man använder dem i
+			ett PHP-script.
+		</para>
+	</abstract>
+
+	<sect1>
+		<title>Vad är en operator?</title>
+
+		<para>
+			En operator är något som verkar på en eller flera termer. Exempel på
+			operatorer är +, -, * och / som gör precis vad ni tror att de gör.
+		</para>
+		<para>
+			Det finns olika typer av operatorer. Aritmetiska operatorer, som de
+			ovan, opererar bara på tal. Sedan finns det tilldelningsoperatorer
+			som gör tilldelningar och så vidare. Här kommer några av de vi kommer
+			att jobba med:
+		</para>
+
+		<sect2>
+			<title>Aritmetiska operatorer</title>
+
+			<para>
+				<table frame='all'>
+					<title>Aritmetiska operatorer</title>
+					<tgroup cols='3' align='left' colsep='1' rowsep='1'>
+						<colspec colname='c1'/>
+						<colspec colname='c2'/>
+						<colspec colname='c3'/>
+						<thead>
+							<row>
+								<entry>Exempel</entry>
+								<entry>Namn</entry>
+								<entry>Resultat</entry>
+							</row>
+						</thead>
+						<tbody>
+							<row>
+								<entry>$a + $b</entry>
+								<entry>Addition</entry>
+								<entry>Summan av $a och $b</entry>
+							</row>
+							<row>
+								<entry>$a - $b</entry>
+								<entry>Subtraktion</entry>
+								<entry>Differensen av $a och $b</entry>
+							</row>
+							<row>
+								<entry>$a * $b</entry>
+								<entry>Multiplikation</entry>
+								<entry>Produkten av $a och $b</entry>
+							</row>
+							<row>
+								<entry>$a / $b</entry>
+								<entry>Division</entry>
+								<entry>Kvoten av $a och $b</entry>
+							</row>
+							<row>
+								<entry>$a % $b</entry>
+								<entry>Modulus</entry>
+								<entry>Resten av division mellan $a och $b</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</para>
+		</sect2>
+
+		<sect2>
+			<title>Tilldelningsoperatorer</title>
+
+			<para>
+				Det finns bara en tilldelningsoperator och den heter helt enkelt
+				"tilldelas". Den representeras av ett lika-med-tecken (=). Så här
+				kan den användas:
+				<example>
+					<title>Tilldelningsoperatorn</title>
+					<programlisting>
+<![CDATA[
+<?php
+$c = $a + $b; // Utläses, c tilldelas värdet av a + b
+?>
+]]>
+					</programlisting>
+				</example>
+			</para>
+			<para>
+				Det finns vissa andra tilldelningsoperatorer, men dessa behöver
+				ni inte kunna. Jag tar dem kort här.
+				<example>
+					<title>Tilldelningsoperatorerna += och -=</title>
+					<programlisting>
+<![CDATA[
+<?php
+$a += 5; // Samma sak som $a = $a + 5
+$a -= 5; // Samma sak som $a = $a - 5
+?>
+]]>
+					</programlisting>
+				</example>
+			</para>
+		</sect2>
+
+		<sect2>
+			<title>Jämförelseoperatorer</title>
+			<para>
+				Jämförelseoperatorer arbetar på tal och returnerar alltid ett
+				värde av typen boolean. Det vill säga true eller false.
+
+				<table frame='all'>
+					<title>Jämförelseoperatorer</title>
+					<tgroup cols='3' align='left' colsep='1' rowsep='1'>
+						<colspec colname='c1'/>
+						<colspec colname='c2'/>
+						<colspec colname='c3'/>
+
+						<thead>
+							<row>
+								<entry>Exempel</entry>
+								<entry>Namn</entry>
+								<entry>Resultat</entry>
+							</row>
+						</thead>
+						<tbody>
+							<row>
+								<entry>$a == $b</entry>
+								<entry>Lika med</entry>
+								<entry>
+									Sant om $a är lika med $b.
+								</entry>
+							</row>
+							<row>
+								<entry>$a != $b</entry>
+								<entry>Inte lika med</entry>
+								<entry>
+									Sant om $a inte är lika med $b.
+								</entry>
+							</row>
+							<row>
+								<entry>$a &lt; $b</entry>
+								<entry>Mindre än</entry>
+								<entry>
+									Sant om $a är mindre än $b.
+								</entry>
+							</row>
+							<row>
+								<entry>$a &gt; $b</entry>
+								<entry>Större än</entry>
+								<entry>
+									Sant om $a är större än $b.
+								</entry>
+							</row>
+							<row>
+								<entry>$a &lt;= $b</entry>
+								<entry>Mindre än eller lika med</entry>
+								<entry>
+									Sant om $a är mindre än eller lika med $b.
+								</entry>
+							</row>
+							<row>
+								<entry>$a &gt;= $b</entry>
+								<entry>Större än eller lika med</entry>
+								<entry>
+									Sant om $a är större än eller lika med $b.
+								</entry>
+							</row>
+							<row>
+								<entry>$a === $b</entry>
+								<entry>Identiska</entry>
+								<entry>
+									Sant om $a är lika med $b och båda är av samma typ.
+								</entry>
+							</row>
+							<row>
+								<entry>$a !== $b</entry>
+								<entry>Inte identiska</entry>
+								<entry>
+									Sant om $a inte är lika med $b eller om de inte
+									är av samma typ.
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</para>
+		</sect2>
+
+		<sect2>
+			<title>Logiska operatorer</title>
+
+			<para>
+				Som jag sade ovan så returnerar alltid de jämförande operatorerna
+				av typen boolean och opererar på tal. Logiska operatorer
+				returnerar alltid boolean, men opererar också bara på logiska
+				termer.
+
+				<table frame='all'>
+					<title>Logiska operatorer</title>
+					<tgroup cols='3' align='left' colsep='1' rowsep='1'>
+						<colspec colname='c1'/>
+						<colspec colname='c2'/>
+						<colspec colname='c3'/>
+
+						<thead>
+							<row>
+								<entry>Exempel</entry>
+								<entry>Namn</entry>
+								<entry>Resultat</entry>
+							</row>
+						</thead>
+						<tbody>
+							<row>
+								<entry>$a and $b</entry>
+								<entry>Och</entry>
+								<entry>
+									Sant om $a och $b är sanna.
+								</entry>
+							</row>
+							<row>
+								<entry>$a or $b</entry>
+								<entry>Eller</entry>
+								<entry>
+									Sant om $a eller $b är sanna.
+								</entry>
+							</row>
+							<row>
+								<entry>$a xor $b</entry>
+								<entry>Exklusivt eller</entry>
+								<entry>
+									Sant om $a eller $b är sanna men inte båda två.
+								</entry>
+							</row>
+							<row>
+								<entry>!$a</entry>
+								<entry>Inte/Icke</entry>
+								<entry>
+									Sant om $a inte är sant.
+								</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+			</para>
+		</sect2>
+
+		<sect2>
+			<title>Strängoperatorer</title>
+			<para>
+				Det finns tre operatorer som opererar på strängar, den första
+				känner ni till sedan förut och det är tilldelningsoperatorn
+				"tilldelas". Den fungerar lika på strängar som på tal. Sedan
+				finns det två till. Dessa beskrivs lättast med ett exempel:
+
+				<example>
+					<title>Strängoperatorer</title>
+					<programlisting>
+<![CDATA[
+<?php
+$s = "Kalle ";    //$a tilldelas "Kalle "
+$t = $a . "Anka"; //$t innehåller nu "Kalle Anka"
+$s = "Kalle ";
+$s .= "Anka";     //Samma sak som $s = $s . "Anka"
+?>
+]]>
+					</programlisting>
+				</example>
+			</para>
+		</sect2>
+	</sect1>
+
+	<sect1><title>Mer läsning</title>
+		<para>
+			Det står mycket om operatorer i PHP-Manualen (
+			<ulink url="http://www.php.net/manual/en/language.operators.php">
+				<citetitle>
+					http://www.php.net/manual/en/language.operators.php
+				</citetitle>
+			</ulink>).
+		</para>
+	</sect1>
+</chapter>
+
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+tab-width: 3
+End:
+vim600: syn=xml fen fdm=syntax si
+vim: noet sw=3 ts=3 syn=sgml
+vi: ts=3 sw=3
+-->

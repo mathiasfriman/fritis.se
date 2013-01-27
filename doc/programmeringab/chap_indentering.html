@@ -1,0 +1,298 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Indentering</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="Programmering i PHP"
+HREF="book1.html"><LINK
+REL="PREVIOUS"
+TITLE="Pseudokod"
+HREF="chap_pseudokod.html"><LINK
+REL="NEXT"
+TITLE="Kommentering"
+HREF="chap_kommentering.html"><LINK
+REL="stylesheet"
+HREF="./book.css"
+TYPE="text/css"></HEAD
+><BODY
+CLASS="chapter"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Programmering i PHP</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="chap_pseudokod.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="chap_kommentering.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="chapter"
+><H1
+><A
+NAME="chap_indentering"
+></A
+>Kapitel 11. Indentering</H1
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Innehållsförteckning</B
+></DT
+><DT
+><A
+HREF="chap_indentering.html#AEN509"
+>Vad �r indentering?</A
+></DT
+><DT
+><A
+HREF="chap_indentering.html#AEN522"
+>Mer l�sning</A
+></DT
+></DL
+></DIV
+><BLOCKQUOTE
+CLASS="ABSTRACT"
+><DIV
+CLASS="abstract"
+><P
+></P
+><A
+NAME="AEN507"
+></A
+><P
+>&#13;			Att indentera sin kod �r n�got man g�r f�r att den skall bli l�ttare
+			att l�sa och l�ttare att hitta fel. Detta avsnitt beskriver hur man
+			indenterar p� ett bra s�tt.
+		</P
+><P
+></P
+></DIV
+></BLOCKQUOTE
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN509"
+>Vad �r indentering?</A
+></H1
+><P
+>&#13;			Indentering g�r ut p� att man med hj�lp av olika mycket blanksteg
+			(space) till v�nster om koden kan p� ett logiskt s�tt gruppera koden
+			s� att den g�r l�ttare att l�sa. Det finns flera olika s�tt att
+			intendera p� och varje programmerare har sin egen stil. F�r att kod
+			skall bli enhetliga s� har m�nga f�retag en kodstandard i vilken det
+			beskrivs hur kommentering och indentering skall g�ra inom f�retaget.
+			Det g�r att alla programmerare k�nner sig hemma i varandras kod och
+			att den totala kodmassan blir enhetlig och l�ttare att granska.
+		</P
+><P
+>&#13;			Grundprincipen �r att kod som h�nger ihop skall ha samma
+			indenteringsniv�. Se f�ljande exemepel:
+
+			<DIV
+CLASS="example"
+><A
+NAME="AEN513"
+></A
+><P
+><B
+>Exempel 11-1. Indentering</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+if ($tal == 100) {
+   echo "Talet �r 100";
+   $tal = $tal + 1;
+}
+?&#62;
+
+				</PRE
+></DIV
+>
+
+			I exemplet ser vi att det som h�r till if-satsen har flyttats in en
+			niv�. Det g�r det l�tt att se att det h�r till if-satsen och att
+			m�svingarna �r riktiga. Vissa indenterar if-satsen s� h�r:
+
+			<DIV
+CLASS="example"
+><A
+NAME="AEN516"
+></A
+><P
+><B
+>Exempel 11-2. Indentering</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+if ($tal == 100)
+{
+   echo "Talet �r 100";
+   $tal = $tal + 1;
+}
+?&#62;
+
+				</PRE
+></DIV
+>
+
+			Om vi s�ger att vi har n�stlade if-satser s� syns det �nnu tydligare
+			vad bra det �r att indentera.
+
+			<DIV
+CLASS="example"
+><A
+NAME="AEN519"
+></A
+><P
+><B
+>Exempel 11-3. Indentering</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+if ($inloggad) {
+   if ($tal == 100) {
+      echo "Tal �r hundra";
+   } else {
+      echo "Tal �r inte hundra";
+   }
+} else {
+   echo "Du �r inte inloggad!"
+}
+?&#62;
+
+				</PRE
+></DIV
+>
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN522"
+>Mer l�sning</A
+></H1
+><P
+>&#13;			L�nkar till mera l�sning f�r den intresserade
+		</P
+><P
+>&#13;		Svensk text med massor av exempel p� indentering och kommentering,
+		samt l�nkar till mer +info p� engelska:
+		http://www.phpsidan.nu/res_articles.php?view=art&#38;id=48
+		</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="chap_pseudokod.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Hem</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="chap_kommentering.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Pseudokod</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Kommentering</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

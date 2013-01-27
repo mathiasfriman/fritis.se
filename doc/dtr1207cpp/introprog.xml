@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<chapter id="introprog">
+  <title>Introduktion till programmering</title>
+
+  <abstract>
+    <para>I detta kapitel går vi igenom det mest grundläggande fär att kunna
+    skapa ett första program i C++.</para>
+  </abstract>
+
+  <sect1 id="kallkoden">
+    <title>Källkoden</title>
+
+    <para>När vi skriver ett program i C++ skriver vi det som ett vanligt
+    textdokument. Ungefär som när vi skriver ett brev eller skolarbete i
+    OpenOffice Writer eller Microsoft Word. Skillnaden är att vi skriver text
+    som vår kompilator kan tolka och göra om till maskinkod, det språk datorn
+    förstår.</para>
+
+    <para>Texten vi skriver kallas för källkod. Källkoden kan skrivas i vilken
+    texteditor som helst, till exempel: <application>vi</application>,
+    <application>emacs</application>, <application>notepad</application> eller
+    <application>Edit+</application>. Vi kan också använda utvecklingsmiljöer
+    som <application>KDevelop</application>,
+    <application>Anjuta</application>, <application>Dev C++</application>,
+    <application>Microsoft Visual C++</application> eller <application>Borland
+    C++ Builder</application>.</para>
+
+    <para>När vi skrivit källkoden sparar vi den med lämpligt filnamn, oftast
+    använder vi <filename class="extension">.cpp</filename> som filändelse.
+    <filename class="extension">.cpp</filename> är en förkortning för C Plus
+    Plus ( C++ ).</para>
+
+    <para>Efter vi sparat källkoden som en fil skall vi kompilera den.
+    Kompileringen går till så att texten i källkoden omvandlas till ett
+    binärformat som datorn kan tolka. Det vill säga vi bygger vårt program.
+    Den kompilator vi använder i boken heter <application>GCC</application>
+    och är en fri kompilator. Senare i boken kommer vi gå igenom mer om
+    kompilatorn, just nu behöver du bara känna till hur du kompilerar din
+    källkod. I <xref linkend="kompilera_med_gcc" /> ser du ett exempel på hur
+    det kan se ut när du kompilerar källkodsfilen
+    <replaceable>kallkod.cpp</replaceable> till programfilen
+    <replaceable>utnamn</replaceable>. Parametern <parameter
+    class="command">-o</parameter> anger vad filnamnet skall vara för den
+    färdigkompilerade filen, i exemplet sätter vi
+    <replaceable>utnamn</replaceable> som filnamn för vårt program. För att
+    sedan starta programmet skriver du <command>./filnamnet</command> om du
+    angett <replaceable>utnamn</replaceable> som filnamn så skriver du
+    <command>./utnamn</command> för att starta programmet.</para>
+
+    <example id="kompilera_med_gcc">
+      <title>Kompilera källkod med GCC</title>
+
+      <screen>
+<prompt>$</prompt> <command>g++ -o <replaceable>utnamn</replaceable> <replaceable>kallkod.cpp</replaceable></command>
+</screen>
+    </example>
+  </sect1>
+
+  <sect1 id="preprocessor">
+    <title>Preprocessordirektiv</title>
+
+    <para>När vi programmerar i C++ kommer vi använda en hel del funktioner
+    som inte finns inbyggda i språket. De ligger istället i biblioteksfiler.
+    För att få tillgång till funktionerna måste vi inkludera rätt
+    biblioteksfil i vårt program. Den vanligaste biblioteksfilen är <filename
+    class="headerfile">iostream</filename>, denna innehåller funktioner för
+    in- och utmatning till bland annat skärm och skrivare.</para>
+
+    <para>Skall vi använda biblioteksfilen <filename
+    class="headerfile">iostream</filename> skriver vi #include
+    &lt;iostream&gt; högst upp i vår källkod. Se <xref
+    linkend="include_iostream" />.</para>
+
+    <example id="include_iostream">
+      <title>inkludera iostream</title>
+
+      <programlisting>#include &lt;iostream&gt;
+</programlisting>
+    </example>
+  </sect1>
+
+  <sect1 id="funkmain">
+    <title>Huvudfunktionen main</title>
+
+    <para>Alla program har en huvudfunktion som heter
+    <function>main</function>. Denna funktion måste vi själva skapa i varje
+    program vi skriver. Vi börjar med att titta på hur den ser ut i <xref
+    linkend="funk_main" />.</para>
+
+    <example id="funk_main">
+      <title>Funktionen main</title>
+
+      <programlisting>int main()
+{
+
+    return 0;
+}
+</programlisting>
+    </example>
+
+    <para>Den första raden i <xref linkend="funk_main" /> är int main(). int
+    är vilken datatyp som skall returneras, skickas tillbaka när programmet är
+    klart. Funktionen main skall alltid returnera datatypen int. main är
+    funktionens namn och paranteserna är till för att vi skall kunna skicka in
+    argument i funktionen. Tomma paranteser innebär att vi inte vill skicka in
+    något i funktionen. { betyder att vi öppnar funktionen, allt som skrivs
+    härifrån fram till } finns bara i funktionen main. Mellan {&nbsp;och }
+    står raden return 0; eftersom main är en funktion med returdatatypen
+    <type>int</type> måste vi returnera något, vi returnerar som standard
+    värdet noll (0).</para>
+
+    <para>Programmet i <xref linkend="funk_main" /> kan du kompilera genom att
+    skriva <command>g++ -o test main.cpp</command>, om din källkodsfil heter
+    <filename>main.cpp</filename>. Annars ändrar du till det du döpt filen
+    till. Kör du programmet så ser du att ingenting händer. Vi gör ju inget
+    annat än att returnera värdet 0.</para>
+
+    <example id="kompilera_kor_return">
+      <title>Kompilera och kör main.cpp</title>
+
+      <screen><prompt>$</prompt> <command>g++ -o <replaceable>test</replaceable> <replaceable>main.cpp</replaceable></command>
+<prompt>$</prompt> <command>./<replaceable>test</replaceable></command>
+</screen>
+    </example>
+  </sect1>
+</chapter>

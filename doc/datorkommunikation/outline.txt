@@ -1,0 +1,102 @@
+$Id: outline.txt,v 1.1 2004/01/14 12:38:30 rejas Exp $
+
+Inledning
+ 	- Vad är datorkommunikation
+ 		- Jämför med vanlig kommunikation
+		- Data kontra dator
+		- Information kontra data
+
+Allmänt om överföring
+	- Ettor och nollor
+	- Hur dessa representeras
+	- Hur det går till att föra data genom en kabel
+
+Allmänt om kablar och icke-kablar
+	- Ledningsegenskaper och kapacitet samt deras praktiska innebörd
+	  vid datakommunikation
+	- Olika sorters kablar
+		- För och nackdelar
+	- Olika sorters trådlösa alternativ
+	
+Seriell och parallell kommunikation
+
+Förbindelser med olika typer av modem
+	- Egenskaper för de vanligaste modemstandarderna
+
+Datornätverk
+	- Topologier
+		- Buss, Stjärn, Ring
+	- LAN, WAN
+	- 
+	
+Publika telenätets anslutningsmöjligheter
+
+
+Digitala tjänster
+	- Funktion och prestanda hos olika digitala förbindelser
+
+
+Protokoll
+	- Olika typer av överförings- transport- och
+	  transmissionsprotokoll
+	- Referensmodeller som beskriver struktur och funktion för
+	  datorkommunikation
+
+Modeller, referensmodeller, standarder
+	- ISO/OSI
+	- SIS
+	- IEEE
+	- PTS
+	- m.fl.
+
+Internet
+	- internets historik, uppbyggnad och kommunikationsteknik
+		- Historia
+		- Svensk Internethistoria
+		- RFC:er
+	- Att ansluta till Internet
+	- vanligaste protokollen och programmen på internet
+		- TCP/IP
+		- http
+		- ftp
+		- nntp
+		- telnet/ssh
+
+Mer om Internets teknik
+
+	- TCP/IP
+		- Ip-adresser
+			- Nätklasser
+			- Nätmask
+		- Portnummer
+		- Routing
+			- Paketförmedling
+			- Routing i korthet
+			- Time to live (TTL)
+			- Statisk routing, default gw
+		- ICMP
+		- Felsökning i TCP/IP-nätverk
+			- ifconfig
+			- ping
+			- route
+			- traceroute
+			- host
+			- arp
+			- netstat
+	
+	- Domännamnssystemet (DNS)
+		- DNS-systemets uppbyggnad
+			- hierarkiskt
+			- topdomäner (appendix med komplett lista
+			  kanske)
+
+		- dns-servrar
+	
+	- Mer om e-post
+		- SMTP
+		- POP
+		- IMAP
+
+Säkerhet
+	- Gällande datalagstiftning och förstå datasäkerhetens betydelse
+	- Olika sätt att skydda information vid dataöverföringar

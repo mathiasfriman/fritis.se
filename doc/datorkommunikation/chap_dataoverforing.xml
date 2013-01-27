@@ -1,0 +1,319 @@
+<chapter id="chap_dataoverforing"><title>Dataöverföring</title>
+	<abstract>
+		<para>
+			Detta kapitel behandlar hur data kan föras över mellan två
+			olika noder i ett system genom en kabel eller på annat sätt som
+			till exempel radio eller som infrarött ljus.
+		</para>
+	</abstract>
+
+	<sect1><title>Inledning</title>
+		<para> 
+			I slutet på det förra kapitlet nämndes ett telefonsamtal som
+			ett exempel på kommunikation. Två personer kommunicerar med
+			varandra. Om man bryter ner samtalet i olika lager så ser vi
+			att personerna egentligen inte talar med varandra utan de båda
+			talar egentligen med sin telefon. Telefonerna i sin tur talar
+			med varandra med hjälp av telenätet. Telefonerna utbyter data
+			med varandra men är ovetande om innebörden.  Telefonerna
+			presenterar data i form av ljud som personerna som för dialogen
+			förstår och omsätter till information. En hel del regler måste
+			finnas och följas för att kommunikationen skall fungera.
+		</para>
+
+		<para>
+			I <xref linkend="fig_telefonsamtal"/> visas en skiss på ett
+			sådant telefonsamtal. Det är inte meningen att förklara hur
+			telefonnätet fungerar. Häng inte upp dig på detaljerna utan
+			fokusera på principen med de olika skikten. I figuren är alla
+			protokoll ritade som pilar. Tänk på att de olika delarna
+			upplever att de talar horisontellt med sin motpart på andra
+			sidan när de egentligen talar nedåt eller uppåt på sin egen
+			sida.
+															
+		</para>
+
+		<figure id="fig_telefonsamtal"><title>Ett telefonsamtal</title>
+			<mediaobject>
+  				<imageobject>
+      			<imagedata scalefit="1" fileref="bilder/telefonsamtal.jpeg" format="JPEG" />
+        		</imageobject>
+  				<imageobject>
+      			<imagedata scalefit="1" fileref="bilder/telefonsamtal.eps" format="EPS" />
+        		</imageobject>
+				<textobject>
+					<phrase>
+						En figur som visar hur ett telefonsamtal mellan två
+						personer kan delas upp en mängd olika delar och skikt.
+					</phrase>
+				</textobject>
+			</mediaobject>
+		</figure>
+
+		<para>
+			Personerna som samtalar måste följa en mängd regler som båda
+			känner till, och som de i förhand kommit överens om, för att
+			samtalet skall ha någon mening. Till exempel så måste de komma
+			överens om att tala en i taget och tala ett språk som de båda
+			förstår och följa de regler som finns i detta språk. Man kan
+			säga att detta är det <emphasis>protokoll</emphasis> som de
+			följer.
+		</para>
+		<para>
+			Nu är det ju inte så att dessa två personer talar med varandra
+			direkt, utan de talar ju egentligen med sina telefoner.
+			Telefonerna i sin tur talar sedan med den andra telefonen med
+			hjälp av en mängd komponenter som till exempel växlar och
+			kablar. Alla dessa komponenter måste samarbeta enligt givna
+			protokoll för att det skall fungera. Telefonerna skickar och
+			tar emot elektriska strömmar som bildar ljud. Dessa måste se ut
+			på ett visst sätt för att telefonerna skall förstå dem. Vidare
+			måste alla delar i telefonnätet vara överens för att man skall
+			vara så säker som möjligt på att de strömmar som kommer ur en
+			telefons högtalare skall vara så lika som möjligt som de som
+			kommer in i den andra telefonens mikrofon.
+		</para>
+		<para>
+			Om alla delar i denna kommunikation fungerar så kommer samtalet
+			att vara givande. 
+		</para>
+	</sect1>
+
+
+	<sect1><title>Duplex, Simplex och Halv-duplex</title>
+		<para>
+			Man kan dela in kommunikation beroende på i vilken rikting den
+			kan gå. Simplex innebär att kommunikation bara kan ske åt ett
+			håll. Ett bra exempel på det är TV eller radio-utsändningar. Du
+			kan bara lyssna (och titta) på det som sägs, men inte säga
+			något tillbaka. Duplex (kallas ibland även full-duplex) innebär
+			att du kan svara och säga emot den du kommunicerar med det vill
+			säga ni kan tala i munnen på varandra och kommunikationen kan
+			flyta åt båda håll på samma gång. Ett exempel på duplex är ett
+			vanligt telefonsamtal. Ett mellanting mellan simplex och duplex
+			är halv-duplex. Med halv-duplex kan kommunikationen ske åt båda
+			hållen, men bara åt ett håll i taget. Ett exempel på detta är
+			kommunikationsradio där man inte kan tala i munnen på varandra
+			utan en sänder och andra lyssnar.
+		</para>
+	</sect1>
+
+	<sect1><title>Analog och digital överföring</title>
+		<para>
+			Data som förs över en ledning skickas som elektriska pulser
+			eller signaler på ett eller annat vis. Beroende på vilket
+			protokoll som används så kan data packas in i dessa strömmar på
+			olika sätt. Till exempel så kan en hög spänning betyda en sak
+			och en låg spänning något annat.
+		</para>
+		<para>
+			I telefonexemplet så var det ljud som fördes från en telefon
+			till en annan. Ljud är exempel på analoga data
+			<footnote><para>Även analoga data kan överföras digitalt bara
+			man kommer överens om vilket protokoll som skall användas för
+			att packa in dessa analoga data i ett binärt
+			format.</para></footnote>. Spänningen varierar beroende på
+			vilket ljud som kommer i mikrofonen på den ena telefonen och
+			spelas upp på motsvarande sätt i den andres hörtelefon. Man kan
+			jämföra analoga signaler med en vattenkran. Om man öppnar
+			mycket kommer mycket vatten och öppnar man den lite kommer det
+			lite vatten. Man kan variera exakt hur mycket vatten man vill
+			skall komma fram vid varje tidpunkt. Digitala signaler kan man
+			istället jämföra med en strömbrytare som antingen kan slå på
+			eller av strömmen. Man kan inte med en vanlig strömbrytare
+			sätta på strömmen lite grann.
+		</para>
+
+		<figure id="fig_analogadigitalasignaler">
+			<title>Analoga och digitala signaler</title>
+			<mediaobject>
+  				<imageobject>
+      			<imagedata scalefit="1" fileref="bilder/analog-digital.jpeg" format="JPEG" />
+        		</imageobject>
+  				<imageobject>
+      			<imagedata scalefit="1" fileref="bilder/analog-digital.eps" format="EPS" />
+        		</imageobject>
+				<textobject>
+					<phrase>
+						En figur som visar en rund sinusformad våg till
+						vänster och en kantig fyrkantvåg till höger.
+					</phrase>
+				</textobject>
+			</mediaobject>
+		</figure>
+
+	</sect1>
+
+	<sect1><title>Amplitud och frekvens</title>
+		<para>
+			I <xref linkend="fig_analogadigitalasignaler"/> så ser vi
+			exempel på en analog och en digital signal. Vi ser att båda två
+			går upp och ned. Ibland är de höga och ibland är de låga.
+			Avståndet mellan det höga läget och det låga läget kallas för
+			signalens amplitud. I vilken enhet den mäts beror på vilken
+			enhet som finns på y-axeln i diagrammet. Vanligt är att den
+			mäts i Volt.
+		</para>
+		<para>
+			Hur många gånger per sekund en kurva växlar mellan lågt och
+			högt värde kallas för frekvens. Den mäts i enheten Hertz (Hz)
+			som är samma sak som antal per sekund. Vid höga frekvenser
+			används Kilo Hertz (kHz), Mega Hertz (MHz) eller till och med
+			Giga Hertz (GHz).
+		</para>
+	</sect1>
+
+	<sect1><title>Mer om digital dataöverföring</title>
+		<para>
+			När man talar om datorkommunikation menar man så gott som
+			alltid digital dataöverföring. Datorn fungerar digitalt både
+			inom en och samma maskin och när den kommunicerar med andra
+			datorer. 
+		</para>
+		<para>
+			Du har kanske hört att en dator bara känner till ettor och
+			nollor.  Detta verkar ju hänga bra ihop med liknelsen med en
+			strömbrytare ovan eller att kurvan bara kan vara låg eller hög.
+			Och visst hänger det ihop. En dator använder bara ettor och
+			nollor för att hantera data och dessa representeras ofta av
+			låga och höga spänningar, precis som i vårt lilla exempel ovan.
+		</para>
+		<para>
+			Men hur kan man få ut något av en etta eller en nolla? Jodå,
+			det går alldeles utmärkt bara det finns många ettor och nollor.
+			En datamängd som kan vara ett eller noll är den minsta möjliga
+			datamängden. Den kallas för en <emphasis>bit</emphasis>. Alltså
+			något som kan vara ett eller noll är en bit. Ordet bit kommer
+			från engelskans <emphasis>Binary Digit</emphasis> som betyder
+			binär siffra. Binär är samma sak som tvåfaldig. Men en bit har
+			man ingen större nytta av. Oftast klumpar man ihop några bitar
+			för att få en datamängd som är något större. Om man har en bit
+			så finns det ju bara två alternativ (0 och 1), men har man 8
+			bitar så finns det betydligt fler alternativ (till exempel
+			11001010 och 01010111). Det är vanligt att man jobbar med just
+			8 bitar som kallas för en <emphasis>byte</emphasis>. Ordet byte
+			kommer från engelskans "By eight" En byte kan anta
+			2<superscript>8</superscript>=256 olika kombinationer.
+		</para>
+	</sect1>
+
+	<sect1><title>Något om talbaser</title>
+		<para>
+			Normalt när vi räknar och talar om siffror så menar vi
+			underförstått att vi använder talbasen 10. Vi bygger våra tal
+			av 10 olika siffror (0-9) och grupperar upp ett tal i ental,
+			10-tal, 100-tal, 1000-tal och så vidare. 1, 10, 100 och 1000 är
+			potenser av 10 10<superscript>0</superscript>,
+			10<superscript>1</superscript>, 10<superscript>2</superscript>,
+			10<superscript>3</superscript>. Precis på samma sätt kan man
+			räkna med andra talbaser, till exempel 2 (binärt), 8 (oktalt)
+			eller 16 (hexadecimalt).
+		</para>
+		<para>
+			Talet 13 kan beskrivas som
+			1*10<superscript>1</superscript>+3*10<superscript>0</superscript>=13.
+			Det vill säga ett 10-tal och 3 ental. I det binära talsystemet
+			har vi bara två siffror (0 och 1) och istället för ental,
+			10-tal och så vidare så har vi ental, 2-tal, 4-tal, 8-tal,
+			16-tal och så vidare eller 2<superscript>0</superscript>,
+			2<superscript>1</superscript>, 2<superscript>2</superscript>,
+			2<superscript>3</superscript>, 2<superscript>4</superscript>
+			och så vidare. Skall vi binärt skriva 13 så behöver vi, enligt
+			samma principer som i vår decimalsystem, ett 8-tal, ett 4-tal,
+			inget 2-tal och ett ental eftersom
+			1*2<superscript>3</superscript>+1*2<superscript>2</superscript>+0*2<superscript>1</superscript>+1*2<superscript>0</superscript>=13.
+			Talet 13 skrivs alltså som 1101 binärt.
+		</para>
+		<para>
+			Eftersom datorn bara jobbar binärt med bitar så hanterar datorn
+			tal i binärform. Ofta när man jobbar inom datateknik och
+			programmering så använder man sig av binära tal. Som vi sett så
+			går det ju utmärkt att konvertera mellan det binära talsystemet
+			och det vanliga decimala. Som vi också ser så är 1101 mycket
+			längre och svårare att överblicka än till exempel 13. Det gör
+			att man i praktiken sällan jobbar med binära tal. Ofta räknar
+			man istället med talbasen 8 eller 16. Dessa är fortfarande
+			potenser av 2 och passar bra in i datorsammanhang men talen
+			blir mindre och enklare. Det vanligaste är talbasen 16 eller
+			hexadecimala tal som det kallas. Eftersom vi har talbasen 16
+			måste vi ha 16 stycken siffror. Våra vanliga siffror räcker
+			inte till utan man brukar lägga till bokstäverna A-F också och
+			behandla dem precis som om de vore siffror. Vi har alltså
+			siffrorna 0123456789ABCDEF.  Vi bygger tal av ental, 16-tal,
+			256-tal, 4096-tal och så vidare.  Eller om vi uttrycker det som
+			ovan 16<superscript>0</superscript>,
+			16<superscript>1</superscript>, 16<superscript>2</superscript>,
+			16<superscript>3</superscript> och så vidare. Skall man skriva
+			talet 13 binärt så behöver vi bara D (=13) stycken ental. Talet
+			13 skrivs alltså D hexadecimalt.
+		</para>
+	</sect1>
+
+	<sect1><title>Bit, Byte kByte, ...</title>
+		<para>
+			Inom matematiken har vi sedan länge lärt oss att prefixen kilo
+			(k), Mega (M) och Giga (G) betyder
+			10<superscript>3</superscript>, 10<superscript>6</superscript>
+			respektive 10<superscript>9</superscript>. Inom datorvärlden
+			där mycket utgår från binära tal så är inte dessa tal speciellt
+			jämna. De tal som är jämna i ett binärt talsystem är, översatt
+			till decimaltal, talen 4, 8, 16, 32, 64, 128, 256, 512, 1024,
+			osv. Kanske känner du igen dessa tal om du någon gång köpt till
+			exempel minne till din dator. Detta har också gjort att man
+			inom datorvetenskapen definierat om våra vanliga prefix. Kilo
+			betyder istället för 1000 (10<superscript>3</superscript>) i
+			sammanhanget kByte istället 1024
+			(2<superscript>10</superscript>). Mega betyder 1024*1024 eller
+			2<superscript>20</superscript> eller som det blir decimalt,
+			1048576. Detta leder förstås till en del missförstånd, men
+			eftersom talen ligger relativt nära varandra så blir det sällan
+			några större problem. Men det kan vara svårt att veta om man
+			till exempel köpt en hårddisk på 1 GByte om den rymmer
+			10<superscript>9</superscript>=1000000000 eller
+			2<superscript>30</superscript>=1073741824 bytes.
+		</para>
+		<para>
+			Märk också, när vi har enhetsförväxlingar på tapeten, att
+			dataöverföringshastigheter oftast mäts i bitar/sekund och inte
+			i bytes/sekund. Där gör det större skillnad eftersom skillnaden
+			är ungefär en faktor 10.
+		</para>
+	</sect1>
+
+	<sect1><title>ASCII-tabell</title>
+		<para>
+			Vi har nu sett att man binärt kan uttrycka tal. Till exempel så
+			var ju 1101 talet 13. Ofta så vill man istället för tal
+			representera text eller bokstäver. Detta går till på så sätt
+			att man låter olika tal representera olika bokstäver enligt en
+			tabell. Ett exempel på en sådan tabell är ASCII-tabellen.
+			ASCII står för <emphasis>American Standard Code for Information
+			Interchange</emphasis> och är en standard för hur tecken skall
+			representeras binärt i form av siffror från
+			standardiseringsorganet ANSI. Ett exempel på en (utökad)
+			ASCII-tabell visas i <xref linkend="tab_ascii"/>.
+		</para>
+	</sect1>
+
+	<sect1><title>Sammanfattning</title>
+		<para>
+			I detta kapitel har vi behandlat på vilket sätt olika protokoll
+			kan jobba både beroende till varandra och oberoende av varandra
+			i en och samma kommunikationsmodell. Vi har också tittat på vad
+			som menas med analog och digital överföring och vilka
+			karakteristiska egenskaper dessa har. Vi har lärt oss
+			ytterligare några begrepp och lite om matematiken med olika
+			talbaser och varför man i datorvärlden så ofta uttrycker tal
+			hexadecimalt.
+		</para>
+	</sect1>
+
+</chapter>
+
+<!-- Keep this comment at the end of the file
+tab-width: 3
+vim600: fdm=syntax sw=3 ts=3
+vim: sw=3 ts=3
+vi: sw=3 ts=3
+-->
+

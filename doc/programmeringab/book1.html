@@ -1,0 +1,1345 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Programmering i PHP</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="NEXT"
+TITLE="F�rord"
+HREF="forord.html"><LINK
+REL="stylesheet"
+HREF="./book.css"
+TYPE="text/css"></HEAD
+><BODY
+CLASS="book"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="BOOK"
+><A
+NAME="AEN1"
+></A
+><DIV
+CLASS="TITLEPAGE"
+><H1
+CLASS="title"
+><A
+NAME="AEN2"
+>Programmering i PHP</A
+></H1
+><H3
+CLASS="author"
+><A
+NAME="AEN5"
+></A
+>Marcus Rej�s</H3
+><DIV
+CLASS="affiliation"
+><DIV
+CLASS="address"
+><P
+CLASS="address"
+><br>
+				<CODE
+CLASS="email"
+>&#60;<A
+HREF="mailto:marcus@rejas.se"
+>marcus@rejas.se</A
+>&#62;</CODE
+><br>
+			</P
+></DIV
+></DIV
+><H3
+CLASS="author"
+><A
+NAME="AEN11"
+></A
+>Magnus M��tt�</H3
+><DIV
+CLASS="affiliation"
+><DIV
+CLASS="address"
+><P
+CLASS="address"
+><br>
+				<CODE
+CLASS="email"
+>&#60;<A
+HREF="mailto:magnus@php.net"
+>magnus@php.net</A
+>&#62;</CODE
+><br>
+			</P
+></DIV
+></DIV
+><P
+CLASS="copyright"
+>Copyright &copy; 2003-2005 Marcus Rej�s och Magnus M��tt�</P
+><DIV
+><DIV
+CLASS="abstract"
+><P
+></P
+><A
+NAME="AEN31"
+></A
+><P
+>&#13;			Denna bok �r anpassad f�r gymnasieskolans kurser Programmering
+			A och B med kurskoderna DTR1207 och DTR1208 (PPHP1408). Den kan
+			naturligtvis anv�ndas �ven i andra sammanhang, till exempel
+			sj�lvstudier, studiecirklar eller annan l�rarledd utbildning.
+		</P
+><P
+>&#13;			Till boken kommer att finnas f�rslag p� �vningar man kan utf�ra
+			f�r att praktiskt ut�va de f�rdigheter man skaffar sig under
+			studierna.
+		</P
+><P
+></P
+></DIV
+></DIV
+><DIV
+CLASS="legalnotice"
+><P
+></P
+><A
+NAME="AEN21"
+></A
+><P
+>&#13;			Var och en �ger r�tt att kopiera, distribuera och/eller
+			modifiera detta dokument under villkoren i licensen "GNU Free
+			Documentation License", version 1.2 eller senare publicerad av
+			Free Software Foundation, med de invarianta avsnitten <A
+HREF="dtr1207.html"
+>Appendix A</A
+> och <A
+HREF="dtr1208.html"
+>Appendix B</A
+>, utan
+			framsidestexter och utan baksidestexter.  En kopia av denna
+			licens finns med i avsnittet med titeln "GNU Free Documentation
+			License".
+		</P
+><P
+>&#13;			Det vill s�ga, du kan fritt ladda ner, vidaredistribuera
+			och kopiera denna bok. Du f�r �ndra den om du vill (se
+			licenstexten).  Tryckta b�cker kan k�pas av TriNix AB i
+			Helsingborg, telefon 042-127800.
+		</P
+><P
+></P
+></DIV
+><HR></DIV
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Innehållsförteckning</B
+></DT
+><DT
+><A
+HREF="forord.html"
+>F�rord</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="forord.html#AEN36"
+>Tack till</A
+></DT
+></DL
+></DD
+><DT
+>1. <A
+HREF="chap_historik.html"
+>Kort historik</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_historik.html#AEN43"
+>F�re 1900</A
+></DT
+><DT
+><A
+HREF="chap_historik.html#AEN47"
+>1900-talet</A
+></DT
+><DT
+><A
+HREF="chap_historik.html#AEN52"
+>Nutid</A
+></DT
+><DT
+><A
+HREF="chap_historik.html#AEN55"
+>Mer l�sning</A
+></DT
+></DL
+></DD
+><DT
+>2. <A
+HREF="chap_programmeringssprak.html"
+>Programmeringsspr�k</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_programmeringssprak.html#AEN64"
+>Olika spr�k till olika saker</A
+></DT
+><DT
+><A
+HREF="chap_programmeringssprak.html#AEN69"
+>Kompilerande spr�k</A
+></DT
+><DT
+><A
+HREF="chap_programmeringssprak.html#AEN74"
+>Interpreterande spr�k</A
+></DT
+><DT
+><A
+HREF="chap_programmeringssprak.html#AEN79"
+>Andra typer av spr�k</A
+></DT
+><DT
+><A
+HREF="chap_programmeringssprak.html#AEN82"
+>F�r- och nackdelar</A
+></DT
+><DT
+><A
+HREF="chap_programmeringssprak.html#AEN110"
+>Exempel p� olika spr�k som ni b�r k�nna till</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_programmeringssprak.html#AEN113"
+>C</A
+></DT
+><DT
+><A
+HREF="chap_programmeringssprak.html#AEN120"
+>C++</A
+></DT
+><DT
+><A
+HREF="chap_programmeringssprak.html#AEN128"
+>C# (C-sharp eller Ciss)</A
+></DT
+><DT
+><A
+HREF="chap_programmeringssprak.html#AEN135"
+>Java</A
+></DT
+><DT
+><A
+HREF="chap_programmeringssprak.html#AEN142"
+>Mer l�sning</A
+></DT
+></DL
+></DD
+></DL
+></DD
+><DT
+>3. <A
+HREF="chap_building.html"
+>Fr�n k�llkod till program</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_building.html#AEN151"
+>Kompilering</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_building.html#AEN155"
+>F�rbehandling av k�llkoden (preprocessing)</A
+></DT
+><DT
+><A
+HREF="chap_building.html#AEN158"
+>Kompilering</A
+></DT
+><DT
+><A
+HREF="chap_building.html#AEN161"
+>Assemblering</A
+></DT
+><DT
+><A
+HREF="chap_building.html#AEN164"
+>Laddning och l�nkning</A
+></DT
+><DT
+><A
+HREF="chap_building.html#AEN167"
+>Mer l�sning</A
+></DT
+></DL
+></DD
+></DL
+></DD
+><DT
+>4. <A
+HREF="chap_helloworld.html"
+>Hall� V�rlden!</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_helloworld.html#AEN176"
+>Programmeringsmilj�n</A
+></DT
+><DT
+><A
+HREF="chap_helloworld.html#AEN189"
+>Hall� v�rlden!</A
+></DT
+><DT
+><A
+HREF="chap_helloworld.html#AEN203"
+>�vningsuppgifter</A
+></DT
+></DL
+></DD
+><DT
+>5. <A
+HREF="chap_webbprogrammering.html"
+>Webbrowser, webbserver och program</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_webbprogrammering.html#AEN215"
+>Webbl�saren</A
+></DT
+><DT
+><A
+HREF="chap_webbprogrammering.html#AEN221"
+>Webbservern</A
+></DT
+><DT
+><A
+HREF="chap_webbprogrammering.html#AEN225"
+>Program</A
+></DT
+></DL
+></DD
+><DT
+>6. <A
+HREF="chap_variabler.html"
+>Variabler</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_variabler.html#AEN232"
+>Vad �r en variabel</A
+></DT
+><DT
+><A
+HREF="chap_variabler.html#AEN249"
+>Datatyper</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_variabler.html#AEN253"
+>Skal�ra</A
+></DT
+><DT
+><A
+HREF="chap_variabler.html#AEN265"
+>Sammansatta</A
+></DT
+><DT
+><A
+HREF="chap_variabler.html#AEN273"
+>�vriga speciella</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="chap_variabler.html#AEN281"
+>�vningar</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_variabler.html#AEN283"
+>Addition</A
+></DT
+></DL
+></DD
+></DL
+></DD
+><DT
+>7. <A
+HREF="chap_operatorer.html"
+>Operatorer</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_operatorer.html#AEN290"
+>Vad �r en operator?</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_operatorer.html#AEN294"
+>Aritmetiska operatorer</A
+></DT
+><DT
+><A
+HREF="chap_operatorer.html#AEN329"
+>Tilldelningsoperatorer</A
+></DT
+><DT
+><A
+HREF="chap_operatorer.html#AEN339"
+>J�mf�relseoperatorer</A
+></DT
+><DT
+><A
+HREF="chap_operatorer.html#AEN386"
+>Logiska operatorer</A
+></DT
+><DT
+><A
+HREF="chap_operatorer.html#AEN417"
+>Str�ngoperatorer</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="chap_operatorer.html#AEN423"
+>Mer l�sning</A
+></DT
+></DL
+></DD
+><DT
+>8. <A
+HREF="chap_selektioner.html"
+>Selektioner (Villkorssatser)</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_selektioner.html#AEN432"
+>If-satsen</A
+></DT
+><DT
+><A
+HREF="chap_selektioner.html#AEN440"
+>If-else-satsen</A
+></DT
+><DT
+><A
+HREF="chap_selektioner.html#AEN448"
+>if-elseif</A
+></DT
+><DT
+><A
+HREF="chap_selektioner.html#AEN455"
+>Mer l�sning</A
+></DT
+></DL
+></DD
+><DT
+>9. <A
+HREF="chap_iterationer.html"
+>Iterationer (Upprepningar, loopar)</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_iterationer.html#AEN464"
+>While-satsen</A
+></DT
+><DT
+><A
+HREF="chap_iterationer.html#AEN472"
+>do-while-satsen</A
+></DT
+><DT
+><A
+HREF="chap_iterationer.html#AEN478"
+>for-loopen</A
+></DT
+><DT
+><A
+HREF="chap_iterationer.html#AEN493"
+>Mer l�sning</A
+></DT
+></DL
+></DD
+><DT
+>10. <A
+HREF="chap_pseudokod.html"
+>Pseudokod</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_pseudokod.html#AEN502"
+>Mer l�sning</A
+></DT
+></DL
+></DD
+><DT
+>11. <A
+HREF="chap_indentering.html"
+>Indentering</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_indentering.html#AEN509"
+>Vad �r indentering?</A
+></DT
+><DT
+><A
+HREF="chap_indentering.html#AEN522"
+>Mer l�sning</A
+></DT
+></DL
+></DD
+><DT
+>12. <A
+HREF="chap_kommentering.html"
+>Kommentering</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_kommentering.html#AEN530"
+>Hur ser en kommentar ut</A
+></DT
+><DT
+><A
+HREF="chap_kommentering.html#AEN541"
+>Att kommentera sin kod</A
+></DT
+><DT
+><A
+HREF="chap_kommentering.html#AEN552"
+>Liten sammanfattning</A
+></DT
+><DT
+><A
+HREF="chap_kommentering.html#AEN568"
+>Mer l�sning</A
+></DT
+></DL
+></DD
+><DT
+>13. <A
+HREF="chap_strings.html"
+>Mer om str�ngar</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_strings.html#AEN576"
+>Vad �r en str�ng</A
+></DT
+><DT
+><A
+HREF="chap_strings.html#AEN583"
+>Escape-tecken</A
+></DT
+><DT
+><A
+HREF="chap_strings.html#AEN620"
+>L�gga ihop str�ngar</A
+></DT
+><DT
+><A
+HREF="chap_strings.html#AEN626"
+>J�mf�ra str�ngar</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_strings.html#AEN629"
+>Strcmp och strcasecmp</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="chap_strings.html#AEN635"
+>�ndra str�ngar</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_strings.html#AEN638"
+>strtoupper och strtolower</A
+></DT
+><DT
+><A
+HREF="chap_strings.html#AEN645"
+>Ucfirst och ucwords</A
+></DT
+><DT
+><A
+HREF="chap_strings.html#AEN652"
+>strrev</A
+></DT
+><DT
+><A
+HREF="chap_strings.html#AEN658"
+>strlen</A
+></DT
+><DT
+><A
+HREF="chap_strings.html#AEN665"
+>str_replace</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="chap_strings.html#AEN672"
+>Hantera o�nskad HTML i str�ngar</A
+></DT
+><DT
+><A
+HREF="chap_strings.html#AEN681"
+>S�ka i str�ngar</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_strings.html#AEN684"
+>strstr och stristr</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="chap_strings.html#AEN690"
+>Mer l�sning</A
+></DT
+></DL
+></DD
+><DT
+>14. <A
+HREF="chap_funktioner.html"
+>Funktioner</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_funktioner.html#AEN699"
+>Vad �r en funktion?</A
+></DT
+><DT
+><A
+HREF="chap_funktioner.html#AEN705"
+>N�r skall man anv�nda funktioner?</A
+></DT
+><DT
+><A
+HREF="chap_funktioner.html#AEN718"
+>Argument till funktioner</A
+></DT
+><DT
+><A
+HREF="chap_funktioner.html#AEN724"
+>Returv�rden</A
+></DT
+><DT
+><A
+HREF="chap_funktioner.html#AEN730"
+>Mer l�sning</A
+></DT
+></DL
+></DD
+><DT
+>15. <A
+HREF="chap_filer.html"
+>Filer och filhantering</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_filer.html#AEN739"
+>Filer</A
+></DT
+><DT
+><A
+HREF="chap_filer.html#AEN743"
+>Arbetsmetod vid arbete med filer</A
+></DT
+><DT
+><A
+HREF="chap_filer.html#AEN749"
+>Funktionen fopen</A
+></DT
+><DT
+><A
+HREF="chap_filer.html#AEN789"
+>Funktionen fwrite</A
+></DT
+><DT
+><A
+HREF="chap_filer.html#AEN799"
+>Readfile</A
+></DT
+><DT
+><A
+HREF="chap_filer.html#AEN806"
+>Sammanh�ngande exempel</A
+></DT
+><DT
+><A
+HREF="chap_filer.html#AEN812"
+>Mer l�sning</A
+></DT
+></DL
+></DD
+><DT
+>16. <A
+HREF="chap_array.html"
+>Arrayer (vektorer)</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_array.html#AEN821"
+>Arrayer</A
+></DT
+><DT
+><A
+HREF="chap_array.html#AEN828"
+>Array-funktioner</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_array.html#AEN832"
+>Funktionen array_reverse</A
+></DT
+><DT
+><A
+HREF="chap_array.html#AEN838"
+>Funktionen sort</A
+></DT
+><DT
+><A
+HREF="chap_array.html#AEN844"
+>Funktionen file</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="chap_array.html#AEN848"
+>Mer l�sning</A
+></DT
+></DL
+></DD
+><DT
+>17. <A
+HREF="chap_funktioner2.html"
+>Mer om funktioner</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="chap_funktioner2.html#AEN855"
+>Call by reference, call by value</A
+></DT
+></DL
+></DD
+><DT
+>18. <A
+HREF="chap_inmatning.html"
+>Inmatning</A
+></DT
+><DT
+>A. <A
+HREF="dtr1207.html"
+>Kurs DTR1207 - Programmering A</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="dtr1207.html#AEN872"
+>M�l</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="dtr1207.html#AEN874"
+>M�l f�r kursen</A
+></DT
+><DT
+><A
+HREF="dtr1207.html#AEN877"
+>M�l som eleverna skall ha uppn�tt efter avslutad
+kurs</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="dtr1207.html#AEN886"
+>Betygskriterier</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="dtr1207.html#AEN888"
+>Kriterier f�r betyget Godk�nd</A
+></DT
+><DT
+><A
+HREF="dtr1207.html#AEN893"
+>Kriterier f�r betyget V�l godk�nd</A
+></DT
+><DT
+><A
+HREF="dtr1207.html#AEN897"
+>Kriterier f�r betyget Mycket v�l godk�nd</A
+></DT
+></DL
+></DD
+></DL
+></DD
+><DT
+>B. <A
+HREF="dtr1208.html"
+>Kurs DTR1208 - Programmering B</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="dtr1208.html#AEN906"
+>M�l</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="dtr1208.html#AEN908"
+>M�l f�r kursen</A
+></DT
+><DT
+><A
+HREF="dtr1208.html#AEN911"
+>M�l som eleverna skall ha uppn�tt efter avslutad
+kurs</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="dtr1208.html#AEN923"
+>Betygskriterier</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="dtr1208.html#AEN925"
+>Kriterier f�r betyget Godk�nd</A
+></DT
+><DT
+><A
+HREF="dtr1208.html#AEN930"
+>Kriterier f�r betyget V�l godk�nd</A
+></DT
+><DT
+><A
+HREF="dtr1208.html#AEN934"
+>Kriterier f�r betyget Mycket v�l godk�nd</A
+></DT
+></DL
+></DD
+><DT
+><A
+HREF="dtr1208.html#AEN939"
+>Specialisering mot enligt lista nedan. F�r betyg mm.
+anv�nd angivna koder.</A
+></DT
+></DL
+></DD
+><DT
+>C. <A
+HREF="app_reserved-words.html"
+>Reserverade ord i PHP</A
+></DT
+><DT
+>D. <A
+HREF="gfdl-sv.html"
+>GNU Free Documentation License</A
+></DT
+><DD
+><DL
+><DT
+><A
+HREF="gfdl-sv.html#gfdl-sv-0"
+>0. BAKGRUND</A
+></DT
+><DT
+><A
+HREF="gfdl-sv.html#gfdl-sv-1"
+>1. TILL�MPNINGSOMR�DE OCH DEFINITIONER</A
+></DT
+><DT
+><A
+HREF="gfdl-sv.html#gfdl-sv-2"
+>2. ORDAGRANN KOPIERING</A
+></DT
+><DT
+><A
+HREF="gfdl-sv.html#gfdl-sv-3"
+>3. OMFATTANDE KOPIERING</A
+></DT
+><DT
+><A
+HREF="gfdl-sv.html#gfdl-sv-4"
+>4. F�R�NDRINGAR</A
+></DT
+><DT
+><A
+HREF="gfdl-sv.html#gfdl-sv-5"
+>5. KOMBINERA DOKUMENT</A
+></DT
+><DT
+><A
+HREF="gfdl-sv.html#gfdl-sv-6"
+>6. SAMLINGAR AV DOKUMENT</A
+></DT
+><DT
+><A
+HREF="gfdl-sv.html#gfdl-sv-7"
+>7. SAMMANSLAGNING MED OBEROENDE VERK</A
+></DT
+><DT
+><A
+HREF="gfdl-sv.html#gfdl-sv-8"
+>8. �VERS�TTNING</A
+></DT
+><DT
+><A
+HREF="gfdl-sv.html#gfdl-sv-9"
+>9. UPPH�RANDE</A
+></DT
+><DT
+><A
+HREF="gfdl-sv.html#gfdl-sv-10"
+>10. FRAMTIDA VERSIONER AV DENNA LICENS</A
+></DT
+><DT
+><A
+HREF="gfdl-sv.html#gfdl-sv-addendum"
+>TILL�GG: Hur du anv�nder denna licens f�r dina dokument</A
+></DT
+></DL
+></DD
+></DL
+></DIV
+><DIV
+CLASS="LOT"
+><DL
+CLASS="LOT"
+><DT
+><B
+>Tabellförteckning</B
+></DT
+><DT
+>2-1. <A
+HREF="chap_programmeringssprak.html#AEN84"
+>F�rdeler och nackdelar med kompilerande och interpreterande spr�k.</A
+></DT
+><DT
+>7-1. <A
+HREF="chap_operatorer.html#AEN297"
+>Aritmetiska operatorer</A
+></DT
+><DT
+>7-2. <A
+HREF="chap_operatorer.html#AEN342"
+>J�mf�relseoperatorer</A
+></DT
+><DT
+>7-3. <A
+HREF="chap_operatorer.html#AEN389"
+>Logiska operatorer</A
+></DT
+><DT
+>13-1. <A
+HREF="chap_strings.html#AEN592"
+>Specialtecken i str�ngar</A
+></DT
+><DT
+>15-1. <A
+HREF="chap_filer.html#AEN755"
+>Andra argumentet till fopen</A
+></DT
+></DL
+></DIV
+><DIV
+CLASS="LOT"
+><DL
+CLASS="LOT"
+><DT
+><B
+>Exempelförteckning</B
+></DT
+><DT
+>2-1. <A
+HREF="chap_programmeringssprak.html#AEN117"
+>Hello World i C</A
+></DT
+><DT
+>2-2. <A
+HREF="chap_programmeringssprak.html#AEN125"
+>Hello World i C++</A
+></DT
+><DT
+>2-3. <A
+HREF="chap_programmeringssprak.html#AEN132"
+>Hello World i C#</A
+></DT
+><DT
+>2-4. <A
+HREF="chap_programmeringssprak.html#AEN139"
+>Hello World i Java</A
+></DT
+><DT
+>4-1. <A
+HREF="chap_helloworld.html#AEN193"
+>Hello World i PHP</A
+></DT
+><DT
+>4-2. <A
+HREF="chap_helloworld.html#AEN200"
+>Hello World i PHP utan HTML</A
+></DT
+><DT
+>6-1. <A
+HREF="chap_variabler.html#AEN236"
+>Exempel med konstanter</A
+></DT
+><DT
+>6-2. <A
+HREF="chap_variabler.html#AEN240"
+>Exempel med variabler</A
+></DT
+><DT
+>6-3. <A
+HREF="chap_variabler.html#AEN244"
+>Exempel med variabler och $_GET</A
+></DT
+><DT
+>7-1. <A
+HREF="chap_operatorer.html#AEN332"
+>Tilldelningsoperatorn</A
+></DT
+><DT
+>7-2. <A
+HREF="chap_operatorer.html#AEN336"
+>Tilldelningsoperatorerna += och -=</A
+></DT
+><DT
+>7-3. <A
+HREF="chap_operatorer.html#AEN420"
+>Str�ngoperatorer</A
+></DT
+><DT
+>8-1. <A
+HREF="chap_selektioner.html#AEN436"
+>St�rre �n 100</A
+></DT
+><DT
+>8-2. <A
+HREF="chap_selektioner.html#AEN444"
+>If-else exempel</A
+></DT
+><DT
+>8-3. <A
+HREF="chap_selektioner.html#AEN452"
+>if-elseif-else</A
+></DT
+><DT
+>9-1. <A
+HREF="chap_iterationer.html#AEN467"
+>Exempel med while</A
+></DT
+><DT
+>9-2. <A
+HREF="chap_iterationer.html#AEN475"
+>Exempel med do-while</A
+></DT
+><DT
+>9-3. <A
+HREF="chap_iterationer.html#AEN490"
+>Exempel med for-loop</A
+></DT
+><DT
+>11-1. <A
+HREF="chap_indentering.html#AEN513"
+>Indentering</A
+></DT
+><DT
+>11-2. <A
+HREF="chap_indentering.html#AEN516"
+>Indentering</A
+></DT
+><DT
+>11-3. <A
+HREF="chap_indentering.html#AEN519"
+>Indentering</A
+></DT
+><DT
+>12-1. <A
+HREF="chap_kommentering.html#AEN538"
+>Exempel med kommentering</A
+></DT
+><DT
+>12-2. <A
+HREF="chap_kommentering.html#AEN546"
+>L�ngre kommentar f�re block</A
+></DT
+><DT
+>12-3. <A
+HREF="chap_kommentering.html#AEN549"
+>Papegojkommentarer</A
+></DT
+><DT
+>12-4. <A
+HREF="chap_kommentering.html#AEN565"
+>Kommentering sammanh�ngade exempel</A
+></DT
+><DT
+>13-1. <A
+HREF="chap_strings.html#AEN580"
+>Exempel med str�ngar</A
+></DT
+><DT
+>13-2. <A
+HREF="chap_strings.html#AEN586"
+>Citationstecken i str�ngar</A
+></DT
+><DT
+>13-3. <A
+HREF="chap_strings.html#AEN589"
+>Exempel p� escape-tecken</A
+></DT
+><DT
+>13-4. <A
+HREF="chap_strings.html#AEN623"
+>Exempel med str�ngar</A
+></DT
+><DT
+>13-5. <A
+HREF="chap_strings.html#AEN632"
+>Exempel med strcmp</A
+></DT
+><DT
+>13-6. <A
+HREF="chap_strings.html#AEN642"
+>Exempel med strtoupper och strtolower</A
+></DT
+><DT
+>13-7. <A
+HREF="chap_strings.html#AEN648"
+>Exempel med ucfirst och  ucword</A
+></DT
+><DT
+>13-8. <A
+HREF="chap_strings.html#AEN655"
+>Exempel med strrev</A
+></DT
+><DT
+>13-9. <A
+HREF="chap_strings.html#AEN662"
+>Exemepel med strrev</A
+></DT
+><DT
+>13-10. <A
+HREF="chap_strings.html#AEN669"
+>Exempel med str_replace</A
+></DT
+><DT
+>13-11. <A
+HREF="chap_strings.html#AEN675"
+>Med str_replace</A
+></DT
+><DT
+>13-12. <A
+HREF="chap_strings.html#AEN678"
+>Exempel med htmlentities</A
+></DT
+><DT
+>13-13. <A
+HREF="chap_strings.html#AEN687"
+>Exemempel med strstr()</A
+></DT
+><DT
+>14-1. <A
+HREF="chap_funktioner.html#AEN702"
+>Funktioner</A
+></DT
+><DT
+>14-2. <A
+HREF="chap_funktioner.html#AEN721"
+>Argument till funktioner</A
+></DT
+><DT
+>14-3. <A
+HREF="chap_funktioner.html#AEN727"
+>Retur fr�n funktioner</A
+></DT
+><DT
+>15-1. <A
+HREF="chap_filer.html#AEN752"
+>Funktionen fopen</A
+></DT
+><DT
+>15-2. <A
+HREF="chap_filer.html#AEN793"
+>Funktionen fwrite</A
+></DT
+><DT
+>15-3. <A
+HREF="chap_filer.html#AEN796"
+>Funktionen fwrite med felkontrol</A
+></DT
+><DT
+>15-4. <A
+HREF="chap_filer.html#AEN803"
+>Exempel med readfile</A
+></DT
+><DT
+>15-5. <A
+HREF="chap_filer.html#AEN809"
+>Sammanh�ngande exempel p� filanv�ndning</A
+></DT
+><DT
+>16-1. <A
+HREF="chap_array.html#AEN825"
+>Arrayer</A
+></DT
+><DT
+>16-2. <A
+HREF="chap_array.html#AEN835"
+>Exempel med array_reverse()</A
+></DT
+><DT
+>16-3. <A
+HREF="chap_array.html#AEN841"
+>Exempel med sort()</A
+></DT
+><DT
+>17-1. <A
+HREF="chap_funktioner2.html#AEN862"
+>Call by reference</A
+></DT
+></DL
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="forord.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>F�rord</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

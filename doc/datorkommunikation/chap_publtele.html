@@ -1,0 +1,376 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Publika telenätet</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="Datorkommunikation"
+HREF="book1.html"><LINK
+REL="PREVIOUS"
+TITLE="Modem"
+HREF="chap_modem.html"><LINK
+REL="NEXT"
+TITLE="Protokoll"
+HREF="chap_protokoll.html"><LINK
+REL="stylesheet"
+HREF="./fritis.css"
+TYPE="text/css"></HEAD
+><BODY
+CLASS="chapter"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Datorkommunikation</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="chap_modem.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="chap_protokoll.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="chapter"
+><H1
+><A
+NAME="chap_publtele"
+></A
+>Kapitel 9. Publika telenätet</H1
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Innehållsförteckning</B
+></DT
+><DT
+><A
+HREF="chap_publtele.html#AEN688"
+>Telenätets uppbyggnad</A
+></DT
+><DT
+><A
+HREF="chap_publtele.html#AEN696"
+>Kretskopplade nät</A
+></DT
+><DT
+><A
+HREF="chap_publtele.html#AEN703"
+>Paketförmedlande nät</A
+></DT
+><DT
+><A
+HREF="chap_publtele.html#AEN711"
+>Uppringt Internet</A
+></DT
+><DT
+><A
+HREF="chap_publtele.html#AEN715"
+>Sammanfattning</A
+></DT
+></DL
+></DIV
+><BLOCKQUOTE
+CLASS="ABSTRACT"
+><DIV
+CLASS="abstract"
+><P
+></P
+><A
+NAME="AEN685"
+></A
+><P
+>&#13;			Över det publika telenätet kan man använda en hel del olika
+			tjänster. Här tittar vi på ett urval av dessa, vad de är och
+			hur de fungerar. Vi tar inte upp snabba och moderna
+			Internetuppkopplingar i detta kapitel utan dessa behandlas i
+			<A
+HREF="chap_internet.html"
+>kapitel 11</A
+>.
+		</P
+><P
+></P
+></DIV
+></BLOCKQUOTE
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN688"
+>Telenätets uppbyggnad</A
+></H1
+><P
+>&#13;			Vi skall inte gå in på detaljnivå i denna bok hur telenätet är
+			uppbyggt. Det finns säkert andra böcker som behandlar detta. Vi
+			nöjer oss med att titta på de mesta karakteristiska
+			egenskaperna.
+		</P
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN691"
+>Stamnät och accessnät</A
+></H2
+><P
+>&#13;				Man delar in det publika telenätet i två olika delar:
+				<SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>stamnät</I
+></SPAN
+> och
+				<SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>accessnät</I
+></SPAN
+>.  Stamnät brukar man kalla
+				stora nätverk som används som backbone i nätverksstrukturer
+				och så är det även i fallet med telefonnätet.  Stamnätet är
+				alla de kablar som utgör telefonnätet mellan städer och
+				kopplingsstationer i Sverige. Accessnät kallas det nät som
+				förbinder alla abonnenter med stamnätet. Det vill säga den
+				kabeln som går från ditt telefonjack till
+				kopplingsstationen.  Telefonnätet består till största delen
+				av kopparkabel som i många fall är 50 år gammal. När man
+				skall bygga snabba datornät över telenätet är det oftast här
+				man stöter på problem. Detta gamla kablage är naturligtvis
+				inte avsett för att köra snabba, moderna datornät över. Men
+				det finns tekniker där man anpassat modern teknik efter
+				gammal lägre standard. Ett bra exempel på det är xDSL som är
+				ett snabbt sätt att kommuninicera med datatrafik över gamla
+				kopparledningar. I Sverige är ADSL vanligast inom det
+				området idag.
+			</P
+></DIV
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN696"
+>Kretskopplade nät</A
+></H1
+><P
+>&#13;			Man skiljer på kretskopplade och paketförmedlande nät. I
+			kretskopplade nät fungerar förbindelsen så att man har en
+			fysisk koppling mellan de två parterna. Denna är konstant öppen
+			och stängs inte förrän parterna bestämmer det. Precis så
+			fungerar ett telefonsamtal. Detta har både fördelar och
+			nackdelar. De kommunicerande har en konstant koppling till
+			varandra, de känner dess kapacitet och vet att ingen annan tar
+			den i anspråk. Å andra sidan är det ett enormt slöseri med
+			resurser när dessa parter inte utbyter någon data. Då är ju
+			linjen uppbokad så att ingen annan kan  nyttja den men den
+			används inte till något.  Alltså måste parterna koppla ner
+			förbindelsen när den inte skall användas på en längre tid.
+		</P
+><P
+>&#13;			Det vanligaste protokollet för krestskopplade nätverk är X.21.
+		</P
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN700"
+>Datex</A
+></H2
+><P
+>&#13;				Ett exempel på ett kretskopplat datornät är Datex. Datex
+				lanserades av Televerket 1982 (oktober), det var då ett av
+				de första publika datanäten i världen. Datex har
+				idag fått ge vika för andra, nyare tekniker.
+			</P
+></DIV
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN703"
+>Paketförmedlande nät</A
+></H1
+><P
+>&#13;			Ett paketförmedlat nät är ett nät där trafiken delas upp i små
+			paket som skickas genom nätet. Det gör att flera kan nyttja
+			nätet på samma gång. Om man jämför kretskopplande nät med ett
+			telefonsamtal så kan man jämföra ett paketförmedlande nät med
+			en transportfirma eller posten. Flera personer kan skicka
+			massor av paket samtidigt. Posten eller transportfirman ser
+			till att alla paket kommer dit de skall. Paketen delar
+			lastbilar och annat på vägen.
+		</P
+><P
+>&#13;			Standarden för paketförmedling i dessa nät kallas
+			<SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>X.25</I
+></SPAN
+>. 
+		</P
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN708"
+>Datapak</A
+></H2
+><P
+>&#13;				Ett exempel på ett paketförmedlande (X.25) datanät är
+				Datapak.  Datapak marknadsförs av bland annat Telia och
+				används till exempel för bankomater, kassasystem,
+				företagsnät och telefonsystem. 
+			</P
+></DIV
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN711"
+>Uppringt Internet</A
+></H1
+><P
+>&#13;			Vi kommer att tala mer om olika sätt att ansluta sig till
+			Internet i <A
+HREF="chap_internet.html"
+>kapitel 11</A
+>. Men det passar här
+			att i alla fall nämna att telenätet är ett av de vanligaste
+			sätten att ansluta sig till Internet eller använda sig av
+			datorkommunikation. Använder man en uppringd förbindelse till
+			Internet eller till någon annan dator eller tjänst så behöver
+			man inget annat än en vanlig telefonanslutning och ett modem i
+			båda ändar av förbindelsen. Detta fungerar sedan som ett vanligt
+			telefonsamtal. Man skall tänka på att man har en kretskopplad
+			förbindelse mellan modemen. Modemens prestanda är väldigt
+			beroende av hur bra denna förbindelse är. Har man en dålig
+			förbindelse kan det löna sig att koppla ner och sedan koppla upp
+			igen och hoppas på en bättre koppling mellan modemen.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN715"
+>Sammanfattning</A
+></H1
+><P
+>&#13;		</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="chap_modem.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Hem</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="chap_protokoll.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Modem</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Protokoll</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

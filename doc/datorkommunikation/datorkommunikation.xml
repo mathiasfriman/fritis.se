@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
+ "/usr/share/sgml/docbook/dtd/4.2/docbookx.dtd" [
+<!ENTITY fdl-sv SYSTEM "fdl-sv.xml">
+<!ENTITY fdl SYSTEM "fdl.xml">
+<!ENTITY dtr1201 SYSTEM "dtr1201.xml">
+<!ENTITY kommandotabell SYSTEM "kommandotabell.xml">
+<!ENTITY hextodectabell SYSTEM "hextodectabell.xml">
+<!ENTITY dectobintabell SYSTEM "dectobintabell.xml">
+<!ENTITY rfcer SYSTEM "rfcer.xml">
+<!ENTITY netmask SYSTEM "netmask.xml">
+<!ENTITY asciitabell SYSTEM "asciitabell.xml">
+<!ENTITY ovningsuppgifter SYSTEM "ovningsuppgifter.xml">
+<!ENTITY services SYSTEM "services.xml">
+<!ENTITY topdomains SYSTEM "topdomains.xml">
+<!ENTITY brev SYSTEM "brev.xml">
+<!ENTITY chap_inledning SYSTEM "chap_inledning.xml">
+<!ENTITY chap_epost SYSTEM "chap_epost.xml">
+<!ENTITY chap_sakerhet SYSTEM "chap_sakerhet.xml">
+<!ENTITY chap_dataoverforing SYSTEM "chap_dataoverforing.xml">
+<!ENTITY chap_serpar SYSTEM "chap_serpar.xml">
+<!ENTITY chap_wlan SYSTEM "chap_wlan.xml">
+<!ENTITY chap_datornatverk SYSTEM "chap_datornatverk.xml">
+<!ENTITY chap_natverkskomponenter SYSTEM "chap_natverkskomponenter.xml">
+<!ENTITY chap_kablar SYSTEM "chap_kablar.xml">
+<!ENTITY chap_modem SYSTEM "chap_modem.xml">
+<!ENTITY chap_publtele SYSTEM "chap_publtele.xml">
+<!ENTITY chap_protokoll SYSTEM "chap_protokoll.xml">
+<!ENTITY chap_internet SYSTEM "chap_internet.xml">
+<!ENTITY chap_internetteknik SYSTEM "chap_internetteknik.xml">
+]>
+
+<book lang="sv" status="draft">
+<bookinfo>
+
+	<title>Datorkommunikation</title>
+
+	<author>
+		<firstname>Marcus</firstname> 
+		<surname>Rejås</surname>
+		<affiliation>
+			<orgname>Rejås Datakonsult AB</orgname>
+			<address><email>marcus@rejas.se</email></address>
+		</affiliation>
+	</author>
+	<!--
+	<othercredit>
+		<firstname>Johan</firstname>
+		<surname>Hammar</surname>
+		<contrib>
+			Mycket uppskattad korrekturläsning.
+		</contrib>
+	</othercredit>
+	-->
+
+	<pubdate>$Date: 2011-01-19 20:09:27 $</pubdate>
+
+	<copyright>
+		<year>2003,2004,2005,2007,2008,2009,2010</year>
+		<holder>Marcus Rejås</holder>
+	</copyright>
+
+	<revhistory>
+		<revision>
+			<revnumber>$Revision: 1.62 $</revnumber>
+			<date></date>
+			<revremark>Utvecklingsversion</revremark>
+		</revision>
+	</revhistory>
+
+
+	<legalnotice>
+		<para>
+			Permission is granted to copy, distribute and/or modify this
+			document under the terms of the GNU Free Documentation License,
+			Version 1.2 or any later version published by the Free Software
+			Foundation; with the Invariant Sections being <xref
+			linkend="dtr1201"/> and <xref linkend="forord"/>, no
+			Front-Cover Texts, and no Back-Cover Texts. A copy of the
+			license is included in the section entitled "GNU Free
+			Documentation License".
+		</para>
+		<para>
+			[Översättning:] Var och en äger rätt att kopiera, sprida
+			och/eller förändra detta dokument under villkoren i licensen
+			"GNU Free Documentation License", version 1.2 eller senare
+			publicerad av Free Software Foundation, med de oföränderliga
+			avsnitten <xref linkend="dtr1201"/> och <xref
+			linkend="forord"/>, utan framsidestexter och utan
+			baksidestexter.  En kopia av denna licens finns med i avsnittet
+			med titeln "GNU Free Documentation License".
+		</para>
+		<para>
+			Denna bok använder visst material från Wikipedia
+			(http://sv.wikipedia.org).
+		</para>
+		<para>
+			Det vill säga, du kan fritt ladda ner, vidaredistribuera och
+			kopiera denna bok. Du får ändra den om du vill (se
+			licenstexten).
+		</para>
+	</legalnotice>
+
+
+	<abstract>
+		<para>
+			Denna bok är anpassad för gymnasieskolans kurs
+			datorkommunikation med kurskoden DTR1201 (<xref
+			linkend="dtr1201"/>). Den kan naturligtvis användas även i
+			andra sammanhang.
+		</para>
+		<para>
+			Du kan köpa tryckta böcker från Rejås Datakonsult AB, se
+			http://www.rejas.se.
+		</para>
+	</abstract>
+
+</bookinfo>
+
+<dedication>
+		<para>Denna bok vill jag tillägna mina barn.</para>
+		<para>In Memorian Daniel Lundblad 1995--2008.</para>
+	</dedication>
+
+<preface id="forord"><title>Förord</title>
+	<sect1><title>Tack till</title>
+		<para>
+			Jag vill börja denna bok med att tacka alla som hjälpt
+			mig med den. Framför allt då <emphasis>Johan
+				Hammar</emphasis>, <emphasis>Gunnar
+				Sjöö</emphasis>, <emphasis>Jenny
+				Ohlsson</emphasis> och <emphasis>Kalevi
+				Nyman</emphasis> som ställt upp med
+			korrekturläsning och <emphasis>XXXX XXXX</emphasis> som
+			ritat alla fina bilder. Utan er hade boken inte varit
+			så bra som den är idag. Tack!
+		</para>
+		<para>
+			Jag vill också tacka dig som läser denna bok. Hittar du något
+			som är fel eller som du tycker att man kan göra på något bättre
+			sätt så tveka inte att höra av dig till mig. Min adress står i
+			början av boken. Jag har mina begränsningar som författare men
+			genom att släppa denna bok fri förväntar jag mig att du som
+			läsare skall skicka mig kommentarer så att vi tillsammans kan
+			göra den mycket bättre än vad jag och kanske du skulle ensamma.
+			Några exempel på de som gjort detta är <emphasis>Bengt
+				Gördén</emphasis> som gett mycket bra feedback om NAT,
+			<emphasis>Pär Lindskog</emphasis> som gett bra feedback
+			angående IMAP, <emphasis>Jan Johansson</emphasis> som bidragit
+			med stycken om bryggor och repeatrar, <emphasis>Torbjörn
+				Ahlsén</emphasis> som skrev och berättade att jag blandat ihop
+			kablar och ledare, <emphasis>Simon Schmidt</emphasis> som hittade fel
+			i kapitlet om Internet och <emphasis>Marie Lundholm Janenge</emphasis>
+			som uppmärksammade att jag snurrat till det bland bilderna i kapitlet
+			om datornätverk. Marie påpekade också att jag förkortat Media Access
+			Unit felaktigt inte bara en eller två utan tre gånger. Tack alla för
+			er hjälp!
+		</para>
+		<para>
+			Sist vill jag tacka min <emphasis>Jenny</emphasis> som står ut
+			med att ha en datanörd hemmavid. Att skriva böcker för att ge
+			bort dem samt att engagera sig i en massa öppna projekt vid
+			sidan om mer än ett heltidsjobb tar sin tid och kräver mycket
+			tålamod och förståelse av de nära. Allt det ger Jenny mig
+			vilket jag är mycket tacksam för. Ni borde också tacka Jenny,
+			utan Jenny -- ingen bok.
+		</para>
+	</sect1>
+
+	<sect1><title>Några ord om denna bok</title>
+		<para>
+			Jag vill också passa på att berätta lite om denna bok, varför
+			jag skriver den, varför jag släpper den helt fritt och kanske
+			varför den blev som den blev.
+		</para>
+		<para>
+			Det finns flera anledningar till att jag skriver denna bok. Den
+			största anledningen är att jag till vardags håller bland annat
+			denna kurs i en gymnasieskola. Jag har läst ett flertal böcker
+			på området och tycker inte att någon lägger upp kursen på det
+			sätt jag vill och vissa innehåller inte heller allt det som
+			står i kursplanen. Jag har utgått från kursplanen när jag gjort
+			denna bok så allt skall vara med. Man bör komplettera med
+			labbar också eftersom kursplanen nämner en del praktiska
+			moment. Det finns labbar att hämta på denna boks hemsida. Har
+			du förslag på labbar, lektionsförslag, övningar eller annat så
+			tveka inte att skicka dem till mig. Tillsammans kan vi göra ett
+			suveränt kursmaterial som kan gagna både elever, lärare och
+			skolor i framtiden.
+		</para>
+		<para>
+			Hur kommer det sig då att jag släpper denna bok fritt på
+			Internet, med en licens som till och med låter andra ändra i
+			den och/eller sälja den för att tjäna pengar? Jag brinner för
+			något som kallas fri programvara. Fri programvara är
+			programvara som du får använda fritt i vilket syfte du vill och
+			vars källkod är öppen. Fri programvara har visat sig hålla
+			mycket hög kvalitet och funktionalitet. Exempel på fri
+			programvara är till exempel operativsystemet Linux, webbservern
+			Apache och kontorsprogramsviten OpenOffice.org. Alla dessa tre
+			har på sitt sätt hjälpt till att skapa och sprida denna bok.
+			Till denna bok har uteslutande fria programvaror använts.
+		</para>
+		<para>
+			Även denna bok är fri. Du kan ladda ner den från Internet. Även
+			de datafiler jag skrivit boken i finns där så att du kan
+			förbättra den om du vill. Om du väljer att göra det så vill jag
+			gärna veta det även om det inte är något tvång. Vad som däremot
+			är ett tvång är att om du bygger vidare på denna bok så måste
+			du släppa den lika fri som jag gjort (se licenstexten om du är
+			osäker). Eftersom denna bok är skriven för och med fria
+			programvaror så kommer de exempel som är i boken att vara för 
+			operativsystemet Linux och de program som brukar finnas med
+			det.  Använder du något annat operativsystem så kan du ändå ha
+			nytta av boken. 
+		</para>
+		<para>
+			Det finns naturligtvis andra skäl till att släppa en bok fritt
+			på detta sätt. Det självklara är att alla kan hjälpas åt att
+			göra den bättre, men det finns även mer praktiska fördelar. Det
+			står skolan fritt att köpa denna bok i tryckt format. Tycker
+			man att det är för dyrt eller tar för lång tid kan man trycka
+			den själv. Man kan även läsa den online om man vill. Har någon
+			elev glömt sin bok en dag så finns allt material fritt
+			tillgängligt på Internet. Man får fritt kopiera hela eller
+			delar av boken.  Detta kan vara smidigt i händelse av att någon
+			glömt sin bok eller om man bara vill behandla en liten del av
+			den i en kurs.  Hittas ett fel i boken kan detta rättas till
+			och vara studenterna till hands redan nästa dag om man vill.
+		</para>
+		<para>
+			Men, som jag sagt, den största fördelen är att alla kan hjälpas
+			åt för att göra denna bok bättre. Jag hoppas nu när jag skriver
+			denna bok att det skall vara ett levande dokument som anpassas
+			efterhand som tekniken förändras. Därför vill jag uppmuntra dig
+			som läsare att skicka kommentarer, rättelser, nya avsnitt,
+			förändrade avsnitt, m.m., m.m. till mig så för jag in dem i
+			boken.  Tillsammans kan vi göra en bok mycket bättre än vad jag
+			själv skulle kunna åstadkomma. I gengäld får du ett bättre
+			material och vad som brukar kallas för "credit", det vill säga
+			ett omnämnande i boken för att visa vad du gjort. Att hjälpas
+			åt på detta sätt för att göra det som blir bäst för alla, det
+			är det som allt detta handlar om.
+		</para>
+		<para>
+			Marcus Rejås, Norrtälje 2004-01-11.
+		</para>
+</sect1>
+</preface>
+
+<toc/>
+
+&chap_inledning;
+
+&chap_dataoverforing;
+
+&chap_serpar;
+
+&chap_datornatverk;
+
+&chap_natverkskomponenter;
+
+&chap_kablar;
+
+&chap_wlan;
+
+&chap_modem;
+
+&chap_publtele;
+
+&chap_protokoll;
+
+&chap_internet;
+
+&chap_internetteknik;
+
+&chap_epost;
+
+&chap_sakerhet;
+
+&ovningsuppgifter;
+
+&dtr1201;
+
+&asciitabell;
+
+&hextodectabell;
+
+&dectobintabell;
+
+&kommandotabell;
+
+&services;
+
+&topdomains;
+
+&netmask;
+
+&rfcer;
+
+&brev;
+
+&fdl-sv;
+
+&fdl;
+</book>
+
+
+<!-- Keep this comment at the end of the file
+tab-width: 3
+vim600: fdm=syntax sw=3 ts=3
+vim: sw=3 ts=3
+vi: sw=3 ts=3
+-->
+

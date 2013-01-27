@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<chapter id="datatyper">
+<title>Datatyper</title>
+<abstract>
+<para>I detta kapitel går vi igenom de grundläggande datatyperna. Se till att du lär dig dem och förstår när du skall använda vilken datatyp. Tabellen i sammanfattningen kan vara till hjälp.</para>
+</abstract>
+<para>Det finns tre viktiga typer av data att känna till: heltalen, flyttalen och tecken. Var och en av dessa har varianter. Det viktigaste är att du känner till grundformen av dem, men det är bra om du lär dig varianterna också. Detta för att du på så sätt kan minska ditt minnesanvändande i programmet. Du slipper också fel i programmet som kommer av att du använt fel variant av datatyp.</para>
+<sect1 id="datatyper_int">
+<title>int</title>
+<para>Datatypen <type>int</type>, eller integer som det är en förkortning för, används för att definera heltal. Du använder <type>int</type> när du vill hantera tal som 1, 200, 3000 och -1, -200, -3000.</para>
+<para><type>short int</type> tar upp 2 bytes och är 16 bitar stor. <type>short int</type> kan hantera tal mellan -32,768 och +32,767<footnote>
+<para>Varför kan man ha större negativa tal än positiva?</para>
+<para>Det beror på att talen representeras binär som 2's-komplement. Tänk dig en tvåbitarsdatatyp. De positiv talen representation är trivial.</para>
+<para>10 = -2</para>
+<para>11 = -1</para>
+<para>00 = 0</para>
+<para>01 = 1</para>
+<para>Det råkar helt enkelt finnas plats för ett extra tal. Det finns andra sätt att representera binär tal men 2's-kompement är väldigt praktiskt.</para>
+</footnote>.</para>
+<para><type>unsigned short int</type> tar upp 2 bytes<footnote>
+<para>Formellt så kan olika system ha olika storlekar. Enligt C-standard så är dessa mini</para>
+</footnote> och är 16 bitar stor. <type>unsigned short int</type> hanterar tal mellan 0 och +65,535.</para>
+<para><type>unsigned int</type> tar upp 4 bytes och är 32 bitar stor. <type>unsigned int</type> hanterar tal mellan 0 och +4,294,967,295 .</para>
+<para><type>int</type> tar upp 4 bytes och är 32 bitar stor. <type>int</type> hanterar tal mellan -2,147,483,648 och +2,147,483,647 . Datatypen <type>long int</type> är på de flesta 32-bitars system det samma som datatypen <type>int</type>.</para>
+<para>Det är bra att känna till hur mycket minne (bytes) datatyperna använder. Det verkar onödigt att använda en <type>int</type> för att lagra tal mellan 1 och 100 till exempel.</para>
+</sect1>
+<sect1 id="datatyper_char">
+<title>char</title>
+<para>Datatypen <type>char</type> används för att hantera tecken. Eftersom <type>char</type> enbart tar upp en byte (8 bitar) i minnet är den lämplig att använda även för små tal. Skillnaden mellan <type>signed char</type> och <type>unsigned char</type> är att <type>signed char</type> kan använda negativa heltal, vilket <type>unsigned char</type> inte kan.</para>
+<para><type>signed char</type> tar upp 1 byte och är 8 bitar stor, den kan hantera talen -128 till +127.</para>
+<para><type>unsigned char</type> tar upp en byte och är 8 bitar stor, den kan hantera talen 0 till +255.</para>
+<para>En vanlig char har oftast tecken och beter sig som signed char, men</para>
+</sect1>
+<sect1 id="datatyper_float_och_double">
+<title>float och double</title>
+<para><type>float</type> och <type>double</type> använder vi för flyttal som 3.14 och -3.14 . Skillnaden mellan <type>float</type> och <type>double</type> är att <type>double</type> har högre nogrannhet och kan hantera båda större och mindre tal.</para>
+<para><type>float</type> tar upp 4 bytes och är 32 bitar stor. <type>double</type> tar upp 8 bytes och är 64 bitar stor. ytterligare en flyttalsdatatyp finns, <type>long double som är till för riktigt hög precision. Storleken varierar.</type></para>
+<para><type>Flyttal är approximationer av reella tal, men det kan vara bra att komma ihåg att det inte är riktigt samma sak. En operation man skall undvika är att jämföra flyttal för att se om dom är lika. Resultatet av matematiska uttryck som skall ge samma värde kan uttryckt i flyttalsaritmetik ge tal som är nästan, men inte exakt, lika.</type></para>
+</sect1>
+<sect1>
+<title>bool</title>
+<para><type>bool</type> används för att lagra sanningsvärden. Den kan vara sann eller falsk. Det finns två konstanter som man kan använda vid tilldelningar: true och false.</para>
+</sect1>
+<sect1>
+<title>wchar_t</title>
+<para>Tänkt att användas för att representera tecken där char (t.ex. japanska) inte räcker. Av diverse praktiska skäl används den inte så mycket utan man löser problemt på annat sätt. Den finns bara med här för att göra listan komplett.</para>
+</sect1>
+<sect1 id="datatyper_void">
+<title>void</title>
+<para>void är inte en datatyp egentligen, utan betecknar att man inte vill deklarera en datatyp. Man kan t.ex inte deklarera variabler av typen void. Däremot kan man ha pekare som inte pekar på data av någon speciell typ och funktioner som inte returnerar ett värde måste deklareras med returtypen void.</para>
+</sect1>
+<sect1 id="datatyper_sammanfattning">
+<title>Sammanfattning</title>
+<table id="tbl_datatyper">
+<title>Datatyper</title>
+<tgroup align="right" cols="4" colsep="1" rowsep="1">
+<colspec colname="c1"/>
+<colspec colname="c2"/>
+<colspec colname="c3"/>
+<colspec colname="c4"/>
+<thead>
+<row>
+<entry>Datatyp</entry>
+<entry>Byte(typiskt)</entry>
+<entry>Bitar(typisk)</entry>
+<entry>Område(typiskt)</entry>
+</row>
+</thead>
+<tbody>
+<row>
+<entry>short int</entry>
+<entry>2</entry>
+<entry>16</entry>
+<entry>-32,768 -&gt; +32,767</entry>
+</row>
+<row>
+<entry>unsigned short int</entry>
+<entry>2</entry>
+<entry>16</entry>
+<entry>0 -&gt; +65,535</entry>
+</row>
+<row>
+<entry>unsigned int</entry>
+<entry>4</entry>
+<entry>32</entry>
+<entry>0 -&gt; +4,294,967,295</entry>
+</row>
+<row>
+<entry>int</entry>
+<entry>4</entry>
+<entry>32</entry>
+<entry>-2,147,483,648 -&gt; +2,147,483,647</entry>
+</row>
+<row>
+<entry>long int</entry>
+<entry>4</entry>
+<entry>32</entry>
+<entry>-2,147,483,648 -&gt; +2,147,483,647</entry>
+</row>
+<row>
+<entry>unsigned long int</entry>
+<entry>4</entry>
+<entry>32</entry>
+<entry>0 -&gt; +4,294,967,295</entry>
+</row>
+<row>
+<entry>signed char</entry>
+<entry>1</entry>
+<entry>8</entry>
+<entry>-128 -&gt; +127</entry>
+</row>
+<row>
+<entry>unsigned char</entry>
+<entry>1</entry>
+<entry>8</entry>
+<entry>0 -&gt; +255</entry>
+</row>
+<row>
+<entry>char</entry>
+<entry>1</entry>
+<entry>8</entry>
+<entry>0 -&gt; +255 eller -128 -&gt; +127</entry>
+</row>
+<row>
+<entry>float</entry>
+<entry>4</entry>
+<entry>32</entry>
+<entry/>
+</row>
+<row>
+<entry>double</entry>
+<entry>8</entry>
+<entry>64</entry>
+<entry/>
+</row>
+<row>
+<entry>long double</entry>
+<entry>12,10 eller 8</entry>
+<entry>96, 80 eller 64</entry>
+<entry/>
+</row>
+<row>
+<entry>bool</entry>
+<entry>1</entry>
+<entry>1</entry>
+<entry>false -&gt; true</entry>
+</row>
+<row>
+<entry>wchar_t</entry>
+<entry>4/2</entry>
+<entry>32/16</entry>
+<entry>Oftast Unicode UCS-32/UTF-16</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</sect1>
+</chapter>

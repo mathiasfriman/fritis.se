@@ -1,0 +1,141 @@
+<appendix id="dtr1208">
+
+<title>Kurs DTR1208 - Programmering B</title>
+<subtitle>50 poäng, inrättad 2000-07  SKOLFS: 2000:28</subtitle>
+
+<sect1><title>Mål</title>
+
+<sect2><title>Mål för kursen</title>
+
+<para>Kursen skall ge fördjupade teoretiska och praktiska kunskaper i
+ett strukturerat programmeringsspråk. Kursen skall också ge kunskaper om
+språkets viktigaste datastrukturer. Dessutom skall kursen ge färdigheter
+i algoritmkonstruktion.</para>
+
+</sect2>
+
+<sect2><title>Mål som eleverna skall ha uppnått efter avslutad
+kurs</title>
+
+<para>Eleven skall</para>
+
+<para> förstå och kunna använda språkets vanliga datastrukturer såsom
+fält, lista, stack och filsystem</para>
+
+<para>kunna införa och använda array, länkade listor och trädstrukturer
+i datastrukturer</para>
+
+<para>förstå och implementera vanliga sorteringsalgoritmer</para>
+
+<para>förstå och implementera vanliga sökalgoritmer</para>
+
+<para>kunna analysera programmeringsuppgifter och formulera strukturerad
+pseudokod</para>
+
+<para>kunna skriva program och felsöka källkod</para>
+
+<para>känna till kompilatorns/länkarens uppgift vid arbete från källkod
+till färdigt program</para>
+
+<para>känna till viktiga operativsystemstandarder för bl.a. teckenkoder
+och utmatningsrutiner</para>
+
+<para>känna till språkets allmänna prestanda och egenskaper samt vilka
+programmeringsuppgifter det är lämpligast för.</para>
+
+</sect2>
+</sect1>
+
+<sect1><title>Betygskriterier</title>
+
+<sect2><title>Kriterier för betyget Godkänd</title>
+
+<para>Eleven analyserar programmeringsuppgifter och skapar med viss
+handledning enkla körbara väldokumenterade program.</para>
+
+
+<para> Eleven söker med viss handledning upp de fakta som behövs för
+programmeringsuppgifterna.</para>
+
+<para> Eleven beskriver det använda programspråkets uppbyggnad,
+viktigaste funktioner, egenskaper och prestanda.</para>
+
+</sect2>
+
+<sect2><title>Kriterier för betyget Väl godkänd</title>
+
+<para>Eleven utför sina programmeringsuppgifter på egen hand och inom
+rimlig tid.</para>
+
+<para> Eleven hämtar på egen hand fakta från olika källor och tillämpar
+dessa i uppgifterna.</para>
+
+</sect2>
+
+<sect2><title>Kriterier för betyget Mycket väl godkänd</title>
+
+<para>Eleven utför självständigt sina programmeringsuppgifter med
+noggrannhet och når snabbt avsett resultat.</para>
+
+<para> Eleven anpassar sin arbetsinsats till situationen, analyserar
+resultat samt åtgärdar kvalitetsavvikelser.</para>
+
+<para> Eleven beskriver samband och ser helheter i komplicerade
+programmeringssituationer</para>
+
+</sect2>
+
+</sect1>
+
+<sect1><title>Specialisering mot enligt lista nedan. För betyg mm.
+använd angivna koder.</title>
+
+<para>
+<informaltable frame="none">
+	<tgroup cols='2' align='left' colsep='0' rowsep='0'>
+	<thead><row>
+		<entry>Kod</entry>
+		<entry>Namn</entry>
+	</row></thead>
+	<tbody>
+	<row>
+		<entry>PCOB1408</entry>
+		<entry>Cobol</entry>
+	</row>
+	<row>
+		<entry>PDEL1408</entry>
+		<entry>Delphi</entry>
+	</row>
+	<row>
+		<entry>PJAV1408</entry>
+		<entry>Java</entry>
+	</row>
+	<row>
+		<entry>PPAS1408</entry>
+		<entry>Pascal</entry>
+	</row>
+	<row>
+		<entry>PPER1408</entry>
+		<entry>Perl</entry>
+	</row>
+	<row>
+		<entry>PPHP1408</entry>
+		<entry>PHP</entry>
+	</row>
+	<row>
+		<entry>PROC1408</entry>
+		<entry>C++</entry>
+	</row>
+	<row>
+		<entry>PVBA1408</entry>
+		<entry>Visual Basic</entry>
+	</row>
+	</tbody>
+	</tgroup>
+</informaltable>
+</para>
+
+<para>Skolverket 2002-04-09</para>
+</sect1>
+
+</appendix>

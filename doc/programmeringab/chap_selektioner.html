@@ -1,0 +1,397 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Selektioner (Villkorssatser)</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="Programmering i PHP"
+HREF="book1.html"><LINK
+REL="PREVIOUS"
+TITLE="Operatorer"
+HREF="chap_operatorer.html"><LINK
+REL="NEXT"
+TITLE="Iterationer (Upprepningar, loopar)"
+HREF="chap_iterationer.html"><LINK
+REL="stylesheet"
+HREF="./book.css"
+TYPE="text/css"></HEAD
+><BODY
+CLASS="chapter"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Programmering i PHP</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="chap_operatorer.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="chap_iterationer.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="chapter"
+><H1
+><A
+NAME="chap_selektioner"
+></A
+>Kapitel 8. Selektioner (Villkorssatser)</H1
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Innehållsförteckning</B
+></DT
+><DT
+><A
+HREF="chap_selektioner.html#AEN432"
+>If-satsen</A
+></DT
+><DT
+><A
+HREF="chap_selektioner.html#AEN440"
+>If-else-satsen</A
+></DT
+><DT
+><A
+HREF="chap_selektioner.html#AEN448"
+>if-elseif</A
+></DT
+><DT
+><A
+HREF="chap_selektioner.html#AEN455"
+>Mer l�sning</A
+></DT
+></DL
+></DIV
+><BLOCKQUOTE
+CLASS="ABSTRACT"
+><DIV
+CLASS="abstract"
+><P
+></P
+><A
+NAME="AEN430"
+></A
+><P
+>&#13;			I de allra flesta programmeringsspr�k finns det selektionssatster.
+			Precis som namnet antyder handlar det om val. Programmet kan ta
+			olika v�gar beroende p� olika villkor. Vanliga selektionssatser
+			�r if-satsen och if-else-satsen.
+		</P
+><P
+></P
+></DIV
+></BLOCKQUOTE
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN432"
+>If-satsen</A
+></H1
+><P
+>&#13;			If-satser finns i de allra flesta spr�k och ser n�stan likadan ut
+			i dem alla. If-satsen fungerar som s� att om n�got �r sant s� g�r
+			en sak, annars inte. Ett exempel �r p� sin plats.
+		</P
+><P
+>&#13;			Antag att jag vill att ett program skall tala om f�r mig om ett
+			tal �r st�rre �n 100. Jag vill att programmet skall skriva ut det
+			tal jag anger och om det �r st�rre �n 100 s� skall det ocks�
+			skrivas ut. S� h�r kan det se ut:
+			<DIV
+CLASS="example"
+><A
+NAME="AEN436"
+></A
+><P
+><B
+>Exempel 8-1. St�rre �n 100</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;html&#62;
+&#60;head&#62;
+   &#60;title&#62;St�rre �n 100&#60;/title&#62;
+&#60;/head&#62;
+&#60;body&#62;
+   &#60;?php
+      echo "Du angav tal: $tal";
+
+      if ($tal &#62; 100) {
+         echo "&#60;p&#62;&#60;emphasis&#62;$tal �r st�rre �n 100&#60;/emphasis&#62;&#60;/p&#62;";
+      }
+   ?&#62;
+&#60;/body&#62;
+&#60;/html&#62;
+
+				</PRE
+></DIV
+>
+
+			If-satsen best�r allts� av ordet if f�ljt av ett test inom
+			parenteser. Satsen som f�ljer efter utf�rs om testet blir sant.
+			Vill man att det skall vara flera satser som utf�rs om testet blir
+			sant kan man sl� ihop dem till ett block med hj�lp av { och }
+			(m�svingar). I exemplet ovan anv�nder jag m�svingarna fast de
+			egentligen inte beh�vs. Som regel �r det b�st att alltid s�tta dit
+			m�svingarna ifall man vill stoppa in en rad till inom if-satsen
+			sedan s� gl�mmer man dem inte.
+		</P
+><P
+>&#13;			Studera nu if-satsen ovan och skriv om programmet och testa olika
+			tal.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN440"
+>If-else-satsen</A
+></H1
+><P
+>&#13;			Nu fungerar programmet s� l�ngt. Men det vore ju kul om programmet
+			sade till �ven om talet inte �r st�rre �n 100. Allts� om det �r
+			st�rre �n 100 skriv det annars skriv att det inte �r st�rre �n 100.
+		</P
+><P
+>&#13;			Studera f�ljande exempel
+			<DIV
+CLASS="example"
+><A
+NAME="AEN444"
+></A
+><P
+><B
+>Exempel 8-2. If-else exempel</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;html&#62;
+&#60;head&#62;
+   &#60;title&#62;St�rre �n 100&#60;/title&#62;
+&#60;/head&#62;
+&#60;body&#62;
+&#60;?php
+echo "Du angav tal: $tal";
+
+if ($tal &#62; 100) {
+   echo "&#60;p&#62;&#60;emphasis&#62;$tal �r st�rre �n 100&#60;/emphasis&#62;&#60;/p&#62;";
+} else {
+   echo "&#60;p&#62;&#60;emphasis&#62;$tal �r inte st�rre �n 100&#60;/emphasis&#62;&#60;/p&#62;";
+}
+?&#62;
+&#60;/body&#62;
+&#60;/html&#62;
+
+				</PRE
+></DIV
+>
+
+			I exemplet ovan ser vi hur en if-else sats fungerar. Om uttrycket
+			inom parenteserna �r sant utf�rs det som kommer efter. Om inte s�
+			utf�rs det som kommer efter else. <SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+> Det kan aldrig intr�ffa
+			att b�da satserna utf�rs!</I
+></SPAN
+>
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN448"
+>if-elseif</A
+></H1
+><P
+>&#13;			If-elseif �r ocks� en vanlig konstruktion. Den anv�nds ofta
+			tillsammans med else och blir d� en if-elseif-else sats. Man
+			kan ha flera elseif i en konstruktion men bara en else. Det som
+			kommer efter det f�rsta sanna uttrycket utf�rs och inget annat.
+			Om inget �r sant kommer det som st�r efter else (annars) att
+			utf�ras.
+		</P
+><P
+>&#13;			Vi tittar p� v�rt exempel igen. Talet man anger kan ju vara st�rre
+			eller mindre �n 100. �r det inte det s� m�ste det ju vara talet 100
+			som angetts. Vi testar igen.
+
+			<DIV
+CLASS="example"
+><A
+NAME="AEN452"
+></A
+><P
+><B
+>Exempel 8-3. if-elseif-else</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;html&#62;
+&#60;head&#62;
+   &#60;title&#62;St�rre �n 100&#60;/title&#62;
+&#60;/head&#62;
+&#60;body&#62;
+&#60;?php
+echo "Du angav tal: $tal";
+
+if ($tal &#62; 100) {
+   echo "&#60;p&#62;&#60;emphasis&#62;$tal �r st�rre �n 100&#60;/emphasis&#62;&#60;/p&#62;";
+} elseif ($tal &#60; 100) {
+   echo "&#60;p&#62;&#60;emphasis&#62;$tal �r inte st�rre �n 100&#60;/emphasis&#62;&#60;/p&#62;";
+} else {
+   echo "&#60;p&#62;&#60;emphasis&#62;$tal �r ju lika med 100&#60;/emphasis&#62;&#60;/p&#62;";
+}
+?&#62;
+
+&#60;/body&#62;
+&#60;/html&#62;
+
+				</PRE
+></DIV
+>
+
+			Som vi ser s� �r den inte helt olik de andra konstruktionerna med if.
+			Den fungerar s� att om det f�rsta testet �r sant s� utf�rs satsen
+			efter det. Om inte g�rs testen efter elseif. �r denna sann s� utf�rs
+			satsen efter den. Om inget test har varit sant utf�rs det som kommer
+			efter else. Det kan vara flera elseif och else kan utel�mnas.
+
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN455"
+>Mer l�sning</A
+></H1
+><P
+>&#13;			Aktuellt avsnitt i PHP-manualen.
+			<A
+HREF="http://www.php.net/manual/en/control-structures.php"
+TARGET="_top"
+>&#13;				<I
+CLASS="citetitle"
+>&#13;					http://www.php.net/manual/en/control-structures.php
+				</I
+>
+			</A
+>
+		</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="chap_operatorer.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Hem</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="chap_iterationer.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Operatorer</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Iterationer (Upprepningar, loopar)</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

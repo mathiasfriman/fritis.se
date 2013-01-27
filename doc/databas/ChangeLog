@@ -1,0 +1,31 @@
+2004-01-18 22:21  magnus
+
+	Changed:
+		databashantering.xml (1.2), "Exp", lines: +1 -1
+
+	Dummy commit.
+
+2004-01-18 09:45  jonas
+
+	Added:
+		Makefile (1.1)
+		databashantering.xml (1.1)
+		index.in (1.1)
+		style.dsl (1.1)
+		include/book.css (1.1)
+		include/docbook.dsl (1.1)
+
+	Initial revision
+
+2004-01-18 09:45  jonas
+
+	Changed:
+		Makefile (1.1.1.1), "Exp", lines: +0 -0
+		databashantering.xml (1.1.1.1), "Exp", lines: +0 -0
+		index.in (1.1.1.1), "Exp", lines: +0 -0
+		style.dsl (1.1.1.1), "Exp", lines: +0 -0
+		include/book.css (1.1.1.1), "Exp", lines: +0 -0
+		include/docbook.dsl (1.1.1.1), "Exp", lines: +0 -0
+
+	forsta importen till nya cvs:en
+

@@ -1,0 +1,132 @@
+<chapter id="chap_wlan"><title>Trådlösa nätverk, WLAN</title>
+	<abstract>
+		<para>
+			I förra kapitlet behandlades kablar och några trådlösa
+			alternativ. Det vanligaste trådlösa alternativet idag är WLAN
+			och det är vad vi skall behanda i detta kapitel.
+		</para>
+		<para>
+			Detta kapitel behandlar trådlösa nätverk. En del av detta
+			kapitel kommer från Wikipedia, Den fria encyklopedin.
+		</para>
+	</abstract>
+
+	<sect1><title>Trådlös frihet</title>
+		<para>
+				Det finns massor av skäl att välja trådlösa nätverk idag.
+				Tekniken är mogen och snabb och fungerar mycket bra. Att
+				sätta upp ett trådlöst nätver går på ett kick om lokalen
+				inte är för stor och användarna för många. Tidigare har det
+				kritiserats väldigt mycket för att vara osäkert men dagen
+				teknik gör att det är enkelt att få det åtminstone lika
+				säkert som trådbundna nätverk.
+			</para>
+			<para>
+				Att man slipper dra kablar gör installationen enkel och
+				billig. Har de som skall använda nätverket bärbara datorer
+				och kan flytta sig så är det också bra med trådlöst nätverk.
+				Men finns det kablar att tillgå är det nästan alltid
+				snabbare och mer tillgängligt att använda dem, men
+				fördelarna med trådlöst nätverk är många.
+			</para>
+	</sect1>
+
+	<sect1><title>Trådlöst LAN</title>
+		<para>
+			Trådlöst LAN eller WLAN (av engelskans Wireless Local Area
+			Network) är ett samlingsnamn för olika typer trådlösa lokala
+			datornätverk.
+		</para>
+		<para>
+			Den vanligaste typen är IEEE 802.11-familjen som bland annat
+			kan användas för att koppla ihop en central accesspunkt (AP)
+			med klienter i form av datorer, IP-telefoner, handdatorer,
+			smarta mobiltelefoner, mediaspelare och annan utrustning i
+			kontors- eller hemmiljö.
+		</para>
+		<para>
+			Trådslösa LAN använder sig av teknologi baserad på radio eller
+			mikrovågor (vid radio-LAN), och förr även infraröda vågor, för
+			att kommunicera med andra enheter inom en begränsad radie.
+			Detta ger användaren möjligheten att röra sig fritt inom detta
+			område och fortfarande vara ansluten till nätverket. Radio-LAN
+			har på senare tid blivit mer och mer populär bland annat på
+			grund av den låga investeringskostnaden jämfört med trådbundet
+			LAN.
+		</para>
+		<para>
+			De standarder som idag används för radio-LAN ger tillgång på
+			upptill 54Mb/s i delad överföringshastighet, det vill säga
+			hastigheten delas av samtliga klienter i nätverket. Inom en
+			förmodligen snar framtid kommer dock nya standarder som skall
+			stödja 100Mb/s och mer och skall även ge längre räckvidd med
+			samma utsända effekt.
+		</para>
+	</sect1>
+
+	<sect1><title>Teknik</title>
+		<para>
+			Som tidigare sagts är trådlösa lan byggda på
+			radiovågor. Dessa går igeom väggar och har ganska bra
+			räckvidd. Upp till 30-50 meter brukar gå bra och även
+			längre om man har bra utrustning. Även i ett trådlöst
+			nätverk uppstår kollisioner (se <xref
+				linkend="sect_accessmetoder"/>). Som accessmetod
+			används CSMA/CA för att undvika och göra kollisionerna
+			så snabba som möjligt.
+	
+		</para>	
+	</sect1>
+
+	<sect1><title>Säkerhet</title>
+		<para>
+			Trådlösa nätverk är ur säkerhetssynpunkt mer utsatta än
+			trådbundna nätverk. Detta beror på att någon som vill utnyttja
+			ett nät inte behöver komma i fysisk kontakt med det utan det
+			räcker att denna är i närheten, till exempel i samma hus eller
+			på gatan nedanför.
+		</para>
+		<para>
+			Oerfarna WLAN ägare begår ofta misstaget att inte skydda
+			åtkomsten till nätverket med hjälp av kryptering. En stor andel
+			av trådlösa nätverk står därför öppna utan något som helst
+			skydd. Dessa kan vem som helst som har en dator och ett
+			trådlöst nätverkskort ansluta sig till. Detta fenomen, att
+			använda andras nät utan tillstånd, brukar man kalla Snyltning.
+			Snyltarna kan till exempel göra olagligheter på någon annans
+			bredbandsuppkoppling eller bara använda den för normalt bruk
+			och då slippa betala för en egen. De flesta jurister verkar
+			numera överens om att sådant uppsåtligt olovligt nyttjande av
+			både oskyddade och skyddade nätverk är olagligt.
+		</para>
+		<para>
+			För att skydda sig mot snyltning och andra typer av intrång,
+			tillämpas olika typer av skydd. Det vanligaste är att man
+			krypterar nätverket. Det finns olika typer av
+			kryperingsmetoder, de vanligaste är WEP, WPA och WPA2. WPA och
+			WPA2 är en nyare och bättre standarder, men WEP-krypteringen
+			dominerar fortfarande p g a att många accesspunkter inte stöder
+			något annat.
+		</para>
+		<para>
+			Det finns även andra sätt att skydda sitt trådlösa nätverk från
+			intrång, till dessa hör MAC-adressbegränsning, MAC-filtrering
+			och att stänga av SSID-broadcast. Dessa skydd bör bara användas
+			som komplement till kryptering då de är mycket lätta att komma
+			förbi och deras huvudsakliga uppgift är att stänga ute
+			oavsiktlig användning. Snyltare kommer förbi dem ändå genom att
+			bland annat använda spoofing. Att stänga av SSID-broadcast ger
+			egentligen inget skydd alls eftersom SSIDet fortfarande finns i
+			all trafik på det aktuella WLANet.
+		</para>
+	</sect1>
+</chapter>
+	
+
+<!-- Keep this comment at the end of the file
+tab-width: 3
+vim600: fdm=syntax sw=3 ts=3
+vim: sw=3 ts=3
+vi: sw=3 ts=3
+-->
+

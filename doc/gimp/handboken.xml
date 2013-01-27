@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+"http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<book lang="sv" status="draft">
+<bookinfo>
+  <title>Gimp Handbok</title>
+	<author>
+		<firstname>Christian</firstname> 
+		<surname>Gundersson</surname>
+		<affiliation>
+			<orgname>Xxxx</orgname>
+			<address><email>Xxxx@xxx.xx</email></address>
+		</affiliation>
+	</author>
+	<pubdate>$Date: 2006/04/12 20:04:19 $</pubdate>
+
+	<copyright>
+		<year>2005-2006</year>
+		<holder>Christian Gundersson</holder>
+	</copyright>
+
+	<revhistory>
+		<revision>
+			<revnumber>$Revision: 1.5 $</revnumber>
+			<date></date>
+			<revremark>Utvecklingsversion</revremark>
+		</revision>
+	</revhistory>
+
+
+	<legalnotice>
+		<para>
+			Permission is granted to copy, distribute and/or
+			modify this document under the terms of the GNU
+			Free Documentation License, Version 1.2 or any
+			later version published by the Free Software
+			Foundation; with no Invariant Sections , no
+			Front-Cover Texts, and no Back-Cover Texts. A
+			copy of the license is included in the section
+			entitled "GNU Free Documentation License".
+		</para>
+		<para>
+			[Översättning:] Var och en äger rätt att
+			kopiera, sprida och/eller förändra detta
+			dokument under villkoren i licensen "GNU Free
+			Documentation License", version 1.2 eller senare
+			publicerad av Free Software Foundation, utan
+			oföränderliga avsnitt, utan framsidestexter och
+			utan baksidestexter.  En kopia av denna licens
+			finns med i avsnittet med titeln "GNU Free
+			Documentation License".
+		</para>
+		<para>
+			Det vill säga, du kan fritt ladda ner,
+			vidaredistribuera och kopiera denna bok. Du får
+			ändra den om du vill (se licenstexten).
+		</para>
+	</legalnotice>
+
+	<abstract>
+		<para>
+			En liten sammanfattning här
+		</para>
+	</abstract>
+
+</bookinfo>
+
+  <chapter>
+    <title>Inledning</title>
+    <para>Inledningar är svåra. Ville bara ha sagt det så att ni har lite 
+    förståelse för varför denna kanske inte blir så bra. I denna handbok kommer
+    jag att gå igenom programmets grunddelar samt vissa olika tekniker för 
+    bildbehandling. Jag kommer dessutom att ta upp en del olika termer som är
+    ofta förekommande.</para>
+    
+    <sect1><title>För Photoshopanvändare</title>
+    <para>Trots att detta är en bok om det alldeles utmärkta programmet 
+    'the Gimp', har det visat sig i princip oundvikligt att ta upp det 
+    andra program som oftast tas fram i jämförelse, Adobes 'Photoshop'. Jag 
+    kommer inte i varje enskilt fall ta upp skillnader och likheter mellan 
+    programmen, istället gör jag här en kort genomgång.</para>
+    
+    <para>Först vill jag säga att om du har suttit i Photoshop och vill prova
+    Gimp, så ta det lugnt. Det kan verka förvirrande och ologiskt till en början, 
+    det beror på att du inte hittar. Efter ett tag kommer du att vänja dig att 
+    hitta i Gimp med. Det första du kommer att märka är skillnaden i programmens 
+    upplägg i design. Photoshop består av ett stort 'huvudfönster' i vilket de 
+    aktuella bilderna hålls tillsammans med alla verktygspaletter. Gimp arbetar 
+    med, per default, två separata huvudfönster och varje bild öppnas i ett eget 
+    fönster. En genomgång av huvudfönsterna hittar du i nästa kapitel 
+    "Lär dig hitta i Gimp".</para>
+    
+    <para>Rent verktygsmässigt kan jag inte säga att jag använt ett verktyg i 
+    Photoshop som jag inte hittat en motsvarighet för i Gimp. Du har tillgång 
+    till de vanliga ritverktygen, textverktyg, kloning, markering, slingor, 
+    lager, tranformationsverktyg, färg och mönster med mera. Den tydligaste 
+    skillnaden ser man nog i filterna, en del är lika men många skiljer sig åt. 
+    </para>
+    </sect1>
+  </chapter>
+  
+  
+  <chapter>
+    <title>Lär dig hitta i Gimp</title>
+    <para>
+    
+
+	<figure id="fig_1">
+		<title>Namn på denna bild här</title>
+
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1"
+				fileref="bilder/1.jpeg" format="JPEG" />
+			</imageobject>
+			<imageobject>
+				<imagedata scalefit="1" fileref="bilder/1.eps" format="EPS" />
+			</imageobject>
+		</mediaobject>
+	</figure>
+    
+    Det första du kommer att lägga märke till när du startar 'Gimp' är att istället för ett
+stort huvudfönster, så har du två mindre verktygsfönster. Det är med dessa två fönster du kommer att
+jobba mest. Bilden du vill redigera, oavsett om det är en gammal eller ny bild, kommer att ha sitt eget
+fönster. Ett fönster för varje bild. Om det är bra eller dåligt låter jag vara upp till dig, jag föredrar
+det och tror att det mest är en vanesak.</para>
+
+<para>
+	<figure id="fig_2">
+		<title>Namn på denna bild här</title>
+
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1"
+				fileref="bilder/2.jpeg" format="JPEG" />
+			</imageobject>
+			<imageobject>
+				<imagedata scalefit="1" fileref="bilder/2.eps" format="EPS" />
+			</imageobject>
+		</mediaobject>
+	</figure>
+
+Det vänstra fönstret är verktygsfönstret. Här hittar du genvägarna till de flesta av de verktyg du kommer att jobba med, som markeringsverktyg, slingverktyg, färgpalletten m.m. Du hittar även inställningarna för varje verktyg i detta fönstret, de visas under verktygspaletten för respektive verktyg du väljer.</para>
+
+<para>
+
+	<figure id="fig_3">
+		<title>Namn på denna bild här</title>
+
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1"
+				fileref="bilder/3.jpeg" format="JPEG" />
+			</imageobject>
+			<imageobject>
+				<imagedata scalefit="1" fileref="bilder/3.eps" format="EPS" />
+			</imageobject>
+		</mediaobject>
+	</figure>
+Det högra fönstret kallas för 'Lagerfönstret'.
+Detta beror på att här har du dialogen för lagerhantering(mer om
+lager senare). Namnet är tyvärr lite missvisande, fönstret
+innehåller mer än bara lagerdialogen. Om du inte gjort några extra
+inställningar redan så hittar du dialoger för bl.a. penselval,
+texturval, slingor, ångrahistorik m.m. Det fina är att du lätt kan
+ändra om detta fönster med olika dialoger efter ditt eget tycke och
+smak, du väljer själv vilken funktionalitet du vill komma åt enkelt
+och snabbt. Genom att klicka på 'Arkiv -&gt; Fönster' får du fram en meny med flera olika fönsterval. Klickar du på ett av alternativen kommer det du valde att poppa upp i ett eget fönster. 
+
+
+	<figure id="fig_4">
+		<title>Namn på denna bild här</title>
+
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1"
+				fileref="bilder/4.jpeg" format="JPEG" />
+			</imageobject>
+			<imageobject>
+				<imagedata scalefit="1" fileref="bilder/4.eps" format="EPS" />
+			</imageobject>
+		</mediaobject>
+	</figure>
+
+Du har möjligheten att låta det vara i ett fönster för sig självt, men om du vill kan du dra detta fönster och 'docka' det med exempelvis 'Lagerfönstret' för en enklare organisering.</para>
+
+<para>Tips! Om du låter muspekaren vila över någon av kontrollerna kommer du att få se ett 'tooltip' som ger en kort beskrivning av vad kontroller är till för.</para>
+
+<para>För att visa 'Bildfönstret' måste vi först skapa en ny bild, gå
+till 'Arkiv' och välj 'Ny' (Alternativt använd kortkommandot Ctrl + n).
+Du får då upp en dialog där du kan välja vissa egenskaper på din nya
+bild som exempelvis storlek i pixlar. 
+
+	<figure id="fig_5">
+		<title>Namn på denna bild här</title>
+
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1"
+				fileref="bilder/5.jpeg" format="JPEG" />
+			</imageobject>
+			<imageobject>
+				<imagedata scalefit="1" fileref="bilder/5.eps" format="EPS" />
+			</imageobject>
+		</mediaobject>
+	</figure>
+
+
+Under fliken
+'Mall' kan du välja några förinställda bildmallar som A4 för utskrift,
+US letter och olika vanliga skärmupplösningsstorlekar. Under 'Avancerat'
+har tillgång till ytterliggare inställningar men för tillfället nöjer vi
+oss med att skapa en bild på 300x300 pixlar. Ändra fälten där det står
+'Bredd' och 'Höjd' till värdena '300' och klicka på 'OK'. Du får nu upp
+ett nytt fönster med vit bakgrund, detta är din nya bild.
+
+	<figure id="fig_6">
+		<title>Namn på denna bild här</title>
+
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1"
+				fileref="bilder/6.jpeg" format="JPEG" />
+			</imageobject>
+			<imageobject>
+				<imagedata scalefit="1" fileref="bilder/6.eps" format="EPS" />
+			</imageobject>
+		</mediaobject>
+	</figure>
+
+
+Du kan storleksändra detta fönster om du tycker att det känns lite
+trångt utan att storleksändra på bilden. Överst i fönstret ser du en
+menyrad, den ger dig tillgång till olika operationer att utföra på just
+denna bilden. Här hittar du t.ex. 'Spara', 'Skriv ut' m.m. Värt att veta
+är att allt i denna menyn finns tillgängligt om du högerklickar på
+bilden med musen. Till vilken nytta? frågar du dig säkert då. Jo, om man
+som jag är allergisk mot onödigt upptagande av skärmareal så finns det
+men möjlighet att släcka ner menyraden under 'Visa -&gt; Visa menyrad'.
+Här kan du dessutom välja att visa eller dölja andra saker som ex.
+navigeringslinjalerna, stödlinjer, lagergräns, stödlinjer etc. Lek runt
+lite och hitta en inställning som passar dig så väntar jag här sålänge.
+Klar? Bra, då fortsätter vi. Dessa inställningar kommer att försvinna
+igen så fort du stänger ner bildfönstret, vill du ha permanenta
+inställningar måste du gå in under 'Arkiv -&gt; Inställningar -&gt; Utseende' i verktygsfönstret och göra dina inställningar där.</para>
+
+<para>Vill du hellre redigera en befintlig bild finns det olika sätt att
+öppna den på. Det kanske mest uppenbara är att gå in under 'Arkiv -&gt; Öppna' i verktygsfönstret, navigera till bilden och klicka på 'Ok'. Du kan även här använda kortkommandot 'Ctrl + o'. Ett annat sätt är att hitta bilden i någon filhanterare och sedan klicka och dra bilden till verktygsfönstret, då öppnar Gimp automatiskt bilden åt dig.</para>
+
+<para>Nu när du vet hur man skapar, öppnar och sparar bilder kan du skapa, spara, stänga ner och öppna olika bilder så att du känner dig bekväm med det. I nästa kapitel kommer vi att gå igenom lite av de olika verktygen som finns till hands.</para>
+  </chapter>
+
+  <chapter>
+    <title>Verktygen</title>
+
+    <para>Denna sektion kommer att gå in på de verktyg som finns
+    representerade på 'huvudverktygsraden'.
+    
+
+	<figure id="fig_huvudverktygsrad">
+		<title>Huvudverktygsraden</title>
+
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1"
+				fileref="bilder/huvudverktygsrad.jpeg"
+				format="JPEG" />
+			</imageobject>
+			<imageobject>
+				<imagedata scalefit="1"
+				fileref="bilder/huvudverktygsrad.eps" format="EPS" />
+			</imageobject>
+		</mediaobject>
+	</figure>
+    
+    </para>
+
+    <sect1><title>Markeringsvertyg</title>
+
+    <para>Det är svårt att avgöra vilket vertyg som är viktigast i ett
+    bildbehandlingsprogram, för att inte säga omöjligt. Det är däremot lättare
+    att säga vilka verktyg som används oftast, och det måste vara
+    markeringsverktygen. Att veta hur dessa verktyg uppför sig i olika
+    situationer kan drastiskt förenkla livet för den som är intresserad av ens
+    den minsta gnutta bildmanipulation. Markeringsverktyg kommer i olika
+    skepnader och passar sig för olika situationer. Det finns de 'vanliga'
+    kvadratiska och elliptiska markeringsverktygen för att markera, just det,
+    kvadratiska och elliptiska regioner, sedan finns även verktyg för
+    frihandsmarkering, markering via färgområden, kontinuerliga ytor och
+    former.</para>
+
+    <para>Eftersom rektangulär och elliptisk markering fungerar på samma sätt
+    kommer vi att baka in dessa bägge i denna sektion och bara visa
+    rektangulär. Börja med att välja rektangulär markering. Som defaultläge är
+    detta verktyg inställt i 'Ersätt aktuell markering' (Bild.
+    verktygsalternativ-kvadrat-markering.png)
+    
+	<figure id="fig_verktygsalternativ-kvadrat-markering">
+		<title>Namn på denna bild här</title>
+
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1"
+				fileref="bilder/verktygsalternativ-kvadrat-markering.jpeg" format="JPEG" />
+			</imageobject>
+			<imageobject>
+				<imagedata scalefit="1"
+				fileref="bilder/verktygsalternativ-kvadrat-markering.eps" format="EPS" />
+			</imageobject>
+		</mediaobject>
+	</figure>
+
+    
+    (knappen längst till vänster),
+    detta betyder att om du gör en markering (vänsterklicka och håll inne
+    knappen samtidigt som du rör musen) ersätter den gamla merkeringar med den
+    nya. Ibland vill man inte ersätta utan modifiera den markering man nyligen
+    gjort, i panelen 'Verktygsalternativ' finner du fyra knappar, dessa
+    modifierar uppförandet hos markeringsverktygen du valt. I detta fallet
+    rektangulär markering.</para>
+
+    <para>Om du väljer den andra från vänster(Bild.) hamnar du i läget 'Lägg
+    till aktuell markering', detta gör att alla efterföljande markeringar
+    sparas och allt du hädanefter gör påverkar samtliga markerade regioner.
+    Väljer du istället den andra från höger(Bild.) hamnar du i läget 'Ta bort
+    från aktuell markering', detta låter dig skära bort sektioner från den
+    markering du har. Knappen längst till höger ger dig 'Snitt med aktuell
+    markering', detta betyder att om den markering du redan har korsar den
+    markering du gör, sparas den region som överlappar bägge markeringarna.
+    Samma som sagts ovan om rektangulär markering gäller även för elliptisk
+    markering, och du kan givetvis blanda dessa olika verktyg hur du
+    vill.</para>
+
+    <para>Nästa markeringsverktyg är 'Frihandsmarkering'(Bild.) och detta
+    verktyg låter dig markera regioner utan att styra det till en viss form.
+    Ett svårt verktyg att använda men som kan ha sina
+    användningsområden.</para>
+
+    <para>Att 'Markera kontinuerliga ytor'(Bild.) kan verka förvillande likt
+    'Markera regioner via färg'(Bild.), detta p.g.a att verktygert väljer
+    ytorna efter färg. Man skulle kunna döpa verktyget till 'Markera
+    kontinuerliga via dess färg'. Välj verktyget och klicka någonstans på det
+    område du vill markera och låt programmet sköta resten. Nu väljer
+    programmet att bara markera det område med den färg du pekat på som hänger
+    ihop, har du samma färg i något annat område i bilden kommer detta inte
+    att markeras, såvida inte det hänger ihop. Att 'Markera regioner via färg'
+    däremot markerar alla områden i bilden som innehåller den färg du pekar
+    på. Vad gäller bägge dessa verktyg är att man kan välja hur pass känslig
+    man vill vara. Detta gör man via 'tröskelvärde', ju högre tröskelvärde man
+    anger ju mer förlåtande blir programmet mot avvikelser från grundfärgen.
+    Det lägsta värdet tolererar inga avvikelser överhuvudtaget.</para>
+
+    <para>'Markera former i bilden' förstår jag själv inte mig på, kommer
+    senare...</para>
+    </sect1>
+  </chapter>
+
+
+
+
+
+
+
+
+
+
+  <chapter>
+    <title>Att arbeta i lager</title>
+
+    <para>Om man ska göra bildbehandling som går utöver enbart storleksändring
+    och enstaka filterbehandling inser man snart att arbeta direkt på
+    'huvudbilden' är ett ont som måste bekämpas. Det blir lätt rörigt och
+    ibland vill man komma åt det man målade över i ett senare skede. Därför
+    uppfanns metoden att arbeta i lager. Ett lager är i princip en bild som
+    ligger ovan för en bild, oftast är den övre bilden genomskinlig med bara
+    små 'överlägg' som tillför något till bilden under. Genom att arbeta med
+    lager får man flera fördelar, man kan lätt ta bort en ändring som inte
+    blev bra, man skadar eller förstör inte originalbilden och man kan
+    applicera olika filtereffekter på en del utan att påverka hela bilden, för
+    att nämna några. Det är inte alls svårt att arbeta i lager och med bara
+    lite övning så kommer det att bli ett välkommet verktyg.</para>
+
+    <para>
+	<figure id="fig_lager-1">
+		<title>Exempel med lager</title>
+
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1"
+				fileref="bilder/lager-exempel-1.jpeg"
+				format="JPEG" />
+			</imageobject>
+			<imageobject>
+				<imagedata scalefit="1" fileref="bilder/lager-exempel-1.eps" format="EPS" />
+			</imageobject>
+		</mediaobject>
+	</figure>
+	
+	För att demonstrera lagerverktyget stegar vi igenom en
+    exempelbild, börja med att skapa en ny bild med storleken runt 500x500
+    pixlar. I den högra panelen ser du då något som ser ut som på Bild 1.
+    Texten Bakgrund är namnet på lagret och i detta fallet avser den
+    'originalbilden', alla bilder du öppnar kommer att ha lagernamnet
+    bakgrund. Detta kan man givetvis ändra om man känner för det, bara
+    dubbelklicka på namnet, eller högerklicka och välj 'Redigera
+    lagerattribut', så får du möjlighet att ändra det till något mer
+    passande.</para>
+
+    <para>Nere i vänstra hörnet (Bild 2. lager-exempel-2.png) hittar du en
+    knapp som säger 'Nytt lager', klickar du på den får du fram en
+    dialogruta(Bild 3)(Bild. lager-exempel-3.png) som låter dig göra lite
+    förinställningar på lagret vi ska skapa. 
+    
+	<figure id="fig_lager-2">
+		<title>Exempel med lager</title>
+
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1"
+				fileref="bilder/lager-exempel-2.jpeg"
+				format="JPEG" />
+			</imageobject>
+			<imageobject>
+				<imagedata scalefit="1"
+				fileref="bilder/lager-exempel-2.eps" format="EPS" />
+			</imageobject>
+		</mediaobject>
+	</figure>
+	<figure id="fig_lager-3">
+		<title>Exempel med lager</title>
+
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1"
+				fileref="bilder/lager-exempel-3.jpeg"
+				format="JPEG" />
+			</imageobject>
+			<imageobject>
+				<imagedata scalefit="1"
+				fileref="bilder/lager-exempel-3.eps" format="EPS" />
+			</imageobject>
+		</mediaobject>
+	</figure>
+    
+
+    
+    Som du ser är storleken
+    förinställd på samma värden som originalbilden samt att alternativet
+    'Transparens' är markerat. Detta kommer att skapa ett lager som täcker
+    hela bilden och som är helt genomskinligt. Klicka på 'OK' för att godkänna
+    inställningarna och du borde nu se något i stil med det som finns med på
+    Bild 4(Bild. lager-exempel-4.png). 
+    
+	<figure id="fig_lager-4">
+		<title>Exempel med lager</title>
+
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1"
+				fileref="bilder/lager-exempel-4.jpeg"
+				format="JPEG" />
+			</imageobject>
+			<imageobject>
+				<imagedata scalefit="1" fileref="bilder/lager-exempel-4.eps" format="EPS" />
+			</imageobject>
+		</mediaobject>
+	</figure>
+    
+    
+    Notera att ingen förändring är gjord på
+    själva bilden. Du kan nu växla mellan de olika lagerna genom att klicka på
+    dem i 'Lager' dialogen, men för tillfället vill vi ha det nya lagret
+    markerat.</para>
+
+    <para>Välj nu det rektangulära markeringsverktyget och gör en markering i
+    bilden och fyll den med svart färg. Notera att den svarta rektangeln dyker
+    upp i 'Lager' dialogen på det aktuella lagret. Om du nu klckar på
+    'Ögat'-symbolen(Bild 5)(Bild. lager-exempel-5.png) på det aktuella lagret
+    ser du att din nyskapade svarta fyrkant försvann från ursprungsbilden och
+    att denna är helt oförändrad, klickar du på ögatsymbolen(som också
+    försvann) igen så kommer den tillbaka. 
+    
+	<figure id="fig_lager-5">
+		<title>Exempel med lager</title>
+
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1"
+				fileref="bilder/lager-exempel-5.jpeg"
+				format="JPEG" />
+			</imageobject>
+			<imageobject>
+				<imagedata scalefit="1" fileref="bilder/lager-exempel-5.eps" format="EPS" />
+			</imageobject>
+		</mediaobject>
+	</figure>
+    
+
+    
+    Du kan skapa hur många lager du vill i
+    en bild, det finns inga egentliga begränsningar. Värt att tänka på dock är
+    att varje lager tar upp en del av arbetsminnet, och diskutrymme vid
+    sparande. Ju större bild och ju fler lager desto mer minne tar den upp.
+    Vid bearbetning av bilder med stora storlekar (över ung. 1000x1000px) kan
+    det därför vara värt att storleksändra bilden(Se sektionen om
+    storleksändring) för att kunna arbeta med dem någorlunda smidigt.</para>
+
+	<sect1><title>Lagermasker</title>	
+	<para>Lagermasker är verktyg som tillåter oss att göra modifieringar på lager
+	utan att påverka lagret själv, detta är bra därför att vi vill kanske inte spara 
+	ändringarna eller kanske vi vill kopiera effekterna till andra lager. Lagermasker 
+	låter oss göra detta.</para>
+
+	<para>För att illustrera masker tar vi och gör en exempelbild. Skapa en ny bild
+	på ungefär 500x500 pixlar med vit bakgrund, skapa ett nytt lager och gör en 
+	svart kvadrat som fyller ut nästan hela bilden. Högerklicka sedan på ditt nya lager
+	i lagerväljaren och välj alternativet "Lägg till lagermask..."(Bild 6)(Bild. lager-exempel-6.png), 
+<!--
+	<figure id="fig_lager-6">
+		<title>Exempel med lager</title>
+
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1"
+				fileref="bilder/lager-exempel-6.jpeg"
+				format="JPEG" />
+			</imageobject>
+			<imageobject>
+				<imagedata scalefit="1"
+				fileref="bilder/lager-exempel-6.eps" format="EPS" />
+			</imageobject>
+		</mediaobject>
+	</figure>
+-->
+
+	
+	detta ger oss en dialogruta (Bild 7)(Bild. lager-exempel-7.png). 
+	
+<!--
+	<figure id="fig_lager-7">
+		<title>Exempel med lager</title>
+
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1"
+				fileref="bilder/lager-exempel-7.jpeg"
+				format="JPEG" />
+			</imageobject>
+			<imageobject>
+				<imagedata scalefit="1" fileref="bilder/lager-exempel-7.eps" format="EPS" />
+			</imageobject>
+		</mediaobject>
+	</figure>
+-->    
+    
+	
+	
+	
+	Här kan vi välja olika typer av 
+	lagermasker, alla ger oss olika möjligheter att påverka vårt lager och alla har de sina egna
+	fördelar. De som du antagligen kommer att använda mest är vit(Full opacitet) och 
+	svart(Full transparens) lagermask. Markera 'Vit' lagermask och klicka på OK, notera
+	att ingen ändring gjordes på lagret utan det enda som dök upp var en extra ruta bredvid
+	lagerrutan i lagerväljaren(Bild 8)(Bild. lager-exempel-8.png) och att denna är vit. 
+	
+<!--
+	<figure id="fig_lager-8">
+		<title>Exempel med lager</title>
+
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1"
+				fileref="bilder/lager-exempel-8.jpeg"
+				format="JPEG" />
+			</imageobject>
+			<imageobject>
+				<imagedata scalefit="1" fileref="bilder/lager-exempel-8.eps" format="EPS" />
+			</imageobject>
+		</mediaobject>
+	</figure>
+-->    
+    
+	
+	
+	Hade
+	vi valt 'Svart' lagermask istället hade denna ruta varit svart och lagret vi applicerade masken
+	på hade försvunnit, blivit transparent. Nu undrar du säker vad nytta är med detta? Jo du, 
+	föreställ dig att du har två fina bilder som du vill 'smälta' samman i ett schysst kollage,
+	ungefär som vår vita bakgrund med svart fyrkant. Välj färgtoningsverktyget och ha svart som 
+	förgrundsfärg, välj sedan att dra färgtonen svart till transparent(Bild 9)(Bild lager-exempel-9.png).
+
+<!--
+	<figure id="fig_lager-9">
+		<title>Exempel med lager</title>
+
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1"
+				fileref="bilder/lager-exempel-9.jpeg"
+				format="JPEG" />
+			</imageobject>
+			<imageobject>
+				<imagedata scalefit="1" fileref="bilder/lager-exempel-9.eps" format="EPS" />
+			</imageobject>
+		</mediaobject>
+	</figure>
+-->    
+    
+
+
+	
+	Klicka på lagermasken, till höger om lagret i lagerväljaren för att välja den och dra sedan 
+	en färgtoning från övre vänstra hörnet till det nedre högra. Detta borde ge något i stil med vad 
+	vi får i Bild 10(Bild lager-exempel-10.png).
+	
+<!--
+	<figure id="fig_lager-10">
+		<title>Exempel med lager</title>
+
+		<mediaobject>
+			<imageobject>
+				<imagedata scalefit="1"
+				fileref="bilder/lager-exempel-10.jpeg"
+				format="JPEG" />
+			</imageobject>
+			<imageobject>
+				<imagedata scalefit="1"
+				fileref="bilder/lager-exempel-10.eps" format="EPS" />
+			</imageobject>
+		</mediaobject>
+	</figure>
+-->    
+	
+	
+	</para>
+	</sect1>
+  </chapter>
+</book>

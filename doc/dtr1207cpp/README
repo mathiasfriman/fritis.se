@@ -1,0 +1,34 @@
+Teckenkodning
+-------------
+Använd ISO-8859-15 när du spara. docbook2pdf är ett sgml-baserad verktyg som inte förstår UTF-8. Kolla inställningarn för den editor du anvönder. Kör kommandot "grep encoding *.xml" för att verifiera att det är rätt.
+
+
+Indentering
+-----------
+Använd inställningar så att det är "lätt" att se vad som ändrats mellan versioner. Det gör det också möjligt att "merga" mindre ändringar.
+För XML-minds editor gäller "Kodning=ISO-8859-15, Indentera, Indentering=0(!), och inget kryss för att lägga in "open lines".
+
+
+Skrivtips
+---------
+Denna guide kan användas som hjälp för att veta vilka taggar man skall använda: http://infohost.nmt.edu/tcc/help/pubs/docbook/writing.pdf
+
+
+Kostiga fel när du försöker skapa PDF med docbook2pdf
+-----------------------------------------------------
+Om du får en massa konstiga felmeddelanden av denna sort så beror det på att du inte
+har rätt att uppdatera en katalog. Ändra antinge rättigheterna eller kör kommandot "mktextfm ecrm0900" (i utskriften)
+som root.c
+
+kpathsea: Running mktextfm ecrm0900
+mktextfm: Running mf-nowin -progname=mf \mode:=ljfour; mag:=1; nonstopmode; input ecrm0900
+This is METAFONT, Version 2.71828 (Web2C 7.5.4)
+
+kpathsea: Running mktexmf ecrm0900
+mktemp: cannot create temp file mf.X30723: Permission denied
+/usr/bin/mktexmf: line 94: : No such file or directory
+chmod: felaktigt argument: ""
+mv: kan inte ta status på "": No such file or directory
+
+chrgp -R dingrupp /var/lib/texmf
+chmod -R g+w /var/lib/texmf

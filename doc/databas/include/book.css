@@ -1,0 +1,142 @@
+body {	
+	font-family: arial, verdana, helvetica, sans-serif;
+	font-size: 12px;
+	font-weight:	normal;
+	word-spacing:	normal;
+	letter-spacing:	normal;
+	text-transform:	none;
+	font-size-adjust:	.48;
+	background-color: white;
+}	
+		
+p, blockquote, ul, ol, dl, dd, li, dir, menu	{	
+	/* inherit from body */	
+}	
+	
+
+table, tbody, tr, td, th	{	
+	word-spacing:	normal;
+	letter-spacing:	normal;
+	text-transform:	none;
+	font-family: arial, verdana, helvetica, sans-serif;
+	font-size: 12px;
+	font-size-adjust:	.48;
+	margin-bottom: 0.5em;
+}	
+	
+
+b {
+	font-family: arial, verdana, helvetica, sans-serif;
+}
+
+
+td {
+	padding-bottom: 0.5em;
+/*	border-bottom: 1px solid #5090c0; */
+	padding-top: 0.5em;
+}
+
+th {
+	font-weight: bold;
+	width: 180px;
+	text-align: left;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+h2, h3, h4, h5, h6 {
+	color: #5090c0;
+	background-color: transparent;
+	font-weight: bold;
+	clear: left;
+	font-family: Helvetica, Verdana, Arial, sans-serif; 
+	margin: 0;
+	padding-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+
+h1 {
+	font-size: 200%;
+	font-weight: bold;
+	color: #5090c0;;
+	background-color: transparent;
+	clear: left;
+	font-family: Helvetica, Verdana, Arial, sans-serif; 
+	margin: 0;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	text-align: center;
+}
+
+h2 { 
+	font-size: 130%; 
+	border-bottom: 1px solid #5090c0;
+}
+
+h3 { 
+	font-size: 100%; 
+}
+
+hr {
+	 color: #5090c0;
+	 background-color: #5090c0;
+	 border: 0;
+	 height: 1px;
+}
+
+.keywords {
+	font-family: arial, verdana, helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.noborder {
+	border-bottom: 0px;	
+}
+
+.copyright {
+	padding-top: 0.5em;
+	margin-top: 0.5em;
+	font-family: arial, verdana, helvetica, sans-serif;
+	font-size: 12px;
+	text-align: left;
+}
+
+h1.sect1 {
+	color: #5090c0;
+	background-color: transparent;
+	font-weight: bold;
+	clear: left;
+	font-family: Helvetica, Verdana, Arial, sans-serif; 
+	margin: 0;
+	padding-top: 0.5em;
+	margin-bottom: 0.5em;
+	font-size: 130%; 
+	border-bottom: 1px solid #5090c0;
+	text-align: left;
+}
+
+div.abstract {
+        font-weight: italic;
+        text-align:left;
+        padding:0.5em;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+        border:1px dashed #5090c0;
+        background-color: #eee	
+}
+
+h3.author {
+	font-weight: bold;
+	font-size: 130%;
+}
+
+.legalnotice {
+	font-weight: bold;
+}

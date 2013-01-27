@@ -1,0 +1,649 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Protokoll</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="Datorkommunikation"
+HREF="book1.html"><LINK
+REL="PREVIOUS"
+TITLE="Publika telenätet"
+HREF="chap_publtele.html"><LINK
+REL="NEXT"
+TITLE="Internet"
+HREF="chap_internet.html"><LINK
+REL="stylesheet"
+HREF="./fritis.css"
+TYPE="text/css"></HEAD
+><BODY
+CLASS="chapter"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Datorkommunikation</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="chap_publtele.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="chap_internet.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="chapter"
+><H1
+><A
+NAME="chap_protokoll"
+></A
+>Kapitel 10. Protokoll</H1
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Innehållsförteckning</B
+></DT
+><DT
+><A
+HREF="chap_protokoll.html#AEN722"
+>Inledning</A
+></DT
+><DT
+><A
+HREF="chap_protokoll.html#AEN729"
+>Olika protokoll till olika saker</A
+></DT
+><DT
+><A
+HREF="chap_protokoll.html#AEN735"
+>Vem styr över protokollen och hur tillkommer nya?</A
+></DT
+><DT
+><A
+HREF="chap_protokoll.html#sect_osimodellen"
+>OSI-modellen</A
+></DT
+><DT
+><A
+HREF="chap_protokoll.html#AEN793"
+>Sammanfattning</A
+></DT
+></DL
+></DIV
+><BLOCKQUOTE
+CLASS="ABSTRACT"
+><DIV
+CLASS="abstract"
+><P
+></P
+><A
+NAME="AEN720"
+></A
+><P
+>&#13;			Protokoll är en uppsättning regler som de olika systemen måste
+			känna till för att kunna kommunicera med varandra. Man kan säga
+			att ett protokoll är det språk på vilket kommunikationen sker.
+			Jag skriver detta på Svenska. Eftersom du känner till de regler
+			som gäller för Svenska så förstår du vad jag skriver. Vi
+			kommunicerar med Svenska som protokoll.
+		</P
+><P
+></P
+></DIV
+></BLOCKQUOTE
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN722"
+>Inledning</A
+></H1
+><P
+>&#13;			Minns ni telefonsamtalet (<A
+HREF="chap_dataoverforing.html#fig_telefonsamtal"
+>figur 2-1</A
+>)
+			som var ett exempel tidigt i denna bok? För att telefonsamtalet
+			skall fungera krävs att väldigt många olika regler följs. Man
+			kan dela kommunikationen i ett flertal olika lager. Om Kalle
+			talar i telefon med Kajsa så talar de ju enligt en uppsättning
+			olika regler. De måste vara överens om vilket språk de talar
+			och även inom vilket ämne de talar. Talar de om helt olika
+			saker finns det en stor risk att de missförstår varandra.
+		</P
+><P
+>&#13;			Om man studerar samtalet i detalj så ser man att Kalle
+			egentligen inte talar med Kajsa. För honom är det som om han
+			gör det men egentligen så talar han med sin telefon. Telefonen
+			i sin tur tror att den "talar" med Kajsas telefon men den talar
+			egentligen med en telefonväxel och så vidare. Varje nivå i vårt
+			exempel tror att de talar med en motpart på samma nivå medan de
+			egentligen talar med en nivå upp eller ner på sin sida av
+			figuren. Överallt i alla pilar i <A
+HREF="chap_dataoverforing.html#fig_telefonsamtal"
+>figur 2-1</A
+> finns det regler för hur det
+			skall gå till för att allt skall fungera. Märk också att de
+			tvärgående pilarna fungerar precis lika även om de
+			underliggande pilarna ändras. Till exempel så behöver inte
+			Kalle och Kajsa tala på ett annat sätt om samtalet går via
+			satellit istället för kopparkabel bara de lager det berör gör
+			sitt.
+		</P
+><P
+>&#13;			Kort sagt så kan man säga att om man skall kommunicera på ett
+			eller annat sätt så måste de som kommunicerar göra det efter
+			vissa givna regler. Ett datornätverk skulle inte fungera om
+			inte alla enheter höll sig till en uppsättning regler. Hur
+			skulle alla 1:or och 0:or på Internet kunna komma rätt om alla
+			datorer gjorde som de ville?
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN729"
+>Olika protokoll till olika saker</A
+></H1
+><P
+>&#13;			Nu är det inte så att det bara finns ett protokoll. Det finns
+			inte heller bara ett protokoll per nätverk utan det finns
+			massor av protokoll, i alla delar av kommunikationen. Tänk på
+			telefonsamtalet igen. Kalle och Kajsa talar ett språk med
+			varandra, det är ett protokoll. Den som ringde upp slog ett
+			nummer med sin telefon, detta nummer tolkades av en
+			telefonväxel enligt ett visst protokoll, osv. På samma sätt är
+			det ett virrvarr av protokoll i ett datornätverk och även
+			mellan datorer och tillbehör, som till exempel skrivare.
+		</P
+><P
+>&#13;			Protokoll finns mellan alla parter som utbyte av data sker.
+			Detta gäller både horisontellt och vertikalt i vår
+			telefonmodell (<A
+HREF="chap_dataoverforing.html#fig_telefonsamtal"
+>figur 2-1</A
+>). Vi har ju
+			tidigare tittat på till exempel hur data kan skickas över en
+			seriell förbindelse som är ett exempel på ett protokoll.
+		</P
+><P
+>&#13;			Följer alla sina protokoll så kommer det att fungera. För att
+			alla skall kunna följa samma protokoll så måste ju dessa
+			protokoll finnas tillgängliga för alla som vill vara med och
+			prata. Dessutom måste det ju finnas någon som ser till att
+			protokollen hålls uppdaterade och att de är korrekta.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN735"
+>Vem styr över protokollen och hur tillkommer nya?</A
+></H1
+><P
+>&#13;			Det finns flera företag och organisationer som hanterar olika
+			standarder. De flesta välanvända protokoll finns dokumenterade
+			i någon typ av standard. När det gäller Internet så har flera
+			standarder kommit till på ett lite annorlunda sätt. Internet är
+			ju ett öppet nät som inte någon kontrollerar, därför har
+			standarder under Internets uppväxt kommit till på i den andan.
+			På Internet finns en typ av dokument som heter
+			<SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Request For Comments, RFC</I
+></SPAN
+>. RFC-Dokument
+			fungerar så att någon publicerar ett RFC som beskriver något
+			protokoll eller annat som kan beröra flera. Om inte någon
+			protesterat inom en vis tid antas att RFC:n kan fungera som
+			standard. I dag är som regel ett RFC-dokument redan klart när det
+			publiceras. Vi kommer att titta mer på Internet i <A
+HREF="chap_internet.html"
+>kapitel 11</A
+>, det finns också en tabell över
+			RFC:er som berör det vi talar om i denna bok i <A
+HREF="rfc.html"
+>appendix J</A
+>.
+		</P
+><P
+>&#13;			Det finns naturligtvis även protokoll och standarder som
+			kontrolleras av företag och organisationer på traditionellt
+			vis.  Exempel på organisationer som hanterar standarder är i
+			Sverige till exempel <SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Post och Telestyrelsen,
+			PTS</I
+></SPAN
+> som kontrollerar bland annat radio och
+			teletrafiken i Sverige och <SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Standardiseringen i
+			Sverige, SIS</I
+></SPAN
+> som är en del av <SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>ISO,
+			International Organization for Standardization</I
+></SPAN
+> som
+			är en organisation som lyder under FN och har medlemmar från
+			147<A
+NAME="AEN745"
+HREF="#FTN.AEN745"
+><SPAN
+CLASS="footnote"
+>[1]</SPAN
+></A
+>
+			länder. Ett annat organ som kan vara bra att känna till är
+			<SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>IEEE</I
+></SPAN
+> som är ett Amerikansk samling av
+			ingenjörer som tar fram standarder för bland annat lokala
+			nätverk.
+		</P
+><P
+>&#13;			Standarder som tas fram av oberoende organisationer kallas för
+			<SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>formella standarder</I
+></SPAN
+>. I de oberoende
+			organisationerna sitter ofta flera av de företag som berörs av
+			starndarderna men eftersom de alla har samma tillgång till
+			standarderna så kallas de ändå oberoende. Ganska många
+			standarder tas fram på så sätt att ett företag utvecklar en
+			produkt som skall fungera på ett viss sätt. Blir denna populär
+			så kommer konkurrenterna att anamma samma format för att kunna
+			utbyta information med denna produkt. Till slut har man en
+			"standard" som alla följer men som ett enda företag (det som
+			inledningsvis tog fram det) kontrollerar och utvecklar. Dessa
+			standarder kallas för <SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>de-factostandarder</I
+></SPAN
+>
+			eller industristandarder och skall inte förväxlas med formella
+			standarder eftersom företagen inte konkurrerar på samma villkor
+			kring en industristandard vilket de kan kring en formell
+			standard.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="sect_osimodellen"
+>OSI-modellen</A
+></H1
+><P
+>&#13;			I de fall där man skall implementera datorkommunikation så
+			stöter man oftast på problem som är väldigt likartade. Oftast
+			så kan man specificera problemet i en modell som inte är helt
+			olik den i vårt telefonsamtal (<A
+HREF="chap_dataoverforing.html#fig_telefonsamtal"
+>figur 2-1</A
+>).  Likheten är att man kan dela
+			upp kommunikationen i olika lager med samma lager på både
+			sändar- och mottagarsidan. Precis som i telefonsamtalet
+			upplever varje lager som om det kommunicerar med motsvarande
+			lager på andra sidan när det i själva verket egentligen bara
+			talar med det underliggande och överliggande lagret.
+		</P
+><P
+>&#13;			På under slutet av 1970- och början på 1980-talet kom den
+			internationella standardiseringsorganisationen, ISO på en
+			modell för att på ett standardiserat sätt beskriva hur
+			datorkommunikation går till.  Anledningen till detta är att
+			alla som jobbar med datorkommunikation skall ha en gemensam
+			modell att jobba kring. Modellen som ISO togs fram kallas för
+			<SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Open Systems Interconnect (OSI)</I
+></SPAN
+>.
+		</P
+><P
+>&#13;			OSI-modellen har sju lager. Den nedersta lagret är närmast
+			hårdvaran och det översta närmast användaren. Man numrerar
+			lagren från 1 till 7 och börjar nerifrån. Så här ser lagren ut.
+
+			<P
+CLASS="literallayout"
+>7.&nbsp;Applikation&nbsp;(Application)<br>
+				6.&nbsp;Presentation&nbsp;(Presentation)<br>
+				5.&nbsp;Session&nbsp;(Session)<br>
+				4.&nbsp;Transport&nbsp;(Transport)<br>
+				3.&nbsp;Nätverk&nbsp;(Network)<br>
+				2.&nbsp;Datalänk&nbsp;(Datalink)<br>
+				1.&nbsp;Fysiska&nbsp;(Physical)<br>
+			</P
+>
+
+			För att komma ihåg de olika lagren är det smidigt att lära sig
+			en lite ramsa. Den ramsa jag lärde mig en gång i tiden var
+			<SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Please Do Not Teach Such Petty Acronyms</I
+></SPAN
+>
+			men du kan hitta på en egen ramsa eller leta efter en på
+			Internet, det finns massor.
+		</P
+><P
+>&#13;			Vi skall nu studera OSI-modellen lite mer i detalj. För att det
+			skall gå så lätt som möjligt så börjar vi med en liten figur. 
+
+			<DIV
+CLASS="figure"
+><A
+NAME="fig_osi-modell"
+></A
+><P
+><B
+>Figur 10-1. OSI-modellen</B
+></P
+><DIV
+CLASS="mediaobject"
+><P
+><IMG
+SRC="bilder/osi.jpeg"></P
+></DIV
+></DIV
+>
+
+
+			I figuren (<A
+HREF="chap_protokoll.html#fig_osi-modell"
+>figur 10-1</A
+>) ser vi
+			OSI-modellens sju lager. Då ett meddelande skall gå från den
+			ena sidan till den andra börjar meddelandet högst upp på den
+			ena sidan. All data förbereds för att skickas till samma nivå
+			på den andra sidan och skickas sedan till lagret under. Detta
+			lager lägger på den information som skall till motsvarande
+			lager på andra sidan och skickar nedåt. Så fortsätter
+			meddelandet på sändarsidan tills det nått det nedersta lagret.
+			Det nedersta lagret ser till att meddelandet hamnar längst ned
+			på mottagarsidan. Nu har meddelandet en resa framför sig upp på
+			mottagarsidan. Varje lager behandlar den information som var
+			avsedd för det lagret (från sin kompis på andra sidan) och tar
+			bort denna information innan meddelandet skickas uppåt. Så
+			fortgår det tills meddelandet nått toppen på mottagarsidan och
+			ser ut som det gjorde innan det började sin resa.
+		</P
+><P
+>&#13;			Vi skall ni titta lite närmare på varje lager:
+		</P
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN772"
+>Applikationslagret</A
+></H2
+><P
+>&#13;				Detta är lagret närmast programvarorna som användaren ser. Det
+				är med detta lager som program som använder nätverket jobbar.
+				Exempel på protokoll från detta lager är FTP, HTTP, och olika
+				protokoll för att dela filer.
+			</P
+></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN775"
+>Presentationslagret</A
+></H2
+><P
+>&#13;				Används inte så ofta. I detta lager formateras data om utan att
+				förändras. Till exempel om man skall kryptera eller komprimera
+				data i överföringen så sker det i detta lager.
+			</P
+></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN778"
+>Sessionslagret</A
+></H2
+><P
+>&#13;				Detta lager används inte så ofta. Detta lager håller reda på hur
+				sessioner startas och avslutas. En session kan till exempel vara
+				att ett program har en koppling till en terminal eller databas.
+			</P
+></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN781"
+>Transportlagret</A
+></H2
+><P
+>&#13;				I detta lager delas data i flera mindre paket. Det gör att
+				nätskiktet lättare kan arbeta. På mottagarsidan ansvarar detta
+				lager för att sätta ihop paketen igen i rätt ordning så att
+				ursprungsstrukturen återfås. I detta skikt hittar vi TCP som
+				används flitigt på Internet och på LAN.
+			</P
+></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN784"
+>Nätverkslagret</A
+></H2
+><P
+>&#13;				Detta lager ansvarar för vägval och och vidarebefordring av
+				paketen i datanätet. Här jobbar till exempel routrar. Det finns
+				massor av protokoll i detta skikt och det viktigaste i dag
+				borde vara IP som används på Internet och i de flesta LAN.
+			</P
+></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN787"
+>Datalänklagret</A
+></H2
+><P
+>&#13;				Här hittar vi de accessmetoder vi lärt oss. Till exempel
+				CSMA/CD och Token Passing. Utrustning som jobbar här är till
+				exempel bryggor.
+			</P
+></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN790"
+>Fysiska lagret</A
+></H2
+><P
+>&#13;				Det fysiska lagret hanterar det fysiska. Det vill säga det som
+				man kan ta på. Här hittar vi kablar, kontakter, spänningar och
+				strömmar. Exempel på utrustning här är STP, UTP, Koax och RJ45.
+				Vanliga enheter är Volt, Ampere och Herz.
+			</P
+></DIV
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN793"
+>Sammanfattning</A
+></H1
+><P
+>&#13;		</P
+></DIV
+></DIV
+><H3
+CLASS="FOOTNOTES"
+>Noter</H3
+><TABLE
+BORDER="0"
+CLASS="FOOTNOTES"
+WIDTH="100%"
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="5%"
+><A
+NAME="FTN.AEN745"
+HREF="chap_protokoll.html#AEN745"
+><SPAN
+CLASS="footnote"
+>[1]</SPAN
+></A
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="95%"
+><P
+>http://www.iso.ch/iso/en/aboutiso/introduction/</P
+></TD
+></TR
+></TABLE
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="chap_publtele.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Hem</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="chap_internet.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Publika telenätet</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Internet</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

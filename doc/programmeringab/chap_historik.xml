@@ -1,0 +1,94 @@
+<chapter id="chap_historik">
+	<title>Kort historik</title>
+	<sect1>
+		<title>Före 1900</title>
+
+		<para>
+			Man började faktiskt att utveckla den metodiken som används i
+			dagens datorer redan på 1800-talet. Den första kalkylatorn som
+			räknade digitalt uppfann och byggde engelsmannen Charles Babbage
+			1832!  Den opererade på sexsiffriga nummer och kunde lösa
+			andragradspolynom med sex siffrors noggrannhet. Efter denna maskin
+			började Babbage på en ännu större maskin, the analytical engine.
+			Denna maskin var en enorm uppfinning som introducerade saker som
+			vi fortfarande känner igen i dagens datorer. Maskinen hade in- och
+			utmatningsenhet, minne samt kalkylator och kontrollenhet
+			(processor). Dessvärre fick han den aldrig att fungera. Idag vet
+			vi varför, det var en enorm uppgift som inte gick att lösa med
+			dåtidens kunskaper och verktyg.  Babbage dog i 1871. Då var det
+			inte många som visste vem han var men nu nämns han i varenda kurs
+			som innefattar datorhistoria världen över.
+		</para>
+
+		<para>
+			Mycket mer saker händer under 1800-talet. Men vi hoppar direkt till
+			1900-talet.
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>1900-talet</title>
+
+		<para>
+			1936 skrev matematikern Alan Turing en rapport som bland annat
+			beskriver hur en digital dator skulle fungera. Rapporten beskriver
+			en matematisk maskin som kunde utföra logiska operationer och
+			läsa, skriva och radera binära symboler (1:or och 0:or) på en
+			oändlig remsa. Dessa kom sedan att kallas Turing-maskiner.
+		</para>
+
+		<para>
+			1941 blev den första fungerande turingmaskinen klar. Den skapades
+			av Konrad Zuse. Den var fritt programmerbar och helautomatisk.
+			Den hade en klockfrekvens på 5.33 Hz och vad byggd med reläer. Det
+			dröjde några år till innan datorerna blev elektroniska.
+		</para>
+
+		<para>
+			Den första moderna datorn blev en maskin som hette ENIAC. Den stod
+			klar 1946. ENIAC är en förkorting för Electronic Numerical Integrator
+			And Computer. Den var stor som ett hus (18000 elektronrör) och kunde
+			mindre än den enklaste kalkylator kan idag. En som var inblandad i
+			utvecklingen av ENIAC var John von Neumann. Von Neumann skapade en
+			datorarkitektur, von Neumann-arkitekturen, som datorer än idag byggs
+			efter. Det var den första arkitekturen där beräkningsenhet och minne
+			var separerade. Mellan dem fanns det en buss över vilken data och
+			instruktioner transporterades. Von Neumann anses av många vara den
+			moderna datorns fader. Den första Von Neuman-datorn, som han själv
+			var med och byggde, hette EDVAC.
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>Nutid</title>
+		<para>
+			Utvecklingen står på intet sätt still. Datorerna utvecklas ständigt.
+			Varje år blir datorerna snabbare och billigare. Det lär dock dröja
+			ett tag innan något så revolutionerande som Babbages kalkylator eller
+			ENIAC ser dagens ljus. Sen hur lång tid det tar, det återstår att se.
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>Mer läsning</title>
+		<para>
+			På adressen
+			<ulink url="http://www2.fht-esslingen.de/studentisches/Computer_Geschichte/fold1.html">
+				<citetitle>
+					http://www2.fht-esslingen.de/studentisches/Computer_Geschichte/fold1.html
+				</citetitle>
+			</ulink>
+			finns en bra tidslinje för datorns historia.
+		</para>
+	</sect1>
+</chapter>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+tab-width: 3
+End:
+vim600: syn=xml fen fdm=syntax si tw=75
+vim: noet sw=3 ts=3 syn=sgml
+vi: ts=3 sw=3
+-->

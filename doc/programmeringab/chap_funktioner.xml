@@ -1,0 +1,189 @@
+<chapter id="chap_funktioner">
+	<title>Funktioner</title>
+
+	<abstract>
+		<para>
+			Funktioner används för att dela upp programmet i mindre små delar.
+			Det gör att programmeraren kan koncentrera sig på en del i taget
+			och löper mindre risk att göra fel. Man använder även funktioner
+			till kod som kan återfinnas på flera ställen för att minska
+			duplikation av kod.
+		</para>
+	</abstract>
+
+	<sect1>
+		<title>Vad är en funktion?</title>
+
+		<para>
+			En funktion är ett antal instruktioner som fristående utför en sak.
+			Denna snutt kan sedan köras om och om i samma program eller delas
+			med andra program.
+			Ett exempel:
+			<example>
+				<title>Funktioner</title>
+				<programlisting>
+<![CDATA[
+<?php
+/*
+ * print_html_header_start
+ *
+ * Skriver ut en html-header
+ */
+function print_html_header_start () {
+   echo "<html><head></head><body>";
+}
+
+/*
+ * print_html_header_stop
+ *
+ * Skriver ut slut-html-taggar
+ */
+function print_html_header_stop () {
+   echo "</body></html>";
+}
+
+
+// Här börjar programmet
+print_html_header_start();
+
+// Andra utskrifter här.
+print_html_header_stop();
+?>
+]]>
+				</programlisting>
+			</example>
+
+			I exemplet ovan deklareras två funktioner som skriver ut en
+			html-header och en html-footer. Dessa funktioner anropas längre
+			ned i programmet.
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>När skall man använda funktioner?</title>
+
+		<para>
+			Man skall använda funktioner så snart man kan. Själva programmet
+			brukar ofta vara bara anrop till olika funktioner. Följande kan vara
+			bra grundregler.
+		</para>
+
+		<para>
+			Använd funktioner till:
+
+			<itemizedlist>
+				<listitem>
+					<para>
+						Alla uppgifter som kan avgränsas
+					</para>
+				</listitem>
+				<listitem>
+					<para>
+						Alla uppgifter som är repititiva
+					</para>
+				</listitem>
+				<listitem>
+					<para>
+						All kod som du kan tänkas återanvända i andra program
+					</para>
+				</listitem>
+			</itemizedlist>
+
+			Försök att tänka ett program i funktioner.
+		</para>
+
+		<para>
+			Vi funderar på programmet password.php och försöker identifiera
+			olika funktioner.
+		</para>
+
+		<para>
+			En funktion är att skriva ut html-formuläret. Det är ju en avgränsad
+			uppgift. En annan solklar funktion är autentiseringen.
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>Argument till funktioner</title>
+
+		<para>
+			En funktion kan ta noll eller flera argument. Ett argument är ett
+			värde som man skickar till funktionen. Till exempel om man vill vill
+			göra en funktion som summerar två tal så är det bra om den kan ta de
+			två talen som argument. Se följande exempel:
+
+			<example>
+				<title>Argument till funktioner</title>
+				<programlisting>
+<![CDATA[
+<?php
+function summa($tal1, $tal2) {
+        return ($tal1 + $tal2);
+}
+
+echo summa(5,6);
+?>
+]]>
+				</programlisting>
+			</example>
+
+			Observera att ordningen på argumenten spelar roll. I exemplet kommer
+			tal1 att bli 5 och tal2 6. Variablerna $tal1 och $tal2 existerar
+			bara inom funktionen och inte i resten av programmet. Vilken som får
+			vilket värde bestäms av ordningen i funktionsanropet.
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>Returvärden</title>
+
+		<para>
+			I funderingen ovan vore det ju bra om autentiseringen kunde
+			returnera ett värde (ett boolskt värde till exempel). Det kan se
+			ut så här:
+
+			<example>
+				<title>Retur från funktioner</title>
+				<programlisting>
+<![CDATA[
+<?php
+function is_logged_in ($name, $pass) {
+        if ($name == "kalle") && ($pass == "ankeborg")) {
+                return true;
+        } else {
+                return false;
+        }
+}
+?>
+]]>
+				</programlisting>
+			</example>
+
+			Denna funktion är ganska kompakt och gör sig fötjänt av en
+			förklaring.  Den tar två argument, $namn och $pass. Funktionen
+			returnerar värdet av en boolsk operation.
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>Mer läsning</title>
+
+		<para>
+			Aktuellt avsnitt i manualen.
+			<ulink url="http://www.php.net/manual/en/functions.php">
+				<citetitle>http://www.php.net/manual/en/functions.php</citetitle>
+			</ulink>
+		</para>
+	</sect1>
+</chapter>
+
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+tab-width: 3
+End:
+vim600: syn=xml fen fdm=syntax si
+vim: noet sw=3 ts=3 syn=sgml
+vi: ts=3 sw=3
+-->

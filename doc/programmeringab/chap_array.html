@@ -1,0 +1,363 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Arrayer (vektorer)</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="Programmering i PHP"
+HREF="book1.html"><LINK
+REL="PREVIOUS"
+TITLE="Filer och filhantering"
+HREF="chap_filer.html"><LINK
+REL="NEXT"
+TITLE="Mer om funktioner"
+HREF="chap_funktioner2.html"><LINK
+REL="stylesheet"
+HREF="./book.css"
+TYPE="text/css"></HEAD
+><BODY
+CLASS="chapter"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Programmering i PHP</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="chap_filer.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="chap_funktioner2.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="chapter"
+><H1
+><A
+NAME="chap_array"
+></A
+>Kapitel 16. Arrayer (vektorer)</H1
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Innehållsförteckning</B
+></DT
+><DT
+><A
+HREF="chap_array.html#AEN821"
+>Arrayer</A
+></DT
+><DT
+><A
+HREF="chap_array.html#AEN828"
+>Array-funktioner</A
+></DT
+><DT
+><A
+HREF="chap_array.html#AEN848"
+>Mer l�sning</A
+></DT
+></DL
+></DIV
+><BLOCKQUOTE
+CLASS="ABSTRACT"
+><DIV
+CLASS="abstract"
+><P
+></P
+><A
+NAME="AEN819"
+></A
+><P
+>&#13;			Vi har tidigare tittat p� variabler. Nu skall vi titta p� en speciell
+			typ av variabler n�mligen arrayer. En array �r en variabel som kan
+			inneh�lla flera olika v�rden. En array kallas iband �ven f�r en
+			vektor.
+		</P
+><P
+></P
+></DIV
+></BLOCKQUOTE
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN821"
+>Arrayer</A
+></H1
+><P
+>&#13;			Ibland vill man spara flera v�rden i en variabel. Till exempel om
+			de m�ste h�ra ihop och inte f�r komma is�r eller om man vill
+			returnera flera v�rlden fr�n en funktion. Det �r precis var arrayer
+			�r, en typ av variabel som kan h�lla flera v�rden.
+		</P
+><P
+>&#13;			Vi kastar oss direkt in p� ett exempel:
+
+			<DIV
+CLASS="example"
+><A
+NAME="AEN825"
+></A
+><P
+><B
+>Exempel 16-1. Arrayer</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+// Vi skapar en array som heter arr och inneh�ller tre v�rden.
+$arr[0] = 10;
+$arr[1] = 20;
+$arr[2] = 30;
+
+echo $arr[2]; // Skriver ut 30
+?&#62;
+
+				</PRE
+></DIV
+>
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN828"
+>Array-funktioner</A
+></H1
+><P
+>&#13;			En annan f�rdel med arrayer �r att det finns massor av funktioner
+			som verkar p� arrayer. Till exempel s� finns det funktioner f�r att
+			sortera, reversera eller blanda arrayer.
+		</P
+><P
+>&#13;			Vi skall titta p� ett par anv�ndbara funktioner:
+		</P
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN832"
+>Funktionen array_reverse</A
+></H2
+><P
+>&#13;					Den h�r funktionen tar en array som argument och returnerar
+					samma array fast i omv�nd ordning. Det vill s�ga det som var
+					sist i arrayen tidigare liger f�rst i den array som
+					array_reverse returnerar. Ett litet exempel:
+
+					<DIV
+CLASS="example"
+><A
+NAME="AEN835"
+></A
+><P
+><B
+>Exempel 16-2. Exempel med array_reverse()</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+$arr[0] = 1;
+$arr[1] = 2;
+$arr[2] = 3;
+
+$arr2 = array_reverse($arr);
+
+echo $arr2[0] ."\n"; // Skriver ut 3
+echo $arr2[1] ."\n"; // Skriver ut 2
+echo $arr2[2] ."\n"; // Skriver ut 1
+?&#62;
+
+						</PRE
+></DIV
+>
+				</P
+></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN838"
+>Funktionen sort</A
+></H2
+><P
+>&#13;					Funktionen sort tar en array som argument och sorterar den.
+					Observera att denna funktion inte returnerar n�got utan
+					sorterar den array den f�r som argument.
+
+					<DIV
+CLASS="example"
+><A
+NAME="AEN841"
+></A
+><P
+><B
+>Exempel 16-3. Exempel med sort()</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+$arr2[0] = "Kalle";
+$arr2[1] = "Fnatte";
+$arr2[2] = "Knatte";
+$arr2[3] = "Kajsa";
+$arr2[4] = "Joakim";
+$arr2[5] = "Alexander";
+$arr2[6] = "Tjatte";
+
+
+sort($arr2); // Observera att inget returneras, utan att arrayen blir sorterad.
+
+for ($i = 0; $i &#60;= 6; $i++) {
+        echo "$arr2[$i]&#60;br&#62;";
+}
+
+					</PRE
+></DIV
+>
+				</P
+></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN844"
+>Funktionen file</A
+></H2
+><P
+>&#13;					File �r en funktion som kanske b�ttre pasar bland
+					filfunktionerna (d�r finns den till exempel i PHP-manualen)
+					men jag har valt att l�gga den h�r eftersom den inbjuder till
+					att anv�nda andra array-funktioner.
+					
+				</P
+><P
+>&#13;					File tar ett argument som skall vara ett filnamn, den
+					returnerar en array med varje rad i filen i ett element.
+				</P
+></DIV
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN848"
+>Mer l�sning</A
+></H1
+><P
+>&#13;			http://www.php.net/manual/en/language.types.array.php
+			http://www.php.net/manual/en/ref.array.php
+		</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="chap_filer.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Hem</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="chap_funktioner2.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Filer och filhantering</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Mer om funktioner</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

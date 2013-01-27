@@ -1,0 +1,857 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Nätverkskomponenter</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="Datorkommunikation"
+HREF="book1.html"><LINK
+REL="PREVIOUS"
+TITLE="Datornätverk"
+HREF="chap_datornatverk.html"><LINK
+REL="NEXT"
+TITLE="Kablar och icke-kablar"
+HREF="chap_kablar.html"><LINK
+REL="stylesheet"
+HREF="./fritis.css"
+TYPE="text/css"></HEAD
+><BODY
+CLASS="chapter"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Datorkommunikation</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="chap_datornatverk.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="chap_kablar.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="chapter"
+><H1
+><A
+NAME="chap_natverkskomponenter"
+></A
+>Kapitel 5. Nätverkskomponenter</H1
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Innehållsförteckning</B
+></DT
+><DT
+><A
+HREF="chap_natverkskomponenter.html#AEN368"
+>Noder</A
+></DT
+><DT
+><A
+HREF="chap_natverkskomponenter.html#AEN373"
+>Datorer/Servrar</A
+></DT
+><DT
+><A
+HREF="chap_natverkskomponenter.html#AEN388"
+>Hubb<A
+NAME="AEN390"
+HREF="#FTN.AEN390"
+><SPAN
+CLASS="footnote"
+>[1]</SPAN
+></A
+></A
+></DT
+><DT
+><A
+HREF="chap_natverkskomponenter.html#AEN405"
+>Switch<A
+NAME="AEN407"
+HREF="#FTN.AEN407"
+><SPAN
+CLASS="footnote"
+>[2]</SPAN
+></A
+></A
+></DT
+><DT
+><A
+HREF="chap_natverkskomponenter.html#AEN426"
+>Repeater<A
+NAME="AEN428"
+HREF="#FTN.AEN428"
+><SPAN
+CLASS="footnote"
+>[3]</SPAN
+></A
+></A
+></DT
+><DT
+><A
+HREF="chap_natverkskomponenter.html#AEN432"
+>Brygga<A
+NAME="AEN434"
+HREF="#FTN.AEN434"
+><SPAN
+CLASS="footnote"
+>[4]</SPAN
+></A
+></A
+></DT
+><DT
+><A
+HREF="chap_natverkskomponenter.html#AEN438"
+>Brouter</A
+></DT
+><DT
+><A
+HREF="chap_natverkskomponenter.html#AEN441"
+>Router</A
+></DT
+><DT
+><A
+HREF="chap_natverkskomponenter.html#AEN446"
+>Gateway</A
+></DT
+><DT
+><A
+HREF="chap_natverkskomponenter.html#AEN449"
+>Brandvägg</A
+></DT
+><DT
+><A
+HREF="chap_natverkskomponenter.html#AEN457"
+>Sammanhängande exempel</A
+></DT
+><DT
+><A
+HREF="chap_natverkskomponenter.html#AEN470"
+>Sammanfattning</A
+></DT
+></DL
+></DIV
+><BLOCKQUOTE
+CLASS="ABSTRACT"
+><DIV
+CLASS="abstract"
+><P
+></P
+><A
+NAME="AEN366"
+></A
+><P
+>&#13;			För att kunna bygga de nätverk som beskrevs i det förra
+			kapitlet måste man ha något att bygga av. Nätverken byggs
+			naturligtvis upp av datorer, men även andra komponenter behövs
+			för att kunna, dels koppla ihop datorerna i nätverk och även
+			kunna koppla ihop olika nätverk med varandra.
+		</P
+><P
+></P
+></DIV
+></BLOCKQUOTE
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN368"
+>Noder</A
+></H1
+><P
+>&#13;			Det kan vara på sin plats att först beskriva termen
+			<SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>nod</I
+></SPAN
+>. En nod är en generell
+			adresserbar nätverkskomponent. Det kan vara en arbetsstation,
+			en router, en brandvägg eller något annat. Är den adresserbar i
+			nätverket så kallas den ofta för en nod.
+		</P
+><P
+>&#13;			Man kan säga att ett nätverk byggs upp av noder som i sin tur
+			är olika komponenter.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN373"
+>Datorer/Servrar</A
+></H1
+><P
+>&#13;			Datorer kan anses som de viktigaste komponenterna i ett
+			datornätverk. Utan dem blir det inte mycket till nätverk. Det
+			minsta nätverk man kan bygga är med hjälp av två datorer med
+			något typ av kommunikationskort och en kabel.
+		</P
+><P
+>&#13;			Den vanligaste typen av kommunikationskort eller gränssnitt man
+			använder på en dator är ett <SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>nätverkskort</I
+></SPAN
+>.
+			Den vanligaste typen av nätverkkort idag är ethernet-kort.
+			Dessa har oftast ett uttag för en kabel med ett kontaktdon som
+			kallas för RJ-45. RJ-45 ser ungefär som den koppling som finns
+			på en del telefoner. Den kontakt som sitter på telefonen heter
+			RJ-11 och har fyra ledningar medan RJ-45 har åtta. RJ-11 kallas
+			även för modulärkontakt. RJ står för Registered Jack.
+		</P
+><P
+>&#13;			Varje nätverkskort har en unik adress. Denna kallas för kortets
+			<SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>hårdvaruadress</I
+></SPAN
+> eller
+			<SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>MAC-adress</I
+></SPAN
+>. MAC står för <SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>Media
+			Access Control</I
+></SPAN
+> och är nödvändig för att kunna
+			identifiera de olika datorerna på nätverket. MAC-adresserna är
+			alltså unika på alla nätverkskort som säljs. Detta samordnas
+			centralt av en organisation som heter
+			<SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>IEEE</I
+></SPAN
+>.  IEEE (uttalas "i-triple-e") är en
+			förkortning för Institute for Electric and Electronic Engineers
+			och är en organisation av personer och företag inom
+			elektricitet, elektronik och datorer.
+		</P
+><P
+>&#13;			En dator kan ha flera olika roller i ett nätverk. Den kan vara
+			till exempel en arbetsstation vid vilken någon sitter och
+			jobbar.  Det kan också vara en <SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>server</I
+></SPAN
+>. En
+			server är en dator som förser nätverket med en eller flera
+			tjänster (Eng.  services). Egentligen är en server inte en
+			hårdvara utan själva programvaran som implementerar tjänsten
+			men det har blivit så att man även kallar själva datorn som kör
+			servern eller servrarna för en server. Det finns speciella
+			datorer som kallas servrar. Det som skiljer dessa från vanliga
+			datorer är att de brukar vara kraftigare byggda och ha mer
+			påkostade fläktar och diskar.  Funktionsmässigt är det ingen
+			större skillnad så länge det rör sig om samma datorarkitektur.
+		</P
+><P
+>&#13;			En dator kan också vara en <SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>terminal</I
+></SPAN
+>. En
+			terminal är brukar kallas för en "dum" terminal och är en dator
+			som inte själv har så mycket resurser utan är knuten till en
+			server vars tjänster terminalen är helt beroende av.
+			Terminalerna bestod tidigare av bara en skärm och ett
+			tangentbord som var kopplade direkt till en dator antingen via
+			en vanlig kabel eller via telefonnätet eller andra större
+			nätverk. De hade alltså ingen egen datorkapacitet. Idag är
+			detta inte så vanligt. Använder man terminalsystem idag så är
+			det oftast så att man kör ett terminalemulerningsprogram på sin
+			PC. 
+		</P
+><P
+>&#13;			Det har dock på senare tid blivit vanligt med tunna klienter.
+			Dessa fungerar ungefär som terminalerna gjorde men en tunn
+			klient har lite egna resurser men kör alla program direkt från
+			en server.  Det har flera fördelar. För det första så blir
+			dessa tunna klienter mycket billigare och har längre livslängd
+			än PC-datorer.  En andra fördel är att service och
+			uppgraderingar av programvaror lättare kan skötas centralt.
+			Alla klienter kör ju samma programvaror från servern så om
+			denna uppgraderas så har alla klienter uppgraderats på en gång.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN388"
+>Hubb<A
+NAME="AEN390"
+HREF="#FTN.AEN390"
+><SPAN
+CLASS="footnote"
+>[1]</SPAN
+></A
+></A
+></H1
+><P
+>&#13;			En hubb, från engelskans hub (= nav), är namnet på den centrala
+			knytpunkten, nätnavet, i ett stjärnnät. Det är också namnet på
+			en nätverkskomponent som används just i detta syfte. En hubb
+			fungerar som en grenkoppling. Alla signaler som kommer in på
+			ett uttag på hubben skickas ut på alla andra uttag på samma
+			gång. En nackdel med detta är att bara en ansluten nod i taget
+			kan sända. Sänder en så skickas det till alla andra på en gång
+			och hela nätet blir således upptaget. Det är väldigt vanligt
+			med kollisioner i ett nät där man har just en hubb som nätnav.
+			De flesta hubbar har en lysdiod som indikerar när det är en
+			kollision på nätet. Denna lampa kan man använda som en
+			indikator för att se hur många kollisioner det är på nätverket.
+			Många kollisioner gör att nätverket får minskad kapacitet och
+			upplevs som långsamt. Man kan då välja att segmentera nätverket
+			eller skaffa en switch (se nästa stycke).  Ett annat relaterat
+			problem är att eftersom all trafik kommer fram till alla
+			datorer kan en ond användare ta del av information som inte är
+			avsedd för henne vilket är en säkerhetsrisk.
+		</P
+><P
+>&#13;			I <A
+HREF="chap_natverkskomponenter.html#fig_hubb"
+>figur 5-1</A
+> visas kommunikation över en hubb.
+			När dator B sänder data över nätverket så når det inte bara
+			avsedd mottagare utan även alla andra anslutna till hubben.
+			Det gör att bara en kan sända i taget vilket gör att fler
+			kollisioner uppstår och att nätverket kan gå långsammare.
+
+			
+			<DIV
+CLASS="figure"
+><A
+NAME="fig_hubb"
+></A
+><P
+><B
+>Figur 5-1. Kommunikation över en hubb</B
+></P
+><DIV
+CLASS="mediaobject"
+><P
+><IMG
+SRC="bilder/hubb.jpeg"></P
+></DIV
+></DIV
+>
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN405"
+>Switch<A
+NAME="AEN407"
+HREF="#FTN.AEN407"
+><SPAN
+CLASS="footnote"
+>[2]</SPAN
+></A
+></A
+></H1
+><P
+>&#13;			En switch är också en komponent som används som nätnav i ett
+			stjärnnät. Till skillnad från hubben så håller switchen reda på
+			vilka datorer som sitter på vilket uttag och skickar bara
+			informationen till den dator som den är avsedd för. Det gör att
+			inte nätet fylls med trafik så fort någon av datorerna skickar
+			data. Alltså kan kommunikation ske mellan två par datorer
+			oberoende av varandra på samma gång på samma switch. Säkerheten
+			ökas också eftersom det blir svårare att komma åt information
+			som inte är avsedd för den aktuella datorn.
+		</P
+><P
+>&#13;			Studera och jämför bilderna <A
+HREF="chap_natverkskomponenter.html#fig_hubb"
+>figur 5-1</A
+> och
+			<A
+HREF="chap_natverkskomponenter.html#fig_switch"
+>figur 5-2</A
+>. I <A
+HREF="chap_natverkskomponenter.html#fig_switch"
+>figur 5-2</A
+>
+			visas kommunikation över en switch. När dator B sänder data
+			över nätverket till C så når dessa data bara dator C.  Eftersom
+			B och C får en egen kanal genom switchen kan de kommunicera
+			utan att resten av nätverket störs.  Samtidigt skulle A och D
+			kunna kommunicera på samma sätt.
+		</P
+><DIV
+CLASS="figure"
+><A
+NAME="fig_switch"
+></A
+><P
+><B
+>Figur 5-2. Kommunikation över en switch</B
+></P
+><DIV
+CLASS="mediaobject"
+><P
+><IMG
+SRC="bilder/switch.jpeg"></P
+></DIV
+></DIV
+><P
+>&#13;			I mer avancerade switchar kan man konfigurera exakt på vilket
+			sätt olika noder får tala med varandra. Man kan skapa så
+			kallade <SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>virtuella LAN</I
+></SPAN
+> (VLAN) på en switch.
+			Det går till så att man kopplar ihop portar i grupper så att
+			varje grupp fungerar som en egen switch. Det finns även flera
+			funktioner på dyrare switchar.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN426"
+>Repeater<A
+NAME="AEN428"
+HREF="#FTN.AEN428"
+><SPAN
+CLASS="footnote"
+>[3]</SPAN
+></A
+></A
+></H1
+><P
+>&#13;			En repeater kan jämföras med en förstärkare. En repeater har
+			ingångar och utgångar, den lyssnar på ingångarna och förstärker
+			signalerna och skickar dem på utgångarna. En repeater har ingen
+			intelligens alls utan förstärker bara det den hör och skickar
+			vidare. En repeater används vid kommunikation över större
+			avstånd och för att koppla ihop olika nätverkssegment i ett
+			nätverk.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN432"
+>Brygga<A
+NAME="AEN434"
+HREF="#FTN.AEN434"
+><SPAN
+CLASS="footnote"
+>[4]</SPAN
+></A
+></A
+></H1
+><P
+>&#13;			En brygga fungerar ungefär som en repeater så tillvida att den
+			är en ganska enkel apparat med två anslutningar. Där slutar
+			dock likheten. En brygga används för att koppla ihop olika
+			nätverk, eller segment av samma nätverk. Bryggan släpper bara
+			igenom den trafik som skall till nätet på andra sidan. På så
+			sätt minskas onödig trafik i de båda näten eller segmenten.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN438"
+>Brouter</A
+></H1
+><P
+>&#13;			Namnet brouter är en lek med ord. Det är en sammanslagning av
+			de engelska orden Bridge (brygga) och Router. Den fungerar som
+			en brygga men kan koppla ihop flera nätverk, eller
+			nätverkssegment, som en router (se nedan). Den är dock enklare
+			än en router och jobbar på samma nivå som en brygga.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN441"
+>Router</A
+></H1
+><P
+>&#13;			En router är en nätverkskomponent som kopplar samman olika
+			nätverk. Den kopplar inte samman näten så blint som en brygga
+			eller repeater utan en Router läser nätverkstrafiken och
+			bedömer vilken trafik som skall till vilket nät. En router kan
+			vara ansluten till flera nät. Att läsa nätverkstrafik och
+			skicka den vidare åt olika håll beroende på deras destination
+			kallas för att <SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>routa</I
+></SPAN
+> på klingande
+			svengelska. För att veta åt vilket håll inkommen nätverkstrafik
+			skall använder sig en router av en
+			<SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>routingtabell</I
+></SPAN
+> där det finns listat var
+			olika datorer och nätverk finns. Routingtabellen kan vara
+			statisk, det vill säga sparad på en disk i routern och ändras
+			inte, eller dynamisk. En dynamisk routingtabell uppdateras
+			automatiskt utifrån hur omgivningen ser ut.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN446"
+>Gateway</A
+></H1
+><P
+>&#13;			En gateway används för att koppla samman nätverk av olika typ.
+			Man kan se det som en konverterare. Namnet gateway används
+			ibland, felaktigt, på en maskin som som sitter mellan ett
+			lokalt nät och Internet även om samma nätverksprotokoll
+			används. I det fallet är router en riktigare benämning.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN449"
+>Brandvägg</A
+></H1
+><P
+>&#13;			En router mellan till exempel ett lokalt nätverk och Internet
+			kombineras ofta med en brandvägg (eng. Firewall). En brandvägg
+			är en speciell sorts router som bara routar vidare den trafik
+			som uppfyller vissa krav.  Trafik som inte uppfyller kraven
+			kastas bort vilket gör att mottagaren av den "förbjudna"
+			trafiken skyddas från den. 
+		</P
+><P
+>&#13;			Oftast har man en brandvägg mellan ett lokalt nätverk och
+			Internet men man kan även ha brandväggar på det interna nätet.
+			Ibland har man brandväggar på själva den datorn som skall
+			skyddas. Den fungerar på samma sätt som en vanlig brandvägg med
+			den enda skillnaden att den inte routar till och från ett helt
+			nätverk utan bara till och från den aktuella datorn.
+		</P
+><P
+>&#13;			Det som avgör om en viss trafik skall släppas igenom eller inte
+			kallas för <SPAN
+CLASS="emphasis"
+><I
+CLASS="emphasis"
+>brandväggsregler</I
+></SPAN
+> eller bara
+			regler om det inte råder några tvivel om vad man talar om.
+		</P
+><P
+>&#13;			Vi kommer att tala mer om brandväggar i <A
+HREF="chap_sakerhet.html"
+>kapitel 14</A
+>.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN457"
+>Sammanhängande exempel</A
+></H1
+><P
+>&#13;			I <A
+HREF="chap_natverkskomponenter.html#fig_natverk"
+>figur 5-3</A
+> visas en en ganska krystad bild
+			på ett nätverk där de flesta av komponenterna vi behandlat
+			finns med. Switchen hade lika gärna kunnat vara en hubb. I
+			exemplet finns det en kombinerad router och brandvägg vilket
+			inte alls är ovanligt.
+		</P
+><DIV
+CLASS="figure"
+><A
+NAME="fig_natverk"
+></A
+><P
+><B
+>Figur 5-3. Exempel på nätverk</B
+></P
+><DIV
+CLASS="mediaobject"
+><P
+><IMG
+SRC="bilder/natvarksexempel.jpeg"></P
+></DIV
+></DIV
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN470"
+>Sammanfattning</A
+></H1
+><P
+>&#13;			I detta kapitel har vi gått igenom en mängd
+			nätverkskomponenter. Du skall nu känna till vad dessa gör och
+			hur de fungerar. Till exempel switch, router och brandvägg.
+		</P
+></DIV
+></DIV
+><H3
+CLASS="FOOTNOTES"
+>Noter</H3
+><TABLE
+BORDER="0"
+CLASS="FOOTNOTES"
+WIDTH="100%"
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="5%"
+><A
+NAME="FTN.AEN390"
+HREF="chap_natverkskomponenter.html#AEN390"
+><SPAN
+CLASS="footnote"
+>[1]</SPAN
+></A
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="95%"
+><P
+>Se även brevet från Jan Johansson i
+	<A
+HREF="brev.html"
+>appendix K</A
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="5%"
+><A
+NAME="FTN.AEN407"
+HREF="chap_natverkskomponenter.html#AEN407"
+><SPAN
+CLASS="footnote"
+>[2]</SPAN
+></A
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="95%"
+><P
+>Se även brevet från Jan Johansson i
+	<A
+HREF="brev.html"
+>appendix K</A
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="5%"
+><A
+NAME="FTN.AEN428"
+HREF="chap_natverkskomponenter.html#AEN428"
+><SPAN
+CLASS="footnote"
+>[3]</SPAN
+></A
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="95%"
+><P
+>Se även brevet från Jan Johansson i
+	<A
+HREF="brev.html"
+>appendix K</A
+></P
+></TD
+></TR
+><TR
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="5%"
+><A
+NAME="FTN.AEN434"
+HREF="chap_natverkskomponenter.html#AEN434"
+><SPAN
+CLASS="footnote"
+>[4]</SPAN
+></A
+></TD
+><TD
+ALIGN="LEFT"
+VALIGN="TOP"
+WIDTH="95%"
+><P
+>Se även brevet från Jan Johansson i
+	<A
+HREF="brev.html"
+>appendix K</A
+></P
+></TD
+></TR
+></TABLE
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="chap_datornatverk.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Hem</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="chap_kablar.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Datornätverk</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Kablar och icke-kablar</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

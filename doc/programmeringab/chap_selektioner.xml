@@ -1,0 +1,181 @@
+<chapter id="chap_selektioner">
+	<title>Selektioner (Villkorssatser)</title>
+
+	<abstract>
+		<para>
+			I de allra flesta programmeringsspråk finns det selektionssatster.
+			Precis som namnet antyder handlar det om val. Programmet kan ta
+			olika vägar beroende på olika villkor. Vanliga selektionssatser
+			är if-satsen och if-else-satsen.
+		</para>
+	</abstract>
+
+	<sect1>
+		<title>If-satsen</title>
+		<para>
+			If-satser finns i de allra flesta språk och ser nästan likadan ut
+			i dem alla. If-satsen fungerar som så att om något är sant så gör
+			en sak, annars inte. Ett exempel är på sin plats.
+		</para>
+
+		<para>
+			Antag att jag vill att ett program skall tala om för mig om ett
+			tal är större än 100. Jag vill att programmet skall skriva ut det
+			tal jag anger och om det är större än 100 så skall det också
+			skrivas ut. Så här kan det se ut:
+			<example>
+				<title>Större än 100</title>
+				<programlisting>
+<![CDATA[
+<html>
+<head>
+   <title>Större än 100</title>
+</head>
+<body>
+   <?php
+      echo "Du angav tal: $tal";
+
+      if ($tal > 100) {
+         echo "<p><emphasis>$tal är större än 100</emphasis></p>";
+      }
+   ?>
+</body>
+</html>
+]]>
+				</programlisting>
+			</example>
+
+			If-satsen består alltså av ordet if följt av ett test inom
+			parenteser. Satsen som följer efter utförs om testet blir sant.
+			Vill man att det skall vara flera satser som utförs om testet blir
+			sant kan man slå ihop dem till ett block med hjälp av { och }
+			(måsvingar). I exemplet ovan använder jag måsvingarna fast de
+			egentligen inte behövs. Som regel är det bäst att alltid sätta dit
+			måsvingarna ifall man vill stoppa in en rad till inom if-satsen
+			sedan så glömmer man dem inte.
+		</para>
+		<para>
+			Studera nu if-satsen ovan och skriv om programmet och testa olika
+			tal.
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>If-else-satsen</title>
+
+		<para>
+			Nu fungerar programmet så långt. Men det vore ju kul om programmet
+			sade till även om talet inte är större än 100. Alltså om det är
+			större än 100 skriv det annars skriv att det inte är större än 100.
+		</para>
+
+		<para>
+			Studera följande exempel
+			<example>
+				<title>If-else exempel</title>
+				<programlisting>
+<![CDATA[
+<html>
+<head>
+   <title>Större än 100</title>
+</head>
+<body>
+<?php
+echo "Du angav tal: $tal";
+
+if ($tal > 100) {
+   echo "<p><emphasis>$tal är större än 100</emphasis></p>";
+} else {
+   echo "<p><emphasis>$tal är inte större än 100</emphasis></p>";
+}
+?>
+</body>
+</html>
+]]>
+				</programlisting>
+			</example>
+
+			I exemplet ovan ser vi hur en if-else sats fungerar. Om uttrycket
+			inom parenteserna är sant utförs det som kommer efter. Om inte så
+			utförs det som kommer efter else. <emphasis> Det kan aldrig inträffa
+			att båda satserna utförs!</emphasis>
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>if-elseif</title>
+
+		<para>
+			If-elseif är också en vanlig konstruktion. Den används ofta
+			tillsammans med else och blir då en if-elseif-else sats. Man
+			kan ha flera elseif i en konstruktion men bara en else. Det som
+			kommer efter det första sanna uttrycket utförs och inget annat.
+			Om inget är sant kommer det som står efter else (annars) att
+			utföras.
+		</para>
+
+		<para>
+			Vi tittar på vårt exempel igen. Talet man anger kan ju vara större
+			eller mindre än 100. Är det inte det så måste det ju vara talet 100
+			som angetts. Vi testar igen.
+
+			<example>
+				<title>if-elseif-else</title>
+				<programlisting>
+<![CDATA[
+<html>
+<head>
+   <title>Större än 100</title>
+</head>
+<body>
+<?php
+echo "Du angav tal: $tal";
+
+if ($tal > 100) {
+   echo "<p><emphasis>$tal är större än 100</emphasis></p>";
+} elseif ($tal < 100) {
+   echo "<p><emphasis>$tal är inte större än 100</emphasis></p>";
+} else {
+   echo "<p><emphasis>$tal är ju lika med 100</emphasis></p>";
+}
+?>
+
+</body>
+</html>
+]]>
+				</programlisting>
+			</example>
+
+			Som vi ser så är den inte helt olik de andra konstruktionerna med if.
+			Den fungerar så att om det första testet är sant så utförs satsen
+			efter det. Om inte görs testen efter elseif. Är denna sann så utförs
+			satsen efter den. Om inget test har varit sant utförs det som kommer
+			efter else. Det kan vara flera elseif och else kan utelämnas.
+
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>Mer läsning</title>
+
+		<para>
+			Aktuellt avsnitt i PHP-manualen.
+			<ulink url="http://www.php.net/manual/en/control-structures.php">
+				<citetitle>
+					http://www.php.net/manual/en/control-structures.php
+				</citetitle>
+			</ulink>
+		</para>
+	</sect1>
+</chapter>
+
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+tab-width: 3
+End:
+vim600: syn=xml fen fdm=syntax si
+vim: noet sw=3 ts=3 syn=sgml
+vi: ts=3 sw=3
+-->

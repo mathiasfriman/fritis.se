@@ -1,0 +1,76 @@
+<chapter id="chap_funktioner2">
+	<title>Mer om funktioner</title>
+
+	<abstract>
+		<para>
+			Tidigare har vi lärt oss hur funktioner fungerar. I detta kapitel
+			lär vi oss lite mer om dem.
+		</para>
+	</abstract>
+
+
+	<sect1>
+		<title>Call by reference, call by value</title>
+
+		<para>
+			När man anropar en funktion skickar man vanligtvis med ett eller
+			flera argument. Vi har tidigare sett att om man ändrar dessa argument
+			i funktionen så ändras de inte utanför funktionen. Det är för att man
+			lättare skall kunna flytta funktionen mellan olika program utan att
+			behöva vara rädd för att den skall ändra något utanför själva
+			funktionen. Detta kallas för <emphasis>call by value</emphasis>. Det
+			vill säga att värdet i variabeln skickas till funktionen, inte själva
+			variabeln.
+		</para>
+
+		<para>
+			Ibland kan man vilja låta funktionen ändra variabler även i världen
+			utanför. Alltså om jag skickar en variabel till en funktion och den
+			ändras i funktionen så skall den ändras även utanför funktionen.
+			Detta förfarande kallas för <emphasis>call by reference</emphasis>.
+			Det vill säga att man istället för att skicka en kopia på värdet i en
+			variabel så skickar man en pekare till variablen så att det man gör
+			men variabeln i funktionen även händer utanför funktionen.
+		</para>
+
+		<para>
+			Detta kan i flera fall vara väldigt smidigt men skall normalt
+			undvikas. Ett litet exempel.
+
+			<example>
+				<title>Call by reference</title>
+				<programlisting>
+<![CDATA[
+<?php
+function swap (&$var1, &$var2) {
+   $tmp = $var2;
+   $var2 = $var1;
+   $var1 = $tmp;
+}
+
+$text1 = "Text1";
+$text2 = "Text2";
+
+echo "Före swap: text1: $text1, text2: $text2 <br>\n";
+
+swap($text1, $text2);
+
+echo "Efter swap: text1: $text1, text2: $text2 <br>\n";
+?>
+]]>
+				</programlisting>
+			</example>
+		</para>
+	</sect1>
+</chapter>
+
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+tab-width: 3
+End:
+vim600: syn=xml fen fdm=syntax si
+vim: noet sw=3 ts=3 syn=sgml
+vi: ts=3 sw=3
+-->

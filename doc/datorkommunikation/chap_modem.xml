@@ -1,0 +1,287 @@
+<chapter id="chap_modem"><title>Modem</title>
+	<abstract>
+		<para>
+			För bara några år sedan kom internet-boomen till Sverige. Alla
+			skulle koppla upp sig. I början fanns det bara ett sätt att
+			skapa en förbindelse mellan kunderna och deras
+			internetleverantör (ISP, Internet Service Provider). Det var
+			genom att skicka digital datatrafik som analoga signaler över
+			telefonnätet. Till detta används en uppfining som är mycket
+			äldre än så och som använts i datorkommunikationssammanhang
+			sedan 1960-talet, nämligen modemet.
+		</para>
+		<para>
+			I detta kapitel tittar vi närmare på modem. Vad ett modem är
+			och hur det fungerar.
+		</para>
+	</abstract>
+
+	<sect1><title>Introduktion</title>
+		<para>
+			Som vi sagt tidigare så är vissa medier, till exempel
+			telefonnätet, gjorda för att transportera analoga signaler.
+			Ofta vill man transportera digital data över en analog
+			förbindelse.  Till detta används en utrustning som kallas för
+			<emphasis>modem</emphasis>. Modem är en förkortning för
+			<emphasis>Modulator/Demodulator</emphasis> och kommer från
+			modemets huvudsakliga funktion. Att modulera innebär att man
+			översätter digitala signaler till analoga och att demodulera
+			innebär att man reverserar processen genom att omvandla de
+			analoga signalerna tillbaka till digitala.
+		</para>
+		<para>
+			Modem har traditionellt varit det vanligaste sättet för
+			privatpersoner att ansluta sig till Internet. Alla
+			Internetleverantören (Internet Service Provider, ISP) erbjuder
+			tjänsten uppringt Internet, det vill säga Internet via ett
+			modem anslutet till telenätet. I dag blir detta dock allt
+			mindre vanligt då nya snabbare tjänster erbjuds. Mer som dessa
+			kommer i kapitlet om Internet (<xref
+			linkend="chap_internet"/>).
+		</para>
+	</sect1>
+
+	<sect1><title>Olika sätt att modulera</title>
+		<para>
+			När ett modem modulerar en digital signal finns det flera olika
+			sätt att göra det på. I slutändan blir det någon typ av ljud
+			med olika egenskaper. Man kan välja att ändra den analoga
+			signalen på flera olika sätt för att kunna koda in digitala
+			signaler i den.
+		</para>
+
+		<sect2><title>Amplitudmodulering</title>
+			<para>
+				Amplitudmodulering innebär att man genom att ändra
+				amplituden i signalen kan man baka in data i signalen. Det
+				vill säga 1:or ges en amplitud och 0:or en annan.  Denna
+				metod är inte så effektiv, eftersom den till exempel är
+				väldigt beroende av att signalen inte dämpas på vägen, och
+				användes i de första modemen. 
+			</para>
+
+			<para>
+				I <xref linkend="fig_amplitudmodulering"/> visas
+				amplitudmodulering.  I figuren innebär till exempel en högre
+				amplitud en 1:a och en lägre en 0:a. Denna metod är dock
+				väldigt känslig för till exempel att signalen blir dämpad
+				och användes bara i de första modemen.
+				
+
+				<figure id="fig_amplitudmodulering">
+					<title>Amplitudmodulering</title>
+
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1"
+							fileref="bilder/amplitudmodulering.jpeg" format="JPEG" />
+						</imageobject>
+						<imageobject>
+							<imagedata scalefit="1"
+							fileref="bilder/amplitudmodulering.eps" format="EPS" />
+						</imageobject>
+						<textobject>
+							<phrase>
+								Bild som visar en analog kurva som varierar i
+								amplitud där de olika amplituderna betyder 0:a
+								eller 1:a.
+							</phrase>
+						</textobject>
+					</mediaobject>
+				</figure>
+			</para>
+		</sect2>
+
+		<sect2><title>Frekvensmodulering</title>
+			<para>
+				Frekvensmudulering innebär att man skickar en signal med
+				konstant amplitud men att frekvensen ändras. Denna metod är
+				bättre än amplitudmodulering.
+			</para>
+			<para>
+				I <xref linkend="fig_frekvensmodulering"/> visas
+				frekvensmodulering. Vid frekvensmodulering används olika
+				frekvenser för att bära antingen 1:or eller 0:or. I figuren
+				innebär till exempel en högre frekvens en 1:a och en lägre
+				en 0:a.
+
+			
+				<figure id="fig_frekvensmodulering">
+					<title>Frekvensmodulering</title>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1"
+							fileref="bilder/frekvensmodulering.jpeg" format="JPEG" />
+						</imageobject>
+						<imageobject>
+							<imagedata scalefit="1"
+							fileref="bilder/frekvensmodulering.eps" format="EPS" />
+						</imageobject>
+						<textobject>
+							<phrase>
+								Bild som visar en analog kurva som varierar i
+								frekvens där de olika frekvenserna betyder 0:a
+								eller 1:a.
+							</phrase>
+						</textobject>
+					</mediaobject>
+				</figure>
+			</para>
+		</sect2>
+
+		<sect2><title>Fasskiftesmodulering</title>
+			<para>
+				Ett tredje sätt att bädda in digitala signaler i en analog
+				är att använda sig av fasskiftesmodulering. Det innebär att
+				man utgår från en sinusformad signal och bestämmer att ett
+				fasskifte har en viss innebörd. Eftersom man kan välja att
+				byta fas vid olika ställen (vinklar) så kan man skicka mer
+				information än 1:or och 0:or. Till exempel kan man bestämma
+				att vissa lägen betyder 00, 01, 10 och 11.
+			</para>
+
+			<para>
+				I <xref linkend="fig_fasskiftesmodulering"/> visas
+				fasskiftesmodulering. Vid fasskiftesmodulering utgår man
+				från en sinusformad kurva och låter den byta fas vid
+				bestämda lägen. Ett fasskifte på ett visst ställe i cykeln
+				betyder en viss sak, till exempel en 1:a eller 0:a.  Det
+				finns också utrymme för att specificera följder av tecken,
+				till exempel 00, 01, 10 eller 11.
+
+				<figure id="fig_fasskiftesmodulering">
+					<title>Fasskiftesmodulering</title>
+					<mediaobject>
+						<imageobject>
+									<imagedata scalefit="1"
+									fileref="bilder/fasskiftesmodulering.jpeg" format="JPEG" />
+							</imageobject>
+						<imageobject>
+									<imagedata scalefit="1"
+									fileref="bilder/fasskiftesmodulering.eps" format="EPS" />
+							</imageobject>
+						<textobject>
+							<phrase>
+								Bild som visar en analog kurva som i vissa lägen
+								byter fas.
+							</phrase>
+						</textobject>
+					</mediaobject>
+				</figure>
+			</para>
+		</sect2>
+	</sect1>
+	<sect1><title>Handskakning</title>
+		<para>
+			Innan två modem kan börja tala med varandra (det är alltid två
+			modem) så måste modem komma överens om hur de skall skicka
+			information. Det gör de i en procedur som kallas
+			<emphasis>handskakning</emphasis> (eng. Handshake). I
+			handskakningen, som föregår det egentliga datautbytet, kommer
+			modemen överens om exempelvis överföringshastigheten.
+		</para>
+		<para>
+			För att ett modem skall kunna kommunicera med så många olika
+			modem som möjligt så kan de flesta modemen skicka och ta emot
+			data i en mängd olika hastigheter. När två modem kommer överens
+			om överföringshastigheten så är det alltid det långsammaste
+			modemet som bestämmer i vilken hastighet de skall utbyta data.
+		</para>
+	</sect1>
+	<sect1><title>Hayes-kommandon, (AT-kommandon)</title>
+		<para>
+			Modem avsedda för telenätet var oftast så kallade akustiska
+			modem.  De bestod av en liten låda med en sladd och en
+			telefonlursliknande sak med gummimuffar som passade på en
+			vanlig telefonlur. Modemet innehöll alltså ingen telefon utan
+			man ringde manuellt upp det nummer man skulle ringa och sedan
+			kopplade man på modemen på varje sida genom att montera
+			modemets mikrofon och högtalare på telefonluren. Detta var
+			naturligtvis inte speciellt praktiskt. Man ville ju kunna
+			programmera modemet från datorn så att datorn själv kunde till
+			exempel ringa upp ett annat modem. Modemet borde ju dessutom
+			kunna svara själv.
+		</para>
+		<para>
+			Det första modemet som kunde detta var ett modem från ett
+			företag som heter <emphasis>Hayes Communications</emphasis>.
+			Modemet hette <emphasis>Hayes Smartmodem</emphasis> och
+			lanserades 1981. Detta modem kunde man kontrollera helt från
+			datorn. Man kunde alltså ringa ett nummer, ändra inställningar,
+			lägga på luren med mera från datorn utan att röra modemet. I
+			övrigt var Smartmodem inget fartunder utan det skickade data i
+			blygsamma 300 bit/s vilket var ganska vanligt på den tiden.
+		</para>
+		<para>
+			För att styra modemet så införde företaget ett system med olika
+			kommandon som man använder för att säga åt modemet att göra
+			olika saker. Dessa kommandon började alla med
+			<emphasis>AT</emphasis> som är en förkortning för engelskans
+			"attention". På grund av detta kallas dessa kommandon för
+			AT-kommandon eller Hayes-kommandon. Det är ingen formell
+			standard men de flesta modem som finns idag är
+			<emphasis>Hayes-kompatibla</emphasis>. det vill säga de stöder
+			hela eller delar av Hayes uppsättning AT-kommandon.  Flera
+			modemtillverkare lägger till egna kommandon utöver de vanliga.
+			I <xref linkend="tab_hayes"/> listas några vanliga
+			AT-kommandon. Är du intresserad så finns det en mer komplett
+			lista på http://en.wikipedia.org/wiki/Hayes_command_set.
+
+			<table frame="all" id="tab_hayes">
+				<title>Vanliga Hayes-kommandon (AT-kommandon)</title>
+				<tgroup cols='2' align='left' colsep='1' rowsep='1'>
+					<thead><row>
+						<entry>Kommando: (AT+)</entry>	
+						<entry>Gör</entry>
+					</row></thead>
+					<tbody>
+					<row>
+						<entry>DT1111111</entry>
+						<entry>Ringer upp 1111111 med tonval</entry>
+					</row>
+					<row>
+						<entry>DP1111111</entry>
+						<entry>Ringer upp 1111111 med pulsval</entry>
+					</row>
+					<row>
+						<entry>M0</entry>
+						<entry>Stänger av modemets högtalare</entry>
+					</row>
+					<row>
+						<entry>H0</entry>
+						<entry>Lägger på luren</entry>
+					</row>
+					<row>
+						<entry>Z0</entry>
+						<entry>Återställer modemets sparade
+						konfiguration</entry>
+					</row>
+					</tbody>
+				</tgroup>
+			</table>
+		</para>
+
+	</sect1>
+	<sect1><title>Sammanfattning</title>
+		<para>
+			Modem är en gammal uppfinning. Modem är en förkortning för
+			<emphasis>Modulator/Demodulator</emphasis>. Sändande modem
+			modulerar och mottagande demodulerar. Man kan modulera på flera
+			sätt och det vanligaste idag är fasskiftesmodulering.
+		</para>
+		<para>
+			Innan två modem kan börja utbyta data kommer de överens
+			om i vilken hastighet detta skall ske. Denna procedur kallas
+			handskakning och det är alltid det långsammaste modemet som
+			bestämmer.
+		</para>
+	</sect1>
+</chapter>
+
+<!-- Keep this comment at the end of the file
+tab-width: 3
+vim600: fdm=syntax sw=3 ts=3
+vim: sw=3 ts=3
+vi: sw=3 ts=3
+-->
+

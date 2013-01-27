@@ -1,0 +1,304 @@
+<chapter id="chap_programmeringssprak">
+	<title>Programmeringsspråk</title>
+
+	<abstract>
+		<para>
+			Detta avsnitt ger en orientering om olika
+			programmeringsspråk och varför det finns så många och
+			några grundläggande egenskaper hos olika språk och olika
+			familjer av språk.
+		</para>
+	</abstract>
+
+	<sect1>
+		<title>Olika språk till olika saker</title>
+
+		<para>
+			Det finns idag hundratals olika programmeringsspråk. De har kommit
+			till av olika anledningar och har olika syften. Vissa är besläktade
+			och har arv från varandra och andra har utvecklats för att fylla ett
+			speciellt ändamål.
+		</para>
+
+		<para>
+			Anledningen till att det finns så många språk och alltid kommer nya
+			är naturligtvis att de är bra på olika saker och att olika personer
+			uppskattar språken olika mycket.
+		</para>
+
+		<para>
+			Vi kan börja med att dela upp språken i två grupper efter hur
+			programmen kompileras och körs. Alla program skrivs i någon form av
+			källkod. Denna källkod måste sedan översättas till något som en dator
+			kan förstå. Datorn förstår bara 1 och 0, på eller av. Detta kallas
+			kompilering och kan göras vid olika tillfällen.
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>Kompilerande språk</title>
+
+		<para>
+			Datorn kan ju inte läsa utan det som man skriver i sina program måste
+			översättas till något som datorn förstår. Det datorn förstår kallas
+			för maskinkod eller binärkod. Denna kod består av maskininstruktioner
+			som är, näst intill, omöjliga för en människa att förstå.
+		</para>
+
+		<para>
+			Ett kompilerande språk är ett programmeringsspråk där källkoden med
+			hjälp av olika verktyg översätts till maskinkod. Maskinkoden blir då
+			ett fristående program som kan köras direkt av datorn. Man säger att
+			man kompilerar koden. Koden kopileras alltså i samband med
+			utvecklingen och inte i samband med exekveringen av programmet. Mer
+			om det i ett annat avsnitt.
+		</para>
+
+		<para>
+			Exempel på kompilerande språk är: C, C++, Pascal och många fler.
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>Interpreterande språk</title>
+
+		<para>
+			Ett interpreterande programspråk, som också kallas skriptspråk, är
+			ett programspråk som inte kompilerar det program som programmeraren
+			har skrivit förrän det körs, och som gör det varje gång det körs.
+			Ibland kompileras hela programmet innan det körs och ibland
+			kompileras det rad för rad. Detta gör att utvecklingen går snabbare
+			eftersom programmet inte behöver kompileras vid testkörning men det
+			innebår också att det färdiga programmet blir långsammare eftersom
+			det måste kompileras varje gång det körs.
+		</para>
+
+		<para>
+			Motorn som kör ett interpreterande språk kallas interpretator,
+			programtolk eller tolkare.
+		</para>
+
+		<para>
+			Exempel på interpreterande språk är: Perl, PHP, Python, TCL, Bash.
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>Andra typer av språk</title>
+
+		<para>
+			Det finns andra sätt att lösa uppgiften på. Till exempel att man
+			kompilerar koden till en mellankod som sedan en interpreterare
+			tolkar. Så fungerar till exempel Java.
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>För- och nackdelar</title>
+
+		<table frame='all'>
+			<title>
+				Fördeler och nackdelar med kompilerande och interpreterande språk.
+			</title>
+
+			<tgroup cols='2' align='left' colsep='3' rowsep='3'>
+				<colspec colname='c1'/>
+				<colspec colname='c2'/>
+				<thead>
+					<row>
+						<entry>Fördelar</entry>
+						<entry>Nackdelar</entry>
+					</row>
+				</thead>
+				<tbody>
+					<row>
+					<entry namest="c1" nameend="c2" align="center">
+						Kompilerande
+					</entry>
+					</row>
+					<row>
+						<entry>Snabbt att köra</entry>
+						<entry>Långsam programmering</entry>
+					</row>
+					<row>
+						<entry>Lätt att distribuera</entry>
+						<entry>Svårt att portera</entry>
+					</row>
+					<row>
+						<entry namest="c1" nameend="c2" align="center">
+							Interpreterande
+						</entry>
+					</row>
+					<row>
+						<entry>Snabb programmering</entry>
+						<entry>Långsamt att köra</entry>
+					</row>
+					<row>
+						<entry>
+							Mycket lätt att portera (om tolkare finns)
+						</entry>
+						<entry>
+							Svårare att distribuera (tolkare måste finnas)
+						</entry>
+					</row>
+				</tbody>
+			</tgroup>
+		</table>
+	</sect1>
+
+	<sect1>
+		<title>Exempel på olika språk som ni bör känna till</title>
+
+		<para>
+			Det finns tusentals, jo säkert, olika programmeringsspråk. Här
+			listas de jag tycker ni bör känna till och hur programmet
+			"Hello World!" ser ut i dem.
+		</para>
+
+		<sect2>
+			<title>C</title>
+			<para>
+				C är ett av de mest utbredda språken. Det är en vidareutveckling
+				av språket B. Utvecklades vid AT&amp;T Bell Labs samtidigt med
+				operativsystemet UNIX&reg;. C anses som ett ganska maskinnära språk.
+				Flera operativsystem är till stor det skrivna i C. Hello World
+				i C ser ut så här:
+			</para>
+
+			<para>
+				<example>
+					<title>Hello World i C</title>
+					<programlisting>
+<![CDATA[
+/*
+ * Hello World i C
+ */
+#include <stdio.h>
+
+int main() {
+        printf("Hello, world!\n");
+        return 0;
+}
+]]>
+					</programlisting>
+				</example>
+			</para>
+		</sect2>
+
+		<sect2>
+			<title>C++</title>
+
+			<para>
+				C++ utveckladen av Bjarne Stroustrup vid AT&amp;T Bell Labs och
+				är en utökning av programspråket C. Till skillnad från C så är
+				C++ objektorienterat (eller har bättre stöd för det i alla fall).
+			</para>
+
+			<para>
+				Hello World i C++ ser ut så här:
+			</para>
+
+			<para>
+				<example>
+					<title>Hello World i C++</title>
+					<programlisting>
+<![CDATA[
+/*
+ * Hello World i C++
+ */
+#include <iostream>
+
+int main () {
+        cout << "Hello world" << endl;
+}
+]]>
+					</programlisting>
+				</example>
+			</para>
+		</sect2>
+		<sect2>
+			<title>C# (C-sharp eller Ciss)</title>
+
+			<para>
+				Objektorienterat språk utvecklat av Microsoft för att möta Java
+				från Sun. Språket är, liksom Java, halvinterpreterande och har
+				mycket influenser från C och C++.
+			</para>
+
+			<para>
+				Hello World i C# ser ut så här:
+				<example>
+					<title>Hello World i C#</title>
+					<programlisting>
+<![CDATA[
+//
+// Hello World i C#
+//
+using System;
+class HelloWorld {
+        static void Main() {
+                Console.WriteLine("Hello, world!");
+        }
+}
+]]>
+					</programlisting>
+				</example>
+			</para>
+		</sect2>
+
+		<sect2>
+			<title>Java</title>
+			<para>
+				Objektorienterat språk utvecklat av Sun Microsystems. Språket är
+				halvinterpreterande och har mycket influenser från C och C++. En
+				stor fördel med Java är att program skrivna i Java är nästan
+				platformsoberoende. Du kan alltså köra dem i alla miljöer till
+				vilka det finns en javamotor.
+			</para>
+
+			<para>
+				Hello World i Java ser ut så här:
+				<example>
+					<title>Hello World i Java</title>
+					<programlisting>
+<![CDATA[
+//
+// Hello World i Java
+//
+class HelloWorld {
+        public static void main (String s[]) {
+                System.out.println("Hello world");
+        }
+}
+]]>
+					</programlisting>
+				</example>
+			</para>
+		</sect2>
+
+		<sect2>
+			<title>Mer läsning</title>
+			<para>
+				En sida med jättemånga exempel på "Hello World!" i olika språk. (
+				<ulink url="http://www2.latech.edu/~acm/HelloWorld.shtml">
+					<citetitle>
+						http://www2.latech.edu/~acm/HelloWorld.shtml
+					</citetitle>
+				</ulink>
+				)
+			</para>
+		</sect2>
+	</sect1>
+</chapter>
+
+
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+tab-width: 3
+End:
+vim600: syn=xml fen fdm=syntax si
+vim: noet sw=3 ts=3 syn=sgml
+vi: ts=3 sw=3
+-->

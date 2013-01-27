@@ -1,0 +1,411 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Funktioner</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="Programmering i PHP"
+HREF="book1.html"><LINK
+REL="PREVIOUS"
+TITLE="Mer om str�ngar"
+HREF="chap_strings.html"><LINK
+REL="NEXT"
+TITLE="Filer och filhantering"
+HREF="chap_filer.html"><LINK
+REL="stylesheet"
+HREF="./book.css"
+TYPE="text/css"></HEAD
+><BODY
+CLASS="chapter"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Programmering i PHP</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="chap_strings.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="chap_filer.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="chapter"
+><H1
+><A
+NAME="chap_funktioner"
+></A
+>Kapitel 14. Funktioner</H1
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Innehållsförteckning</B
+></DT
+><DT
+><A
+HREF="chap_funktioner.html#AEN699"
+>Vad �r en funktion?</A
+></DT
+><DT
+><A
+HREF="chap_funktioner.html#AEN705"
+>N�r skall man anv�nda funktioner?</A
+></DT
+><DT
+><A
+HREF="chap_funktioner.html#AEN718"
+>Argument till funktioner</A
+></DT
+><DT
+><A
+HREF="chap_funktioner.html#AEN724"
+>Returv�rden</A
+></DT
+><DT
+><A
+HREF="chap_funktioner.html#AEN730"
+>Mer l�sning</A
+></DT
+></DL
+></DIV
+><BLOCKQUOTE
+CLASS="ABSTRACT"
+><DIV
+CLASS="abstract"
+><P
+></P
+><A
+NAME="AEN697"
+></A
+><P
+>&#13;			Funktioner anv�nds f�r att dela upp programmet i mindre sm� delar.
+			Det g�r att programmeraren kan koncentrera sig p� en del i taget
+			och l�per mindre risk att g�ra fel. Man anv�nder �ven funktioner
+			till kod som kan �terfinnas p� flera st�llen f�r att minska
+			duplikation av kod.
+		</P
+><P
+></P
+></DIV
+></BLOCKQUOTE
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN699"
+>Vad �r en funktion?</A
+></H1
+><P
+>&#13;			En funktion �r ett antal instruktioner som frist�ende utf�r en sak.
+			Denna snutt kan sedan k�ras om och om i samma program eller delas
+			med andra program.
+			Ett exempel:
+			<DIV
+CLASS="example"
+><A
+NAME="AEN702"
+></A
+><P
+><B
+>Exempel 14-1. Funktioner</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+/*
+ * print_html_header_start
+ *
+ * Skriver ut en html-header
+ */
+function print_html_header_start () {
+   echo "&#60;html&#62;&#60;head&#62;&#60;/head&#62;&#60;body&#62;";
+}
+
+/*
+ * print_html_header_stop
+ *
+ * Skriver ut slut-html-taggar
+ */
+function print_html_header_stop () {
+   echo "&#60;/body&#62;&#60;/html&#62;";
+}
+
+
+// H�r b�rjar programmet
+print_html_header_start();
+
+// Andra utskrifter h�r.
+print_html_header_stop();
+?&#62;
+
+				</PRE
+></DIV
+>
+
+			I exemplet ovan deklareras tv� funktioner som skriver ut en
+			html-header och en html-footer. Dessa funktioner anropas l�ngre
+			ned i programmet.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN705"
+>N�r skall man anv�nda funktioner?</A
+></H1
+><P
+>&#13;			Man skall anv�nda funktioner s� snart man kan. Sj�lva programmet
+			brukar ofta vara bara anrop till olika funktioner. F�ljande kan vara
+			bra grundregler.
+		</P
+><P
+>&#13;			Anv�nd funktioner till:
+
+			<P
+></P
+><UL
+><LI
+><P
+>&#13;						Alla uppgifter som kan avgr�nsas
+					</P
+></LI
+><LI
+><P
+>&#13;						Alla uppgifter som �r repititiva
+					</P
+></LI
+><LI
+><P
+>&#13;						All kod som du kan t�nkas �teranv�nda i andra program
+					</P
+></LI
+></UL
+>
+
+			F�rs�k att t�nka ett program i funktioner.
+		</P
+><P
+>&#13;			Vi funderar p� programmet password.php och f�rs�ker identifiera
+			olika funktioner.
+		</P
+><P
+>&#13;			En funktion �r att skriva ut html-formul�ret. Det �r ju en avgr�nsad
+			uppgift. En annan solklar funktion �r autentiseringen.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN718"
+>Argument till funktioner</A
+></H1
+><P
+>&#13;			En funktion kan ta noll eller flera argument. Ett argument �r ett
+			v�rde som man skickar till funktionen. Till exempel om man vill vill
+			g�ra en funktion som summerar tv� tal s� �r det bra om den kan ta de
+			tv� talen som argument. Se f�ljande exempel:
+
+			<DIV
+CLASS="example"
+><A
+NAME="AEN721"
+></A
+><P
+><B
+>Exempel 14-2. Argument till funktioner</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+function summa($tal1, $tal2) {
+        return ($tal1 + $tal2);
+}
+
+echo summa(5,6);
+?&#62;
+
+				</PRE
+></DIV
+>
+
+			Observera att ordningen p� argumenten spelar roll. I exemplet kommer
+			tal1 att bli 5 och tal2 6. Variablerna $tal1 och $tal2 existerar
+			bara inom funktionen och inte i resten av programmet. Vilken som f�r
+			vilket v�rde best�ms av ordningen i funktionsanropet.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN724"
+>Returv�rden</A
+></H1
+><P
+>&#13;			I funderingen ovan vore det ju bra om autentiseringen kunde
+			returnera ett v�rde (ett boolskt v�rde till exempel). Det kan se
+			ut s� h�r:
+
+			<DIV
+CLASS="example"
+><A
+NAME="AEN727"
+></A
+><P
+><B
+>Exempel 14-3. Retur fr�n funktioner</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;?php
+function is_logged_in ($name, $pass) {
+        if ($name == "kalle") &#38;&#38; ($pass == "ankeborg")) {
+                return true;
+        } else {
+                return false;
+        }
+}
+?&#62;
+
+				</PRE
+></DIV
+>
+
+			Denna funktion �r ganska kompakt och g�r sig f�tj�nt av en
+			f�rklaring.  Den tar tv� argument, $namn och $pass. Funktionen
+			returnerar v�rdet av en boolsk operation.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN730"
+>Mer l�sning</A
+></H1
+><P
+>&#13;			Aktuellt avsnitt i manualen.
+			<A
+HREF="http://www.php.net/manual/en/functions.php"
+TARGET="_top"
+>&#13;				<I
+CLASS="citetitle"
+>http://www.php.net/manual/en/functions.php</I
+>
+			</A
+>
+		</P
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="chap_strings.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Hem</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="chap_filer.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Mer om str�ngar</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Filer och filhantering</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

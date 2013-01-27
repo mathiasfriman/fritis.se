@@ -1,0 +1,920 @@
+<chapter id="chap_internetteknik"><title>Mer om Internets teknik</title>
+	<abstract>
+		<para>
+			Vi har i föregående kapitel tittat på Internet och hur det
+			används. I detta kapitel skall vi titta närmare på tekniken som
+			gör Internet möjligt. Efter att ha läst detta skall du förstå
+			hur Internet fungerar och kunna utföra enklare felsökning.
+		</para>
+	</abstract>
+
+	<sect1><title>TCP/IP</title>
+		<para>
+			TCP/IP är en grundläggande teknik som används på Internet.
+			TCP/IP är det protokoll, eller riktigare, den familj av
+			protokoll som bygger upp Internet. TCP/IP står för
+			<emphasis>Transmission Control Protocol/Internet
+			protocol</emphasis>. Standarden TCP/IP har fått sitt namn av
+			två av dess ingående protokoll, nämligen TCP och IP. Andra
+			protokoll som ingår i standarden och som vi kommer att bekanta
+			oss med är UDP, ICMP och ARP. Vi kommer även att titta på
+			protokoll på lite högre nivå, till exempel FTP, HTTP, SMTP, och
+			DNS.
+		</para>
+		<para>
+			Precis som OSI-modellen (se <xref linkend="sect_osimodellen"/>)
+			så är TCP/IP-modellen uppdelad i lager enligt samma princip som
+			modellen från ISO. I TCP/IP-modellen har man slagit ihop några
+			av lagren för att få enklare implementationer. I <xref
+			linkend="fig_osi-vs-tcpip"/> visas en figur över modellerna och
+			hur deras lager är relaterade till varandra. Vi ser även
+			exempel på protokoll i de olika lagren. Till vänster ser vi
+			OSI-modellens sju lager. Till höger ser vi att TCP/IP har 4
+			lager och hur de är relaterade till OSI-modellen. Vissa delar
+			upp TCP/IP-stacken i 5 skikt. Då är det nedersta lagret uppdelat
+			på samma sätt som i OSI-modellen.
+			
+		</para>
+		<figure id="fig_osi-vs-tcpip"><title>OSI modellen kontra TCP/IP</title>
+			<mediaobject>
+  				<imageobject>
+      			<imagedata scalefit="1" fileref="bilder/ositcpip.jpeg" format="JPEG" />
+        		</imageobject>
+  				<imageobject>
+      			<imagedata scalefit="1" fileref="bilder/ositcpip.eps" format="EPS" />
+        		</imageobject>
+				<textobject>
+					<phrase>
+						En figur som visar de två modellerna bredvid varandra.
+						Man ser tydligt hur TCP/IP-modellens fyra lager
+						spänner över OSI-modellens 7 lager.
+					</phrase>
+				</textobject>
+			</mediaobject>
+		</figure>
+
+		<sect2><title>Några av protokollen i TCP/IP</title>
+		
+		<para>
+			I detta avsnitt behandlas de olika protokollen mycket
+			kortfattat. Vissa kommer inte att behandlas mer och andra
+			kommer vi att gå igen lite djupare på andra ställen i boken. Du
+			kan också komma att stöta på dem i laborationskursen.
+		</para>
+
+		<figure id="fig_tcpip"><title>Några av protokollen i TCP/IP</title>
+			<mediaobject>
+  				<imageobject>
+      			<imagedata scalefit="1" fileref="bilder/tcpip.jpeg" format="JPEG" />
+        		</imageobject>
+  				<imageobject>
+      			<imagedata scalefit="1" fileref="bilder/tcpip.eps" format="EPS" />
+        		</imageobject>
+				<textobject>
+					<phrase>
+						En figur som visar TCP/IP. I bilden finns exempel på
+						olika protokoll och i vilka lager du hör hemma.
+					</phrase>
+				</textobject>
+			</mediaobject>
+		</figure>
+
+		<sect3><title>IP</title>
+			<para>
+				IP är en förkortning för <emphasis>Internet
+				Protocol</emphasis>. IP är det protokoll som ser till att
+				data kommer från en nod till en annan. IP är vad man brukar
+				kalla för ett <emphasis>connectionless</emphasis> protokoll.
+				Det innebär att det inte finns en koppling mellan sändare
+				och mottagare utan paketen skickas ut i nätet och kommer
+				fram om det kommer fram. Man kan jämföra det med att skicka
+				ett brev med posten. Man skriver det och skickar iväg. Det
+				finns ingen direkt förbindelse mellan sändare och mottagare.
+				Kommer brevet fram så gör det, annars inte. Vill man veta
+				att brevet verkligen har kommit fram måste man be mottagaren
+				bekräfta detta vilket görs i en del av protokollen ovanför
+				IP i OSI-modellen. IP hittas i nätverksnivån i OSI-modellen.
+			</para>
+		</sect3>
+		<sect3><title>TCP</title>
+			<para>
+				TCP står för <emphasis>Transmission Control
+				Protocol</emphasis>. TCP är det vanligaste
+				transportprotokollet på Internet. TCP är vad man brukar
+				kalla för <emphasis>connection oriented</emphasis>, det vill
+				säga det skapas en koppling (connection) mellan sändare och
+				mottagare, precis som under ett telefonsamtal. Vi inser ju
+				att den bara är virtuell eftersom den bygger på IP, men alla
+				överliggande lager ser det som en koppling. I TCP finns
+				funktioner som ser till all data som sänds mellan noderna
+				kommer fram och att den inte blir förstörd. På IP-nivån kan
+				detta åstadkommas genom att paketen som skickas måste
+				kvitteras. Precis på samma sätt som jag kan veta säkert att
+				ett brev kommit fram om jag ber mottagaren bekräfta det.
+			</para>
+		</sect3>
+		<sect3><title>UDP</title>
+			<para>
+				UDP är också ett vanligt protokoll på Internet. UDP är en
+				förkortning för <emphasis>User Datagram Protocol</emphasis>.
+				Till skillnad från TCP så är det
+				<emphasis>connectionless</emphasis>, vilket betyder att det
+				fungerar som det underliggande IP i det avseendet. I UDP
+				finns alltså ingen garanti för att alla paket kommer fram.
+				UDP används till exempel till DNS och i många program som
+				streamar media av något slag där det är viktigare att data
+				kommer fram i tid än att alla data kommer fram.
+			</para>
+		</sect3>
+		<sect3><title>ICMP</title>
+			<para>
+				ICMP som är en förkortning för <emphasis>Internet Control
+					Message Protocol</emphasis> är ett protokoll som används
+				för ruting och annan funktionalitet samt för kontroll och
+				felmeddelandehantering i ett TCP/IP-nät.  Programmen "ping"
+				och "traceroute" är exempel på program som använder ICMP.
+				ICMP är, precis som UDP, connectionless så man kan inte
+				garantera att paketen kommer fram.
+			</para>
+		</sect3>
+		<sect3><title>ARP</title>
+			<para>
+				ARP (Address Resolution Protocol) använs för att en nod
+				skall kunna hitta MAC-adressen<footnote><para>MAC-adress
+				kallas även Fysisk adress eller
+				hårdvaruadress</para></footnote> till en annan nod. Detta är
+				nödvändigt eftersom nätverkslagret inte använder samma typ
+				av adresser som underliggande lager. För att de skall kunna
+				tala behöver noden veta den andres IP-adress som är känd
+				från nätverkslagret och uppåt (mer om IP-adresser nedan) men
+				för att de faktiskt skall kunna prata måste den veta dess
+				MAC-adress som används i de underliggande lagren.  För att
+				hitta den används ARP. Det fungerar så att den dator som
+				skall sända skickar ut en
+				<emphasis>broadkast</emphasis>-förfrågan (en
+				broadkastförfrågan kommer till alla datorer på nätverket)
+				där den ber noden med den aktuella IP-adressen att svara.
+				När den svarar får den nod som skickar redan på dess
+				MAC-adress. För att varje nod inte skall behöva göra
+				ARP-förfrågningar varje gång den skall sända sparas
+				MAC-adresserna i en tabell på varje nod.
+			</para>
+		</sect3>
+
+		</sect2>
+		
+
+		<sect2><title>IP-adresser</title>
+			<para>
+				<!-- IP-adresser, nätklasser och nätmaskar  -->
+
+				För att man skall hitta alla datorer i ett TCP/IP nät så
+				måste de ha en unik adress. Precis som alla telefoner
+				anslutna till ett globalt telefonnät måste ha unika
+				telefonnummer. Precis som i telefonfallet kan olika datorer
+				ha samma nummer men de kan inte sitta på samma nät. Två
+				telefoner kan ha nummer 12345 men de kan ju inte finnas på
+				samma riktnummer. Skulle de sitta på samma riktnummer så
+				får de inte finnas inom samma land utan måste skiljas åt med
+				olika landsnummer. Huvudsakligen är att det totala
+				telefonnummret är unikt. IP-adresserna byggs upp av olika
+				delar, precis som ett telefonnummer.
+			</para>
+			<para>
+				Man delar upp en IP-adress i datoradress (host address) och
+				nätverksadress (network address) för att, på samma sätt som
+				i telefonnätet, kunna dela upp nätverket (Internet) i mindre
+				delar. För att man skall hitta fram mellan de olika delarna
+				använder man en teknik som kallas routing. Vi kommer att
+				tala mer om det senare i denna bok.
+			</para>
+			<para>
+				En IP-adress består av ett tal som är 32 bitar stort. Detta
+				tal brukar delas upp i fyra delar om vardera 8 bitar. Man
+				brukar ange delarna decimalt. Det vill säga med basen tio
+				som vi är vana. 8 bitar ger 256 olika kombinationer så varje
+				del i en IP-adress kan vara mellan 0 och 255. De fyra
+				delarna åtskiljs med . (punkt). Exempel på en giltig
+				IP-adress är 192.168.100.10.  Precis som med telefonnummer
+				så består denna IP-adress av olika delar. En del är
+				datornamnet och en annan del är adressen till det nätverk
+				där datorn finns. Till skillnad från telefonnummer så är
+				avgränsningen mellan datornamn och nätverksnamn lite mer
+				flytande och syns inte direkt i adressen. 
+			</para>
+			<para>
+				Vilken del av adressen som är nätadress och vilken som är
+				datoradress beror på vilket nätverk man sitter på.
+				Traditionellt så delar man in nätverken i tre olika klasser,
+				A, B och C. Det finns även D och E men dessa behandlas inte
+				i denna bok. Om man delar in IP-adressen i dess fyra
+				talgrupper w.x.y.w så gäller <xref
+					linkend="table_natverksklasser"/>.
+	
+				<table frame="all" id="table_natverksklasser">
+					<title>Nätverksklasser</title>
+					<tgroup cols='6' align='left' colsep='3' rowsep='3'>
+						<thead>
+							<row>
+								<entry>Klass</entry>
+								<entry>Nätadress (N)</entry>
+								<entry>Datoradress (D)</entry>
+								<entry>Nätmask</entry>
+								<entry>Antal nätverk</entry>
+								<entry>Datorer / Nätverk</entry>
+							</row>
+						</thead>
+						<tbody>
+							<row>
+								<entry>A</entry>
+								<entry>N.X.X.X</entry>
+								<entry>X.D.D.D</entry>
+								<entry>255.0.0.0</entry>
+								<entry>126</entry>
+								<entry>16 777 214</entry>
+							</row>
+							<row>
+								<entry>B</entry>
+								<entry>N.N.X.X</entry>
+								<entry>X.X.D.D</entry>
+								<entry>255.255.0.0</entry>
+								<entry>16 384</entry>
+								<entry>65 534</entry>
+							</row>
+							<row>
+								<entry>C</entry>
+								<entry>N.N.N.X</entry>
+								<entry>X.X.X.D</entry>
+								<entry>255.255.255.0</entry>
+								<entry>2 097 152</entry>
+								<entry>254</entry>
+							</row>
+						</tbody>
+					</tgroup>
+				</table>
+				
+				Det är alltså med hjälp av nätmasken som man avgör hur stort
+				ett nätverk är. Med hjälp av IP-adressen och nätmasken kan
+				man lista ut vilken del av en IP-adress som är datoradress
+				(host address) och vilken del som är netverksadress (network
+				address). Ett förenklat sett att förklara det är att man
+				genom att titta på nätmasken kan se vad som är nätadress och
+				datoradress. Den del av IP-adressen som består av 255:or är
+				nätverksadressen och de som består av 0:or är datoradressen
+				(hosta ddress). Detta är en förenkling av verkligheten, se
+				<xref linkend="natmask"/> om du vill veta mer.
+			</para>
+			<para>
+				Den observanta läsaren har redan insett att antalet
+				tillgängliga nätverk inte kommer att räcka till alla
+				datorer som finns på Internet. Det finns flera lösningar på
+				detta. Ett sätt är att dela in adresserna i fler mer
+				finfördelade klasser än A, B och C. Detta gör man redan idag
+				för att få fler nätverk. Man kan till exempel ha nätverk
+				med bara 8 eller 32 IP-adresser. Läs med om detta i <xref
+				linkend="natmask"/>. Det finns också en teknik som kallas
+				NAT <emphasis>Network Address Translation</emphasis> som gör
+				att man kan gömma hela nätverk bakom en enda IP-adress.
+				Genom att använda denna teknik så kan man ha samma
+				IP-adresser på flera datorer bara de sitter på ett nätverk
+				som använder NAT för att komma ut på Internet. Läs mer om
+				detta i <xref linkend="sec_routing"/>. Detta är idag det
+				vanligaste sättet att ansluta företagsnät. Det har flera
+				fördelar, till exempel så höjs säkerheten eftersom datorerna
+				inne på nätverket har adresser som inte finns på Internet.
+				Det finns speciella adress-serier för detta som vi ser i
+				<xref linkend="sec_routing"/>.  En annan uppenbar fördel är
+				att företaget bara behöver några få publika IP-adresser. Det
+				finns också nackdelar med denna metod, till exempel om någon
+				av datorerna på det interna nätet av någon anledning behöver
+				göras tillgänglig på Internet. Men det är som regel inget
+				som förekommer i lokala nät som drivs av säkerhetsmedvetna
+				administratörer<footnote><para>Se även brevet från Bengt
+				Gördén i <xref linkend="brev"/></para></footnote>.
+			</para>
+			<para>
+				Det finns också en mer permanent lösning på problemet. Det
+				finns en helt ny version av IP-protokollet som heter IP
+				version 6. Med IP version 6 kommer det inte att råda någon
+				brist på vare sig IP-adresser eller nätverksadresser.
+				Problemet är att bytet från nuvarande version, IP version 4,
+				till den nya inte är enkel och kommer att skapa problem. IP
+				version 6 behandlas inte i denna version av denna bok.
+			</para>
+		</sect2>
+
+		<sect2><title>Portnummer och tjänster</title>
+			<para>
+				Som vi sagt tidigare så kan en och samma dator
+				tillhandahålla en mängd olika tjänster. Till exempel så kan
+				en dator vara både webbserver, e-postserver och DNS-server på
+				samma gång. För att inte trafiken till de olika tjänsterna
+				skall krocka med varandra så måste man på något sätt dela
+				upp den. Till exempel så förstår ju inte en webbserver den
+				trafik som är menad till en e-postserver även om de körs på
+				samma dator. För att komma till rätta med detta så har man
+				infört i protokollet något som kallas för portar. Man skulle
+				kunna jämföra det med ett hyreshus. Hela huset är datorn och
+				varje lägenhetsdörr är en port. I varje lägenhet bor en
+				tjänst. I lägehet nummer 80 bor till exempel webbtjänsten så
+				om någon pratar med port 80 på datorn så pratar den bara med
+				webbtjänsten. Portar är alltså inte något fysiskt på datorn
+				utan bara en logisk uppdelning av tjänsterna. Varje tjänst
+				är kopplad till en port på datorn. En dator kan ha ungefär
+				65000 portar.I lägehet nummer 80 bor till exempel
+				webbtjänsten så om någon pratar med port 80 på datorn så
+				pratar den bara med webbtjänsten. Portar är alltså inte något
+				fysiskt på datorn utan bara en logisk uppdelning av
+				tjänsterna. I lägehet nummer 80 bor till exempel
+				webbtjänsten så om någon pratar med port 80 på datorn så
+				pratar den bara med webbtjänsten. Portar är alltså inte något
+				fysiskt på datorn utan bara en logisk uppdelning av
+				tjänsterna.
+			</para>
+			<para>
+				För att man skall veta bakom vilken port som en viss tjänst
+				finns (jämför lägenhetsdörr) så har man kommit fram till
+				vissa standardportar som brukar användas. Till exempel så
+				körs nästan alltid webbservern på port 80 och e-postservern
+				på port 25. I <xref linkend="services"/> finns en lista av
+				de vanligaste portarna och vad de används till. Där finns
+				även en referens till var man hittar fler.
+			</para>
+		</sect2>
+
+		<sect2><title>URL Uniform Resource Locator</title>
+			<para>
+				En URL är en adress som används för att referera till en
+				viss tjänst på en viss dator någonstans i världen
+				(Internet). En URL består av tre olika delar. Vi tittar på
+				en URL:
+				<emphasis>http://www.se.linux.org:80/support</emphasis>. Den
+				första delen är det som kommer före
+				<emphasis>://</emphasis>, i vårt fall
+				<emphasis>http</emphasis>. Http står för <emphasis>Hypertext
+				Transfer Protocol</emphasis> och används för att läsa
+				webbsidor från en webbserver. Andra exempel på vanliga
+				protokoll i URL:er är ftp och https som är för filöverföring
+				respektive säker överföring av webbsidor. Den andra delen är
+				datornamnet, se kapitlet om DNS längre fram i boken. Om
+				datornamnet har ett kolon i sig så är det som kommer efter
+				ett portnummer. Normalt sett så behöver man inte ange
+				portnummer om tjänsten man skall komma åt körs på sin
+				standardport, men om den körs på en icke-standardport så
+				måste man tala om detta. Den sista delen är en adress till
+				något på den dator man ansluter till. I vårt fall en
+				webbsida.
+			</para>
+		</sect2>
+
+		<sect2 id="sec_routing"><title>Routing</title>
+			<para>
+				På Internet finns en otrolig mängd datorer. Du kan
+				blixtsnabbt läsa en sida på en dator i Australien för att
+				nästa sekund läsa en på en dator i USA. Att detta fungerar
+				och går så fort är inget under utan ingenjörskonst. I detta
+				avsnitt skall vi behandla hur det går till.
+			</para>
+
+			<sect3><title>Paketförmedling</title>
+				<para>
+					Till att börja med så är en del i hemligheten att
+					Internet (TCP/IP) är ett paketförmedlande nät. Det
+					betyder som vi sagt tidigare att all trafik mellan två
+					datorer delas upp i små paket som skickas oberoende av
+					varandra igenom nätverket.
+				</para>
+				<para>
+					För att alla paket, eller åtminstone så många som
+					möjligt, skall komma fram används en teknik som kallas
+					för routing.
+				</para>
+			</sect3>
+
+			<sect3><title>Routing i korthet</title>
+				<para>
+					På Internet finns en mängd olika routrar. De fungerar som
+					små postkontor som tar emot paket från olika håll och
+					beroende på vart de skall skickar dem vidare åt olika
+					håll. Varje router står i kontakt med andra routrar och
+					de samarbetar så att varje router vet vilka delar av
+					nätet som varje router kan komma åt.  På så sätt kan en
+					router välja vilken av sina grannar som bäst kan förmedla
+					det aktuella paketet. Det finns flera alternativa väger
+					för ett paket att komma fram så om någon router går ner så
+					märker dess granne detta och letar efter en annan router
+					som kan komma åt de delar av nätet som den som gick ned.
+					Det kan innebära att paketen får ta en liten omväg men de
+					kommer i alla fall fram. Det kan även hända att den
+					kortaste vägen för tillfället är överbelastad. Då kan en
+					router välja att skicka paketeten en annan väg.
+				</para>
+				<para>
+					Systemet består alltså av en mängd olika routrar som
+					känner till sin omgivning genom att de med hjälp av
+					bestämda protokoll samarbetar med sina grannar om de
+					olika möjliga vägarna till olika mål och därefter tar
+					emot och skickar datapaket åt olika håll beroende på var
+					de skall.
+				</para>
+			</sect3>
+
+			<sect3><title>Time to live (TTL)</title>
+				<para>
+					Man kan lätt tänka sig att det kan uppstå problem i detta
+					system. Tänk om någon router får fel information av någon
+					anledning och börjar att skicka paket åt fel håll eller
+					tänk om ett paket har en konstig adress som ingen vill
+					veta av. För att förhindra att paket åker runt i all
+					evighet på Internet så har varje paket ett fält med ett
+					heltal som kallas för <emphasis>Time To Live
+					(TTL)</emphasis>. Detta fält börjar på ett tal och
+					minskas av varje router som tar i paketet med ett.  Om
+					paketet kommer till en router med TTL=0 så kastar denna
+					router bort paketet. På så sätt kommer inget paket att
+					åka runt för evigt.
+				</para>
+			</sect3>
+
+			<sect3><title>Statisk routing, default gw</title>
+				<para>
+					Vi har i tidigare kapitel talat om nätmasker (netmask).
+					Anledningen till att man har en sådan är just routing.
+					Man måste veta lite om det nätverk som man tillhör för
+					att veta om en dator eller nod man söker finns på det
+					nätet eller på ett annat.
+				</para>
+				<para>
+					Studera exemplet i <xref linkend="fig_netroute"/>.
+				</para>
+				<figure id="fig_netroute">
+				<title>Nätverksexempel</title>
+
+				<mediaobject>
+					<imageobject>
+						<imagedata scalefit="1" fileref="bilder/ingen-bild.jpeg" format="JPEG" />
+					</imageobject>
+					<imageobject>
+						<imagedata scalefit="1" fileref="bilder/ingen-bild.eps" format="EPS" />
+					</imageobject>
+					<textobject>
+						<phrase>
+							Bild på ett nätverk. Till vänster syns ett lokalt
+							nätverk med adressrymden 192.168.0.0/255.255.255.0.
+							Det har en router som har adressen 192.168.0.254 på
+							insidan och 10.0.0.9 på utsidan. Den är kopplad
+							till Internet där till exempel www.se.linux.org
+							finns.
+						</phrase>
+					</textobject>
+					<caption>
+						<para>
+							Till vänster i denna bild syns ett lokalt, internt
+							nätverk. Det har nätverksadressen 192.168.0.0 och
+							nätmasken 255.255.255.0. På det nätverket finns
+							maskinerna 192.168.0.1 och 192.168.0.2 samt en
+							router på 192.168.0.254. Denna router har en publik
+							IP-adress som är 10.0.0.9. Routern är kopplad till
+							Internet (eller i själva verket till ytterligare en
+							router) och där, på Internet, finns bland annat
+							datorn se.linux.org (213.141.74.169).
+						</para>
+					</caption>
+				</mediaobject>
+			</figure>
+			
+			<para>
+				I figuren <xref linkend="fig_netroute"/> så kan 192.168.0.1
+				direkt få kontakt med 192.168.0.2. De sitter ju på samma
+				nätverk och kan tala med varandra direkt. Skall 192.168.0.1
+				däremot komma åt se.linux.org (213.141.74.169) så måste
+				paketen går via 192.168.0.254. Detta sker med hjälp av den
+				så kallade routingtabellen som finns på alla
+				nätverksanslutna datorer.
+			</para>
+			<para>
+				Routingtabellen på 192.168.0.1 och 192.168.0.2 ser ut så
+				här:
+
+				<screen>
+Destination   Netmask          Gateway           Interface
+192.168.0.0   255.255.255.0    0.0.0.0           eth0
+0.0.0.0       0.0.0.0          192.168.100.253   eth0
+				</screen>
+
+				Routingtabellen fungerar så att varje paket som skall
+				skickas iväg från en maskin kontrolleras mot en
+				routingtabell. Paketet jämförs med varje rad. Om IP-adressen
+				passar in i kombinationen av destination och nätmask (det
+				vill säga skall det det nätet) är det den regeln som gäller.
+				Routingtabellen läses uppifrån och ner och den första raden
+				som stämmer blir den som gäller. Hittas ingen regel som
+				stämmer kan inte paktet levereras. För att undvika detta
+				brukar man ha en regel i slutet som gäller för alla
+				adresser. Det vill säga, har inget annat passat så gäller
+				denna. En sådan regel för man om man använder nätmasken
+				0.0.0.0 eftersom en sådan markerat ett nätverk som består av
+				hela Internet. 
+			</para>
+			<para>
+				Skall man skicka ett paket till något annat ställe än det
+				interna nätet så måste man använda en router, eller gateway
+				som det brukar kallas på ett Internt nätverk. Man kan bara
+				skicka ett paket till en nod man har kontakt med, det har
+				man med en gateway och den kan skicka paketen vidare. Den
+				router som pekas ut i den sista regeln, den som fångar upp
+				alla paket som inte hittat rätt i tidigare regler brukar
+				kallas för <emphasis>Default Gateway</emphasis>, det vill
+				säga den gateway som man skall kontakta för att lämna det
+				lokala nätet.
+			</para>
+			<para>
+				I exemplet tittar vi på datorer på ett lokalt nätverk. Dessa
+				har vad man brukar kalla <emphasis>statiska
+				routingtabeller</emphasis>. En dator kan antingen konfigureras i
+				nätverksinställningarna att använda en speciell
+				routingtabell eller så får den tabellen av en en server på
+				nätet. Sedan ändras inte denna tabell utan den är statisk.
+				Routrar på Internet som inte gör annat än att routar har som
+				regel dynamiska routingtabeller. Som vi sagt tidigare är en
+				av fördelarna med Internet att ett paket kan ta flera olika
+				vägar för att komma fram. Om alla routrar på vägen hade
+				statiska routingtabeller skulle alla paket mellan två
+				platser alltid gå samma väg, precis som de alltid går via
+				samma gateway i exemplet. Istället för statiska tabeller
+				använder routrarna på Internet ett speciellt protokoll för
+				att deras routingtabeller alltid skall vara aktuella. De
+				håller ständigt reda på sina grannar och vet vilken väg de
+				skall skicka paket för att nå olika nät. I övrigt fungerar
+				routrar enligt precis samma princip som routingtabellen i
+				din dator.
+			</para>
+			</sect3>
+			<sect3><title>NAT, Network Address
+			Translation<footnote><para>Se även brevet från Bengt Gördén i
+			<xref linkend="brev"/></para></footnote></title>
+				<para>
+					Som vi nämnt tidigare så finns det inte oändligt med
+					IP-adresser på dagens Internet. Det gör att företag idag
+					inte får hur många IP-adresser som helst. Ett sätt att
+					spara adresser är att använda sig av privata adresser på
+					sitt interna nätverk och sedan använda en router eller
+					gateway som har en publik adress på Internet. Denna
+					router översätter sedan de interna adresserna så att alla
+					datorer på den interna nätverket använder en och samma
+					adress när de ansluter till Internet.
+				</para>
+				<para>
+					Det finns, som nämnts tidigare, flera fördelar med detta
+					än att man sparar IP-adresser. En annan fördel är att
+					säkerheten höjs för de datorer som är på det interna
+					nätverket eftersom de har IP-adresser som inte syns på
+					Internet, de göms ju bakom routern.
+				</para>
+				<para>
+					Eftersom IP-adresserna på det interna nätverket aldrig
+					kommer att synas på Internet så kan dessa vara vilka
+					adresser som helst. För att man inte skall riskera att
+					använda adresser på det interna nätet som finns på
+					Internet (då skulle man ju inte komma åt den datorn
+					eftersom deras adresser skulle kollidera) så finns det
+					speciella adresser som bara är avsedda att användas på
+					Interna nät. Dessa kallas ibland för svarta adresser
+					eftersom man aldrig skall stöta på dessa på Internet.
+					Dessa adresser specificeras i RFC 1918 (se <xref
+					linkend="rfc"/>) och är:
+			
+					<literallayout>10.0.0.0        -   10.255.255.255  (10/8 prefix)
+172.16.0.0      -   172.31.255.255  (172.16/12 prefix)
+192.168.0.0     -   192.168.255.255 (192.168/16 prefix)
+					</literallayout>
+					
+					Som vi ser så är det olika stora nätverksklasser. Till
+					exempel så är det lämpligt att använda 10.X.X.X om man
+					behöver ett klass A nät, 172.16.x.x om man behöver ett
+					klass B nät och 192.168.0.x om man behöver ett klass C
+					nät. Men inget hindrar att man använder ett klass C nät
+					som börjar på 10 eftersom man gör som man vill med dessa
+					adresser.
+				</para>
+				<para>
+					Observera att vissa ISP:er använder dessa adresser i sina
+					nät. Till exempel använder telia 10.0.0.0 till sina
+					kunder. Tänk på att kolla detta innan du väljer att
+					använda dessa adresser.
+				</para>
+			</sect3>
+		</sect2>
+
+
+		<sect2><title>Felsökning i TCP/IP-nätverk</title>
+			<para>
+				<!-- IP-adresser, nätklasser och nätmaskar  -->
+			</para>
+
+			<sect3><title>Ifconfig</title>
+				<para>
+					Ifconfig<footnote><para>Se <xref
+					linkend="commands"/> ifall du använder ett annat
+					operativsystem än Linux</para></footnote> är ett program
+					som visar, eller ändrar de nätverksgränssnitt som finns på
+					datorn. Vi skall i detta avsnitt inte ändra på
+					nätverkgränssnitten utan bara titta på dem.
+				</para>
+				<figure id="fig_ifconfig">
+					<title>Skärmdump: ifconfig på Linux</title>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" fileref="bilder/ifconfig.jpeg" format="JPEG" />
+						</imageobject>
+						<imageobject>
+							<imagedata scalefit="1" fileref="bilder/ifconfig.eps" format="EPS" />
+						</imageobject>
+					</mediaobject>
+				</figure>
+			</sect3>
+
+			<sect3><title>Ping</title>
+				<para>
+
+				</para>
+				<figure id="fig_ping">
+					<title>Skärmdump: ping på Linux</title>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" fileref="bilder/ping.jpeg" format="JPEG" />
+						</imageobject>
+						<imageobject>
+							<imagedata scalefit="1" fileref="bilder/ping.eps" format="EPS" />
+						</imageobject>
+					</mediaobject>
+				</figure>
+			</sect3>
+
+			<sect3><title>Route</title>
+				<para>
+
+				</para>
+				<figure id="fig_route">
+					<title>Skärmdump: route på Linux</title>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" fileref="bilder/route.jpeg" format="JPEG" />
+						</imageobject>
+						<imageobject>
+							<imagedata scalefit="1" fileref="bilder/route.eps" format="EPS" />
+						</imageobject>
+					</mediaobject>
+				</figure>
+			</sect3>
+
+			<sect3><title>Traceroute</title>
+				<para>
+
+				</para>
+				<figure id="fig_traceroute">
+					<title>Skärmdump: traceroute på Linux</title>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" fileref="bilder/traceroute.jpeg" format="JPEG" />
+						</imageobject>
+						<imageobject>
+							<imagedata scalefit="1" fileref="bilder/traceroute.eps" format="EPS" />
+						</imageobject>
+					</mediaobject>
+				</figure>
+			</sect3>
+
+			<sect3><title>Host</title>
+				<para>
+
+				</para>
+				<figure id="fig_host">
+					<title>Skärmdump: host på Linux</title>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" fileref="bilder/host.jpeg" format="JPEG" />
+						</imageobject>
+						<imageobject>
+							<imagedata scalefit="1" fileref="bilder/host.eps" format="EPS" />
+						</imageobject>
+					</mediaobject>
+				</figure>
+			</sect3>
+
+			<sect3><title>Arp</title>
+				<para>
+
+				</para>
+				<figure id="fig_apr">
+					<title>Skärmdump: arp på Linux</title>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" fileref="bilder/arp.jpeg" format="JPEG" />
+						</imageobject>
+						<imageobject>
+							<imagedata scalefit="1" fileref="bilder/arp.eps" format="EPS" />
+						</imageobject>
+					</mediaobject>
+				</figure>
+			</sect3>
+
+			<sect3><title>Netstat</title>
+				<para>
+
+				</para>
+				<figure id="fig_netstat">
+					<title>Skärmdump: netstat på Linux</title>
+					<mediaobject>
+						<imageobject>
+							<imagedata scalefit="1" fileref="bilder/netstat.jpeg" format="JPEG" />
+						</imageobject>
+						<imageobject>
+							<imagedata scalefit="1" fileref="bilder/netstat.eps" format="EPS" />
+						</imageobject>
+					</mediaobject>
+				</figure>
+			</sect3>
+
+		</sect2>
+	</sect1>
+
+	<sect1><title>Domännamnssystemet (DNS)</title>
+		<!--
+							- DNS-systemets uppbyggnad
+							- hierarkiskt
+							- toppdomäner (appendix med komplett lista kanske)
+				- DNS-servrar								   
+		-->
+		<para>
+			Domännamnssystemet <emphasis>Domain Name System, DNS</emphasis>
+			är ett av de viktigaste systemen på Internet. Utan detta system
+			skulle visserligen det mesta av Internet fungera men inte många
+			skulle kunna använda sig av det. Både fysiska användare och
+			olika system på Internet skulle sluta fungera om DNS skulle
+			sluta att fungera en dag.
+		</para>
+		<para>
+			Domännamnssystemets huvudsakliga uppgift är att översätta
+			datornamn (hostname), till exempel www.se.linux.org till en
+			IP-adress, 213.141.74.169. Den huvudsakliga anledningen till
+			detta är att det skall vara lätt för människor att komma ihåg
+			namnen på olika servrar. I exemplet så är ju datornamnet mycket
+			lättare för en människa att lägga på minnet än vad IP-adressen
+			är. Dessutom är det bra att använda ett alias, datornamnet, när
+			man adresserar en dator eftersom man då kan flytta datorn,
+			vilket oftast medför en ny IP-adress, utan att man behöver
+			uppdatera alla som skall använda datorn, det räcker ju att
+			uppdatera DNS-namnet.
+		</para>
+		<para>
+			När Internet inte var så stort behövde man inte använda något
+			system som DNS. På samma sätt behöver man inte använda det om
+			man har ett mindre lokalt nätverk. Men så snart man skall
+			använda Internet eller skall hantera ett lite större nätverk så
+			är det väldigt bra att använda ett DNS-system. Från början på
+			Internet använde man så kallade hosts-filer på varje dator. I
+			denna fil fanns det en lista med datornamn och motsvarande
+			IP-adresser. Detta system kan man fortfarande använda om man
+			vill men fungerar bara så länge som nätverket är litet. Det blir
+			snabbt ohållbart att hålla alla dessa hosts-filer uppdaterade
+			med varandra. Precis som man upptäckte så snart som Internet
+			började växa.
+		</para>
+
+		<sect2><title>Hierarkiskt system</title>
+			<para>
+				DNS kan jämföras med en gigantisk distribuerad databas med
+				datornamn och IP-adresser. DNS är ett hierarkiskt system. Det
+				vill säga det finns en mängd olika nivåer där varje nivå har en
+				master. Det kan jämföras med en hierarkisk företagsstruktur med
+				en VD överst och under denne en rad chefer som under sig har
+				kanske andra chefer som under sig har arbetare. Varje chef
+				ansvarar för sina underhuggare och lyder närmast överliggande
+				chef. Ungefär på samma sätt fungerar DNS. 
+			</para>
+			<para>
+				Denna hierarkiska struktur används i DNS av precis samma skäl
+				som det används i företag. Den högsta chefen kan inte
+				personligen hålla reda på alla arbetare i företaget. Precis som
+				en enda dator inte kan hålla reda på alla datorer på Internet
+				och hantera frågor om dem.
+			</para>
+			<para>
+				DNS har inte en master eller topp-chef utan i dagsläget 13
+				stycken (http://www.root-servers.org/). Under dessa finns alla
+				dns-servrar som hanterar <emphasis>toppdomäner</emphasis>.
+			</para>
+			<para>
+				Vi har tidigare sett att ett datornamn består av flera olika
+				delar. Det längst till höger är det mest signifikanta och är den
+				så kallade toppdomänen. I det finns två olika typer av
+				toppdomäner, dels de så kallade <emphasis>generiska</emphasis>
+				som är de äldsta. De vanligaste generiska toppdomänerna är .com,
+				.org, och .net. Dessa kom till när Internet var litet och i
+				princip bara fanns i USA. Då var det mest logiskt att dela upp
+				datornamnen efter vilken funktion de tillhörde. Sedan när
+				Internet växte insåg man att man måste dela upp ytterligare, då
+				blev det mest logiska att dela upp efter land. Så kom de
+				nationella toppdomänerna till. Exempel på nationella domäner ät
+				.se, .no, och .dk. Märk att de nationella domänerna är bundna
+				till land medan de generiska kan användas överallt. USA, där
+				användandet av generiska toppdomännamn är vanligast har det
+				nationella toppdomännamnet .us. Märk också att även om nationella
+				toppdomännamn är bundna till länder så finns det inget som
+				hindrar att landet säljer dessa till utlandet. På så sätt har
+				det till exempel blivit väldigt vanligt att svenskar använder
+				det nationella toppdomännamnet .nu som tillhör landet Niue.
+			</para>
+			<para>
+				I Sverige har vi den nationella toppdomänen se. Den styrs av
+				ett företag som heter Nic-SE. Nic-SE ägs till 100% av en
+				stiftelse som heter <emphasis>Stiftelsen för
+				internetinfrastruktur (II-stiftelsen)</emphasis>. Fram till
+				april 2003 var det väldigt avancerat att få ett domännamn
+				under se-domänen, till exempel så måste man då ha ett
+				företag registrerat hos Patent och Registreringsverket
+				(PRV). Bland annat detta ledde till att toppdomänen nu blev
+				så populär bland svenskar. Nu är det betydligt enklare och
+				vem som helst kan skaffa en se-domän.
+			</para>
+			<para>
+				I <xref linkend="topdomains"/> finns en komplett lista över de
+				generiska och nationella toppdomänerna.
+			</para>
+		</sect2>
+
+		<sect2><title>Domännamnsförfrågan</title>
+			<para>
+				Som vi sa tidigare så ansvarar DNS för att översätta datornamn
+				till IP-adress. Så vad händer när du skall hitta en dator. Säg
+				att du vill kontakta datorn www.se.linux.org för att till
+				exempel titta på de webbtjänster som den erbjuder. Du knappar in
+				http://www.se.linux.org i din browser, vad händer sedan?
+			</para>
+			<para>
+				Det första som händer är att din dator frågar den DNS-server
+				som du angett som standard, det är vanligtvis den server som
+				är DNS på ditt lokala nätverk eller den som din
+				internetleverantör tillhandahåller. Så din dator frågar
+				alltså denna efter www.se.linux.org. Vi antar att denna DNS
+				inte vet vad www.se.linux.org har för adress så denna DNS
+				måste fråga någon annan. Eftersom det är en .org adress
+				(generisk toppdomän) så frågar den den server som ansvarar
+				för .org. Vet den inte vilken server vilken det är så
+				måste den fråga någon av root-servrarna vilken
+				server<footnote><para>Dessa stora domäner hanteras av flera
+						servrar men man kan se de som en
+						enda.</para></footnote> som hanterar .org. Denna
+				server känner inte heller till hela adressen men den kan
+				fråga linux.org som den känner till. Alla känner ju till de
+				som ligger direkt under dem. linux.org känner se.linux.org
+				som i sin tur hittar www.se.linux.org. På så sätt så hittas
+				adressen till den dator du sökte. Varje fråga som ställs
+				sparas (cachas) i den maskin som ställde frågan så det skall
+				gå snabbare nästa gång. Så nästa gång du frågar så vet redan
+				din lokala DNS vilken adress det är du söker. Utan denna
+				funktion skulle Internet snabbt svämma över av bara
+				namnförfrågningar.
+			</para>
+		</sect2>
+		<sect2><title>DNS-servrar</title>
+			<para>
+				En DNS-server är en funktion i en dator. De större DNS-servrarna
+				är datorer som bara är DNS-servrar och inget annat. Mindre
+				DNS-servrar till exempel i lokala nätverk kan ha flera
+				funktioner, man kan till exempel ha en dator som både DNS-server
+				och webbserver. Det finns DNS-serverprogramvaror till i princip
+				alla operativsystem. Den vanligaste finns till Unix-system, även
+				Linux och heter <emphasis>BIND, Berkeley Internet Name
+				Daemon</emphasis>. 
+			</para>
+		</sect2>
+		<sect2><title>Round Robin DNS</title>
+			<para>
+				Om man har en server där prestanda blir lidande av för stor
+				belastning kan man använda en teknik som heter Round Robin
+				DNS. Den fungerar så att DNS-servern inte returnerar samma
+				IP-adress varje gång den frågas efter ett datornamn. Det gör
+				att man kan ha två eller flera servrar, gärna utspridda på
+				olika håll som servar samma domännamn. Eftersom
+				DNS-servrarna sprider ut svaren på domännamnsfårgorna så
+				kommer lasten att balanseras över de olika servrarna.
+			</para>
+		</sect2>
+	</sect1>
+
+	<sect1><title>Sammanfattning</title>
+		<para>
+		
+		</para>
+	</sect1>
+</chapter>
+
+<!-- Keep this comment at the end of the file
+tab-width: 3
+vim600: fdm=syntax sw=3 ts=3
+vim: sw=3 ts=3
+vi: sw=3 ts=3
+-->
+

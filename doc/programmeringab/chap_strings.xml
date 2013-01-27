@@ -1,0 +1,498 @@
+<chapter id="chap_strings">
+	<title>Mer om strängar</title>
+
+	<abstract>
+		<para>
+			Strängar är en typ som består av följder av tecken. Till exempel så
+			är "Jag heter Marcus" en sträng. I detta avsnitt tittar vi lite mer
+			på vad man kan göra med strängar.
+		</para>
+	</abstract>
+
+	<sect1>
+		<title>Vad är en sträng</title>
+
+		<para>
+			En sträng är en grupp av tecken. Strängar förekommer, i stort sett,
+			i alla program. PHP är ett språk som är väldigt rikt på funktioner
+			för att hantera strängar. Mycket beroende på att det är ett språk
+			för web-programmering där i princip allt som kommer från programmet
+			är strängar. Det uppmuntrar även till att man låter okända användare
+			mata in strängar till programmen vilket gör att man av säkerhetsskäl
+			måste vara försiktig med strängarna.
+		</para>
+
+		<para>
+			I PHP markeras en sträng av att den innesluts av enkla eller dubbla
+			citationstecken. Skillnaden är den att inom dubbla citationstecken
+			kommer alla variabler i strängen att bytas ut mot sitt värde. Se
+			följande exempel:
+
+			<example>
+				<title>Exempel med strängar</title>
+				<programlisting>
+<![CDATA[
+<?php
+$summa = 1 + 6;
+echo "Summan är $summa"; // Skriver ut: Summan är 7
+echo 'Summan är $summa'; // Skriver ut: Summan är $summa
+?>
+]]>
+				</programlisting>
+			</example>
+
+			Som du ser så sker ingen variabelsubstitution i den andra raden
+			eftersom den omges av enkla citationstecken.
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>Escape-tecken</title>
+
+		<para>
+			Som vi såg i förra stycket så omges en sträng av citationstecken.
+			En naturlig fråga man då ställer sig är vad som händer om jag vill
+			ha citationstecken i en sträng. Se följande exempel:
+
+			<example>
+				<title>Citationstecken i strängar</title>
+				<programlisting>
+<![CDATA[
+<?php
+echo "Tjenare din gamle "hacker"";
+?>
+]]>
+				</programlisting>
+			</example>
+
+			Man ser direkt att det inte kommer att bli bra. Hur skall tolkaren
+			kunna veta var strängen slutar? Det som kommer att ske är att
+			strängen börjar vid det första citationstecknet och slutar vid den
+			andra. Den bosktav (h) som kommer efter kommer att orsaka ett
+			"parse error". Hur gör man då?
+			Jo om man vill infoga specialtecken i en sträng måste dessa föregås
+			av specialtecknet \ (bakvänt snedstreck eller backslash). Strängen
+			ovan blir då:
+
+			<example>
+				<title>Exempel på escape-tecken</title>
+				<programlisting>
+<![CDATA[
+<?php
+echo "Tjenare din gamle \"hacker\"";
+?>
+]]>
+				</programlisting>
+			</example>
+
+			Nu blir utskrifter som vi tänkt oss. Det finns även andra
+			specialtecken:
+
+			<table frame='all'>
+				<title>Specialtecken i strängar</title>
+				<tgroup cols='2' align='left' colsep='1' rowsep='1'>
+					<colspec colname='c1'/>
+					<colspec colname='c2'/>
+
+					<thead>
+						<row>
+							<entry>Teckenkombination</entry>
+							<entry>Skrivs ut som</entry>
+						</row>
+					</thead>
+					<tbody>
+						<row>
+							<entry>\"</entry>
+							<entry>"</entry>
+						</row>
+						<row>
+							<entry>\'</entry>
+							<entry>'</entry>
+						</row>
+						<row>
+							<entry>\\</entry>
+							<entry>\</entry>
+						</row>
+						<row>
+							<entry>\$</entry>
+							<entry>$</entry>
+						</row>
+						<row>
+							<entry>\n</entry>
+							<entry>Ny rad</entry>
+						</row>
+						<row>
+							<entry>\t</entry>
+							<entry>Tab</entry>
+						</row>
+					</tbody>
+				</tgroup>
+			</table>
+
+			I strängar inom enkla citationstecken (') så substitueras bara
+			"\'". Alla andra representerar sig själva.
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>Lägga ihop strängar</title>
+
+		<para>
+			Man kan inte lägga ihop strängar med hjälp av additionsoperatorn
+			(+).  Den är ju till för aritmetiska termer. Som tur är så finns
+			det speciella opteratorer för just strängar. Den som lägger ihop
+			två strängar kallas för concatenationsoperatorn. Den representeras
+			av tecknet "." (punkt).  Se nedanstående exempel.
+
+			<example>
+				<title>Exempel med strängar</title>
+				<programlisting>
+<![CDATA[
+<?php
+$a = "Hello ";
+$b = $a . "World!"; // Vi lägger till strängen "World!" efter $a
+echo $b; // Skriver ut "Hello World!"
+?>
+]]>
+				</programlisting>
+			</example>
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>Jämföra strängar</title>
+
+		<para>
+			I PHP kan man jämföra strängar med de operaorer som vi lärt oss för
+			numeriska värden. Det är ganska specifikt för PHP. Räkna inte med
+			att du kan göra så i andra språk du kommer i kontakt med. Även i PHP
+			finns det funktioner för att jämföra strängar.
+		</para>
+
+		<sect2>
+			<title>Strcmp och strcasecmp</title>
+
+			<para>
+				Strcmp (STRing CoMPare) är en funktion som jämför två strängar
+				med varandra. Om de är exakt likadana returneras värdet 0. Om
+				den första är större returneras 1 och om den andra är större
+				returneras -1. Syntaxen och ett exempel på hur den kan användas
+				visas i nedanstående exempel.
+
+				<example>
+					<title>Exempel med strcmp</title>
+					<programlisting>
+<![CDATA[
+<?php
+if (strcmp($password, "Hemligt") == 0) {
+   echo "Rätt lösenord";
+} else {
+   echo "Fel lösenord!";
+}
+?>
+]]>
+					</programlisting>
+				</example>
+
+				Tänk på att strcmp gör skillnad på stora och små bokstävar.
+				Texten "Rätt lösenord" ovan kommer bara att skrivas ut om
+				$password innehåller exakt "Hemligt". Vill du jämföra
+				strängen utan att versaler/gemener skall ha någon betydelse
+				kan du prova strcasecmp som fungerar på samma sätt fast
+				"case insensitive".
+			</para>
+		</sect2>
+	</sect1>
+
+	<sect1>
+		<title>Ändra strängar</title>
+
+		<para>
+			Ofta vill man ändra på strängar så att de ser lite annorlunda ut.
+			Det kan vara att man vill göra om alla bokstäver till versaler
+			eller gemener. Eller att man vill byta något ord mot ett annat.
+			PHP har massor av funktioner för detta. Vanliga saker man vill
+			göra med strängar är att byta ut en förekomst av ett ord mot ett
+			annat eller att göra alla tecken till små eller stora bokstäver
+			eller ta bort tomma tecken.
+		</para>
+
+		<sect2>
+			<title>strtoupper och strtolower</title>
+
+			<para>
+				Dessa två funktioner (STRing TO UPPERcase och LOWERcase) tar
+				en sträng som argument och returnerar samma sträng med alla
+				bokstäver konverterade till antingen stora bokstäver (versaler)
+				eller små bokstäver (gemener).
+			</para>
+
+			<para>
+				Se följande lilla exempel:
+
+				<example>
+					<title>Exempel med strtoupper och strtolower</title>
+					<programlisting>
+<![CDATA[
+<?php
+$str1 = "Kalle Anka";
+$str2 = strtolower($str1);  // str2 blir "kalle anka"
+$str3 = strtoupper($str1);  // str3 blir "KALLE ANKA"
+echo "\$str1: ". $str1;
+echo "\n\$str2: ". $str2;
+echo "\n\$str3: ". $str3 ."\n";
+?>
+]]>
+					</programlisting>
+				</example>
+			</para>
+		</sect2>
+
+		<sect2>
+			<title>Ucfirst och ucwords</title>
+
+			<para>
+				Dessa två funtioner (UpperCase FIRST och WORDS) är kanske inte
+				lika användbara som strtoupper och strtolower men kan vara bra
+				att känna till. De kan användas till exempel om man vill snygga
+				till användarinmatad data. Vad de gör är att göra den första
+				bokstaven i en sträng (ucfirst) eller första bokstaven i varje
+				ord i strängen (ucwords) till versal. Observera att dessa
+				funktioner bara verkar på de tecken det gäller och inte de
+				övriga. Se följande exempel:
+
+				<example>
+					<title>Exempel med ucfirst och  ucword</title>
+					<programlisting>
+<![CDATA[
+<?php
+$str1 = "kalle anka";
+$str2 = ucwords($str1); // str2 blir "Kalle Anka"
+
+$str1 = 'KALLE ANKA';
+$str2 = ucwords($str1); // str2 blir KALLE ANKA (inga tecken blir gemener)
+
+$str3 = ucwords(strtolower($str1)); // str3 blir Kalle Anka
+?>
+]]>
+					</programlisting>
+				</example>
+
+				I exemplet ser vi att "KALLE ANKA" blir samma sak efter ucwords.
+				Det beror på att denna funktion bara verkar på det första
+				tecknet i varje ord. Detta görs versalt. Inget annat görs. Är
+				alla tecken versaler så kommer inget att ske. I den sista satsen
+				lägger vi in ett anrop till strtolower vilket gör att ucwords
+				matas med strängen "kalle anka" istället.
+			</para>
+
+			<para>
+				Ucfirst fungerar på exakt samma sätt fast bara på det allra
+				första tecknet i strängen.
+			</para>
+		</sect2>
+
+		<sect2>
+			<title>strrev</title>
+
+			<para>
+				Detta är en väldigt trevlig lite funktion (STRing REVerse). Det
+				enda den gör är att den tar en sträng som argument och returnerar
+				samma sträng fast reverserad.
+
+				<example>
+					<title>Exempel med strrev</title>
+					<programlisting>
+<![CDATA[
+<?php
+$str1 = "Kalle Anka";
+$str2 = strrev($str1); // str2 blir "aknA ellaK"
+?>
+]]>
+					</programlisting>
+				</example>
+			</para>
+		</sect2>
+
+		<sect2>
+			<title>strlen</title>
+
+			<para>
+				En betydligt mer användbar funktion än strrev är strlen (STRing
+				LENgth). Denna returnerar antalet tecken i en sträng.
+			</para>
+
+			<para>
+				Som vanligt tar vi ett litet exempel:
+
+				<example>
+					<title>Exemepel med strrev</title>
+					<programlisting>
+<![CDATA[
+<?php
+$str1 = "Kalle Anka";
+echo strlen($str1);          // skriver ut 10
+echo strlen(" Kalle Anka "); // skriver ut 12
+?>
+]]>
+					</programlisting>
+				</example>
+			</para>
+		</sect2>
+
+		<sect2>
+			<title>str_replace</title>
+
+			<para>
+				Detta är en mycket användbar funktion. Den byter ut en teckenföljd
+				i en mening mot en annan. Funktionen tar tre argument och
+				returnerar en sträng. Det första argumentet är den teckenföljd som
+				skall ersättas, det andra är det som det skall ersättas med och
+				det tredje argumentet är den sträng som det hela berör. Det som
+				returneras är strängen i det tredje argumentet där alla
+				förekomster av teckenföljden i det första argumentet ersatts med
+				tecknen i det andra argumentet.
+			</para>
+
+			<para>
+				Förvirrad? Se nedanstående exempel:
+
+				<example>
+					<title>Exempel med str_replace</title>
+					<programlisting>
+<![CDATA[
+<?php
+$str1 = "Kalle Anka är bäst";
+$str2 = str_replace("Kalle", "Kajsa", $str1);
+
+echo $str2;  // str2 är "Kajsa Anka är bäst"
+?>
+]]>
+					</programlisting>
+				</example>
+
+				Detta är användbart till väldigt mycket. Bara fantasin sätter
+				gränserna.
+			</para>
+		</sect2>
+	</sect1>
+
+	<sect1>
+		<title>Hantera oönskad HTML i strängar</title>
+
+		<para>
+			I PHP hanterar man av naturliga skäl ofta strängar som skall
+			presenteras i en webläsare. Flera av dessa strängar kommer vanligtvis
+			från användare eller andra osäkra källor. Då vill man gärna
+			kontrollera så att inte användaren kan mata in data som förstör
+			resten av sidan. Till exempel så skall man inte i ett web-forum kunna
+			skriva in HTML-kod hur som helst.  Man skulle då kunna länka in fula
+			bilder eller andra typsnittet på hela sidan. Man kan åstadkomma detta
+			genom att använda massor av anrop på str_replace. Till exempel:
+
+			<example>
+				<title>Med str_replace</title>
+				<programlisting>
+<![CDATA[
+<?php
+//
+// Följande två rader tar bort alla förekomster av större än och
+// mindre än och ersätter dem med deras HTML-motsvarighet. Detta
+// eliminerar alla HTML-taggar.
+//
+$html_string = str_replace("&lt;", "&amp;lt;", $html_string);
+$html_string = str_replace("&gt;", "&amp;gt;", $html_string);
+?>
+]]>
+				</programlisting>
+			</example>
+
+			Men det finns bättre sätt att göra det på. Det finns (naturligtvis)
+			färdiga funktioner som gör HTML av strängar, till exempel
+			htmlentities. htmlentities gör om en sträng så att alla tecken som har
+			en motsvarighet i HTML kod blir just, HTML kod.
+			Funktionen tar ett argument och har två stycken valfria argument som
+			du inte behöver ange, mer än om du t.ex. behöver använda en annan
+			teckenuppsättning. Se följande exempel:
+
+			<example>
+				<title>Exempel med htmlentities</title>
+				<programlisting>
+<![CDATA[
+<?php
+$str1 = "<h1>Kalle Anka</h1>"; // Blir "Kalle Anka" (Rubrik 1) i browsern
+$str2 = htmlentities($str1);   // Blir <h1>Kalle Anka</h1>; i browsern
+?>
+]]>
+				</programlisting>
+			</example>
+
+			Detta gör att allt man skickar till htmlentities kommer att synas i
+			browsern precis som det ser ut i klartext.
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>Söka i strängar</title>
+
+		<para>
+			Ofta vill man hitta eller använda bara vissa delar av en sträng. Det
+			finns flera funktioner för detta. Vi skall titta på två av dem.
+		</para>
+
+		<sect2>
+			<title>strstr och stristr</title>
+
+			<para>
+				Dessa två funktioner fungerar så att de tar två argument, båda är
+				strängar (STRing in STRing och STRing case-Insensitive in STRing).
+				Den första är den sträng som det skall sökas i och det andra är
+				det sökta.  Det som returneras är det som är kvar av det första
+				argumentet efter den funna strängen. Förvirrad?
+
+				<example>
+					<title>Exemempel med strstr()</title>
+					<programlisting>
+<![CDATA[
+<?php
+$namn = "Kalle Anka";
+$enamn = strstr($namn, " ");    // enamn blir " Anka"
+
+$adress = "kalle@ankeborg.net";
+$domain = strstr($adress, "@"); // domain blir "@ankeborg.net"
+?>
+]]>
+					</programlisting>
+				</example>
+
+				Funktionen stristr fungerar på samma sätt men den bryr sig inte
+				om om den eftersökta strängen har stora eller små bokstäver
+				(Case-Insensitive).
+
+			</para>
+		</sect2>
+	</sect1>
+
+	<sect1>
+		<title>Mer läsning</title>
+
+		<para>
+			Aktuellt avsnitt i Manualen.
+			<ulink url="http://www.php.net/manual/en/ref.strings.php">
+				<citetitle>
+					http://www.php.net/manual/en/ref.strings.php
+				</citetitle>
+			</ulink>
+		</para>
+	</sect1>
+</chapter>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+tab-width: 3
+End:
+vim600: syn=xml fen fdm=syntax si
+vim: noet sw=3 ts=3 syn=sgml
+vi: ts=3 sw=3
+-->

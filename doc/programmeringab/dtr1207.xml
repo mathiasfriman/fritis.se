@@ -1,0 +1,84 @@
+<appendix id="dtr1207">
+
+<title>Kurs DTR1207 - Programmering A</title>
+<subtitle>50 poäng, inrättad 2000-07  SKOLFS: 2000:28</subtitle>
+
+<sect1><title>Mål</title>
+
+<sect2><title>Mål för kursen</title>
+
+<para>Kursen skall ge grundläggande teoretiska och praktiska kunskaper i
+programmering.  Kursen skall även ge kunskaper om vanliga
+användningsområden för olika programmeringsspråk. Kursen skall också ge
+grundläggande färdigheter i systemering och struktureringsteknik.</para>
+
+</sect2>
+
+
+<sect2><title>Mål som eleverna skall ha uppnått efter avslutad
+kurs</title>
+
+<para>Eleven skall</para>
+
+<para> kunna något programmeringsspråks grundläggande datatyper,
+fördefinierade strukturer och funktioner samt deras regler och
+syntax</para>
+
+<para>kunna analysera programmeringsuppgifter och formulera strukturerad
+pseudokod samt konstruera enkla algoritmer</para>
+
+<para>kunna systemera och strukturera programmeringsarbetet samt skriva
+enkla program och felsöka källkod </para>
+
+<para>känna till kompilatorns/länkarens arbete från källkod till färdigt
+program</para>
+
+<para>känna till viktiga operativsystemstandarder för bl.a. teckenkoder
+och utmatningsrutiner</para>
+
+<para>känna till språkens allmänna prestanda och egenskaper samt vilka
+programmeringsuppgifter de är bäst lämpade för.</para>
+
+</sect2>
+</sect1>
+
+<sect1><title>Betygskriterier</title>
+
+<sect2><title>Kriterier för betyget Godkänd</title>
+
+<para>Eleven analyserar enkla programmeringsuppgifter och skapar med
+viss handledning körbara väldokumenterade program.</para>
+
+<para> Eleven söker med viss handledning upp de fakta som behövs för
+programmeringsuppgifterna.</para>
+
+<para> Eleven beskriver det använda programspråkets uppbyggnad,
+viktigaste funktioner, egenskaper och prestanda.</para>
+</sect2>
+
+<sect2><title>Kriterier för betyget Väl godkänd</title>
+
+<para>Eleven utför sina programmeringsuppgifter på egen hand och inom
+rimlig tid.</para>
+
+<para> Eleven hämtar på egen hand fakta från olika källor och tillämpar
+dessa i uppgifterna.</para>
+</sect2>
+
+<sect2><title>Kriterier för betyget Mycket väl godkänd</title>
+
+<para>Eleven utför självständigt sina programmeringsuppgifter med
+noggrannhet och når snabbt avsett resultat.</para>
+
+<para> Eleven anpassar sin arbetsinsats till situationen, analyserar
+resultat samt åtgärdar kvalitetsavvikelser.</para>
+
+<para> Eleven beskriver samband och ser helheter i komplicerade
+programmeringssituationer.</para>
+
+<para>Skolverket 2002-04-09</para>
+</sect2>
+
+</sect1>
+
+</appendix>

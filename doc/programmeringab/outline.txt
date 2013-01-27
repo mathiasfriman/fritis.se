@@ -1,0 +1,63 @@
+$Id: outline.txt,v 1.1 2004/01/05 09:01:38 rejas Exp $
+
+Inledning
+ 	- Vad är datorkommunikation
+ 		- Jämför med vanlig kommunikation
+		- Data kontra dator
+		- Information kontra data
+
+
+Allmänt om överföring
+	- Ettor och nollor
+	- Hur dessa representeras
+	- Hur det går till att föra data genom en kabel
+
+Allmänt om kablar och icke-kablar
+	- Ledningsegenskaper och kapacitet samt deras praktiska innebörd
+	  vid datakommunikation
+	- Olika sorters kablar
+		- För och nackdelar
+	- Olika sorters trådlösa alternativ
+
+Datornätverk
+	- Topologier
+		- Buss, Stjärn, Ring
+	- LAN, WAN
+	- 
+
+Seriell och parallell kommunikation
+	
+
+Förbindelser med olika typer av modem
+	- Egenskaper för de vanligaste modemstandarderna
+	
+
+Dublika telenätets anslutningsmöjligheter
+
+
+Digitala tjänster
+	- Funktion och prestanda hos olika digitala förbindelser
+
+
+Protokoll
+	- Olika typer av överförings- transport- och
+	  transmissionsprotokoll
+	- Referensmodeller som beskriver struktur och funktion för
+	  datorkommunikation
+
+Modeller, referensmodeller, standarder
+	- ISO/OSI
+	- SIS
+	- IEEE
+	- PTS
+	- m.fl.
+
+Internet
+	- internets historik, uppbyggnad och kommunikationsteknik
+	- vanligaste protokollen och programmen på interne
+	- programvaror för enklare diagnostisering, spårning och
+	  felsökning på internet
+
+Säkerhet
+	- Gällande datalagstiftning och förstå datasäkerhetens betydelse
+	- Olika sätt att skydda information vid dataöverföringar

@@ -1,0 +1,300 @@
+<chapter id="chap_iterationer">
+	<title>Iterationer (Upprepningar, loopar)</title>
+
+	<abstract>
+		<para>
+			Datorprogram är extremt bra på att göra saker om och om igen, utan
+			att ledsna eller göra fel. Till detta använder man någon typ av
+			iterationssats (iteration = upprepning).
+		</para>
+	</abstract>
+
+	<sect1>
+		<title>While-satsen</title>
+
+		<para>
+			While-satsen är en vanlig iterationssats. Den fungerar så att en
+			sats (som kan vara ett block) körs om och om igen så länge som ett
+			test är sant. Studera följande exempel som skriver ut tiotusen
+			ettor.
+
+			<example>
+				<title>Exempel med while</title>
+				<programlisting>
+<![CDATA[
+<?php
+// Exempel på while-loop
+
+echo "<h1>Tiotusen ettor</h1>";
+
+$a = 0;
+while ($a < 10000) {
+   echo "1 ";
+   $a = $a + 1;
+}
+?>
+]]>
+
+				</programlisting>
+			</example>
+
+			Vi tittar på exemplet rad för rad. Raden som börjar med "//" är en
+			kommentar, den kan ni ignorera, kommentarer är viktiga men vi kommer
+			att gå igenom dem lite senare.
+		</para>
+
+		<para>
+			Den andra raden är starten på while-loopen (kallas även loop eftersom
+			den loopar om och om igen). Så länge som testet ($a &lt; 10000) är
+			sant so kommer satsen efter att repeteras. När $a är större än eller
+			lika med 10000 kommer loopen att avbryts. Om man i loopen glömmer att
+			öka $a kommer testet alltid att vara sant och man kommer aldrig ur
+			loopen.  Detta kallas för en oändlig loop och är ett vanligt
+			programmeringsfel som gör att programmet hänger sig eller kraschar.
+		</para>
+
+		<para>
+			Om testet inte är sant från början så kommer aldrig det står i satsen
+			att köras. Se därför till att testet är sant från början.
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>do-while-satsen</title>
+
+		<para>
+			Do-while liknar på många sätt den vanliga while-satsen. Den enda
+			skillnaden är att det som står i satsen alltid kommer att utföras
+			åtminstone en gång. Se följande exempel:
+
+			<example>
+				<title>Exempel med do-while</title>
+				<programlisting>
+<![CDATA[
+<?php
+// Ett exempel på hur man använder do-while
+
+$i = 0;
+
+do {
+   echo "$i ";
+   $i = $i + 1;
+} while ($i < 100);
+
+?>
+]]>
+
+				</programlisting>
+			</example>
+
+			Tilldelningen till $i är viktig eftersom den sätter värdet där
+			loopen skall börja. I loopen 	skrivs först $i ut och sedan ökas
+			variabeln $i med ett. Detta sker så länge som $i är mindre än 100.
+			Alltså från 0 till 99.
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>for-loopen</title>
+
+		<para>
+			For är den vanligaste iterationen. Den är dock vid en första anblick
+			lite krångligare än de andra. Man kan om man vill använda while
+			istället för for om man vill, men när man kan for är den mycket
+			smidigare.
+		</para>
+
+		<para>
+			for-loopen skriver man med det reserverade ordet for följt av en
+			parentes. Inom parentesen skall det stå tre stycken uttryck. Dessa
+			tre skall se ut enligt följande.
+
+			<itemizedlist>
+				<listitem>
+					<para>
+						Det första kommer att exekveras en gång inan loopen börjar.
+					</para>
+				</listitem>
+				<listitem>
+					<para>
+						Det andra skall vara ett boolskt uttryck. Loopen kommer att
+						gå så länge detta är sant.
+					</para>
+				</listitem>
+				<listitem>
+					<para>
+						Det tredje körs efter varje gång som loopen har gått.
+					</para>
+				</listitem>
+			</itemizedlist>
+		</para>
+
+		<para>
+			Nu känner jag att exempel är på sin plats igen:
+
+			<example>
+				<title>Exempel med for-loop</title>
+				<programlisting>
+<![CDATA[
+<?php
+//Exempel på for-loop
+
+for ($i = 0; $i <= 10; $i++) {
+   echo "$i<br>\n";
+}
+?>
+]]>
+
+				</programlisting>
+			</example>
+
+			Oftast används de tre olika satserna på precis det sätt som visas
+			ovan. Nämligen att initiera en räknare, kolla ett gränsvärde och
+			räkna upp räknaren, men inget hindrar att man använder dem på andra
+			sätt.
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>Mer läsning</title>
+
+		<para>
+			Aktuellt avsnitt i PHP-manualen:
+			<ulink url="http://www.php.net/manual/en/control-structures.php">
+				<citetitle>
+					http://www.php.net/manual/en/control-structures.php
+				</citetitle>
+			</ulink>
+		</para>
+	</sect1>
+</chapter>
+
+<chapter id="chap_pseudokod">
+	<title>Pseudokod</title>
+
+	<abstract>
+		<para>
+			Kommer ...
+		</para>
+	</abstract>
+
+
+	<sect1>
+		<title>Mer läsning</title>
+
+		<para>
+			Länkar till mera läsning för den intresserade
+		</para>
+	</sect1>
+</chapter>
+
+<chapter id="chap_indentering">
+	<title>Indentering</title>
+
+	<abstract>
+		<para>
+			Att indentera sin kod är något man gör för att den skall bli lättare
+			att läsa och lättare att hitta fel. Detta avsnitt beskriver hur man
+			indenterar på ett bra sätt.
+		</para>
+	</abstract>
+
+	<sect1>
+		<title>Vad är indentering?</title>
+
+		<para>
+			Indentering går ut på att man med hjälp av olika mycket blanksteg
+			(space) till vänster om koden kan på ett logiskt sätt gruppera koden
+			så att den går lättare att läsa. Det finns flera olika sätt att
+			intendera på och varje programmerare har sin egen stil. För att kod
+			skall bli enhetliga så har många företag en kodstandard i vilken det
+			beskrivs hur kommentering och indentering skall göra inom företaget.
+			Det gör att alla programmerare känner sig hemma i varandras kod och
+			att den totala kodmassan blir enhetlig och lättare att granska.
+		</para>
+
+		<para>
+			Grundprincipen är att kod som hänger ihop skall ha samma
+			indenteringsnivå. Se följande exemepel:
+
+			<example>
+				<title>Indentering</title>
+				<programlisting>
+<![CDATA[
+<?php
+if ($tal == 100) {
+   echo "Talet är 100";
+   $tal = $tal + 1;
+}
+?>
+]]>
+				</programlisting>
+			</example>
+
+			I exemplet ser vi att det som hör till if-satsen har flyttats in en
+			nivå. Det gör det lätt att se att det hör till if-satsen och att
+			måsvingarna är riktiga. Vissa indenterar if-satsen så här:
+
+			<example>
+				<title>Indentering</title>
+				<programlisting>
+<![CDATA[
+<?php
+if ($tal == 100)
+{
+   echo "Talet är 100";
+   $tal = $tal + 1;
+}
+?>
+]]>
+				</programlisting>
+			</example>
+
+			Om vi säger att vi har nästlade if-satser så syns det ännu tydligare
+			vad bra det är att indentera.
+
+			<example>
+				<title>Indentering</title>
+				<programlisting>
+<![CDATA[
+<?php
+if ($inloggad) {
+   if ($tal == 100) {
+      echo "Tal är hundra";
+   } else {
+      echo "Tal är inte hundra";
+   }
+} else {
+   echo "Du är inte inloggad!"
+}
+?>
+]]>
+				</programlisting>
+			</example>
+		</para>
+	</sect1>
+
+	<sect1>
+		<title>Mer läsning</title>
+
+		<para>
+			Länkar till mera läsning för den intresserade
+		</para>
+		<para>
+		Svensk text med massor av exempel på indentering och kommentering,
+		samt länkar till mer +info på engelska:
+		http://www.phpsidan.nu/res_articles.php?view=art&amp;id=48
+		</para>
+	</sect1>
+</chapter>
+
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+tab-width: 3
+End:
+vim600: syn=xml fen fdm=syntax si
+vim: noet sw=3 ts=3 syn=sgml
+vi: ts=3 sw=3
+-->

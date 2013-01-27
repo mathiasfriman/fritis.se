@@ -1,0 +1,28 @@
+<html>
+	<head>
+	
+	</head>
+	<body>
+		<h1>__TITLE__</h1>
+		<p>Jonas Bj&ouml;rk <a href="mailto:jonas@trinix.se">&lt; jonas@trinix.se &gt;</a><br />
+		<a href="http://www.trinix.se/">TriNix AB, Helsingborg</a><br />
+		</p>
+		
+		<p>Senast uppdaterad: __DATE__</p>
+
+		<p>Denna bok &auml;r en del av <a href="http://se.linux.org/">Svenska Linuxföreningen</a>s projekt <a href="http://se.linux.org/arbetsgrupper/liskola">Linux i skolan</a>. Bes&ouml;k g&auml;rna f&ouml;reningen och g&aring; med du ocks&aring;.</p>
+
+		<h2>Läs boken</h2>
+
+		<h3>Online</h3>
+		<a href="book1.html">HTML-Format</a>
+
+		<h3>Skriv ut</h3>
+		<a href="__BASE_FILE_NAME__.ps">PostScript</a>
+		<a href="__BASE_FILE_NAME__.pdf">Adobe PDF</a>
+		
+		
+		
+	</body>
+</html>
+	

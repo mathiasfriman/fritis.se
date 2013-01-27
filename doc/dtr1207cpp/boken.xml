@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
+ "/usr/share/sgml/docbook/xml-dtd-4.2/docbookx.dtd" [
+<!ENTITY VERSION "0.1.20040821">
+<!ENTITY datatyper SYSTEM "datatyper.xml">
+<!ENTITY varochkonst SYSTEM "varochkonst.xml">
+<!ENTITY operatorer SYSTEM "operatorer.xml">
+<!ENTITY introprog SYSTEM "introprog.xml">
+<!ENTITY forstaprog SYSTEM "forstaprog.xml">
+<!ENTITY inutmatning SYSTEM "inutmatning.xml">
+<!ENTITY villkor SYSTEM "villkor.xml">
+<!ENTITY logiskaoperatorer SYSTEM "logiskaoperatorer.xml">
+<!ENTITY slingor SYSTEM "slingor.xml">
+<!ENTITY flyttal SYSTEM "flyttal.xml">
+<!ENTITY enklaposter SYSTEM "enklaposter.xml">
+<!ENTITY diverse SYSTEM "diverse.xml">
+<!ENTITY dtr1207 SYSTEM "dtr1207.xml">
+<!ENTITY gnu-fdl SYSTEM "fdl-sv.xml">]
+>
+<book lang="sv" status="draft">
+    <bookinfo>
+        <title>Programmering A - C++</title>
+        <author>
+            <firstname>Jonas</firstname>
+            <surname>Bj&ouml;rk</surname>
+            <affiliation>
+                <orgname>TriNix AB, Helsingborg</orgname>
+                <address>
+                    <email>jonas@trinix.se</email>
+                </address>
+            </affiliation>
+        </author>
+        <author>
+            <firstname>Robin</firstname>
+            <surname>Rosenberg</surname>
+            <affiliation>
+                <orgname>Dewire Innovation AB, Stockholm</orgname>
+                <address>
+                    <email>robin.rosenberg@dewire.com</email>
+                </address>
+            </affiliation>
+        </author>
+        
+        <pubdate>Augusti 2004 Version: &VERSION; </pubdate>
+        <copyright>
+            <year>2004</year>
+            <holder>fritis.se</holder>
+        </copyright>
+        <legalnotice>
+            <para>Copyright (c) 2004 Jonas Bj&ouml;rk och Robin Rosenberg. Permission is granted to copy,
+                distribute and/or modify this document under the terms of the GNU Free Documentation
+                License, Version 1.2 or any later version published by the Free Software Foundation;
+                with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts. A copy of
+                the license is included in the section entitled &quot;GNU Free Documentation
+                License&quot;. </para>
+            <para>[&Ouml;vers&auml;ttning:] Copyright (c) 2004 Jonas Bj&ouml;rk och Robin Rosenberg.
+                Var och en &auml;ger r&auml;tt att kopiera, sprida och/eller
+                f&ouml;r&auml;ndra detta dokument under villkoren i licensen &quot;GNU
+                Free Documentation License&quot;, version 1.2 eller senare publicerad av Free
+                Software Foundation, utan of&ouml;r&auml;nderliga avsnitt, utan
+                framsidestexter och utan baksidestexter. En kopia av denna licens finns med i
+                avsnittet med titeln &quot;GNU Free Documentation License&quot;. </para>
+        </legalnotice>
+        <abstract>
+            <para>Denna bok är tänkt att användas i gymnasieskolans kurs Programmering A (DTR1207).</para>
+        </abstract>
+    </bookinfo>
+
+&datatyper;
+&varochkonst;
+&operatorer;
+&introprog;
+&forstaprog;
+&inutmatning;
+&villkor;
+&logiskaoperatorer;
+&slingor;
+&flyttal;
+&enklaposter;
+&diverse;
+&dtr1207;
+&gnu-fdl;
+</book>

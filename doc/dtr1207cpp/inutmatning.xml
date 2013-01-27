@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<chapter>
+  <title>In- och utmatning</title>
+
+  <section>
+    <title id="utmatning">Utmatning</title>
+
+    <para>Vi har redan i <xref linkend="ettforstaprogram" /> tittat på
+    <function>std::cout</function> . <function>std::cout</function> använder
+    vi för att skriva ut text på skärmen. Vi kan skriva ut text mellan
+    citationstecken ( <keycap>"</keycap> ), till exempel <emphasis>"Hej
+    Värld!"</emphasis> . När vi skriver på så sätt säger vi att vi skriver ut
+    <emphasis>strängar</emphasis>. Vi såg också i <xref
+    linkend="ettforstaprogram" /> att vi kunde skriva ut beräkningar, till
+    exempel <literal>2 + 5</literal> . Vi kan också skriva ut variabler, som i
+    <xref linkend="cout_variabel" /> .<example id="cout_variabel">
+        <title>Skriva ut variabler</title>
+
+        <programlisting>#include &lt;iostream&gt;
+
+
+int main()
+{
+    int tal1;
+    tal1 = 20;
+
+    std::cout &lt;&lt; "tal1 är " &lt;&lt; tal1 &lt;&lt; std::endl;
+
+    return 0;
+}</programlisting>
+      </example></para>
+
+    <para>I <xref linkend="cout_variabel" /> deklarerar vi en heltalsvariabel,
+    <varname>tal1</varname>, och tilldelar den värdet <literal>20</literal>.
+    Sedan använder vi <function>std::cout</function> för att skriva ut
+    variabelns värde. Nu tar vi och skapar två variabler och tilldelar dem
+    värden och skriver ut summan av dem, se ex .<example id="cout_variabel2">
+        <title>Skriva ut beräkning av variabler</title>
+
+        <para><programlisting>#include &lt;iostream&gt;
+
+int main()
+{
+    int tal1;
+    int tal2;
+
+    tal1 = 10;
+    tal2 = 20;
+
+    std::cout &lt;&lt; "Summan av tal1 och tal2 är " &lt;&lt; tal1 + tal2 &lt;&lt; std::endl;
+
+    return 0;
+}</programlisting></para>
+      </example></para>
+
+    <para>Du bör kunna förstå vad som händer i <xref
+    linkend="cout_variabel2" /> , om inte bör du gå tillbaka och läsa <xref
+    linkend="ettforstaprogram" /> igen.</para>
+
+    <para>Du har säkert lagt märke till hur vi deklarar varje heltalsvariabel
+    på varsin rad. Det behöver vi naturligtvis inte. Det kan till och med bli
+    jobbigt att göra det om vi har många variabler i våra program. Alla
+    variabler av samma datatyp kan deklareras på samma rad. Vi skriver om
+    <xref linkend="cout_variabel2" /> med denna metod, se <xref
+    linkend="cout_variabel3" /> .<example id="cout_variabel3">
+        <title>Förkortad variabeldeklaration</title>
+
+        <programlisting>#include &lt;iostream&gt;
+
+int main()
+{
+    int tal1, tal2;
+
+    tal1 = 10;
+    tal2 = 20;
+
+    std::cout &lt;&lt; "Summan av tal1 och tal2 är " &lt;&lt; tal1 + tal2 &lt;&lt; std::endl;
+
+    return 0;
+}</programlisting>
+      </example></para>
+
+    <para>Vi kan förkorta programmet ännu mer genom att tilldela variablerna
+    värden vid deklarationen av dem. Se <xref linkend="cout_variabel4" />
+    .</para>
+
+    <example id="cout_variabel4">
+      <title>Förenklad variabeldeklaration med tilldelning</title>
+
+      <programlisting>#include &lt;iostream&gt;
+
+int main()
+{
+    int tal1 = 10, tal2 = 20;
+
+    std::cout &lt;&lt; "Summan av tal1 och tal2 är " &lt;&lt; tal1 + tal2 &lt;&lt; std::endl;
+
+    return 0;
+}</programlisting>
+    </example>
+
+    <para>Vi avslutar detta exempel med att summera <varname>tal1</varname>
+    och <varname>tal2</varname> innan vi skriver ut summan. Se <xref
+    linkend="cout_variabel5" /> .</para>
+
+    <example id="cout_variabel5">
+      <title>Summera innan utskrift</title>
+
+      <programlisting>#include &lt;iostream&gt;
+
+int main()
+{
+    int tal1 = 10, tal2 = 20, summa;
+
+    summa = tal1 + tal2;
+    std::cout &lt;&lt; "Summan av tal1 och tal2 är " &lt;&lt; summa &lt;&lt; std::endl;
+
+    return 0;
+}</programlisting>
+    </example>
+
+    <para>Nu har vi gått igenom grunderna för utmatning av värden och text.
+    Dags att lära oss inmatning.</para>
+  </section>
+
+  <section>
+    <title id="inmatning">Inmatning</title>
+
+    <para>I <xref linkend="utmatning" /> har vi lärt oss hur vi skriver ut
+    text och värden i variabler. Vi upptäcker ganska snart att programmen vi
+    skrivit är begränsade. När de väl är kompilerade kan de bara utföra en
+    sak. Skriva ut summan av två förutbestämda värden. Nu skall vi titta på
+    hur vi kan låta användaren själv mata in värden och låta programmet
+    beräkna summan av dessa.</para>
+
+    <para>Först måste vi titta i namnrymden <function>std</function> igen, där
+    hittar vi <function>std::cin</function> som används för att mata in värden
+    i variabler. Vi tittar på <xref linkend="matain" /> .</para>
+
+    <example id="matain">
+      <title>Mata in värden</title>
+
+      <programlisting>#include &lt;iostream&gt;
+
+int main()
+{
+    int tal1, tal2;
+
+    std::cout &lt;&lt; "Mata in tal1 : ";
+    std::cin &gt;&gt; tal1;
+    std::cout &lt;&lt; "Mata in tal2 : ";
+    std::cin &gt;&gt; tal2;
+
+    std::cout &lt;&lt; "Summan av tal1 och tal2 är " &lt;&lt; tal1 + tal2 &lt;&lt; std::endl;
+
+    return 0;
+}</programlisting>
+    </example>
+
+    <para>Lägg märke till hur vi använder inmatningsoperatorn (
+    <keycap>&gt;&gt;</keycap> ) istället för utmatningsoperatorn (
+    <keycap>&lt;&lt;</keycap> ) för <function>std::cin</function> .</para>
+
+    <para>I <xref linkend="matain" /> deklarerar vi två heltal,
+    <varname>tal1</varname> och <varname>tal2</varname>. Vi skriver ut lite
+    text med <function>std::cout</function> och ber om tal med
+    <function>std::cin</function>. Talen som användaren matar in kommer att
+    hamna i variabeln <varname>tal1</varname> respektive
+    <varname>tal2</varname>. Till sist skriver vi ut summan av
+    <varname>tal1</varname> och <varname>tal2</varname> och avslutar
+    programmet.</para>
+
+    <para>Vi kan be användaren om två tal samtidigt. Titta på koden i <xref
+    linkend="matain2" /> .</para>
+
+    <example id="matain2">
+      <title>Mata in två värden</title>
+
+      <programlisting>#include &lt;iostream&gt;
+
+int main()
+{
+    int tal1, tal2;
+
+    std::cout &lt;&lt; "Mata in tal1 och tal2 : ";
+    std::cin &gt;&gt; tal1 &gt;&gt; tal2;
+
+    std::cout &lt;&lt; "Summan av tal1 och tal2 är " &lt;&lt; tal1 + tal2 &lt;&lt; std::endl;
+
+    return 0;
+}</programlisting>
+    </example>
+
+    <para>I <xref linkend="matain2" /> matar vi in <varname>tal1</varname> och
+    <varname>tal2</varname> med samma <function>std::cin</function> . När
+    användaren skall mata in talen skriver hon in det första talet och trycker
+    sedan blanksteg. Därefter skriver användaren in det andra talet och
+    trycker <keycap>ENTER</keycap>. Programmet svarar med att skriva ut summan
+    av de två inmatade talen.</para>
+
+    <para>Helt plötsligt blev programmet mer interaktivt.</para>
+  </section>
+
+  <section>
+    <title>Formattera utskrifter</title>
+
+    <para>Nu skall vi formattera vår utskrift så det blir lite finare på
+    skärmen. För att kunna formattera utskriften måste vi inkludera
+    biblioteksfilen <filename class="headerfile">iomanip</filename> . Den
+    funktion vi kommer använda heter <function>setw()</function> och anropas
+    genom att vi skriver <function>std::setw(6)</function>. Där sexan anger
+    bredden på utskriften.<example>
+        <title>Formatterad utskrift</title>
+
+        <programlisting>#include &lt;iostream&gt;
+#include &lt;iomanip&gt;
+
+int main()
+{
+    int tal1, tal2;
+
+    std::cout &lt;&lt; "Mata in två tal: ";
+    std::cin &gt;&gt; tal1 &gt;&gt; tal2;
+
+    std::cout &lt;&lt; "Summan är" &lt;&lt; std::endl;
+    std::cout &lt;&lt; "=========" &lt;&lt; std::endl;
+    std::cout &lt;&lt; std::setw(9) &lt;&lt; tal1 &lt;&lt; std::endl;
+    std::cout &lt;&lt; "+" &lt;&lt; std::setw(8) &lt;&lt; tal2 &lt;&lt; std::endl;
+    std::cout &lt;&lt; "---------" &lt;&lt; std::endl;
+    std::cout &lt;&lt; std::setw(9) &lt;&lt; tal1 + tal2 &lt;&lt; std::endl;
+
+    return 0;
+}</programlisting>
+      </example></para>
+  </section>
+
+  <section>
+    <title>Övningar</title>
+
+    <para></para>
+  </section>
+</chapter>

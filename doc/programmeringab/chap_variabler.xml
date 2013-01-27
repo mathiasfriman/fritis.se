@@ -1,0 +1,210 @@
+<chapter id="chap_variabler">
+	<title>Variabler</title>
+
+	<abstract>
+		<para>
+			Detta avsnitt beskriver vad variabler är och hur man använder dem i
+			ett PHP-script. Det tar även upp skillnaden mellan variabler i PHP
+			och i andra vanliga kompilerande språk.
+		</para>
+	</abstract>
+
+	<sect1>
+		<title>Vad är en variabel</title>
+		<para>
+			En variabel är en platshållare för ett värde som ändras under
+			programmets gång. Motsatsen till variabel är en konstant. En
+			konstant kan eller får inte ändras under programmets gång.
+		</para>
+
+		<para>
+			Ett exempel på en variabel kan vara termer i en addition. Tänk dig
+			att du vill göra ett program som skall ränka ut en summa. Man skulle
+			kunna göra programmet med bara konstanter, det skulle se ut så här:
+			<example>
+				<title>Exempel med konstanter</title>
+				<programlisting>
+<![CDATA[
+<html>
+	<head>
+   	<title>Addition</title>
+	</head>
+	<body>
+   	<?php
+      	echo "Summan av talen 1 och 2 är: ", 1 + 2;
+   	?>
+	</body>
+</html>
+]]>
+				</programlisting>
+			</example>
+			Som du kan se så räknar PHP ut vad 1 + 2 blir. Men vad har man för
+			nytta av ett program som bara räknar ut 1 + 2. Vi vill ju kunna
+			mata in vilka värden som helst för termerna.
+		</para>
+
+		<para>
+			Se nedanstående exempel:
+			<example>
+				<title>Exempel med variabler</title>
+				<programlisting>
+<![CDATA[
+<html>
+	<head>
+		<title>Addition</title>
+	</head>
+	<body>
+		<?php
+			$tal1 = 2;
+			$tal2 = 3;
+			echo "Summan av talen $tal1 och $tal2 är: ", $tal1 + $tal2;
+		?>
+	</body>
+</html>
+]]>
+				</programlisting>
+			</example>
+			
+			I exemplet ovan använder vi två variabler, $tal1 och $tal2. I
+			PHP börjar alla variabelnamn med ett dollartecken. Programmet
+			ovan är dock lika statiskt som det fösta programmet. Våra
+			variabler får ju samma värde (2 och 3) varje gång programmet
+			körs. De kan inte påverkas av något.
+		</para>
+
+		<para>
+			Vi tar ytterligare ett exempel:
+			<example>
+				<title>Exempel med variabler och $_GET</title>
+				<programlisting>
+<![CDATA[
+<html>
+	<head>
+		<title>Addition</title>
+	</head>
+	<body>
+		<?php
+			$tal1 = $_GET['tal1'];
+			$tal2 = $_GET['tal2'];
+			echo "Summan av talen $tal1 och $tal2 är: ", $tal1 + $tal2;
+		?>
+	</body>
+</html>
+]]>
+				</programlisting>
+			</example>
+			I exemplet ovan hämtar vi värdena till $tal1 och $tal2 från en
+			speciell variabel som heter $_GET. I $_GET finns det data som
+			ges till programmet via URL:en. Till exempel så kommer
+			programmet om det anropas som
+			http://dinserver/programnamnet.php?tal1=100&amp;tal2=199 att
+			skriva ut "Summan av talen 100 och 199 = 299".
+		</para>
+		
+		<para>
+			Testa sedan andra tal och se vad som händer.
+		</para>
+
+		<para>
+			Du kanske provade att sätta ett av talen till någor annat än ett
+			tal, till exempel bokstäver?
+			I så fall såg du att PHP inte kan summera text. Observera att om du
+			matar in ett decimaltal så måste decimalpunkt och inte komma
+			användas.
+		</para>
+	</sect1>
+
+
+	<sect1>
+		<title>Datatyper</title>
+		<para>
+			Alla programmeringsspråk arbetar med olika datatyper. I PHP behöver
+			du inte ange vilken typ det är du jobbar med utan det listar
+			programtolken ut från innehållet. Det är dock väldigt viktigt att
+			man håller reda på vilka typer ens variabler har eftersom det kan bli
+			underliga fel annars.
+		</para>
+
+		<para>
+			Följande typer finns:
+		</para>
+
+		<sect2>
+			<title>Skalära</title>
+			<para>
+				<itemizedlist>
+					<listitem>
+						<para>boolean, bool (true, false)</para>
+					</listitem>
+					<listitem>
+						<para>integer, int (heltal)</para>
+					</listitem>
+					<listitem>
+						<para>float, double, real (reella tal)</para>
+					</listitem>
+					<listitem>
+						<para>string (Textsträngar)</para>
+					</listitem>
+				</itemizedlist>
+			</para>
+		</sect2>
+
+		<sect2>
+			<title>Sammansatta</title>
+			<para>
+				<itemizedlist>
+					<listitem>
+						<para>
+							arrayer (En samling av värden som indexeras antingen av
+							en integer eller string).
+						</para>
+					</listitem>
+					<listitem>
+						<para>
+							objekt (Kommer inte att ingå i denna kurs, se manualen om
+							du är intresserad).
+						</para>
+					</listitem>
+				</itemizedlist>
+			</para>
+		</sect2>
+
+		<sect2>
+			<title>Övriga speciella</title>
+			<para>
+				<itemizedlist>
+					<listitem>
+						<para>NULL (Variabeln har inget värde alls).</para>
+					</listitem>
+					<listitem>
+						<para>
+							resource (Innehåller en referens till en extern
+							tillgång).
+						</para>
+					</listitem>
+				</itemizedlist>
+			</para>
+		</sect2>
+	</sect1>
+
+	<sect1>
+		<title>Övningar</title>
+
+			<sect2>
+				<title>Addition</title>
+				<para>
+					Skapa ett program som med hjälp av variabler summerar tre tal.
+				</para>
+			</sect2>
+	</sect1>
+</chapter>
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+tab-width: 3
+End:
+vim600: syn=xml fen fdm=syntax si
+vim: noet sw=3 ts=3 syn=sgml
+vi: ts=3 sw=3
+-->

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<chapter>
+<title>Logiska operatorer och uttryck</title>
+
+<section>
+<title>Introduktion</title>
+
+<para>Ofta räcker det inte med enkla villkor i if-satser utan man behöver
+kombinera uttryck. Operator &amp;&amp; betyder 'och' och || betyder eller. Man
+kan t.ex. testa om en variabel har ett rimligt värde. I följande exempel
+testas om två villkor är sanna.<example>
+<title>If-sats med OCH</title>
+
+<para><programlisting>int heltal=-1;
+std::cin &gt;&gt; heltal;
+if ( heltal &gt;= 0 &amp;&amp; heltal &lt;= 10 ) {
+    // gör nåt med heltal
+}</programlisting></para>
+</example></para>
+
+<para>På liknande sätt kan man test om bara det ena villkoret är sant.</para>
+
+<example>
+<title>If-sats med ELLER</title>
+
+<para><programlisting>int heltal=-1;
+std::cin &gt;&gt; heltal;
+if ( heltal &lt; 0 || heltal &gt; 10 ) {
+    std::cout &lt;&lt; "Fel: " &lt;&lt; heltal &lt;&lt; " måste vara i intervallet [0..10]" &lt;&lt; std::endl;
+}</programlisting></para>
+</example>
+
+<para>Man kan också vänta på ett logiskt uttryck. I fallen ovan är det i
+princip vad som skett så där behövs ingen speciell operator, men om det uttyck
+man vill vända på redan är ett boolskt (logiskt) uttyck är det bekvämast och
+säkrast att använda '<command>!</command>'-operatorn.</para>
+
+<example>
+<title></title>
+
+<programlisting>char c=nånfunktion();
+if ( ! isalpha(c) ) {
+    cout &lt;&lt; "tecknet " &lt;&lt; c &lt;&lt; " är inte alfanumeriskt" &lt;&lt; endl;
+}</programlisting>
+</example>
+
+<warning>
+<para>Använd inte uttryck i formen <command>if ( logiskt_uttryck == true
+)</command> eller <command>if ( logiskt_uttryck == false )</command> eller
+Orsaken är att under ytan kan många typer av uttryck betraktas med "boolska"
+glasögon. <constant>true</constant> är bara ett exempel på ett sant värde.
+Skriv istället <command>if ( logiskt_uttryck )</command> eller, för motsatsen,
+<command>if ( ! logiskt_uttryck )</command>.</para>
+</warning>
+</section>
+
+<section>
+<title>Bitvisa logiska operatorer</title>
+
+<para>Förutom att använda logiska uttryck är operationer där varje bit i ett
+heltal betraktas som en egen flagga. De bitvisa logiska operatorerna är
+och-operatorn '&amp;amp;' även kallad and, eller-operatorn '|' även kallad or,
+'^' med alternativnamnet xor samt inte-operatorn '~' med det alternativa
+namnet</para>
+
+<table>
+<title>Exempel på bitvisa opeatorer</title>
+
+<tgroup cols="4">
+<tbody>
+<row>
+<entry>OCH-operatorn</entry>
+
+<entry>ELLER-operatorn</entry>
+
+<entry>EXKLUSIV-ELLER-operatorn</entry>
+
+<entry>ICKE-operatorn</entry>
+</row>
+
+<row>
+<entry><literallayout>   0 1 0 1 0 1 0 1  0x55
+   1 1 1 1 0 0 0 0  0xF0
+ &amp; ---------------
+   0 1 0 1 0 0 0 1  0x51</literallayout></entry>
+
+<entry><literallayout>   0 1 0 1 0 1 0 1  0x55
+   1 1 1 1 0 0 0 0  0xF0
+ | --------------- 
+ = 1 1 1 1 0 1 0 1  0xF5</literallayout></entry>
+
+<entry><literallayout>   0 1 0 1 0 1 0 1  0x55
+   1 1 1 1 0 0 0 0  0xF0
+ ^ ---------------
+   1 0 1 0 0 1 0 1  0xA5</literallayout></entry>
+
+<entry><literallayout>         
+   1 1 1 1 0 0 0 0  0xF0
+ ~ ---------------
+   0 0 0 0 1 1 1 1  0x0F</literallayout></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+
+<para>Bitvisa operationer används typiskt för att hantera många flaggor på ett
+kompakt och effektivt sätt. </para>
+
+<example>
+<title>Definitiv av flaggor</title>
+
+<programlisting>class Lillebil {
+    unsigned flaggor;
+public:
+    const int FYRHJULSFLAGGA=1;
+    const int DIESELFLAGGA=2;
+    const int SEDANFLAGGA=4;
+};</programlisting>
+
+<para>Man kan nu testa flera flaggor på en gång</para>
+
+<programlisting>Lillebil bil = ..
+if (bil.flaggor &amp; (Lillebil::FYRHJULSFLAGGA | Lillebil:DIESELFLAGGA) {
+    std::cout &lt;&lt; "Dieseldriven bil och/eller fyrhjulsbil" &lt;&lt; end;
+}</programlisting>
+</example>
+
+<para>Det finns alternativa sätt med bitfält men eftersom de har aldrig blivit
+populära annat än för att koda drivrutiner för hårdvara.</para>
+</section>
+
+<section>
+<title>Boolska värden</title>
+
+<para>Inte bara <type>bool</type>-variabler, jämförelseoperatorer och logiska
+operatorer kan kan användas som boolska värden. Alla grundläggand datatyper
+kan tolkas som sant eller falskt.</para>
+
+<para><table>
+<title>Tolkning av typer som bool</title>
+
+<tgroup cols="3">
+<thead>
+<row>
+<entry>Typ</entry>
+
+<entry>Tolkning</entry>
+
+<entry>Exempel</entry>
+</row>
+</thead>
+
+<tbody>
+<row>
+<entry>heltal,tecken,</entry>
+
+<entry>falskt om värdet är 0, annars sant</entry>
+
+<entry>Undvik. dålig stil</entry>
+</row>
+
+<row>
+<entry>flyttal</entry>
+
+<entry>falskt om värdet är 0, annars sant</entry>
+
+<entry>Undvik. mycket dålig stil</entry>
+</row>
+
+<row>
+<entry>pekare</entry>
+
+<entry>falskt om pekaren är 0 (NULL), annars sant.</entry>
+
+<entry><para>Mycket vanligt sätt att koda.</para><programlisting>char *p=funktion();
+if (p) { 
+    görnåtmed(p);
+}</programlisting></entry>
+</row>
+
+<row>
+<entry>övriga, som t.ex iostream</entry>
+
+<entry>Kan användas som bool om en konverteringsoperator till tal, pekare
+eller bool finns. För iostream finns en <function>operator bool()</function>
+definierad som är sann om teckenströmmen är i "gott skick".</entry>
+
+<entry><programlisting>int tal;
+std::cin &gt;&gt; tal;
+if (std::cin) {
+    std::cout &lt;&lt; "Talet " &lt;&lt; tal &lt;&lt; "lästes in" &lt;&lt; std::endl;
+} else {
+    std::cout &lt;&lt; "Nåt fel" &lt;&lt; std::endl;
+}</programlisting></entry>
+</row>
+</tbody>
+</tgroup>
+</table></para>
+</section>
+
+<section>
+<title>Förkortad tolkning a logiska villkor</title>
+
+<para>Logiska utttryck beräknas bara så långt som verkligen behövs i C++. Det
+skiljer sig från endel andra språk, även om just moderna språk använder samma
+metod. För t.ex. ett och-uttyck vet man att om det första deluttrycket är
+falskt så spelar det ingen roll vad det andra uttrycket har för värde. Det kan
+vara lurigt om man använder funktionsanrop i ett uttyck och användbart med
+pekare. Metoden kallas <quote>kortslutning (eng: short
+circuit)</quote><example>
+<title>förkortade utrvärdering</title>
+
+<programlisting>Bil *bilen = bilregister.get("TUX0324");
+if (bilen &amp;&amp; bilen-&gt;skattenBetald()) {
+    debiteraskatt(bilen);
+}</programlisting>
+
+<para>Om bilen inte fanns så är bilen (pekare) <constant>NULL</constant>. Ett
+försök att anropa skattenBetald()-metoden skulle då krasha programmet, men i
+<command>if</command>-satsen görs metodanropet bara om den första delen av
+villkorsuttrycket är sant.</para>
+</example></para>
+</section>
+</chapter>

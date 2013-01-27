@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<chapter id="operatorer">
+<title>Operatorer</title>
+<abstract>
+<para>En av de viktigaste användningsområdena för programmeringen är beräkningar. I detta kapitel går vi igenom hur vi använder de fyra räknesätten addition, subtraktion, multiplikation och division.</para>
+</abstract>
+<sect1 id="addition">
+<title>Addition</title>
+<para>För att addera två tal använder vi operatorn +, precis som när vi skriver addition på papper. Hur skriver vi då 20 + 20 = 40 i C++? Vi börjar med att deklarera en heltalsvariabel som kan ta emot summan av talen. Variabeln döper vi till <varname>summa</varname>. Sedan tilldelar vi <varname>summa</varname> värdet av 20 + 20. Se <xref linkend="op_add" /> .</para>
+<example id="op_add">
+<title>20 + 20 = 40</title>
+<programlisting>int summa;
+summa = 20 + 20;
+
+</programlisting>
+</example>
+<para>Det var enkelt, men det är inte speciellt användbart. Vore det inte bättre om vi kunde addera två heltalsvariabler? Det är klart vi kan göra det också, se <xref linkend="op_add2" />.</para>
+<example id="op_add2">
+<title>tal1 + tal2 = summa</title>
+<programlisting>int tal1;
+int tal2;
+int summa;
+
+tal1 = 20;
+tal2 = 20;
+summa = tal1 + tal2;
+
+</programlisting>
+</example>
+<para>Nu har vi tittat på två exempel där vi adderar två tal. Hur gör vi om vi vill addera flera tal? Du kan i princip addera oändligt många tal samtidigt, jag visar exempel på fyra tal i <xref linkend="op_add3" />.</para>
+<example id="op_add3">
+<title>tal1 + tal2 + tal3 + 20 = summa</title>
+<programlisting>
+
+int tal1;
+int tal2;
+int tal3;
+int summa;
+
+tal1 = 20;
+tal2 = 30;
+tal3 = 40;
+summa = tal1 + tal2 + tal3 + 20;
+
+</programlisting>
+</example>
+</sect1>
+<sect1 id="subtraktion">
+<title>Subtraktion</title>
+<para>Subtraktion anger du med minustecknet ( <keycap>-</keycap> ) och fungerar på samma sätt som addition. Därför visar jag enbart ett exempel och hänvisar till <xref linkend="addition"></xref> för mer information.</para>
+<example id="op_sub1">
+<title>tal1 - tal2 - 10 = summa</title>
+<programlisting>
+
+int tal1;
+int tal2;
+int summa;
+
+tal1 = 200;
+tal2 = 30;
+summa = tal1 - tal2 - 10;
+
+</programlisting>
+</example>
+</sect1>
+<sect1 id="multiplikation">
+<title>Multiplikation</title>
+<para>För att räkna multiplikation använder vi asterixtecknet ( <keycap>*</keycap> ). För att multiplicera två tal kan vi skriva 20 * 20 eller <varname>tal1</varname> * <varname>tal2</varname>. Vi tittar på <xref linkend="op_mul1" />.</para>
+<example id="op_mul1">
+<title>tal1 * tal2 = produkt</title>
+<programlisting>
+
+int tal1;
+int tal2;
+int produkt;
+
+tal1 = 20;
+tal2 = 30;
+produkt = tal1 * tal2;
+
+</programlisting>
+</example>
+<para>Precis som i innan i våra exempel deklarerar vi några heltalsvariabler, <varname>tal1</varname>, <varname>tal2</varname> och <varname>produkt</varname>. Vi tilldelar <varname>tal1</varname> värdet 20 och <varname>tal2</varname> värdet 30. Slutligen tilldelar vi <varname>produkt</varname> produkten av multiplikation av <varname>tal1</varname> och <varname>tal2</varname>.</para>
+<para>Vi kan naturligtvis multiplicera med flera faktorer i samma beräkning. Titta på <xref linkend="op_mul2" /> för exempel.</para>
+<example id="op_mul2">
+<title>10 * tal1 * tal2 * tal3 * 50 = produkt</title>
+<programlisting>
+
+int tal1;
+int tal2;
+int tal3;
+int produkt;
+
+tal1 = 20;
+tal2 = 30;
+tal3 = 40;
+produkt = 10 * tal1 * tal2 * tal3 * 50;
+
+</programlisting>
+</example>
+</sect1>
+<sect1 id="division">
+<title>Division</title>
+<para>Vi avslutar de fyra räknesätten med division. Inte helt oväntat använder vi snedstrecket ( <keycap>/</keycap> ) för att ange att vi vill använda division i vår beräkning. Till exempel 10 / 2, eller tal1 / tal2 .</para>
+<para>Dags för en varning. Datorer gillar inte när man försöker dividera med noll (0). Det brukar leda till att programmet avslutar sig själv.</para>
+<para>Nu tittar vi på hur vi kan räkna med division i C++. Se <xref linkend="op_div1" />.</para>
+<example id="op_div1">
+<title>tal1 / tal2 = kvot</title>
+<programlisting>
+
+int tal1;
+int tal2;
+int kvot;
+
+tal1 = 10;
+tal2 = 5;
+kvot = tal1 / tal2;
+
+</programlisting>
+</example>
+<para><xref linkend="op_div1" /> kommer fungera bra, <varname>kvot</varname> kommer att tilldelas värdet <literal>2</literal>. Vad händer då om vi dividerar till exempel 5 med 2 ? Vi arbetar med heltalsvariabler och kan aldrig få decimaler i våra svar. Till vår hjälp har vi modulusoperatorn ( <keycap>%</keycap> ). Modulus ger oss resten vid en division. Nu tittar vi på ett exempel, se <xref linkend="op_div2" />.</para>
+<example id="op_div2">
+<title>tal1 / tal2 = kvot med rest</title>
+<programlisting>
+
+int tal1;
+int tal2;
+int kvot;
+int rest;
+
+tal1 = 5;
+tal2 = 2;
+kvot = tal1 / tal2;
+rest = tal1 % tal2;
+
+</programlisting>
+</example>
+<para>I <xref linkend="op_div2" /> tilldelar vi <varname>kvot</varname> kvoten av 5 / 2 . Eftersom denna division kommer att ge oss kvoten <literal>2.5</literal> tilldelas <varname>kvot</varname> värdet <literal>2</literal>. <varname>rest</varname> tilldelas värdet av 5 modulus 2 och kommer få värdet <literal>1</literal>. Vi får alltså en rest på <literal>1</literal>. Vill du ha mer exakta värden när du dividerar får du använda datatypen <type>float</type> eller double.</para>
+</sect1>
+<sect1 id="tilldelning">
+<title>Tilldelningsoperatorn</title>
+<para>Tilldelningsoperatorn, <keycap>=</keycap>, används för att tilldela variabler värden. Om vi skriver tal1 = tal2 + 10; kan vi tolka det som <emphasis>tal1 tilldelas summan av tal2 och 10</emphasis>. Tilldelningsoperatorn kan användas på alla variabler av alla datatyper utom datatypen <type>void</type>.</para>
+</sect1>
+<sect1 id="op_avancerade">
+<title>Avancerade exempel</title>
+<para>Vi har hittils tittat på beräkningar av samma typ i exemplen. Vi har inte blandat till exempel addition och subtraktion, men detta är något vi naturligtvis kan göra i C++ också. Beräkningen tal1 + tal2 - tal3 är fullständigt giltig. Vi kan blanda de fyra operatorerna hur vi vill.</para>
+<para>Det är viktigt att känna till ordningen på operatorerna också, om vi använder flera i samma beräkning. Ordningen är multiplikation, division, addition och subtraktion. Det betyder att 2 + 3 * 4 ger 14 och inte 20. Därför 3 * 4 = 12 räknas först och sedan adderas 2 till 12. Precis som i matematiken.</para>
+<para>Det finns undantag till ordningen, naturligtvis. Om du sätter paranteser runt tal kommer paranteserna räknas först. Så om vi skriver ( 2 + 3 ) * 4 så får vi 2 + 3 = 5 och sedan multiplicerar vi 5 med 4 och får 20.</para>
+</sect1>
+</chapter>

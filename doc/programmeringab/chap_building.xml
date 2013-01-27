@@ -1,0 +1,104 @@
+<chapter id="chap_building">
+	<title>Från källkod till program</title>
+	<abstract>
+		<para>
+			I detta avsnitt beskrivs vad en kompilator är och varför den
+			används. Detta ingår i kursen men används inte i PHP eftersom det
+			är ett så kallat skriptspråk. I fallet med PHP tar en tolkare hand om
+			allt detta på servern när programmet körs.
+		</para>
+	</abstract>
+
+	<sect1>
+		<title>Kompilering</title>
+
+		<para>
+			När man "kompilerar" ett program så utför man egentligen 3 steg.
+			Ett fjärde steg utförs precis innan programmet laddas för att
+			köras. Dessa steg behandlar vi här.
+		</para>
+
+		<para>
+			Stegen är förbehandling av källkoden, kompilering, assemblering
+			och slutligen länkning. Dessa steg behandlas här.
+		</para>
+
+		<sect2>
+			<title>Förbehandling av källkoden (preprocessing)</title>
+
+			<para>
+				Det första som händer med din källkod är att den går igenom
+				något som kallas en preprocessor. Den tar bort alla
+				kommentarer, som ju i alla fall bara betyder något för
+				människor och formaterar din kod så att den passar
+				kompilatorn.
+			</para>
+		</sect2>
+
+		<sect2>
+			<title>Kompilering</title>
+
+			<para>
+				Sedan är det kompilatorns tur. Det översätter källkoden till
+				ett mellanspråk anpassat för den målmiljö som man kompilerar
+				för. Detta mellanspråk kallas assembler och skall sedan
+				behandlas av en assemblerare.
+			</para>
+		</sect2>
+
+		<sect2>
+			<title>Assemblering</title>
+
+			<para>
+				Assemleraren översätter assemblerkoden till maskinkod. Denna
+				kod är relokerbar, det vill säga den är inte bunden till
+				fasta adresser i minnet. Dessa relokerbara adresser måste
+				dock ändras innan programmet kan köras, det gör laddaren
+				(loader).
+			</para>
+		</sect2>
+
+		<sect2>
+			<title>Laddning och länkning</title>
+
+			<para>
+				Detta är egentligen två steg men de görs nästan alltid
+				tillsammans och de görs varje gång programmet skall köras.
+				De görs oftast av samma rutin. Laddning innebär att
+				programmet flyttas till ett ställe i minnet där det kan
+				köras och se till att adresserna i programmet anpassas efter
+				det ställe det skall köras. Länkaren behöver bara jobba om
+				det körbara programmet behöver delar från flera olika filer,
+				så kallade delade bibliotek (shared libraries, dll:er).
+				Länkaren ser då till att hänvisningarna till dessa i
+				programmet blir riktiga och kontrollerar att de finns
+				tillgängliga.
+			</para>
+		</sect2>
+
+		<sect2>
+			<title>Mer läsning</title>
+			<para>
+				Om du är intresserad kan du läsa denna länk
+				<ulink url="http://techpubs.sgi.com/library/dynaweb_docs/0620/SGI_Developer/books/Pascal_PG/sgi_html/ch02.html">
+					<citetitle>
+						http://techpubs.sgi.com/library/dynaweb_docs/0620/SGI_Developer/books/Pascal_PG/sgi_html/ch02.html
+					</citetitle>
+				</ulink>
+				där kompileringen i Pascal beskrivs mer ingående.
+			</para>
+		</sect2>
+	</sect1>
+</chapter>
+
+
+
+<!-- Keep this comment at the end of the file
+Local variables:
+mode: sgml
+tab-width: 3
+End:
+vim600: syn=xml fen fdm=syntax si
+vim: noet sw=3 ts=3 syn=sgml
+vi: ts=3 sw=3
+-->

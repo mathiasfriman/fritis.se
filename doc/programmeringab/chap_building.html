@@ -1,0 +1,268 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Fr�n k�llkod till program</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="Programmering i PHP"
+HREF="book1.html"><LINK
+REL="PREVIOUS"
+TITLE="Programmeringsspr�k"
+HREF="chap_programmeringssprak.html"><LINK
+REL="NEXT"
+TITLE="Hall� V�rlden!"
+HREF="chap_helloworld.html"><LINK
+REL="stylesheet"
+HREF="./book.css"
+TYPE="text/css"></HEAD
+><BODY
+CLASS="chapter"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Programmering i PHP</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="chap_programmeringssprak.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="chap_helloworld.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="chapter"
+><H1
+><A
+NAME="chap_building"
+></A
+>Kapitel 3. Fr�n k�llkod till program</H1
+><BLOCKQUOTE
+CLASS="ABSTRACT"
+><DIV
+CLASS="abstract"
+><P
+></P
+><A
+NAME="AEN149"
+></A
+><P
+>&#13;			I detta avsnitt beskrivs vad en kompilator �r och varf�r den
+			anv�nds. Detta ing�r i kursen men anv�nds inte i PHP eftersom det
+			�r ett s� kallat skriptspr�k. I fallet med PHP tar en tolkare hand om
+			allt detta p� servern n�r programmet k�rs.
+		</P
+><P
+></P
+></DIV
+></BLOCKQUOTE
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN151"
+>Kompilering</A
+></H1
+><P
+>&#13;			N�r man "kompilerar" ett program s� utf�r man egentligen 3 steg.
+			Ett fj�rde steg utf�rs precis innan programmet laddas f�r att
+			k�ras. Dessa steg behandlar vi h�r.
+		</P
+><P
+>&#13;			Stegen �r f�rbehandling av k�llkoden, kompilering, assemblering
+			och slutligen l�nkning. Dessa steg behandlas h�r.
+		</P
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN155"
+>F�rbehandling av k�llkoden (preprocessing)</A
+></H2
+><P
+>&#13;				Det f�rsta som h�nder med din k�llkod �r att den g�r igenom
+				n�got som kallas en preprocessor. Den tar bort alla
+				kommentarer, som ju i alla fall bara betyder n�got f�r
+				m�nniskor och formaterar din kod s� att den passar
+				kompilatorn.
+			</P
+></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN158"
+>Kompilering</A
+></H2
+><P
+>&#13;				Sedan �r det kompilatorns tur. Det �vers�tter k�llkoden till
+				ett mellanspr�k anpassat f�r den m�lmilj� som man kompilerar
+				f�r. Detta mellanspr�k kallas assembler och skall sedan
+				behandlas av en assemblerare.
+			</P
+></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN161"
+>Assemblering</A
+></H2
+><P
+>&#13;				Assemleraren �vers�tter assemblerkoden till maskinkod. Denna
+				kod �r relokerbar, det vill s�ga den �r inte bunden till
+				fasta adresser i minnet. Dessa relokerbara adresser m�ste
+				dock �ndras innan programmet kan k�ras, det g�r laddaren
+				(loader).
+			</P
+></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN164"
+>Laddning och l�nkning</A
+></H2
+><P
+>&#13;				Detta �r egentligen tv� steg men de g�rs n�stan alltid
+				tillsammans och de g�rs varje g�ng programmet skall k�ras.
+				De g�rs oftast av samma rutin. Laddning inneb�r att
+				programmet flyttas till ett st�lle i minnet d�r det kan
+				k�ras och se till att adresserna i programmet anpassas efter
+				det st�lle det skall k�ras. L�nkaren beh�ver bara jobba om
+				det k�rbara programmet beh�ver delar fr�n flera olika filer,
+				s� kallade delade bibliotek (shared libraries, dll:er).
+				L�nkaren ser d� till att h�nvisningarna till dessa i
+				programmet blir riktiga och kontrollerar att de finns
+				tillg�ngliga.
+			</P
+></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN167"
+>Mer l�sning</A
+></H2
+><P
+>&#13;				Om du �r intresserad kan du l�sa denna l�nk
+				<A
+HREF="http://techpubs.sgi.com/library/dynaweb_docs/0620/SGI_Developer/books/Pascal_PG/sgi_html/ch02.html"
+TARGET="_top"
+>&#13;					<I
+CLASS="citetitle"
+>&#13;						http://techpubs.sgi.com/library/dynaweb_docs/0620/SGI_Developer/books/Pascal_PG/sgi_html/ch02.html
+					</I
+>
+				</A
+>
+				d�r kompileringen i Pascal beskrivs mer ing�ende.
+			</P
+></DIV
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="chap_programmeringssprak.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Hem</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="chap_helloworld.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Programmeringsspr�k</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Hall� V�rlden!</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>

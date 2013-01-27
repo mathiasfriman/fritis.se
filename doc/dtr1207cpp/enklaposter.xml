@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<chapter>
+<title>Enkla poster</title>
+<section>
+<title>Definiera posttyper</title>
+<para>Det flesta riktiga program innehåller data som är grupperade på något sätt. I C++ definier man klasser. Klasser har data och metoder.</para>
+<section>
+<title>Adresspost</title>
+<para>I ett personregister har man personuppgifter. Vi tar ett enkelt exempel. Textsträngar hanteras lämpligen med standardklassen std::string.</para>
+<programlisting>#include &lt;iostream&gt;
+#include &lt;cstring&gt;
+
+class Person {
+public:
+    std::string namn;
+    short fodelsear;
+    std::string adress;
+    std::string telefon;
+
+    void skrivut(std::ostream&amp; os) {
+        os &lt;&lt; "Namn   :" &lt;&lt; namn &lt;&lt; std::endl;
+        os &lt;&lt; "Född   :" &lt;&lt; fodelsear &lt;&lt; std::endl;
+        os &lt;&lt; "Adress :" &lt;&lt; adress &lt;&lt; std::endl;
+        os &lt;&lt; "Telefon:" &lt;&lt; telefon &lt;&lt; std::endl; 
+    }
+};
+</programlisting>
+<para>Denna klass har ett antal publika fält och en metod som kan skriva ut en post.<programlisting>main()
+{
+    Person p;
+    p.namn = "Arthur Dent";
+    p.alder = 48;
+    p.adress = "England";
+    p.telenfon = "+44-5-5555555";
+
+    p.skrivut(std::cout);
+}</programlisting></para>
+<para>Sedan kan man sätta ihop alla till ett enkelt register. Sätt in den här mellan <function>main</function> och <type>Person</type>-klassen.</para>
+<programlisting>class Personregister {
+public:
+   std::vector&lt;Person&gt; personer;
+   void skrivut(std::ostream&amp; os);
+};</programlisting>
+<para><type>std::vector </type>är en standardtyp för att lagra vektorer, dvs en räcka med poster, i detta fall personer. Det behövs en referens till biblioteket vector för det. Lägg in den här raden i början av programmet tillsammans med de andra <literal>#include</literal>-raderna.</para>
+<programlisting>#include &lt;vector&gt;
+</programlisting>
+<para>Nu saknas forfarande implementationen för metoden <function>skrivut</function> i <type>Personregister</type>-klassen. I <type>Person</type>-klassen definierade vi metoden direkt, medan den i <type>Personregister</type> bara deklarerades. Det normala är att man definierar metoder separat, men det är ingen skillnad i funktion.</para>
+<programlisting>void Personregister::skrivut(std::ostream&amp; os)
+{
+    for (std::vector&lt;Person&gt;::iterator i = personer.begin(); i!=personer.end(); ++i) {
+        i-&gt;skrivut(os);
+    }
+}
+</programlisting>
+<para>Iteratorer är generella begrepp i de flesta språk. <command>for</command>-slingan här är ett typiskt exempel på hur man går igenom en vektor eller lista i C++.</para>
+<para/>
+</section>
+</section>
+</chapter>

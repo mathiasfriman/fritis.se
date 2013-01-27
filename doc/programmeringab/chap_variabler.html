@@ -1,0 +1,439 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<HTML
+><HEAD
+><TITLE
+>Variabler</TITLE
+><META
+NAME="GENERATOR"
+CONTENT="Modular DocBook HTML Stylesheet Version 1.79"><LINK
+REL="HOME"
+TITLE="Programmering i PHP"
+HREF="book1.html"><LINK
+REL="PREVIOUS"
+TITLE="Webbrowser, webbserver och program"
+HREF="chap_webbprogrammering.html"><LINK
+REL="NEXT"
+TITLE="Operatorer"
+HREF="chap_operatorer.html"><LINK
+REL="stylesheet"
+HREF="./book.css"
+TYPE="text/css"></HEAD
+><BODY
+CLASS="chapter"
+BGCOLOR="#FFFFFF"
+TEXT="#000000"
+LINK="#0000FF"
+VLINK="#840084"
+ALINK="#0000FF"
+><DIV
+CLASS="NAVHEADER"
+><TABLE
+SUMMARY="Header navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TH
+COLSPAN="3"
+ALIGN="center"
+>Programmering i PHP</TH
+></TR
+><TR
+><TD
+WIDTH="10%"
+ALIGN="left"
+VALIGN="bottom"
+><A
+HREF="chap_webbprogrammering.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="80%"
+ALIGN="center"
+VALIGN="bottom"
+></TD
+><TD
+WIDTH="10%"
+ALIGN="right"
+VALIGN="bottom"
+><A
+HREF="chap_operatorer.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+></TABLE
+><HR
+ALIGN="LEFT"
+WIDTH="100%"></DIV
+><DIV
+CLASS="chapter"
+><H1
+><A
+NAME="chap_variabler"
+></A
+>Kapitel 6. Variabler</H1
+><DIV
+CLASS="TOC"
+><DL
+><DT
+><B
+>Innehållsförteckning</B
+></DT
+><DT
+><A
+HREF="chap_variabler.html#AEN232"
+>Vad �r en variabel</A
+></DT
+><DT
+><A
+HREF="chap_variabler.html#AEN249"
+>Datatyper</A
+></DT
+><DT
+><A
+HREF="chap_variabler.html#AEN281"
+>�vningar</A
+></DT
+></DL
+></DIV
+><BLOCKQUOTE
+CLASS="ABSTRACT"
+><DIV
+CLASS="abstract"
+><P
+></P
+><A
+NAME="AEN230"
+></A
+><P
+>&#13;			Detta avsnitt beskriver vad variabler �r och hur man anv�nder dem i
+			ett PHP-script. Det tar �ven upp skillnaden mellan variabler i PHP
+			och i andra vanliga kompilerande spr�k.
+		</P
+><P
+></P
+></DIV
+></BLOCKQUOTE
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN232"
+>Vad �r en variabel</A
+></H1
+><P
+>&#13;			En variabel �r en platsh�llare f�r ett v�rde som �ndras under
+			programmets g�ng. Motsatsen till variabel �r en konstant. En
+			konstant kan eller f�r inte �ndras under programmets g�ng.
+		</P
+><P
+>&#13;			Ett exempel p� en variabel kan vara termer i en addition. T�nk dig
+			att du vill g�ra ett program som skall r�nka ut en summa. Man skulle
+			kunna g�ra programmet med bara konstanter, det skulle se ut s� h�r:
+			<DIV
+CLASS="example"
+><A
+NAME="AEN236"
+></A
+><P
+><B
+>Exempel 6-1. Exempel med konstanter</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;html&#62;
+	&#60;head&#62;
+   	&#60;title&#62;Addition&#60;/title&#62;
+	&#60;/head&#62;
+	&#60;body&#62;
+   	&#60;?php
+      	echo "Summan av talen 1 och 2 �r: ", 1 + 2;
+   	?&#62;
+	&#60;/body&#62;
+&#60;/html&#62;
+
+				</PRE
+></DIV
+>
+			Som du kan se s� r�knar PHP ut vad 1 + 2 blir. Men vad har man f�r
+			nytta av ett program som bara r�knar ut 1 + 2. Vi vill ju kunna
+			mata in vilka v�rden som helst f�r termerna.
+		</P
+><P
+>&#13;			Se nedanst�ende exempel:
+			<DIV
+CLASS="example"
+><A
+NAME="AEN240"
+></A
+><P
+><B
+>Exempel 6-2. Exempel med variabler</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;html&#62;
+	&#60;head&#62;
+		&#60;title&#62;Addition&#60;/title&#62;
+	&#60;/head&#62;
+	&#60;body&#62;
+		&#60;?php
+			$tal1 = 2;
+			$tal2 = 3;
+			echo "Summan av talen $tal1 och $tal2 �r: ", $tal1 + $tal2;
+		?&#62;
+	&#60;/body&#62;
+&#60;/html&#62;
+
+				</PRE
+></DIV
+>
+			
+			I exemplet ovan anv�nder vi tv� variabler, $tal1 och $tal2. I
+			PHP b�rjar alla variabelnamn med ett dollartecken. Programmet
+			ovan �r dock lika statiskt som det f�sta programmet. V�ra
+			variabler f�r ju samma v�rde (2 och 3) varje g�ng programmet
+			k�rs. De kan inte p�verkas av n�got.
+		</P
+><P
+>&#13;			Vi tar ytterligare ett exempel:
+			<DIV
+CLASS="example"
+><A
+NAME="AEN244"
+></A
+><P
+><B
+>Exempel 6-3. Exempel med variabler och $_GET</B
+></P
+><PRE
+CLASS="programlisting"
+>&#13;
+&#60;html&#62;
+	&#60;head&#62;
+		&#60;title&#62;Addition&#60;/title&#62;
+	&#60;/head&#62;
+	&#60;body&#62;
+		&#60;?php
+			$tal1 = $_GET['tal1'];
+			$tal2 = $_GET['tal2'];
+			echo "Summan av talen $tal1 och $tal2 �r: ", $tal1 + $tal2;
+		?&#62;
+	&#60;/body&#62;
+&#60;/html&#62;
+
+				</PRE
+></DIV
+>
+			I exemplet ovan h�mtar vi v�rdena till $tal1 och $tal2 fr�n en
+			speciell variabel som heter $_GET. I $_GET finns det data som
+			ges till programmet via URL:en. Till exempel s� kommer
+			programmet om det anropas som
+			http://dinserver/programnamnet.php?tal1=100&#38;tal2=199 att
+			skriva ut "Summan av talen 100 och 199 = 299".
+		</P
+><P
+>&#13;			Testa sedan andra tal och se vad som h�nder.
+		</P
+><P
+>&#13;			Du kanske provade att s�tta ett av talen till n�gor annat �n ett
+			tal, till exempel bokst�ver?
+			I s� fall s�g du att PHP inte kan summera text. Observera att om du
+			matar in ett decimaltal s� m�ste decimalpunkt och inte komma
+			anv�ndas.
+		</P
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN249"
+>Datatyper</A
+></H1
+><P
+>&#13;			Alla programmeringsspr�k arbetar med olika datatyper. I PHP beh�ver
+			du inte ange vilken typ det �r du jobbar med utan det listar
+			programtolken ut fr�n inneh�llet. Det �r dock v�ldigt viktigt att
+			man h�ller reda p� vilka typer ens variabler har eftersom det kan bli
+			underliga fel annars.
+		</P
+><P
+>&#13;			F�ljande typer finns:
+		</P
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN253"
+>Skal�ra</A
+></H2
+><P
+>&#13;				<P
+></P
+><UL
+><LI
+><P
+>boolean, bool (true, false)</P
+></LI
+><LI
+><P
+>integer, int (heltal)</P
+></LI
+><LI
+><P
+>float, double, real (reella tal)</P
+></LI
+><LI
+><P
+>string (Textstr�ngar)</P
+></LI
+></UL
+>
+			</P
+></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN265"
+>Sammansatta</A
+></H2
+><P
+>&#13;				<P
+></P
+><UL
+><LI
+><P
+>&#13;							arrayer (En samling av v�rden som indexeras antingen av
+							en integer eller string).
+						</P
+></LI
+><LI
+><P
+>&#13;							objekt (Kommer inte att ing� i denna kurs, se manualen om
+							du �r intresserad).
+						</P
+></LI
+></UL
+>
+			</P
+></DIV
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN273"
+>�vriga speciella</A
+></H2
+><P
+>&#13;				<P
+></P
+><UL
+><LI
+><P
+>NULL (Variabeln har inget v�rde alls).</P
+></LI
+><LI
+><P
+>&#13;							resource (Inneh�ller en referens till en extern
+							tillg�ng).
+						</P
+></LI
+></UL
+>
+			</P
+></DIV
+></DIV
+><DIV
+CLASS="sect1"
+><H1
+CLASS="sect1"
+><A
+NAME="AEN281"
+>�vningar</A
+></H1
+><DIV
+CLASS="sect2"
+><H2
+CLASS="sect2"
+><A
+NAME="AEN283"
+>Addition</A
+></H2
+><P
+>&#13;					Skapa ett program som med hj�lp av variabler summerar tre tal.
+				</P
+></DIV
+></DIV
+></DIV
+><DIV
+CLASS="NAVFOOTER"
+><HR
+ALIGN="LEFT"
+WIDTH="100%"><TABLE
+SUMMARY="Footer navigation table"
+WIDTH="100%"
+BORDER="0"
+CELLPADDING="0"
+CELLSPACING="0"
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+><A
+HREF="chap_webbprogrammering.html"
+ACCESSKEY="P"
+>Föregående</A
+></TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+><A
+HREF="book1.html"
+ACCESSKEY="H"
+>Hem</A
+></TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+><A
+HREF="chap_operatorer.html"
+ACCESSKEY="N"
+>Nästa</A
+></TD
+></TR
+><TR
+><TD
+WIDTH="33%"
+ALIGN="left"
+VALIGN="top"
+>Webbrowser, webbserver och program</TD
+><TD
+WIDTH="34%"
+ALIGN="center"
+VALIGN="top"
+>&nbsp;</TD
+><TD
+WIDTH="33%"
+ALIGN="right"
+VALIGN="top"
+>Operatorer</TD
+></TR
+></TABLE
+></DIV
+></BODY
+></HTML
+>
